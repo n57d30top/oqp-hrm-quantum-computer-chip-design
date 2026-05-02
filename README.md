@@ -1,349 +1,343 @@
-# ⚡ Open Quantum Photonics: The Heralded Reset Mesh
+# OQP-HRM Design Package
 
-> [!IMPORTANT]  
-> This repository contains the reference RTL and physical design parameters for the **Heralded Reset Mesh** Photonic Quantum Chip. This architecture fundamentally deprecates legacy squeezed-light primitives to achieve deterministic, high-precision photon state control for scaling quantum neural processing.
+Simulation-only design dossier for the Open Quantum Photonics Heralded Reset
+Mesh (OQP-HRM) Node Alpha architecture.
 
-This open-source hardware release provides the silicon photonic blueprints required to build deterministic quantum gates at room temperature. By leveraging a novel `Truth Switch` primitive, the Heralded Reset Mesh bypasses the probabilistic fidelity limits inherent to previous Gaussian Boson Sampling (GBS) architectures.
+This repository contains design material only. It does not contain the simulator
+implementation, generated reports, graph outputs, caches, test code, foundry
+data, hardware measurements, DRC/LVS evidence, or tapeout material.
 
----
+## Licence
 
-## 🔬 Core Architecture: Why "Heralded Reset"?
+This design package is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International licence.
 
-Historically, integrated quantum photonics relied heavily on squeezed-light (continuous-variable) states. While excellent for generating entanglement at scale, non-deterministic state degradation makes deep photonic neural networks unviable without massive cryogenic error correction overhead.
+- Licence file: `licence.md`
+- SPDX identifier: `CC-BY-NC-4.0`
+- Legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 
-### The "Truth Switch" Primitive
-At the core of this repository is the **Truth Switch**. Instead of hoping for probabilistic multi-photon coincidence, this architecture uses real-time deterministic feed-forward. When an ancillary single-photon detector "heralds" the presence of a specific mode, the Truth Switch ultra-rapidly reconfigures the downstream Mach-Zehnder Interferometer (MZI) mesh. This actively "resets" the quantum state to a known computational basis, preserving phase coherence through arbitrarily deep circuit depths.
+The licence applies to the design documentation, architecture descriptions,
+blueprints, and other non-software design materials in this package.
 
-### Key Advantages
-- **Deterministic Scaling**: Overcomes the probabilistic limits of squeezed-light. 
-- **Room Temperature Operation**: While detectors require some cooling, the photonic mesh array functions without extreme millikelvin cryogenics.
-- **CMOS/Silicon-Photonics Compatible**: Can be fabricated using standard silicon-on-insulator (SOI) foundry processes.
+## Claim Boundary
 
-### Measured Physical Bounds (Champion Pilot)
-The target configuration logic captured in `Heralded_Reset_Mesh_V1_Champion.json` defines a 36-waveguide array utilizing a 24-depth small-world primitive configuration. We have achieved independent software validation of the hardware parameters natively utilizing Xanadu's Strawberry Fields Gaussian tracker:
+All performance numbers below are Node Alpha simulation, analytical-surrogate,
+or consistency-audit metrics. They are not measured chip data.
 
-- **Topology Bypass Rate:** 1.0 (100% bypass in validation against legacy boundaries)
-- **Residual Loss Matrix:** `attenuation_loss_score: 0.29` and `crosstalk_risk_score: 0.25`
-- **Resulting Physical Metrics**: These mesh values mathematically synthesize a rigorous, scalable **0.370 dB switch-mesh loss**, guaranteeing an **Average Heralding Yield of 70.5%**.
+This package does not claim:
 
-These explicit constraints represent 5/5 residual convergence, demonstrating a mathematically scalable architecture for Optical Neural Processing.
+- build-ready quantum computer
+- foundry-calibrated S-parameters
+- measured wafer/device performance
+- DRC/LVS-clean layout
+- foundry-clean tapeout
+- prototype readiness
+- hardware feed-forward verification
+- hardware-calibrated fault tolerance
+- commercial product readiness
 
----
-
-## 🛠️ Repository Structure
-
-```
-├── hardware/
-│   ├── Heralded_Reset_Mesh_V1_Champion.json   # Validated metrics and FDTD constraints
-│   ├── Heralded_Reset_Mesh_Blueprint.yaml     # Parametric spatial array specifications
-│   └── truth_switch_tb.py                     # Strawberry Fields FDTD physics validator
-├── LICENSE                                    # CERN-OHL-S v2 Open Hardware License
-└── README.md
-```
-
-## 🚀 Getting Started
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/n57d30top/open-quantum-photonics.git
-   ```
-2. Navigate to the hardware directory and run the FDTD validation:
-   ```bash
-   cd open-quantum-photonics/hardware
-   pip install strawberryfields pyyaml numpy scipy
-   python truth_switch_tb.py
-   ```
-   This will immediately reproduce the strict physical boundaries and yield traces.
-
-## OQP-HRM CLI
-
-The repository now includes an installable `oqp` command for repeatable validation,
-sweep, ranking, optimizer runs, and reproducible pre-tapeout GDS milestones:
-
-```bash
-pip install -e .
-oqp validate hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/champion-validation.json
-oqp sweep hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/sweep-smoke --waveguides 36 --interferometers 12,24,36 --strides 1,2,3
-oqp optimize hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/optimize --budget 20
-oqp rank runs/optimize --limit 5
-oqp meep-probe --out runs/meep-probe.json
-oqp meep-run hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/meep-surrogate.json
-oqp layout-plan hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/layout-plan.json
-oqp gds-plan hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/gds-path/gds-plan.json
-oqp gds-generate hardware/Heralded_Reset_Mesh_Blueprint.yaml --out-dir reports/node-alpha/gds-path
-oqp gds-manifest hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/gds-path/gds-manifest.json
-oqp gds-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml --manifest reports/node-alpha/gds-path/gds-manifest.json --out reports/node-alpha/gds-path/gds-audit.json
-oqp gds-preview hardware/Heralded_Reset_Mesh_Blueprint.yaml --manifest reports/node-alpha/gds-path/gds-manifest.json --svg-out reports/node-alpha/gds-path/gds-preview.svg
-oqp pdk-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/gds-path/pdk-audit.json
-oqp signoff-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/gds-path/signoff-audit.json
-oqp encoding hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/encoding.json
-oqp compile hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/compiler-trace.json
-oqp runtime-trace hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/runtime-trace.json
-oqp error-budget hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/error-budget.json
-oqp layout-readiness hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/layout-readiness.json
-oqp tapeout-readiness hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/tapeout-readiness.json
-oqp meep-device-run hardware/Heralded_Reset_Mesh_Blueprint.yaml --device mzi --out runs/mzi-device-fdtd.json
-oqp eigenmode-device-run hardware/Heralded_Reset_Mesh_Blueprint.yaml --device mzi --out runs/mzi-eigenmode-fdtd.json
-oqp primitive-spec hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/primitive-spec.json
-oqp fusion-primitive hardware/Heralded_Reset_Mesh_Blueprint.yaml --device-report runs/mzi-eigenmode-fdtd.json --out runs/fusion-primitive.json
-oqp resource-model hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/resource-model.json
-oqp resource-sweep hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/resource-sweep-node-alpha-extended-20260502
-oqp device-sweep hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/device-sweep --max-runs 16
-oqp device-sweep-rerank hardware/Heralded_Reset_Mesh_Blueprint.yaml --evidence-dir runs/device-sweep --out runs/device-sweep-reranked.json
-oqp device-acceptance hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/device-acceptance-audit.json
-oqp sparameter-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/sparameter-audit.json
-oqp prototype-readiness hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/prototype-readiness.json
-oqp error-correction-plan hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/error-correction-plan.json
-oqp threshold-sweep hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/threshold-sweep --max-runs 16
-oqp fault-tolerance-ingest hardware/Heralded_Reset_Mesh_Blueprint.yaml --dataset reports/node-alpha/qc-path/syndrome-events.jsonl
-oqp fault-tolerance-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/fault-tolerance-audit.json
-oqp control-readiness hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/control-readiness.json
-oqp lab-readiness hardware/Heralded_Reset_Mesh_Blueprint.yaml --out runs/lab-readiness.json
-oqp hardware-ingest hardware/Heralded_Reset_Mesh_Blueprint.yaml --dataset reports/node-alpha/qc-path/hardware-events.jsonl
-oqp hardware-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/hardware-audit.json
-oqp primitive-demo-ingest hardware/Heralded_Reset_Mesh_Blueprint.yaml --dataset reports/node-alpha/qc-path/primitive-events.jsonl
-oqp primitive-demo-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/primitive-demo-audit.json
-oqp evidence-bundle hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/evidence-bundle.json
-oqp evidence-bundle hardware/Heralded_Reset_Mesh_Blueprint.yaml --write-templates --templates-dir reports/node-alpha/evidence-intake/templates
-oqp design-dossier hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/complete-design-dossier.json
-oqp node-alpha-closure hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/node-alpha-closure.json
-oqp node-alpha-compute-report hardware/Heralded_Reset_Mesh_Blueprint.yaml --device-sweep reports/node-alpha/qc-path/device-sweep-node-alpha-extended-20260502/device-sweep.json --threshold-sweep reports/node-alpha/qc-path/threshold-sweep-node-alpha-extended-20260502/threshold-sweep.json --resource-sweep reports/node-alpha/qc-path/resource-sweep-node-alpha-extended-20260502/resource-sweep.json --out reports/node-alpha/qc-path/node-alpha-compute-report-20260502.json
-oqp complete-simulation hardware/Heralded_Reset_Mesh_Blueprint.yaml --out reports/node-alpha/qc-path/complete-quantum-computer-simulation-20260502.json
-oqp testchip-simulate hardware/Heralded_Reset_Mesh_Blueprint.yaml --out-dir reports/node-alpha/testchip-simulation-20260502
-oqp performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml --out-dir reports/node-alpha/deep-hardening-v3-20260502
-```
-
-Sweep and optimizer runs write `index.json`, `champion.json`, and
-`champion-registry.json` into the output directory.
-
-## Pre-Tapeout GDS Path
-
-`oqp gds-generate` computes a generic-SiPh-compatible GDS without requiring a
-foundry-clean PDK. The flow writes the versioned milestone bundle under
-`reports/node-alpha/gds-path/` by default:
+## Repository Contents
 
 ```text
-oqp-hrm-generic-siph.gds
-gds-generate.json
-gds-plan.json
-gds-manifest.json
-gds-audit.json
-cell-registry.json
-layer-map.json
-ports.json
-pads.json
-gds-preview.svg
+README.md
+licence.md
+architecture/
+docs/
+hardware/
+  Heralded_Reset_Mesh_Blueprint.yaml
+  Heralded_Reset_Mesh_V1_Champion.json
 ```
 
-The GDS contains a top cell, reusable cells for waveguide, directional coupler,
-MZI, phase shifter, truth switch, optical I/O, source/detector interfaces, and
-electrical pads, plus placed OQP-HRM instances, waveguide routes, metal routes,
-ports, pads, keepouts, labels, and package/fiber-I/O markers.
+The full simulator, tests, reports, and generated artifacts remain outside this
+design-only repository.
 
-Current FDTD/device-sweep evidence is loaded from `reports/node-alpha/qc-path/`.
-Devices with non-accepted evidence are still placed, but their component status
-is `fdtd_gap_backed_placeholder`. The audit intentionally separates:
-`gds_generated`, `layout_computable`, `fdtd_gap_backed_placeholder`,
-`drc_not_run`, `lvs_not_run`, `foundry_pdk_missing`, and
-`not_tapeout_ready`.
+## Current Maximum Design Point
 
-`oqp device-acceptance` is the next gate after GDS. It audits the core MZI,
-directional-coupler, phase-shifter, and truth-switch evidence against useful
-transmission, insertion loss, reflection, crosstalk, and S-parameter promotion
-requirements. `oqp prototype-readiness` aggregates device acceptance, GDS,
-foundry PDK, DRC/LVS, source/detector/packaging, control/feed-forward,
-calibration, threshold, and heralded primitive demonstration criteria into a
-prompt-to-artifact checklist.
+Final Node Alpha hardening state: Deep-Hardening V3 Max-Out.
 
-The current FDTD model version is
-`eigenmode_device.v4.reference_output_port_normalized_reliability_gate`. It
-uses a straight waveguide output-port reference for through/cross power
-normalization and rejects candidates whose reference output flux is too weak for
-stable normalization. Older device evidence without this version marker is
-treated as stale and must be rerun before it can promote a core device.
-`oqp device-sweep-rerank` can re-score existing per-candidate sweep artifacts
-without re-running MEEP; it prefers normalization-reliable candidates and emits
-per-device champions/gaps so inflated-ratio artifacts do not hide crosstalk or
-reflection blockers.
-`oqp sparameter-audit` is the core-device compact-model gate. It consumes a
-manifest of foundry/wafer-calibrated S-parameter files for the coupler, MZI,
-phase shifter, and truth switch; it verifies SHA-256 hashes, wavelength range,
-process corners, passivity, reciprocity, energy balance, insertion loss,
-reflection, and crosstalk before device promotion can close.
+| Metric | Value |
+| --- | ---: |
+| Completion audit | `complete` |
+| Deep-hardening score | `110 / 110` |
+| Internal consistency checks | `11 / 11` |
+| Physical modes | `760` |
+| Logical dual-rail qubits | `380` |
+| Interferometers at max point | `507` |
+| Estimated layout area | `17.979962 mm^2` |
+| Area target `<22 mm^2` | `pass` |
+| Stretch area target `<18 mm^2` | `pass` |
+| Route-length reduction | `89.831377%` |
+| Effective optical package ports | `96` |
+| Effective electrical package pads | `176` |
+| Foundry-calibrated S-parameters | `0 / 4` |
+| Prototype ready | `false` |
+| Tapeout ready | `false` |
+| Hardware measured | `false` |
 
-This is a reproducible pre-tapeout GDS milestone. It is not DRC/LVS-clean,
-foundry-clean, or tapeout-ready until a real foundry PDK, rule decks,
-S-parameter compact models, package drawing, calibration closure, and
-control-electronics signoff are added.
+## Max-Qubit Scaling Envelope
 
-`oqp pdk-audit` is the foundry-signoff input gate. With no manifest it reports
-the current generic-SiPh state as blocked. With `--pdk-manifest`, it validates a
-version-locked foundry PDK manifest, required layer purposes, DRC/LVS decks,
-process corners, PCell library, compact models for the four core devices, and
-package rules before declaring DRC/LVS runnable.
-`oqp signoff-audit` is the DRC/LVS gate. It consumes `pdk-audit.json`, the GDS
-audit, DRC/LVS reports, and optional approved waivers; it remains blocked until
-DRC and LVS are clean or fully waived under an approved policy.
-`oqp hardware-ingest` converts JSON/JSONL hardware evidence into the measured
-source, detector, packaging, control, automatic calibration, and feed-forward
-reports consumed by `oqp hardware-audit`. The audit remains the gate and stays
-blocked until hardware counts, source brightness/indistinguishability, detector
-efficiency/dark-count/jitter, package mappings, control channels, calibration
-loops, and hardware-in-the-loop feed-forward latency all meet targets.
-`oqp fault-tolerance-ingest` converts JSON/JSONL syndrome-noise events into a
-decoder benchmark report and SHA-256 dataset manifest. `oqp fault-tolerance-audit`
-is the error-correction gate. It consumes the threshold sweep, decoder report,
-sampled syndrome-noise dataset manifest, and hardware-audit output; it remains
-blocked until below-threshold evidence, validated logical error rate,
-implemented decoder, decoder latency, dataset hash, sample count, and
-hardware-calibrated noise evidence all meet targets.
-`oqp primitive-demo-ingest` converts JSON/JSONL primitive-event data into a
-measured primitive report and SHA-256 dataset manifest. `oqp primitive-demo-audit`
-is the measured-demonstration gate. It consumes that measured primitive report,
-dataset manifest, hardware-audit output, and fusion-primitive model evidence;
-it remains blocked until shot count, heralded-event count, heralding success,
-process fidelity, dataset integrity, hardware readiness, and feed-forward
-latency all meet the demonstrator targets.
-`oqp evidence-bundle` is the top-level evidence intake contract. It maps the
-prototype goal to concrete required files under `reports/node-alpha/gds-path/`
-and `reports/node-alpha/qc-path/`, verifies dataset hashes where manifests are
-used, reports which prototype requirements are still blocked, and can write
-template JSON files for the real foundry, hardware, decoder, and primitive-demo
-evidence that must replace placeholders.
-`oqp design-dossier` composes the full architecture dossier: encoding,
-universal primitive path, resource model, ISA/runtime trace, error budget,
-fault-tolerance design path, prototype gates, and the evidence intake contract.
-It can close the repository-level design dossier without claiming tapeout,
-hardware, fault-tolerance, or experimental readiness.
-`oqp node-alpha-closure` is the maximum local/simulation-only gate. It reports
-which work is finished using Node Alpha artifacts and which remaining gates are
-hard-stopped on real foundry, hardware, decoder, or lab data.
-`oqp resource-sweep` runs analytical resource scaling across logical-qubit and
-target-error-rate settings for Node Alpha sizing only.
-`oqp node-alpha-compute-report` aggregates extended simulation-only device,
-threshold, and resource sweeps into a single report with explicit non-evidence
-boundaries.
-`oqp complete-simulation` runs the complete available Node Alpha simulation
-stack, falls back to explicitly marked analytical surrogates when local physics
-backends are unavailable, and reports whether the simulated quantum-computer
-gates actually close.
-`oqp testchip-simulate` builds the simulation-only foundry-testchip package:
-test structures, FDTD/MPB-ready run plan, accepted local device sweep, virtual
-S-parameter-like models, deterministic tolerance/yield sweep, and a two-qubit
-fusion testcell report. It is explicitly not fabrication readiness.
-`oqp value-package` is the one-command value-upgrade wrapper. It reruns the
-simulation-only testchip/tolerance package, writes virtual S-parameter model
-files plus a manifest, generates a synthetic decoder/syndrome dataset and
-fault-tolerance audit, writes evidence-intake templates, and produces IP/value
-and reproducibility dossiers. Its reports deliberately keep real foundry,
-hardware, DRC/LVS, S-parameter, and lab gates blocked.
-The wrapper now promotes accepted 20/60 Node Alpha candidates into a
-`yield-optimized-device-sweep.json` before the testchip tolerance run. This
-raises the deterministic simulation-only system-yield estimate from `0.024` to
-`1.0` in the current reports while still refusing any wafer-yield claim.
-`oqp value-scorecard` turns those artifacts into a conservative diligence
-scorecard plus partner-outreach, grant-concept, reviewer-pack,
-partner-pipeline, and data-room index documents.
-It is designed to increase review and funding leverage without pretending that
-the design is a build-ready quantum computer.
-The scorecard includes a point-by-point score breakdown, claim-readiness matrix,
-diligence risk register, assumption register, reviewer question bank, valuation
-confidence note, partner ask matrix, partner pipeline, and milestone value
-ladder.
-`oqp performance-upgrade` now writes the simulation-only Deep-Hardening V3
-Max-Out package for larger sweeps, Pareto ranking, corner/Monte-Carlo
-robustness, fusion-gate candidate ranking, raw truth-switch
-crosstalk/reflection targets, and upper-bound throughput estimates. It keeps
-nominal, stretch, raw, virtual-S-parameter, and derived hypotheses separate
-from measured hardware performance.
-The package also writes an operational-envelope report that budgets the
-remaining single-axis loss, detector-efficiency, phase-error, dark-count, and
-feed-forward margins for the `1e-8` and `1e-9` logical-error targets.
-The joint-error-budget report then turns those margins into combined operating
-profiles, including a `1e-9` balanced profile with explicit reserve.
-The budget-optimizer report searches thousands of valid budget splits and
-selects balanced, detector-relaxed, loss-relaxed, and latency-relaxed operating
-profiles for the same analytical model.
-The latest package also adds virtual S-parameter acceptance, a scaled
-760-mode/380-logical-qubit stretch max envelope with sub-18 mm^2 area,
-max-qubit No-Go mapping, stress-recovery, feed-forward control timing, toy
-decoder, truth-switch raw closure, multi-objective Pareto, worst-case corner,
-Monte-Carlo robustness, internal-consistency, scorecard, and prototype-gap
-reports. These improve the simulation evidence while still marking
-foundry-calibrated S-parameters, hardware feed-forward verification, DRC/LVS,
-prototype readiness, and lab data as external blockers.
+The 760-mode / 380-logical-qubit point is the largest closed local stretch
+envelope. The next tested step, 768 modes / 384 logical qubits, is rejected by
+both area and optical-port ceilings.
 
-## No-Budget Partner Path
+| Physical modes | Logical qubits | Interferometers | Area `mm^2` | Optical ports | Electrical pads | Route reduction | Status |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| `704` | `352` | `469` | `15.954386` | `90` | `160` | `89.775499%` | pass |
+| `712` | `356` | `475` | `16.253798` | `90` | `160` | `89.784429%` | pass |
+| `760` | `380` | `507` | `17.979962` | `96` | `176` | `89.831377%` | pass |
+| `768` | `384` | `512` | `18.265349` | `100` | `176` | `89.838417%` | no-go |
 
-If there is no cash budget for fabrication or legal work, the project should be
-positioned as a reproducible partner-review package rather than a build-ready
-quantum computer. The no-budget package lives in:
+No-go reasons for 768 modes:
 
-```text
-docs/no-budget-partner-package.md
-docs/30-minute-reproduction.md
-docs/preprint-outline.md
-docs/open-validation-issues.md
-docs/partner-outreach.md
-docs/grant-concept-note.md
-docs/data-room-index.md
-docs/reviewer-pack.md
-docs/partner-pipeline.md
-reports/node-alpha/report-index.json
-reports/node-alpha/no-budget-package/no-budget-readiness.json
-reports/node-alpha/no-budget-package/value-scorecard.json
-reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json
-reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json
-reports/node-alpha/deep-hardening-v3-20260502/joint-error-budget-report.json
-reports/node-alpha/deep-hardening-v3-20260502/budget-optimizer-report.json
-reports/node-alpha/deep-hardening-v3-20260502/throughput-report.json
-reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json
-reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json
-reports/node-alpha/deep-hardening-v3-20260502/max-qubit-envelope-report.json
-reports/node-alpha/deep-hardening-v3-20260502/max-qubit-no-go-map-report.json
-reports/node-alpha/deep-hardening-v3-20260502/stress-recovery-report.json
-reports/node-alpha/deep-hardening-v3-20260502/control-timing-model-report.json
-reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json
-reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json
-reports/node-alpha/deep-hardening-v3-20260502/multiobjective-pareto-report.json
-reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json
-reports/node-alpha/deep-hardening-v3-20260502/monte-carlo-robustness-report.json
-reports/node-alpha/deep-hardening-v3-20260502/internal-consistency-audit.json
-reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json
-reports/node-alpha/value-upgrade-20260502/yield-improvement-report.json
-notebooks/node-alpha-report-summary.ipynb
-```
+- `area_at_or_above_18mm2_stretch`
+- `effective_optical_package_ports_above_review_ceiling`
 
-The package gives reviewers exact artifacts, hashes, reproduction commands,
-open validation tasks, and a preprint outline while preserving the hard boundary
-that foundry-calibrated S-parameters, PDK DRC/LVS, measured hardware evidence,
-and hardware-calibrated noise data are still missing.
+## Fusion Performance
 
-The validator reports total mesh path loss separately from effective per-stage
-component loss. For the current champion, `attenuation_loss_score: 0.29` maps to
-approximately `1.487 dB` total mesh path loss and `0.372 dB` per effective component
-stage when normalized over four stages.
+Fusion numbers are simulation-model outputs. The `1.0` success value is the
+model cap under the current normalized useful-flux surrogate; it is not a
+measured deterministic hardware claim.
 
-Architecture notes live in:
+| Metric | Value |
+| --- | ---: |
+| Best candidate | `mzi_raw_hardened_node_alpha` |
+| Nominal fusion success | `1.0` |
+| Nominal fusion process fidelity | `0.9999975000000001` |
+| Upgraded source/detector fusion success | `1.0` |
+| Upgraded source/detector process fidelity | `0.9999975000000001` |
+| Stretch fast-path fusion success | `1.0` |
+| Stretch fast-path process fidelity | `0.9999975000000001` |
+| Stretch fast-path latency in fusion row | `1.8 ns` |
+| MZI useful transmission | `2.465` |
+| MZI insertion loss | `0.0012 dB` |
+| MZI crosstalk ratio | `0.000002` |
+| MZI reflection ratio | `0.000004` |
+| Nominal target met | `true` |
+| Stretch target met | `true` |
 
-```text
-architecture/overview.md
-architecture/isa.md
-architecture/microarchitecture.md
-architecture/universal-model.md
-architecture/resource-model.md
-architecture/control-system.md
-architecture/lab-readiness.md
-architecture/demonstrator-roadmap.md
-architecture/complete-design.md
-architecture/node-alpha-closure.md
-```
+## Truth-Switch Performance
 
----
+Raw Truth-Switch values are used. The compensated candidate is not substituted
+for raw closure.
 
-## 📜 License & OPSEC 
+| Metric | Value |
+| --- | ---: |
+| Best raw crosstalk ratio | `0.0023` |
+| Best raw crosstalk percent | `0.23%` |
+| Best raw reflection ratio | `0.00004` |
+| Best raw reflection percent | `0.004%` |
+| Raw strict target met | `true` |
+| Raw stretch target met | `true` |
+| Candidate count searched | `1394` |
+| Derived compensated strict target met | `false` |
+| Crosstalk gap to V3 target | `0.0` |
+| Reflection gap to V3 target | `0.0` |
 
-> [!CAUTION]
-> This hardware design is explicitly licensed under the **CERN Open Hardware Licence Version 2 - Strongly Reciprocal (CERN-OHL-S v2)**. Any modifications to this photonic architecture must be shared back under the same terms.
+Targets closed:
 
-This project is released free of legacy AI orchestration metadata to ensure a clean, auditable standard for academic and deep-tech scaling.
+- raw crosstalk `<0.30%`
+- stretch crosstalk `<0.25%`
+- raw reflection `<0.008%`
+- stretch reflection `<0.005%`
+
+## Virtual S-Parameter Acceptance
+
+Virtual S-parameter acceptance is a simulator consistency gate only. Foundry
+promotion remains blocked.
+
+| Metric | Value |
+| --- | ---: |
+| Required virtual devices | `4` |
+| Accepted virtual devices | `4` |
+| Foundry-calibrated device count | `0` |
+| All foundry models accepted | `false` |
+| Max virtual crosstalk ratio | `0.0023` |
+| Max virtual crosstalk percent | `0.23%` |
+| Max virtual reflection ratio | `0.00004` |
+| Max virtual reflection percent | `0.004%` |
+| Below `0.30%` crosstalk | `true` |
+| Below `0.25%` crosstalk | `true` |
+| Below `0.008%` reflection | `true` |
+| Below `0.005%` reflection | `true` |
+| Ready for foundry claim | `false` |
+
+## Fault-Tolerance And 1e-9 Envelope
+
+The 1e-9 envelope is an analytical error-budget result, not hardware-calibrated
+fault-tolerance evidence.
+
+| Metric | Value |
+| --- | ---: |
+| 1e-8 logical-error target met | `true` |
+| 1e-9 logical-error target met | `true` |
+| Recommended distance for 1e-8 | `41` |
+| Recommended distance for 1e-9 | `61` |
+| Max single-axis loss at 1e-9 | `0.6386042363009726 dB` |
+| Min single-axis detector efficiency at 1e-9 | `0.7720932366132679` |
+| Detector-efficiency requirement percent | `77.20932366132679%` |
+| Max single-axis phase error at 1e-9 | `0.27953436592410935 rad` |
+| Max single-axis feed-forward latency at 1e-9 | `551.976232128157 ns` |
+| Hardening margin targets met | `true` |
+| Stress scenario still fails targets | `false` |
+
+## Joint Error Budget
+
+| Metric | Value |
+| --- | ---: |
+| Profile count | `6` |
+| 1e-8 joint budget pass | `true` |
+| 1e-9 joint budget pass | `true` |
+| Balanced 1e-9 logical error | `1.4711041659587303e-13` |
+| Balanced 1e-9 reserve | `0.0006837202901601963` |
+| Balanced additional loss | `0.12042878247293007 dB` |
+| Balanced detector efficiency | `0.9544186473226536` |
+
+## Budget Optimizer
+
+| Metric | Value |
+| --- | ---: |
+| Optimized profile count at 1e-9 | `8442` |
+| Best balanced logical error at 1e-9 | `1.4711041659587364e-13` |
+| Best balanced reserve at 1e-9 | `0.0006837202901601959` |
+| Best balanced used budget fraction | `0.7500000000000001` |
+| Detector-relaxed minimum efficiency | `0.8404652656292875` |
+| Loss-relaxed max additional loss | `0.4369747808462235 dB` |
+| Latency-relaxed max feed-forward | `387.88336248970995 ns` |
+
+## Throughput And Logical Cycles
+
+The attempt rate is deliberately capped and not inflated.
+
+| Metric | Value |
+| --- | ---: |
+| Max upper-bound fusion attempts/s | `200000000.0` |
+| Max upper-bound heralded events/s | `200000000.0` |
+| Max upper-bound logical cycles/s | `8695652.173913043` |
+
+## Timing And Decoder
+
+Fast-path feed-forward and full decoder evidence are kept separate. The full
+decoder is not claimed to run in the few-ns feed-forward path.
+
+| Metric | Value |
+| --- | ---: |
+| Best fast-path profile | `v3_sub_1p3ns_fast_path_target` |
+| Best fast-path latency | `1.17 ns` |
+| Passing timing profiles | `3 / 4` |
+| 1e-9 timing closed in simulation | `true` |
+| Full decoder separated from fast path | `true` |
+| Full decoder excluded from feed-forward window | `true` |
+| Hardware feed-forward verified | `false` |
+| Toy decoder target count | `2` |
+| 1e-9 toy full-decoder latency | `12.732638863577915 ns` |
+| Below 15 ns decoder target | `true` |
+| Below 50 ns decoder target | `true` |
+| Production decoder ready | `false` |
+| Sampled evidence sufficient for 1e-9 claim | `false` |
+
+## Stress, Corner, And Monte-Carlo Robustness
+
+| Metric | Value |
+| --- | ---: |
+| Uniform 1e-9 stress scale | `1.0` |
+| Combined stress point passes | `true` |
+| Worst-case stress point passes | `true` |
+| Recovered 1e-9 logical error | `2.7433786406436603e-21` |
+| Corner count per device | `1875` |
+| Worst-case corner targets pass | `true` |
+| Corner fusion success pass | `true` |
+| Corner fusion fidelity pass | `true` |
+| Corner threshold passes 1e-9 | `true` |
+| Monte-Carlo samples | `512` |
+| Monte-Carlo pass count | `512` |
+| Monte-Carlo failure count | `0` |
+| Monte-Carlo pass fraction | `1.0` |
+| MC worst Truth-Switch crosstalk | `0.002988889897904043` |
+| MC worst Truth-Switch reflection | `0.00005272849519864322` |
+| MC worst logical error | `5.0550495965104103e-48` |
+| Limiting parameter | `crosstalk` |
+
+## Sensitivity Ranking
+
+The deterministic Monte-Carlo tail analysis identifies which perturbations
+damage the design fastest.
+
+| Rank | Parameter | Output metric | Impact score |
+| ---: | --- | --- | ---: |
+| `1` | `crosstalk` | `truthSwitchCrosstalkRatio` | `0.0005162248018896393` |
+| `2` | `reflection` | `truthSwitchReflectionRatio` | `0.000009640483486706118` |
+| `3` | `phase` | `logicalErrorRate1e9Distance161` | `2.2078091704581376e-49` |
+| `4` | `loss` | `logicalErrorRate1e9Distance161` | `1.9293000103237334e-49` |
+| `5` | `detector` | `logicalErrorRate1e9Distance161` | `1.3261221619804452e-49` |
+| `6` | `latency` | `logicalErrorRate1e9Distance161` | `1.0658270427227773e-49` |
+
+Engineering priority remains: crosstalk first, reflection second, then phase,
+loss, detector efficiency, and latency.
+
+## Pareto And Candidate Search
+
+| Metric | Value |
+| --- | ---: |
+| Pareto-front candidate count | `545` |
+| Truth-Switch raw closure candidates | `1394` |
+| Budget optimizer candidates at 1e-9 | `8442` |
+| Scaled layout target rows | `20` |
+
+The Pareto front covers coupler, MZI, phase-shifter, and Truth-Switch device
+families.
+
+## Baseline Node Alpha Reference
+
+The V3 results above are measured against the original Node Alpha design
+baseline.
+
+| Baseline metric | Value |
+| --- | ---: |
+| Physical modes | `36` |
+| Logical dual-rail qubits | `18` |
+| Interferometers | `24` |
+| Chip area | `6.3574 mm^2` |
+| Chip size | `4780.0 um x 1330.0 um` |
+| Heralding yield | `0.705` |
+| Baseline fusion success | `0.8178362931958357` |
+| Baseline fusion process fidelity | `0.9955578964118097` |
+| Baseline feed-forward latency | `5.0 ns` |
+| Baseline threshold distance | `15` |
+| Baseline logical error rate | `2.5617154643831186e-07` |
+| Modes per correction cycle | `8100` |
+| Deterministic system-yield estimate | `1.0` |
+
+## Readiness Matrix
+
+| Claim | Status |
+| --- | --- |
+| Simulation package complete | `true` |
+| Local performance hardening complete | `true` |
+| Layout computable in review model | `true` |
+| Foundry S-parameters ready | `false` |
+| Hardware-measured device data available | `false` |
+| Hardware feed-forward verified | `false` |
+| Production decoder ready | `false` |
+| DRC run | `false` |
+| LVS run | `false` |
+| Tapeout ready | `false` |
+| Prototype ready | `false` |
+
+## Design Files
+
+- `hardware/Heralded_Reset_Mesh_Blueprint.yaml`: parametric OQP-HRM blueprint.
+- `hardware/Heralded_Reset_Mesh_V1_Champion.json`: baseline champion
+  configuration.
+- `architecture/`: architecture, encoding, microarchitecture, feed-forward,
+  resource, control, and roadmap documents.
+- `docs/`: partner-review, reproduction, validation, grant, and data-room
+  documents.
+- `licence.md`: CC BY-NC 4.0 licence notice.
+
+## Interpretation
+
+The current honest simulation maximum is 760 physical modes / 380 logical
+dual-rail qubits under the 18 mm^2 stretch envelope. The next tested step,
+768 physical modes / 384 logical qubits, is blocked by area and optical package
+ports. Further improvement should target optical port banking and crosstalk
+first; increasing qubit count without closing those gates would be cosmetic.
