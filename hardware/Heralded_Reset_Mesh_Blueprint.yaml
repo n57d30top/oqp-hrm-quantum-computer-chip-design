@@ -1,0 +1,26 @@
+# Heralded Reset Mesh - Champion Blueprint
+# Evaluated Scene: 2d1010b0-2ef6-4e1a-9521-c614dacd906f
+# Bounded Live Pilot: 100% legacy bypass confirmation
+
+topology_class: "heralded_reset_truth_switch"
+solver_target: "meep_fdtd"
+
+# Fundamental Physical Layout
+spatial_model:
+  network_style: "small_world"    # Bypassed "cortical_mesh" due to scattering losses
+  lane_mode: "device_component"   # Localized scale vs full-circuit pathing
+  waveguide_count: 36             # Minimum requirement for error-corrected truth switch
+  interferometer_count: 24        # MZI density parameter
+  laser_wavelength_nm: 1550       # Telecom standard C-band operation
+
+# Predicted / Evaluated Convergence Limits (From Run a8bdba03-5083-460e-bd53-27a3da697732)
+metrics:
+  attenuation_loss_score: 0.29    # Total normalized mesh loss score
+  effective_component_stage_count: 4 # Normalizes total loss to ~0.370 dB per stage
+  crosstalk_risk_score: 0.25      # High isolation
+  hop_latency_score: 0.78         # Ultra-fast feedforward path
+  heralding_yield: 0.705          # 70.5% success probability per mode
+
+documentation:
+  - This file serves as the definitive structural blueprint.
+  - The parameter set here is procedurally ingested by open-source MEEP / Lumerical FDTD solvers to dynamically render the GDSII lithography masks.

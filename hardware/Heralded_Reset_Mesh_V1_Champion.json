@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "open-quantum.photonic-device-run.v1",
+  "runId": "Heralded_Reset_Mesh_V1_Champion",
+  "sceneRef": "photonic-device-scene:2d1010b0-2ef6-4e1a-9521-c614dacd906f",
+  "solverFamily": "meep",
+  "executionMode": "local_cluster",
+  "observedMetrics": {
+    "attenuation_loss_score": 0.29,
+    "crosstalk_risk_score": 0.25,
+    "hop_latency_score": 0.78
+  },
+  "artifactRefs": [
+    "./Heralded_Reset_Mesh_Blueprint.yaml"
+  ],
+  "createdAt": "2026-03-22T22:34:17.572Z",
+  "updatedAt": "2026-03-22T22:34:17.572Z"
+}
