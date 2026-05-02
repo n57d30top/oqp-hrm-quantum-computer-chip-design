@@ -1,0 +1,134 @@
+{
+  "claimBoundary": "Stress recovery is a local analytical optimizer, not a measured process-control result.",
+  "errorModel": {
+    "basePhysicalErrorRate": 2.5e-05,
+    "claimBoundary": "Deep-Hardening V3 uses an erasure-aware analytical simulator model; it is not hardware-calibrated threshold evidence.",
+    "darkCountHzWeight": 1e-09,
+    "detectorInefficiencyWeight": 0.012,
+    "deviceCrosstalkWeight": 0.008,
+    "deviceLossWeight": 0.012,
+    "deviceReflectionWeight": 0.02,
+    "latencyExcessNsWeight": 5e-06,
+    "latencyFloorNs": 5.0,
+    "lossWeight": 0.02,
+    "name": "node_alpha_v3_erasure_aware_margin_model",
+    "phaseErrorSquaredWeight": 0.035,
+    "thresholdAssumption": 0.005
+  },
+  "generatedAt": "2026-05-02T21:49:13.004528Z",
+  "limitations": [
+    "Uniform stress scaling is a planning number; real process errors are correlated and distribution-shaped.",
+    "Stress points are analytical budget checks and do not replace calibrated process, detector, reflection, crosstalk, or control distributions."
+  ],
+  "rows": [
+    {
+      "distance": 41,
+      "maxUniformStressScale": 1.0,
+      "minimumRequiredImprovements": {
+        "darkCountReductionFactor": 1.0,
+        "detectorInefficiencyReductionFactor": 1.0,
+        "lossDbReductionFactor": 1.0,
+        "phaseErrorAmplitudeReductionFactor": 1.0
+      },
+      "recoveredOperatingPoint": {
+        "additionalLossDb": 0.1,
+        "darkCountRateHz": 5.0,
+        "detectorEfficiency": 0.98,
+        "effectivePhysicalErrorRate": 0.001169356580883787,
+        "estimatedLogicalErrorRatePerCycle": 5.604232640726062e-15,
+        "feedForwardLatencyNs": 50.0,
+        "passesTarget": true,
+        "phaseErrorRad": 0.08
+      },
+      "remainingNonDeviceErrorBudget": 0.0022956984168063894,
+      "stressContributions": {
+        "dark": 5e-09,
+        "detector": 0.00024000000000000022,
+        "latency": 0.00022500000000000002,
+        "loss": 0.0004552555808837866,
+        "phase": 0.00022400000000000002
+      },
+      "stressNonDeviceContribution": 0.0011442605808837868,
+      "stressPointLogicalErrorRate": 5.604232640726062e-15,
+      "stressPointPassesAsIs": true,
+      "targetLogicalErrorRate": 1e-08,
+      "worstCaseStressContributions": {
+        "dark": 5e-09,
+        "detector": 0.0003000000000000003,
+        "latency": 0.00025,
+        "loss": 0.0005450555244606981,
+        "phase": 0.0002835
+      },
+      "worstCaseStressEffectivePhysicalErrorRate": 0.0014036565244606985,
+      "worstCaseStressLogicalErrorRate": 2.5948229562095954e-13,
+      "worstCaseStressPointPasses": true
+    },
+    {
+      "distance": 61,
+      "maxUniformStressScale": 1.0,
+      "minimumRequiredImprovements": {
+        "darkCountReductionFactor": 1.0,
+        "detectorInefficiencyReductionFactor": 1.0,
+        "lossDbReductionFactor": 1.0,
+        "phaseErrorAmplitudeReductionFactor": 1.0
+      },
+      "recoveredOperatingPoint": {
+        "additionalLossDb": 0.1,
+        "darkCountRateHz": 5.0,
+        "detectorEfficiency": 0.98,
+        "effectivePhysicalErrorRate": 0.001169356580883787,
+        "estimatedLogicalErrorRatePerCycle": 2.7433786406436603e-21,
+        "feedForwardLatencyNs": 50.0,
+        "passesTarget": true,
+        "phaseErrorRad": 0.08
+      },
+      "remainingNonDeviceErrorBudget": 0.002734881160640785,
+      "stressContributions": {
+        "dark": 5e-09,
+        "detector": 0.00024000000000000022,
+        "latency": 0.00022500000000000002,
+        "loss": 0.0004552555808837866,
+        "phase": 0.00022400000000000002
+      },
+      "stressNonDeviceContribution": 0.0011442605808837868,
+      "stressPointLogicalErrorRate": 2.7433786406436603e-21,
+      "stressPointPassesAsIs": true,
+      "targetLogicalErrorRate": 1e-09,
+      "worstCaseStressContributions": {
+        "dark": 5e-09,
+        "detector": 0.0003000000000000003,
+        "latency": 0.00025,
+        "loss": 0.0005450555244606981,
+        "phase": 0.0002835
+      },
+      "worstCaseStressEffectivePhysicalErrorRate": 0.0014036565244606985,
+      "worstCaseStressLogicalErrorRate": 7.8888949870665775e-19,
+      "worstCaseStressPointPasses": true
+    }
+  ],
+  "schemaVersion": "open-quantum.stress-recovery.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "stressPoint": {
+    "additionalLossDb": 0.1,
+    "darkCountRateHz": 5.0,
+    "detectorEfficiency": 0.98,
+    "feedForwardLatencyNs": 50.0,
+    "phaseErrorRad": 0.08
+  },
+  "summary": {
+    "stressPointPassesAsIs": true,
+    "target1e9MaxUniformStressScale": 1.0,
+    "target1e9RecoveredLogicalErrorRate": 2.7433786406436603e-21,
+    "target1e9RecoveredPointPasses": true,
+    "target1e9StressPointPassesAsIs": true,
+    "target1e9WorstCaseStressPasses": true,
+    "targetCount": 2
+  },
+  "worstCaseStressPoint": {
+    "additionalLossDb": 0.12,
+    "darkCountRateHz": 5.0,
+    "detectorEfficiency": 0.975,
+    "feedForwardLatencyNs": 55.0,
+    "phaseErrorRad": 0.09
+  }
+}

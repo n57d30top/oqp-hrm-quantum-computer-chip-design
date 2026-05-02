@@ -1,0 +1,1902 @@
+{
+  "artifactCount": 106,
+  "artifacts": [
+    {
+      "bytes": 2760,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/30-minute-reproduction.md",
+      "sha256": "33097fb659b43c420e1d518762199d77be2a882e5d58e2e7c6925fd8d5511687"
+    },
+    {
+      "bytes": 3558,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/data-room-index.md",
+      "sha256": "624fd54d3f61d4d9579ae1135e4496abf02aa70904f5a2194e6ef07584844599"
+    },
+    {
+      "bytes": 1682,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/grant-concept-note.md",
+      "sha256": "f3f6cdf6e0ea46b860028d6502e70b7bfc2992e5956ecf6998b9660484b0bfd8"
+    },
+    {
+      "bytes": 4982,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/no-budget-partner-package.md",
+      "sha256": "9d231fb68c38ef469a89617e75e4143321af6db37b1eef60df9f82c4d54a48b8"
+    },
+    {
+      "bytes": 3221,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/open-validation-issues.md",
+      "sha256": "c55e6f5def5ef7b25ce307b3408a470ca307dc5810656f8e6f00e224b79770af"
+    },
+    {
+      "bytes": 1612,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/partner-outreach.md",
+      "sha256": "82761532719fe84c4ccdf60f0a5919007958b7bad883717dbb2f3243fcb30d6b"
+    },
+    {
+      "bytes": 947,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/partner-pipeline.md",
+      "sha256": "b4a0ca287ea96e6f42f1de2b3d4f17099efd48f7730c3357dbdf57d2a78f3fa1"
+    },
+    {
+      "bytes": 4053,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/preprint-outline.md",
+      "sha256": "c6fbfadcab79e3deb230d530efc76870e6d617f462758bafe500da35d1b547c0"
+    },
+    {
+      "bytes": 2340,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/reviewer-pack.md",
+      "sha256": "03a64d08cd78fd551a06ac856873275b4aa3127de8382a2f27fbd8837328d5ef"
+    },
+    {
+      "bytes": 7812,
+      "exists": true,
+      "kind": "md",
+      "path": "docs/value-increase-completion-audit.md",
+      "sha256": "9c7400c31b7d2a19486872bb4e7f32afc82114fc02e8485a1f3590d2afa64edd"
+    },
+    {
+      "bytes": 41505,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/budget-optimizer-report.json",
+      "schemaVersion": "open-quantum.budget-optimizer.v1",
+      "sha256": "edaa4bd18f6359e2524caf3b2a8e73d2193121fc50384ea4f318ba51c502f4fa",
+      "summary": {
+        "target1e9BestBalancedLogicalErrorRate": 1.9063979697855677e-10,
+        "target1e9BestBalancedReserve": 0.00015558588300841896,
+        "target1e9BestBalancedUsedBudgetFraction": 0.9000000000000001,
+        "target1e9DetectorRelaxedMinEfficiency": 0.909241568245089,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 222.82023621178652,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.24317824680938493,
+        "target1e9OptimizedProfileCount": 8442,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 3067,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/control-timing-model-report.json",
+      "schemaVersion": "open-quantum.control-timing-model.v1",
+      "sha256": "53257c9659f47fc95b1f7849757a10947840374f89026b91cdf5aa02b1002298",
+      "summary": {
+        "bestFastPathLatencyNs": 1.6,
+        "bestProfileId": "asic_or_close_fpga_optimized_v2",
+        "bestTotalLatencyNs": 1.6,
+        "fullDecoderNotClaimedInFeedForwardWindow": true,
+        "fullDecoderSeparatedFromFastPath": true,
+        "hardwareFeedForwardVerified": false,
+        "passingProfileCount": 2,
+        "profileCount": 3,
+        "target1e9TimingClosedInSimulation": true
+      }
+    },
+    {
+      "bytes": 2478,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/decoder-evidence-report.json",
+      "schemaVersion": "open-quantum.decoder-evidence.v1",
+      "sha256": "61aab6e3356b7a29160d7123efca150a849c46744a9a621f6d84887e06fb228f",
+      "summary": {
+        "fullDecoderSeparatedFromFastPath": true,
+        "productionDecoderReady": false,
+        "sampledEvidenceSufficientFor1e9Claim": false,
+        "target1e9LatencyBelow1000Ns": true,
+        "target1e9LatencyBelow250Ns": true,
+        "target1e9LatencyBelow50Ns": true,
+        "target1e9ToyDecoderLatencyNs": 20.85363123777305,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 657920,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/deep-hardening-v2-report.json",
+      "schemaVersion": "open-quantum.deep-hardening-v2.v1",
+      "sha256": "0391d8b96c2d7eeaab3a7248a7122d3128cd1cd2858d3facf7e5d56e6e84ee7e",
+      "summary": {
+        "allVirtualSparameterCrosstalkBelow1Percent": true,
+        "allVirtualSparameterCrosstalkBelow2Percent": true,
+        "allVirtualSparameterReflectionBelow0p05Percent": true,
+        "allVirtualSparameterReflectionBelow0p1Percent": true,
+        "bestNominalFusionFidelity": 0.9999925,
+        "bestNominalFusionSuccessProbability": 0.9988649561249999,
+        "bestStretchFusionFidelity": 0.9999925,
+        "bestStretchFusionSuccessProbability": 1.0,
+        "bestUpgradedSourceDetectorFusionSuccessProbability": 1.0,
+        "combinedStressPointPass": true,
+        "deepHardeningScore": 110,
+        "fastPathBestLatencyNs": 1.6,
+        "fullDecoderSeparatedFromFastPath": true,
+        "fusionStretchTargetMet": true,
+        "fusionTargetMetInNominalScenario": true,
+        "fusionTargetMetInUpgradedSourceDetectorScenario": true,
+        "internalConsistencyPass": true,
+        "maxEffectiveElectricalPackagePadCount": 160,
+        "maxEffectiveOpticalPackagePortCount": 90,
+        "maxQubitEnvelopeLogicalQubits": 352,
+        "maxQubitEnvelopePhysicalModes": 704,
+        "maxScaledLayoutAreaMm2": 17.783064,
+        "maxScaledLayoutRouteReductionFraction": 0.891348564528632,
+        "maxScaledLogicalQubits": 352,
+        "maxScaledPhysicalModes": 704,
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxVirtualSparameterCrosstalkRatio": 0.0039,
+        "maxVirtualSparameterReflectionRatio": 0.0001,
+        "monteCarloRobustnessPass": true,
+        "nextRejectedQubitEnvelopePhysicalModes": 712,
+        "paretoFrontCandidateCount": 547,
+        "prototypeLocalSimulationCriteriaImproved": 7,
+        "scaledLayoutAreaStretchTargetMet": true,
+        "scaledLayoutAreaTargetMet": true,
+        "simulatedOnly": true,
+        "status": "deep_hardening_v2_generated",
+        "target1e8LogicalErrorMet": true,
+        "target1e9ControlTimingPass": true,
+        "target1e9DetectorRelaxedMinEfficiency": 0.909241568245089,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9JointBudgetLogicalErrorRate": 1.0912266977371629e-11,
+        "target1e9JointBudgetPass": true,
+        "target1e9JointBudgetReserve": 0.0003889647075210475,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 222.82023621178652,
+        "target1e9LogicalErrorMet": true,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.24317824680938493,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 316.17176601683786,
+        "target1e9MaxSingleAxisLossDb": 0.35171558050203805,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.21083906049633414,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.8703450974929842,
+        "target1e9OperationalEnvelopeDistance": 31,
+        "target1e9OptimizedBalancedLogicalErrorRate": 1.9063979697855677e-10,
+        "target1e9OptimizedProfileCount": 8442,
+        "target1e9StressRecoveryScaleFactor": 1.0,
+        "target1e9ToyDecoderLatencyBelow250Ns": true,
+        "target1e9ToyDecoderLatencyBelow50Ns": true,
+        "target1e9ToyDecoderLatencyNs": 20.85363123777305,
+        "truthSwitchRawBestCrosstalkRatio": 0.0039,
+        "truthSwitchRawBestReflectionRatio": 0.0001,
+        "truthSwitchRawStretchTargetMet": true,
+        "truthSwitchRawStrictTargetMet": true,
+        "truthSwitchStrictTargetMet": true,
+        "virtualSparameterAcceptedDeviceCount": 4,
+        "virtualSparameterReadyForFoundryClaim": false,
+        "worstCaseCornerSweepPass": true,
+        "worstCaseStressPointPass": true
+      }
+    },
+    {
+      "bytes": 4977,
+      "exists": true,
+      "kind": "md",
+      "path": "node-alpha/deep-hardening-v2-20260502/deep-hardening-v2-report.md",
+      "sha256": "2e4865930a12ff115b159af6897e8e63f0c535fbe98a2d35208f8902a11e043d"
+    },
+    {
+      "bytes": 1668,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/deep-hardening-v2-scorecard.json",
+      "schemaVersion": "open-quantum.deep-hardening-v2-scorecard.v1",
+      "sha256": "20c6af9a70634f61b2f6f8b0a29054bd46973f1a2a0b6a0f2df52a3c542122ce",
+      "summary": {
+        "foundrySparametersReady": false,
+        "maxScore": 110,
+        "prototypeReady": false,
+        "score": 110,
+        "status": "simulation_hardening_complete",
+        "tapeoutReady": false
+      }
+    },
+    {
+      "bytes": 69163,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/device-sweep-deep-hardening-v2.json",
+      "schemaVersion": "open-quantum.device-sweep.v1",
+      "sha256": "e682a976dc81b82ec254e8005db75f19f279dfde314dbffdf74c373508e50dd5"
+    },
+    {
+      "bytes": 31756,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/fusion-performance-candidates.json",
+      "schemaVersion": "open-quantum.fusion-performance-candidates.v1",
+      "sha256": "35f1e801ceeedd435699728d3347c07e9355b74176702803c26a7efc031f46db",
+      "summary": {
+        "bestNominalProcessFidelity": 0.9999925,
+        "bestNominalSuccessProbability": 0.9988649561249999,
+        "bestStretchProcessFidelity": 0.9999925,
+        "bestStretchSuccessProbability": 1.0,
+        "bestUpgradedSourceDetectorProcessFidelity": 0.9999925,
+        "bestUpgradedSourceDetectorSuccessProbability": 1.0,
+        "nominalCandidateMeets90PercentSuccess": true,
+        "nominalCandidateMeets9997Fidelity": true,
+        "nominalCandidateMeetsBothTargets": true,
+        "stretchCandidateMeets95PercentSuccess": true,
+        "stretchCandidateMeets9999Fidelity": true,
+        "stretchCandidateMeetsBothTargets": true,
+        "upgradedSourceDetectorCandidateMeets90PercentSuccess": true,
+        "upgradedSourceDetectorCandidateMeets9997Fidelity": true,
+        "upgradedSourceDetectorCandidateMeetsBothTargets": true
+      }
+    },
+    {
+      "bytes": 11017,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/hardened-simulation-profile.json",
+      "schemaVersion": "open-quantum.hardened-simulation-profile.v1",
+      "sha256": "cc49e0598a2499e87f26519a2deedeb5209a504f1fb636d6641684c711b623e3",
+      "summary": {
+        "allVirtualCrosstalkBelow1Percent": true,
+        "allVirtualReflectionBelow0p05Percent": true,
+        "foundryCalibratedDeviceCount": 0,
+        "fusionCandidateCrosstalkRatio": 1e-05,
+        "fusionCandidateReflectionRatio": 1e-05,
+        "truthSwitchRawCrosstalkRatio": 0.0039,
+        "truthSwitchRawMeetsStretchTargets": true,
+        "truthSwitchRawReflectionRatio": 0.0001
+      }
+    },
+    {
+      "bytes": 1230,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/internal-consistency-audit.json",
+      "schemaVersion": "open-quantum.internal-consistency-audit.v1",
+      "sha256": "ecf1292fed93e2c76e2bb6deccbb4bced0e227e6b92938b2db1744e1f9fe9bf8",
+      "summary": {
+        "allChecksPassed": true,
+        "checkCount": 10,
+        "failedChecks": [],
+        "passedCheckCount": 10
+      }
+    },
+    {
+      "bytes": 6531,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/joint-error-budget-report.json",
+      "schemaVersion": "open-quantum.joint-error-budget.v1",
+      "sha256": "d4068d52e672c92c958fce66774b9dd9dd687d2f267df1fedb9faef6704d8aae",
+      "summary": {
+        "profileCount": 6,
+        "target1e8JointBudgetPass": true,
+        "target1e9BalancedAdditionalLossDb": 0.06810125470913501,
+        "target1e9BalancedDetectorEfficiency": 0.9740690194985968,
+        "target1e9BalancedLogicalErrorRate": 1.0912266977371629e-11,
+        "target1e9BalancedReserve": 0.0003889647075210475,
+        "target1e9JointBudgetPass": true
+      }
+    },
+    {
+      "bytes": 16915,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/max-qubit-envelope-report.json",
+      "schemaVersion": "open-quantum.max-qubit-layout-search.v1",
+      "sha256": "ae54e4db0328c3421efb08d1b77372dfac6d0334051ed82b0521152c96c6b319",
+      "summary": {
+        "maxFeasibleAreaMm2": 17.783064,
+        "maxFeasibleLogicalQubits": 352,
+        "maxFeasiblePhysicalModes": 704,
+        "maxFeasibleProfileId": "stretch_mux_density_v8_review",
+        "nextRejectedAreaMm2": 18.12188,
+        "nextRejectedLogicalQubits": 356,
+        "nextRejectedPhysicalModes": 712
+      }
+    },
+    {
+      "bytes": 23300,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/monte-carlo-robustness-report.json",
+      "schemaVersion": "open-quantum.monte-carlo-robustness.v1",
+      "sha256": "3f584146cca290d7d02cda3adb8f3f1fea6e1840d1f53c9d5ee6e3cdae5f1e5a",
+      "summary": {
+        "failureCount": 0,
+        "limitingParameter": "crosstalk",
+        "passCount": 512,
+        "passFraction": 1.0,
+        "robustnessTargetMet": true,
+        "worstLogicalErrorRate": 1.1702966063909875e-49,
+        "worstTruthSwitchCrosstalkRatio": 0.004601284457811264,
+        "worstTruthSwitchReflectionRatio": 0.00011976568916000897
+      }
+    },
+    {
+      "bytes": 45357,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/multiobjective-pareto-report.json",
+      "schemaVersion": "open-quantum.multiobjective-pareto.v1",
+      "sha256": "a0ad35651ab88f7fe1c9511843359446ddb89879b3fe067c58ab3a8792e7dc45",
+      "summary": {
+        "coveredDevices": [
+          "coupler",
+          "mzi",
+          "phase-shifter",
+          "truth-switch"
+        ],
+        "paretoFrontCandidateCount": 547,
+        "rawTruthSwitchNoGoFamilies": [
+          "unknown_truth_switch_family"
+        ],
+        "truthSwitchRawV2Candidates": 2
+      }
+    },
+    {
+      "bytes": 13088,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/operational-envelope-report.json",
+      "schemaVersion": "open-quantum.operational-envelope.v1",
+      "sha256": "62d05e5acb13e376d3232326172e376b68c61cc40901f8dd67545c278cf8a7cf",
+      "summary": {
+        "stressScenarioStillFailsTargets": false,
+        "target1e8RecommendedDistance": 31,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 316.17176601683786,
+        "target1e9MaxSingleAxisLossDb": 0.35171558050203805,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.21083906049633414,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.8703450974929842,
+        "target1e9RecommendedDistance": 31
+      }
+    },
+    {
+      "bytes": 657920,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/performance-upgrade-report.json",
+      "schemaVersion": "open-quantum.deep-hardening-v2.v1",
+      "sha256": "0391d8b96c2d7eeaab3a7248a7122d3128cd1cd2858d3facf7e5d56e6e84ee7e",
+      "summary": {
+        "allVirtualSparameterCrosstalkBelow1Percent": true,
+        "allVirtualSparameterCrosstalkBelow2Percent": true,
+        "allVirtualSparameterReflectionBelow0p05Percent": true,
+        "allVirtualSparameterReflectionBelow0p1Percent": true,
+        "bestNominalFusionFidelity": 0.9999925,
+        "bestNominalFusionSuccessProbability": 0.9988649561249999,
+        "bestStretchFusionFidelity": 0.9999925,
+        "bestStretchFusionSuccessProbability": 1.0,
+        "bestUpgradedSourceDetectorFusionSuccessProbability": 1.0,
+        "combinedStressPointPass": true,
+        "deepHardeningScore": 110,
+        "fastPathBestLatencyNs": 1.6,
+        "fullDecoderSeparatedFromFastPath": true,
+        "fusionStretchTargetMet": true,
+        "fusionTargetMetInNominalScenario": true,
+        "fusionTargetMetInUpgradedSourceDetectorScenario": true,
+        "internalConsistencyPass": true,
+        "maxEffectiveElectricalPackagePadCount": 160,
+        "maxEffectiveOpticalPackagePortCount": 90,
+        "maxQubitEnvelopeLogicalQubits": 352,
+        "maxQubitEnvelopePhysicalModes": 704,
+        "maxScaledLayoutAreaMm2": 17.783064,
+        "maxScaledLayoutRouteReductionFraction": 0.891348564528632,
+        "maxScaledLogicalQubits": 352,
+        "maxScaledPhysicalModes": 704,
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxVirtualSparameterCrosstalkRatio": 0.0039,
+        "maxVirtualSparameterReflectionRatio": 0.0001,
+        "monteCarloRobustnessPass": true,
+        "nextRejectedQubitEnvelopePhysicalModes": 712,
+        "paretoFrontCandidateCount": 547,
+        "prototypeLocalSimulationCriteriaImproved": 7,
+        "scaledLayoutAreaStretchTargetMet": true,
+        "scaledLayoutAreaTargetMet": true,
+        "simulatedOnly": true,
+        "status": "deep_hardening_v2_generated",
+        "target1e8LogicalErrorMet": true,
+        "target1e9ControlTimingPass": true,
+        "target1e9DetectorRelaxedMinEfficiency": 0.909241568245089,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9JointBudgetLogicalErrorRate": 1.0912266977371629e-11,
+        "target1e9JointBudgetPass": true,
+        "target1e9JointBudgetReserve": 0.0003889647075210475,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 222.82023621178652,
+        "target1e9LogicalErrorMet": true,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.24317824680938493,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 316.17176601683786,
+        "target1e9MaxSingleAxisLossDb": 0.35171558050203805,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.21083906049633414,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.8703450974929842,
+        "target1e9OperationalEnvelopeDistance": 31,
+        "target1e9OptimizedBalancedLogicalErrorRate": 1.9063979697855677e-10,
+        "target1e9OptimizedProfileCount": 8442,
+        "target1e9StressRecoveryScaleFactor": 1.0,
+        "target1e9ToyDecoderLatencyBelow250Ns": true,
+        "target1e9ToyDecoderLatencyBelow50Ns": true,
+        "target1e9ToyDecoderLatencyNs": 20.85363123777305,
+        "truthSwitchRawBestCrosstalkRatio": 0.0039,
+        "truthSwitchRawBestReflectionRatio": 0.0001,
+        "truthSwitchRawStretchTargetMet": true,
+        "truthSwitchRawStrictTargetMet": true,
+        "truthSwitchStrictTargetMet": true,
+        "virtualSparameterAcceptedDeviceCount": 4,
+        "virtualSparameterReadyForFoundryClaim": false,
+        "worstCaseCornerSweepPass": true,
+        "worstCaseStressPointPass": true
+      }
+    },
+    {
+      "bytes": 4977,
+      "exists": true,
+      "kind": "md",
+      "path": "node-alpha/deep-hardening-v2-20260502/performance-upgrade-report.md",
+      "sha256": "2e4865930a12ff115b159af6897e8e63f0c535fbe98a2d35208f8902a11e043d"
+    },
+    {
+      "bytes": 3146,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/prototype-gap-reduction-report.json",
+      "schemaVersion": "open-quantum.prototype-gap-reduction.v1",
+      "sha256": "591c68166deeee228985af912800b3c2685378e162090045ac317c8aac900288",
+      "summary": {
+        "localSimulationCriteriaImproved": 7,
+        "localSimulationCriteriaTotal": 7,
+        "prototypeReadyAfterLocalWork": false,
+        "realPrototypeCriteriaStillComplete": 1,
+        "realPrototypeCriteriaTotal": 9
+      }
+    },
+    {
+      "bytes": 147277,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/resource-scaling-report.json",
+      "schemaVersion": "open-quantum.performance-resource-scaling.v1",
+      "sha256": "77290a5afa78eb8ad3cefedae2c2f4006361e03c721aae4744c643046a12555c",
+      "summary": {
+        "maxAncillaModesPerCycle": 704,
+        "maxLogicalQubits": 352,
+        "maxPhysicalModes": 704,
+        "maxPnrDetectors": 704,
+        "maxSinglePhotonSources": 704,
+        "targetCount": 36
+      }
+    },
+    {
+      "bytes": 139221,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/scaled-layout-envelope-report.json",
+      "schemaVersion": "open-quantum.scaled-layout-envelope.v1",
+      "sha256": "14309fb308afef31905998aa03e62988d7a8d48ceceb7d34f2d132755578779f",
+      "summary": {
+        "bankedIoModelApplied": true,
+        "denseReviewLayout": true,
+        "maxEffectiveBankedAreaMm2": 17.783064,
+        "maxEffectiveElectricalPackagePadCount": 160,
+        "maxEffectiveOpticalPackagePortCount": 90,
+        "maxElectricalPadCount": 938,
+        "maxEstimatedAreaMm2": 17.783064,
+        "maxEstimatedAreaStretchTargetMet": true,
+        "maxEstimatedAreaTargetMet": true,
+        "maxLogicalQubits": 352,
+        "maxOpticalPortCount": 12198,
+        "maxPhysicalModes": 704,
+        "maxQubitLayoutComputable": true,
+        "maxQubitLogicalQubits": 352,
+        "maxQubitPhysicalModes": 704,
+        "maxQubitTapeoutReady": false,
+        "maxReviewElectricalPackagePads": 192,
+        "maxReviewOpticalPackagePorts": 96,
+        "maxTotalRouteLengthReductionFraction": 0.891348564528632,
+        "nextRejectedPhysicalModes": 712,
+        "packageEnvelopeTargetMet": true,
+        "routingReductionTargetMet": true,
+        "scaled144LayoutComputable": true,
+        "scaled144TapeoutReady": false,
+        "targetCount": 18
+      }
+    },
+    {
+      "bytes": 4936,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/stress-recovery-report.json",
+      "schemaVersion": "open-quantum.stress-recovery.v1",
+      "sha256": "52a0ac133d4268f889c9d02541d5ee77461e94d88935171d0bcfea247d614c14",
+      "summary": {
+        "stressPointPassesAsIs": true,
+        "target1e9MaxUniformStressScale": 1.0,
+        "target1e9RecoveredLogicalErrorRate": 8.030168540138633e-12,
+        "target1e9RecoveredPointPasses": true,
+        "target1e9StressPointPassesAsIs": true,
+        "target1e9WorstCaseStressPasses": true,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 16631,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/threshold-performance-sweep.json",
+      "schemaVersion": "open-quantum.performance-threshold-sweep.v1",
+      "sha256": "fdda8ea08cf9a454ddb21388ca8bd65a96605900735f5aa57d72e9f5e7792e33",
+      "summary": {
+        "belowThresholdCandidateCount": 32768,
+        "target1e8IdealMet": true,
+        "target1e8Met": true,
+        "target1e8StressMet": true,
+        "target1e9IdealMet": true,
+        "target1e9Met": true,
+        "target1e9StressMet": true
+      }
+    },
+    {
+      "bytes": 3484,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/throughput-report.json",
+      "schemaVersion": "open-quantum.throughput-report.v1",
+      "sha256": "e2f8aeb7365df7b1ca7f7f7664c8843e7353a45aeaeed8c29f50d0c61ebb3676",
+      "summary": {
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxUpperBoundLogicalCyclesPerSecond": 8695652.173913043
+      }
+    },
+    {
+      "bytes": 12264,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/truth-switch-raw-closure-report.json",
+      "schemaVersion": "open-quantum.truth-switch-raw-closure.v1",
+      "sha256": "a1390749f7f3805e25f8e077149dda79f9086047036b7a347a9a92910390f0f2",
+      "summary": {
+        "bestRawCrosstalkRatio": 0.0039,
+        "bestRawReflectionRatio": 0.0001,
+        "candidateCount": 1394,
+        "derivedStrictTargetMet": false,
+        "rawStretchTargetMet": true,
+        "rawStrictTargetMet": true
+      }
+    },
+    {
+      "bytes": 5822,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/virtual-sparameter-acceptance-report.json",
+      "schemaVersion": "open-quantum.virtual-sparameter-acceptance.v1",
+      "sha256": "f194daeb2d97bec2262bf2e8ddda7d5cb3c1d667783a4db59130300064803e82",
+      "summary": {
+        "acceptedVirtualDeviceCount": 4,
+        "allFoundryModelsAccepted": false,
+        "allVirtualCrosstalkBelow0p75Percent": true,
+        "allVirtualCrosstalkBelow1Percent": true,
+        "allVirtualCrosstalkBelow2Percent": true,
+        "allVirtualModelsAccepted": true,
+        "allVirtualReflectionBelow0p03Percent": true,
+        "allVirtualReflectionBelow0p05Percent": true,
+        "allVirtualReflectionBelow0p1Percent": true,
+        "foundryCalibratedDeviceCount": 0,
+        "maxVirtualCrosstalkRatio": 0.0039,
+        "maxVirtualReflectionRatio": 0.0001,
+        "requiredDeviceCount": 4
+      }
+    },
+    {
+      "bytes": 4444,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v2-20260502/worst-case-corner-sweep-report.json",
+      "schemaVersion": "open-quantum.worst-case-corner-sweep.v1",
+      "sha256": "7eba4ed53cb85d1f7f10f34ff44867ba306d1c1dbdcddc4df90997519bba90bc",
+      "summary": {
+        "allVirtualCrosstalkBelow1Percent": true,
+        "allVirtualReflectionBelow0p05Percent": true,
+        "allWorstCaseTargetsPass": true,
+        "cornerCountPerDevice": 243,
+        "fusionWorstCaseFidelityAbove9997": true,
+        "fusionWorstCaseSuccessAbove90Percent": true,
+        "thresholdWorstCasePasses1e9": true
+      }
+    },
+    {
+      "bytes": 41556,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/budget-optimizer-report.json",
+      "schemaVersion": "open-quantum.budget-optimizer.v1",
+      "sha256": "faac361b162db498b9dee2660b5dd7cb59744eae0ac80a73ea3426d3d38718b5",
+      "summary": {
+        "target1e9BestBalancedLogicalErrorRate": 1.4711041659587364e-13,
+        "target1e9BestBalancedReserve": 0.0006837202901601959,
+        "target1e9BestBalancedUsedBudgetFraction": 0.7500000000000001,
+        "target1e9DetectorRelaxedMinEfficiency": 0.8404652656292875,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 387.88336248970995,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.4369747808462235,
+        "target1e9OptimizedProfileCount": 8442,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 3550,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/control-timing-model-report.json",
+      "schemaVersion": "open-quantum.control-timing-model.v1",
+      "sha256": "4964b9c15f816ee42e12b78e9498f46dae775e985ca7885e7389fa93f03036bc",
+      "summary": {
+        "bestFastPathLatencyNs": 1.17,
+        "bestProfileId": "v3_sub_1p3ns_fast_path_target",
+        "bestTotalLatencyNs": 1.17,
+        "fullDecoderNotClaimedInFeedForwardWindow": true,
+        "fullDecoderSeparatedFromFastPath": true,
+        "hardwareFeedForwardVerified": false,
+        "passingProfileCount": 3,
+        "profileCount": 4,
+        "target1e9TimingClosedInSimulation": true
+      }
+    },
+    {
+      "bytes": 2520,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json",
+      "schemaVersion": "open-quantum.decoder-evidence.v1",
+      "sha256": "8035b13f1c9abeadcdaf5770bf2864104a98573ac667dc6ef0ad85c3e6815413",
+      "summary": {
+        "fullDecoderSeparatedFromFastPath": true,
+        "productionDecoderReady": false,
+        "sampledEvidenceSufficientFor1e9Claim": false,
+        "target1e9LatencyBelow1000Ns": true,
+        "target1e9LatencyBelow15Ns": true,
+        "target1e9LatencyBelow250Ns": true,
+        "target1e9LatencyBelow50Ns": true,
+        "target1e9ToyDecoderLatencyNs": 12.732638863577915,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 705673,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json",
+      "schemaVersion": "open-quantum.deep-hardening-v3.v1",
+      "sha256": "6ce8f842e17c2fc130c619efae45a4ac9a0167c4c6359995939bab5c583afc50",
+      "summary": {
+        "allVirtualSparameterCrosstalkBelow0p25Percent": true,
+        "allVirtualSparameterCrosstalkBelow0p30Percent": true,
+        "allVirtualSparameterCrosstalkBelow1Percent": true,
+        "allVirtualSparameterCrosstalkBelow2Percent": true,
+        "allVirtualSparameterReflectionBelow0p005Percent": true,
+        "allVirtualSparameterReflectionBelow0p008Percent": true,
+        "allVirtualSparameterReflectionBelow0p05Percent": true,
+        "allVirtualSparameterReflectionBelow0p1Percent": true,
+        "bestNominalFusionFidelity": 0.9999975000000001,
+        "bestNominalFusionSuccessProbability": 1.0,
+        "bestStretchFusionFidelity": 0.9999975000000001,
+        "bestStretchFusionSuccessProbability": 1.0,
+        "bestUpgradedSourceDetectorFusionSuccessProbability": 1.0,
+        "combinedStressPointPass": true,
+        "deepHardeningScore": 110,
+        "fastPathBestLatencyNs": 1.17,
+        "fullDecoderSeparatedFromFastPath": true,
+        "fusionStretchTargetMet": true,
+        "fusionTargetMetInNominalScenario": true,
+        "fusionTargetMetInUpgradedSourceDetectorScenario": true,
+        "internalConsistencyPass": true,
+        "maxEffectiveElectricalPackagePadCount": 176,
+        "maxEffectiveOpticalPackagePortCount": 96,
+        "maxQubitEnvelopeLogicalQubits": 380,
+        "maxQubitEnvelopePhysicalModes": 760,
+        "maxScaledLayoutAreaMm2": 17.979962,
+        "maxScaledLayoutRouteReductionFraction": 0.898313772678447,
+        "maxScaledLogicalQubits": 380,
+        "maxScaledPhysicalModes": 760,
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxVirtualSparameterCrosstalkRatio": 0.0023,
+        "maxVirtualSparameterReflectionRatio": 4e-05,
+        "monteCarloRobustnessPass": true,
+        "nextRejectedQubitEnvelopePhysicalModes": 768,
+        "paretoFrontCandidateCount": 545,
+        "prototypeLocalSimulationCriteriaImproved": 7,
+        "scaledLayoutAreaStretchTargetMet": true,
+        "scaledLayoutAreaTargetMet": true,
+        "simulatedOnly": true,
+        "status": "deep_hardening_v3_generated",
+        "target1e8LogicalErrorMet": true,
+        "target1e9ControlTimingPass": true,
+        "target1e9DetectorRelaxedMinEfficiency": 0.8404652656292875,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9JointBudgetLogicalErrorRate": 1.4711041659587303e-13,
+        "target1e9JointBudgetPass": true,
+        "target1e9JointBudgetReserve": 0.0006837202901601963,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 387.88336248970995,
+        "target1e9LogicalErrorMet": true,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.4369747808462235,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 551.976232128157,
+        "target1e9MaxSingleAxisLossDb": 0.6386042363009726,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.27953436592410935,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.7720932366132679,
+        "target1e9OperationalEnvelopeDistance": 61,
+        "target1e9OptimizedBalancedLogicalErrorRate": 1.4711041659587364e-13,
+        "target1e9OptimizedProfileCount": 8442,
+        "target1e9StressRecoveryScaleFactor": 1.0,
+        "target1e9ToyDecoderLatencyBelow250Ns": true,
+        "target1e9ToyDecoderLatencyBelow50Ns": true,
+        "target1e9ToyDecoderLatencyNs": 12.732638863577915,
+        "truthSwitchRawBestCrosstalkRatio": 0.0023,
+        "truthSwitchRawBestReflectionRatio": 4e-05,
+        "truthSwitchRawStretchTargetMet": true,
+        "truthSwitchRawStrictTargetMet": true,
+        "truthSwitchStrictTargetMet": true,
+        "virtualSparameterAcceptedDeviceCount": 4,
+        "virtualSparameterReadyForFoundryClaim": false,
+        "worstCaseCornerSweepPass": true,
+        "worstCaseStressPointPass": true
+      }
+    },
+    {
+      "bytes": 5096,
+      "exists": true,
+      "kind": "md",
+      "path": "node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.md",
+      "sha256": "f1749f1124641b9e0a3c0b7f41a84307e699802d12e4f66dcd7c86d6c772789a"
+    },
+    {
+      "bytes": 1671,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-scorecard.json",
+      "schemaVersion": "open-quantum.deep-hardening-v3-scorecard.v1",
+      "sha256": "4d86655dbc5d54ea02c7cc6b42d112795ad297c94d0e23dab2efd1b32cd8a65f",
+      "summary": {
+        "foundrySparametersReady": false,
+        "maxScore": 110,
+        "prototypeReady": false,
+        "score": 110,
+        "status": "simulation_hardening_v3_complete",
+        "tapeoutReady": false
+      }
+    },
+    {
+      "bytes": 69163,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json",
+      "schemaVersion": "open-quantum.device-sweep.v1",
+      "sha256": "d320209d1dde1376a2bb72203d68d351ee8042094720da69343ed61f7839f7cc"
+    },
+    {
+      "bytes": 31825,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json",
+      "schemaVersion": "open-quantum.fusion-performance-candidates.v1",
+      "sha256": "c047a7a1ca759fb05e239ec65718794d2f0e9faa928cf879c72dd76b8b7e781d",
+      "summary": {
+        "bestNominalProcessFidelity": 0.9999975000000001,
+        "bestNominalSuccessProbability": 1.0,
+        "bestStretchProcessFidelity": 0.9999975000000001,
+        "bestStretchSuccessProbability": 1.0,
+        "bestUpgradedSourceDetectorProcessFidelity": 0.9999975000000001,
+        "bestUpgradedSourceDetectorSuccessProbability": 1.0,
+        "nominalCandidateMeets90PercentSuccess": true,
+        "nominalCandidateMeets9997Fidelity": true,
+        "nominalCandidateMeetsBothTargets": true,
+        "stretchCandidateMeets95PercentSuccess": true,
+        "stretchCandidateMeets9999Fidelity": true,
+        "stretchCandidateMeetsBothTargets": true,
+        "upgradedSourceDetectorCandidateMeets90PercentSuccess": true,
+        "upgradedSourceDetectorCandidateMeets9997Fidelity": true,
+        "upgradedSourceDetectorCandidateMeetsBothTargets": true
+      }
+    },
+    {
+      "bytes": 11254,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/hardened-simulation-profile.json",
+      "schemaVersion": "open-quantum.hardened-simulation-profile.v3",
+      "sha256": "168dc3ef84e3c1347e94154a385d09c76c5807d4e21cc5f59166545dc8d5d64c",
+      "summary": {
+        "allVirtualCrosstalkBelow0p25Percent": true,
+        "allVirtualCrosstalkBelow0p30Percent": true,
+        "allVirtualCrosstalkBelow1Percent": true,
+        "allVirtualReflectionBelow0p005Percent": true,
+        "allVirtualReflectionBelow0p008Percent": true,
+        "allVirtualReflectionBelow0p05Percent": true,
+        "foundryCalibratedDeviceCount": 0,
+        "fusionCandidateCrosstalkRatio": 2e-06,
+        "fusionCandidateReflectionRatio": 4e-06,
+        "truthSwitchRawCrosstalkRatio": 0.0023,
+        "truthSwitchRawMeetsStretchTargets": true,
+        "truthSwitchRawReflectionRatio": 4e-05
+      }
+    },
+    {
+      "bytes": 1310,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/internal-consistency-audit.json",
+      "schemaVersion": "open-quantum.internal-consistency-audit.v1",
+      "sha256": "def46225c02fc902dd81bee280ebadf6e4a7e1e0568e88aab8d1cc6306cce4b1",
+      "summary": {
+        "allChecksPassed": true,
+        "checkCount": 11,
+        "failedChecks": [],
+        "passedCheckCount": 11
+      }
+    },
+    {
+      "bytes": 6528,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/joint-error-budget-report.json",
+      "schemaVersion": "open-quantum.joint-error-budget.v1",
+      "sha256": "c769bd05f54af0acabea87d10b67804814ab933885839a9eb908a599ac44dbdd",
+      "summary": {
+        "profileCount": 6,
+        "target1e8JointBudgetPass": true,
+        "target1e9BalancedAdditionalLossDb": 0.12042878247293007,
+        "target1e9BalancedDetectorEfficiency": 0.9544186473226536,
+        "target1e9BalancedLogicalErrorRate": 1.4711041659587303e-13,
+        "target1e9BalancedReserve": 0.0006837202901601963,
+        "target1e9JointBudgetPass": true
+      }
+    },
+    {
+      "bytes": 18210,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/max-qubit-envelope-report.json",
+      "schemaVersion": "open-quantum.max-qubit-layout-search.v1",
+      "sha256": "463edbeb2cc38bb9c7a2a182e447c618a6f251a5100d4cae2a4a972b789d11c5",
+      "summary": {
+        "maxFeasibleAreaMm2": 17.979962,
+        "maxFeasibleLogicalQubits": 380,
+        "maxFeasiblePhysicalModes": 760,
+        "maxFeasibleProfileId": "v3_maxout_pitch_floor_review",
+        "nextRejectedAreaMm2": 18.265349,
+        "nextRejectedLogicalQubits": 384,
+        "nextRejectedPhysicalModes": 768
+      }
+    },
+    {
+      "bytes": 4241,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/max-qubit-no-go-map-report.json",
+      "schemaVersion": "open-quantum.max-qubit-no-go-map.v1",
+      "sha256": "725a5581aa7c51e60355d0a4b4bd58fa6d76c7ed7f8473f481e259715021b032"
+    },
+    {
+      "bytes": 22938,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/monte-carlo-robustness-report.json",
+      "schemaVersion": "open-quantum.monte-carlo-robustness.v1",
+      "sha256": "0bfbf1d7419d1bf330cc5c4504a50e63b0525103481405e380c35a08d683a6fc",
+      "summary": {
+        "failureCount": 0,
+        "limitingParameter": "crosstalk",
+        "passCount": 512,
+        "passFraction": 1.0,
+        "robustnessTargetMet": true,
+        "worstLogicalErrorRate": 5.0550495965104103e-48,
+        "worstTruthSwitchCrosstalkRatio": 0.002988889897904043,
+        "worstTruthSwitchReflectionRatio": 5.272849519864232e-05
+      }
+    },
+    {
+      "bytes": 45344,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/multiobjective-pareto-report.json",
+      "schemaVersion": "open-quantum.multiobjective-pareto.v1",
+      "sha256": "45d16fb696d395eca817c869f04c70dfa5ee1b0b626a4a482df40546a1fe9819",
+      "summary": {
+        "coveredDevices": [
+          "coupler",
+          "mzi",
+          "phase-shifter",
+          "truth-switch"
+        ],
+        "paretoFrontCandidateCount": 545,
+        "rawTruthSwitchNoGoFamilies": [
+          "unknown_truth_switch_family"
+        ],
+        "truthSwitchRawV3Candidates": 2
+      }
+    },
+    {
+      "bytes": 13077,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json",
+      "schemaVersion": "open-quantum.operational-envelope.v1",
+      "sha256": "e7c93470ba27b973e19c10ae30e1519e6c1a36c3712e43122d52dce605373a30",
+      "summary": {
+        "stressScenarioStillFailsTargets": false,
+        "target1e8RecommendedDistance": 41,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 551.976232128157,
+        "target1e9MaxSingleAxisLossDb": 0.6386042363009726,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.27953436592410935,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.7720932366132679,
+        "target1e9RecommendedDistance": 61
+      }
+    },
+    {
+      "bytes": 705673,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/performance-upgrade-report.json",
+      "schemaVersion": "open-quantum.deep-hardening-v3.v1",
+      "sha256": "6ce8f842e17c2fc130c619efae45a4ac9a0167c4c6359995939bab5c583afc50",
+      "summary": {
+        "allVirtualSparameterCrosstalkBelow0p25Percent": true,
+        "allVirtualSparameterCrosstalkBelow0p30Percent": true,
+        "allVirtualSparameterCrosstalkBelow1Percent": true,
+        "allVirtualSparameterCrosstalkBelow2Percent": true,
+        "allVirtualSparameterReflectionBelow0p005Percent": true,
+        "allVirtualSparameterReflectionBelow0p008Percent": true,
+        "allVirtualSparameterReflectionBelow0p05Percent": true,
+        "allVirtualSparameterReflectionBelow0p1Percent": true,
+        "bestNominalFusionFidelity": 0.9999975000000001,
+        "bestNominalFusionSuccessProbability": 1.0,
+        "bestStretchFusionFidelity": 0.9999975000000001,
+        "bestStretchFusionSuccessProbability": 1.0,
+        "bestUpgradedSourceDetectorFusionSuccessProbability": 1.0,
+        "combinedStressPointPass": true,
+        "deepHardeningScore": 110,
+        "fastPathBestLatencyNs": 1.17,
+        "fullDecoderSeparatedFromFastPath": true,
+        "fusionStretchTargetMet": true,
+        "fusionTargetMetInNominalScenario": true,
+        "fusionTargetMetInUpgradedSourceDetectorScenario": true,
+        "internalConsistencyPass": true,
+        "maxEffectiveElectricalPackagePadCount": 176,
+        "maxEffectiveOpticalPackagePortCount": 96,
+        "maxQubitEnvelopeLogicalQubits": 380,
+        "maxQubitEnvelopePhysicalModes": 760,
+        "maxScaledLayoutAreaMm2": 17.979962,
+        "maxScaledLayoutRouteReductionFraction": 0.898313772678447,
+        "maxScaledLogicalQubits": 380,
+        "maxScaledPhysicalModes": 760,
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxVirtualSparameterCrosstalkRatio": 0.0023,
+        "maxVirtualSparameterReflectionRatio": 4e-05,
+        "monteCarloRobustnessPass": true,
+        "nextRejectedQubitEnvelopePhysicalModes": 768,
+        "paretoFrontCandidateCount": 545,
+        "prototypeLocalSimulationCriteriaImproved": 7,
+        "scaledLayoutAreaStretchTargetMet": true,
+        "scaledLayoutAreaTargetMet": true,
+        "simulatedOnly": true,
+        "status": "deep_hardening_v3_generated",
+        "target1e8LogicalErrorMet": true,
+        "target1e9ControlTimingPass": true,
+        "target1e9DetectorRelaxedMinEfficiency": 0.8404652656292875,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9JointBudgetLogicalErrorRate": 1.4711041659587303e-13,
+        "target1e9JointBudgetPass": true,
+        "target1e9JointBudgetReserve": 0.0006837202901601963,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 387.88336248970995,
+        "target1e9LogicalErrorMet": true,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.4369747808462235,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 551.976232128157,
+        "target1e9MaxSingleAxisLossDb": 0.6386042363009726,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.27953436592410935,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.7720932366132679,
+        "target1e9OperationalEnvelopeDistance": 61,
+        "target1e9OptimizedBalancedLogicalErrorRate": 1.4711041659587364e-13,
+        "target1e9OptimizedProfileCount": 8442,
+        "target1e9StressRecoveryScaleFactor": 1.0,
+        "target1e9ToyDecoderLatencyBelow250Ns": true,
+        "target1e9ToyDecoderLatencyBelow50Ns": true,
+        "target1e9ToyDecoderLatencyNs": 12.732638863577915,
+        "truthSwitchRawBestCrosstalkRatio": 0.0023,
+        "truthSwitchRawBestReflectionRatio": 4e-05,
+        "truthSwitchRawStretchTargetMet": true,
+        "truthSwitchRawStrictTargetMet": true,
+        "truthSwitchStrictTargetMet": true,
+        "virtualSparameterAcceptedDeviceCount": 4,
+        "virtualSparameterReadyForFoundryClaim": false,
+        "worstCaseCornerSweepPass": true,
+        "worstCaseStressPointPass": true
+      }
+    },
+    {
+      "bytes": 5096,
+      "exists": true,
+      "kind": "md",
+      "path": "node-alpha/deep-hardening-v3-20260502/performance-upgrade-report.md",
+      "sha256": "f1749f1124641b9e0a3c0b7f41a84307e699802d12e4f66dcd7c86d6c772789a"
+    },
+    {
+      "bytes": 3149,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json",
+      "schemaVersion": "open-quantum.prototype-gap-reduction.v1",
+      "sha256": "7316b520424a14e87fa1dc07eda828ff10798dce5f4c54e92af85633a15bfc23",
+      "summary": {
+        "localSimulationCriteriaImproved": 7,
+        "localSimulationCriteriaTotal": 7,
+        "prototypeReadyAfterLocalWork": false,
+        "realPrototypeCriteriaStillComplete": 1,
+        "realPrototypeCriteriaTotal": 9
+      }
+    },
+    {
+      "bytes": 163593,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/resource-scaling-report.json",
+      "schemaVersion": "open-quantum.performance-resource-scaling.v1",
+      "sha256": "9dde793d1d565a95208aa6484e982e2cba4d755488c38007a1ffbc84498c8685",
+      "summary": {
+        "maxAncillaModesPerCycle": 760,
+        "maxLogicalQubits": 380,
+        "maxPhysicalModes": 760,
+        "maxPnrDetectors": 760,
+        "maxSinglePhotonSources": 760,
+        "targetCount": 40
+      }
+    },
+    {
+      "bytes": 161499,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json",
+      "schemaVersion": "open-quantum.scaled-layout-envelope.v1",
+      "sha256": "30c0b3b2b8645fa955ed8c5deb157f4e71b8e95ef417f98c798b8dfa9d9b3499",
+      "summary": {
+        "bankedIoModelApplied": true,
+        "denseReviewLayout": true,
+        "maxEffectiveBankedAreaMm2": 17.979962,
+        "maxEffectiveElectricalPackagePadCount": 176,
+        "maxEffectiveOpticalPackagePortCount": 96,
+        "maxElectricalPadCount": 1014,
+        "maxEstimatedAreaMm2": 17.979962,
+        "maxEstimatedAreaStretchTargetMet": true,
+        "maxEstimatedAreaTargetMet": true,
+        "maxLogicalQubits": 380,
+        "maxOpticalPortCount": 13178,
+        "maxPhysicalModes": 760,
+        "maxQubitLayoutComputable": true,
+        "maxQubitLogicalQubits": 380,
+        "maxQubitPhysicalModes": 760,
+        "maxQubitTapeoutReady": false,
+        "maxReviewElectricalPackagePads": 192,
+        "maxReviewOpticalPackagePorts": 96,
+        "maxTotalRouteLengthReductionFraction": 0.898313772678447,
+        "nextRejectedPhysicalModes": 768,
+        "packageEnvelopeTargetMet": true,
+        "routingReductionTargetMet": true,
+        "scaled144LayoutComputable": true,
+        "scaled144TapeoutReady": false,
+        "targetCount": 20
+      }
+    },
+    {
+      "bytes": 4938,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/stress-recovery-report.json",
+      "schemaVersion": "open-quantum.stress-recovery.v1",
+      "sha256": "6b49c33f3f6b59fc190f9d13a72980c609dcdc891b68ba3a9a14884e82de4cff",
+      "summary": {
+        "stressPointPassesAsIs": true,
+        "target1e9MaxUniformStressScale": 1.0,
+        "target1e9RecoveredLogicalErrorRate": 2.7433786406436603e-21,
+        "target1e9RecoveredPointPasses": true,
+        "target1e9StressPointPassesAsIs": true,
+        "target1e9WorstCaseStressPasses": true,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 16532,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/threshold-performance-sweep.json",
+      "schemaVersion": "open-quantum.performance-threshold-sweep.v1",
+      "sha256": "e468267ea256e1b82427d6e851fe15633ef8d698aaabebaf33128812c8963553",
+      "summary": {
+        "belowThresholdCandidateCount": 32768,
+        "target1e8IdealMet": true,
+        "target1e8Met": true,
+        "target1e8StressMet": true,
+        "target1e9IdealMet": true,
+        "target1e9Met": true,
+        "target1e9StressMet": true
+      }
+    },
+    {
+      "bytes": 3503,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/throughput-report.json",
+      "schemaVersion": "open-quantum.throughput-report.v1",
+      "sha256": "f8cc30c42a9ceb9e7eb8071abaa6c5b403f4c470f87ed39cb6471e73cef0b011",
+      "summary": {
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxUpperBoundLogicalCyclesPerSecond": 8695652.173913043
+      }
+    },
+    {
+      "bytes": 12256,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json",
+      "schemaVersion": "open-quantum.truth-switch-raw-closure.v1",
+      "sha256": "98919797d8840268e1a58d5562db3802dfaf894a9838336a061559401c2114b6",
+      "summary": {
+        "bestRawCrosstalkRatio": 0.0023,
+        "bestRawReflectionRatio": 4e-05,
+        "candidateCount": 1394,
+        "derivedStrictTargetMet": false,
+        "rawStretchTargetMet": true,
+        "rawStrictTargetMet": true
+      }
+    },
+    {
+      "bytes": 6021,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json",
+      "schemaVersion": "open-quantum.virtual-sparameter-acceptance.v1",
+      "sha256": "d2bc83c61e6c4fb2653b08f8a578b94af36a07f67bdc9459dc624ae00759749b",
+      "summary": {
+        "acceptedVirtualDeviceCount": 4,
+        "allFoundryModelsAccepted": false,
+        "allVirtualCrosstalkBelow0p25Percent": true,
+        "allVirtualCrosstalkBelow0p30Percent": true,
+        "allVirtualCrosstalkBelow0p75Percent": true,
+        "allVirtualCrosstalkBelow1Percent": true,
+        "allVirtualCrosstalkBelow2Percent": true,
+        "allVirtualModelsAccepted": true,
+        "allVirtualReflectionBelow0p005Percent": true,
+        "allVirtualReflectionBelow0p008Percent": true,
+        "allVirtualReflectionBelow0p03Percent": true,
+        "allVirtualReflectionBelow0p05Percent": true,
+        "allVirtualReflectionBelow0p1Percent": true,
+        "foundryCalibratedDeviceCount": 0,
+        "maxVirtualCrosstalkRatio": 0.0023,
+        "maxVirtualReflectionRatio": 4e-05,
+        "requiredDeviceCount": 4
+      }
+    },
+    {
+      "bytes": 4555,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json",
+      "schemaVersion": "open-quantum.worst-case-corner-sweep.v1",
+      "sha256": "c0752a727805da650e66cfeb5f210741515c065116645bbc4822b643112515f3",
+      "summary": {
+        "allVirtualCrosstalkBelow1Percent": true,
+        "allVirtualReflectionBelow0p05Percent": true,
+        "allWorstCaseTargetsPass": true,
+        "cornerCountPerDevice": 1875,
+        "fusionWorstCaseFidelityAbove9997": true,
+        "fusionWorstCaseSuccessAbove90Percent": true,
+        "thresholdWorstCasePasses1e9": true
+      }
+    },
+    {
+      "bytes": 48080,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/gds-path/gds-audit.json",
+      "schemaVersion": "open-quantum.gds-audit.v1",
+      "sha256": "84b4fb4a6de99c636ac8911087071b2f4412664b498253e21a850f19553737bb"
+    },
+    {
+      "bytes": 426738,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/gds-path/gds-manifest.json",
+      "schemaVersion": "open-quantum.gds-manifest.v1",
+      "sha256": "18639f1624a909c6dcd29cf8d79a72153b472dc8bb2b0534982e360c2e60d442"
+    },
+    {
+      "bytes": 22072,
+      "exists": true,
+      "kind": "gds",
+      "path": "node-alpha/gds-path/oqp-hrm-generic-siph.gds",
+      "sha256": "a17670ab7e7613d0ab43b5a4b5b0aaf637cca401e7047f983f0d5dde50577d3b"
+    },
+    {
+      "bytes": 1548,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/no-budget-package/no-budget-readiness.json",
+      "schemaVersion": "open-quantum.no-budget-readiness.v1",
+      "sha256": "185484146458c29d3f0680db3e529ff0e96f64a620143d11a9115cc0f80324fe"
+    },
+    {
+      "bytes": 29232,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/no-budget-package/value-scorecard.json",
+      "schemaVersion": "open-quantum.value-scorecard.v1",
+      "sha256": "fc9922bcadd0cffb50946822039d3afe8436b0234c26a7c671d0cccfaebec1f4",
+      "summary": {
+        "activeCriticalRiskCount": 2,
+        "currentCommercialReadiness": 25,
+        "deterministicYieldPassing": true,
+        "foundrySparametersReady": false,
+        "grantLeverageRange": {
+          "currency": "USD_or_EUR_non_dilutive_target",
+          "high": 300000,
+          "low": 50000,
+          "mid": 150000,
+          "rationale": "A strong simulation package can support a proof-of-concept grant ask; award probability is separate."
+        },
+        "immediateSaleRange": {
+          "currency": "USD_or_EUR_order_of_magnitude",
+          "high": 10000,
+          "low": 0,
+          "mid": 5000,
+          "rationale": "No patent, no chip, no foundry signoff, and no hardware data keep cash-sale value low."
+        },
+        "partnerDiligenceReadiness": 100,
+        "partnerPackageRange": {
+          "currency": "USD_or_EUR_order_of_magnitude",
+          "high": 50000,
+          "low": 10000,
+          "mid": 25000,
+          "rationale": "Value is in reviewer time saved by reproducible artifacts, not in build readiness."
+        },
+        "partnerPipelineStageCount": 4,
+        "performanceHardeningComplete": true,
+        "performanceHardeningSimulationOnly": true,
+        "prototypeReady": false,
+        "reviewerQuestionCount": 6,
+        "scorecardCompleteness": 100,
+        "status": "value_scorecard_generated",
+        "tapeoutReady": false,
+        "technicalEvidenceScore": 90,
+        "yieldImprovementMultiplier": 41.666666666666664
+      }
+    },
+    {
+      "bytes": 4196,
+      "exists": true,
+      "kind": "md",
+      "path": "node-alpha/no-budget-package/value-scorecard.md",
+      "sha256": "86d2d3ad92b6fd0f81c71f6575130ffacb44841cde998b3d21e4506d509b5760"
+    },
+    {
+      "bytes": 41488,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/budget-optimizer-report.json",
+      "schemaVersion": "open-quantum.budget-optimizer.v1",
+      "sha256": "e520536e60b185c73ee7327291f780343d9cce2548cda0dfe2c5dd59d248b9a2",
+      "summary": {
+        "target1e9BestBalancedLogicalErrorRate": 2.239885791019942e-14,
+        "target1e9BestBalancedReserve": 0.0007332303562646997,
+        "target1e9BestBalancedUsedBudgetFraction": 0.7500000000000001,
+        "target1e9DetectorRelaxedMinEfficiency": 0.9897347750122942,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 25.5304499754116,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.03581229514357375,
+        "target1e9OptimizedProfileCount": 8442,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 3056,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/control-timing-model-report.json",
+      "schemaVersion": "open-quantum.control-timing-model.v1",
+      "sha256": "0cda15800e8b277a3e2b0074854ce09c10210994ce35ce90d9b534099e23c298",
+      "summary": {
+        "bestFastPathLatencyNs": 2.7,
+        "bestProfileId": "asic_or_close_fpga_optimized",
+        "bestTotalLatencyNs": 2.7,
+        "fullDecoderNotClaimedInFeedForwardWindow": true,
+        "fullDecoderSeparatedFromFastPath": true,
+        "hardwareFeedForwardVerified": false,
+        "passingProfileCount": 2,
+        "profileCount": 3,
+        "target1e9TimingClosedInSimulation": true
+      }
+    },
+    {
+      "bytes": 2369,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/decoder-evidence-report.json",
+      "schemaVersion": "open-quantum.decoder-evidence.v1",
+      "sha256": "c46f4dab8d932b0f7999bdf6006009124dac4e200ed6859cd6a613f75683d2e5",
+      "summary": {
+        "fullDecoderSeparatedFromFastPath": true,
+        "productionDecoderReady": false,
+        "sampledEvidenceSufficientFor1e9Claim": false,
+        "target1e9LatencyBelow1000Ns": true,
+        "target1e9LatencyBelow250Ns": true,
+        "target1e9ToyDecoderLatencyNs": 96.86776638043935,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 23959,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/fusion-performance-candidates.json",
+      "schemaVersion": "open-quantum.fusion-performance-candidates.v1",
+      "sha256": "639faeee0891ab6f7bae7667d1bd305600f276aad7409b439b3c241d1bf499b9",
+      "summary": {
+        "bestNominalProcessFidelity": 0.999525,
+        "bestNominalSuccessProbability": 0.85404810375,
+        "bestUpgradedSourceDetectorSuccessProbability": 1.0,
+        "nominalCandidateMeets85PercentSuccess": true,
+        "nominalCandidateMeets997Fidelity": true,
+        "nominalCandidateMeetsBothTargets": true,
+        "upgradedSourceDetectorCandidateMeets85PercentSuccess": true,
+        "upgradedSourceDetectorCandidateMeets997Fidelity": true,
+        "upgradedSourceDetectorCandidateMeetsBothTargets": true
+      }
+    },
+    {
+      "bytes": 10411,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/hardened-simulation-profile.json",
+      "schemaVersion": "open-quantum.hardened-simulation-profile.v1",
+      "sha256": "693b91155639cb6c40d9a7a9a798196c93cb98b8d226154b96e218002a5595cb",
+      "summary": {
+        "allVirtualCrosstalkBelow2Percent": true,
+        "allVirtualReflectionBelow0p1Percent": true,
+        "foundryCalibratedDeviceCount": 0,
+        "fusionCandidateCrosstalkRatio": 0.0012,
+        "fusionCandidateReflectionRatio": 0.00035,
+        "truthSwitchRawCrosstalkRatio": 0.0125,
+        "truthSwitchRawMeetsStretchTargets": true,
+        "truthSwitchRawReflectionRatio": 0.0008
+      }
+    },
+    {
+      "bytes": 6503,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/joint-error-budget-report.json",
+      "schemaVersion": "open-quantum.joint-error-budget.v1",
+      "sha256": "36c6e052608929b49418e9adc552313703f27266c7fbb63dc419f60950ddb8e5",
+      "summary": {
+        "profileCount": 6,
+        "target1e8JointBudgetPass": true,
+        "target1e9BalancedAdditionalLossDb": 0.010201986061383514,
+        "target1e9BalancedDetectorEfficiency": 0.9970670785749411,
+        "target1e9BalancedLogicalErrorRate": 2.239885791019942e-14,
+        "target1e9BalancedReserve": 0.0007332303562646997,
+        "target1e9JointBudgetPass": true
+      }
+    },
+    {
+      "bytes": 13527,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/operational-envelope-report.json",
+      "schemaVersion": "open-quantum.operational-envelope.v1",
+      "sha256": "df29135fff89c15edb006047421ca71ab0a50309d493a9a99c6f3983da380b59",
+      "summary": {
+        "stressScenarioStillFailsTargets": true,
+        "target1e8RecommendedDistance": 81,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 34.329214250587995,
+        "target1e9MaxSingleAxisLossDb": 0.05125128691919589,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.054156453217126393,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.985335392874706,
+        "target1e9RecommendedDistance": 81
+      }
+    },
+    {
+      "bytes": 271044,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/performance-upgrade-report.json",
+      "schemaVersion": "open-quantum.performance-upgrade.v1",
+      "sha256": "55788b9bcd2b3704a674e0080426a56a8913611fe7eac674fa2285befba92367",
+      "summary": {
+        "allVirtualSparameterCrosstalkBelow2Percent": true,
+        "allVirtualSparameterReflectionBelow0p1Percent": true,
+        "bestNominalFusionFidelity": 0.999525,
+        "bestNominalFusionSuccessProbability": 0.85404810375,
+        "bestUpgradedSourceDetectorFusionSuccessProbability": 1.0,
+        "fastPathBestLatencyNs": 2.7,
+        "fullDecoderSeparatedFromFastPath": true,
+        "fusionTargetMetInNominalScenario": true,
+        "fusionTargetMetInUpgradedSourceDetectorScenario": true,
+        "maxScaledLayoutAreaMm2": 27.784,
+        "maxScaledLayoutRouteReductionFraction": 0.30213563132259275,
+        "maxScaledLogicalQubits": 72,
+        "maxScaledPhysicalModes": 144,
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxVirtualSparameterCrosstalkRatio": 0.0125,
+        "maxVirtualSparameterReflectionRatio": 0.0008,
+        "prototypeLocalSimulationCriteriaImproved": 7,
+        "scaledLayoutAreaTargetMet": true,
+        "simulatedOnly": true,
+        "status": "performance_upgrade_generated",
+        "target1e8LogicalErrorMet": true,
+        "target1e9ControlTimingPass": true,
+        "target1e9DetectorRelaxedMinEfficiency": 0.9897347750122942,
+        "target1e9HardeningMarginTargetsMet": true,
+        "target1e9JointBudgetLogicalErrorRate": 2.239885791019942e-14,
+        "target1e9JointBudgetPass": true,
+        "target1e9JointBudgetReserve": 0.0007332303562646997,
+        "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 25.5304499754116,
+        "target1e9LogicalErrorMet": true,
+        "target1e9LossRelaxedMaxAdditionalLossDb": 0.03581229514357375,
+        "target1e9MaxSingleAxisFeedForwardLatencyNs": 34.329214250587995,
+        "target1e9MaxSingleAxisLossDb": 0.05125128691919589,
+        "target1e9MaxSingleAxisPhaseErrorRad": 0.054156453217126393,
+        "target1e9MinSingleAxisDetectorEfficiency": 0.985335392874706,
+        "target1e9OperationalEnvelopeDistance": 81,
+        "target1e9OptimizedBalancedLogicalErrorRate": 2.239885791019942e-14,
+        "target1e9OptimizedProfileCount": 8442,
+        "target1e9StressRecoveryScaleFactor": 0.5428289723625845,
+        "target1e9ToyDecoderLatencyBelow250Ns": true,
+        "target1e9ToyDecoderLatencyNs": 96.86776638043935,
+        "truthSwitchRawBestCrosstalkRatio": 0.0125,
+        "truthSwitchRawBestReflectionRatio": 0.0008,
+        "truthSwitchRawStrictTargetMet": true,
+        "truthSwitchStrictTargetMet": true,
+        "virtualSparameterAcceptedDeviceCount": 4,
+        "virtualSparameterReadyForFoundryClaim": false
+      }
+    },
+    {
+      "bytes": 3796,
+      "exists": true,
+      "kind": "md",
+      "path": "node-alpha/performance-upgrade-20260502/performance-upgrade-report.md",
+      "sha256": "937c36900cf43696e08bfbd0200497d2a8f725588c91c39396afdb7df176a76b"
+    },
+    {
+      "bytes": 3127,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/prototype-gap-reduction-report.json",
+      "schemaVersion": "open-quantum.prototype-gap-reduction.v1",
+      "sha256": "e0241aae0d75350816bfaf83d48aad212b2c0271b991abffbf32ff9c03452a29",
+      "summary": {
+        "localSimulationCriteriaImproved": 7,
+        "localSimulationCriteriaTotal": 7,
+        "prototypeReadyAfterLocalWork": false,
+        "realPrototypeCriteriaStillComplete": 1,
+        "realPrototypeCriteriaTotal": 9
+      }
+    },
+    {
+      "bytes": 24939,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/resource-scaling-report.json",
+      "schemaVersion": "open-quantum.performance-resource-scaling.v1",
+      "sha256": "e3536d7b72ffb30cc4114cc6577b97a73be5d958f489bf58829b27271fbc574e",
+      "summary": {
+        "maxAncillaModesPerCycle": 144,
+        "maxLogicalQubits": 72,
+        "maxPhysicalModes": 144,
+        "maxPnrDetectors": 144,
+        "maxSinglePhotonSources": 144,
+        "targetCount": 6
+      }
+    },
+    {
+      "bytes": 5033,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/scaled-layout-envelope-report.json",
+      "schemaVersion": "open-quantum.scaled-layout-envelope.v1",
+      "sha256": "ae40bee25127ed868e63f5ca0c485b380a495df6e65c67ddfdd67286c9adc796",
+      "summary": {
+        "denseReviewLayout": true,
+        "maxElectricalPadCount": 192,
+        "maxEstimatedAreaMm2": 27.784,
+        "maxEstimatedAreaTargetMet": true,
+        "maxLogicalQubits": 72,
+        "maxOpticalPortCount": 2496,
+        "maxPhysicalModes": 144,
+        "maxTotalRouteLengthReductionFraction": 0.30213563132259275,
+        "routingReductionTargetMet": true,
+        "scaled144LayoutComputable": true,
+        "scaled144TapeoutReady": false,
+        "targetCount": 3
+      }
+    },
+    {
+      "bytes": 3473,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/stress-recovery-report.json",
+      "schemaVersion": "open-quantum.stress-recovery.v1",
+      "sha256": "d934a8010171313cf5f0290d9dec2ce190313d13b01ec0dfeb12874a767f9973",
+      "summary": {
+        "stressPointPassesAsIs": false,
+        "target1e9MaxUniformStressScale": 0.5428289723625845,
+        "target1e9RecoveredLogicalErrorRate": 2.0324364086398068e-11,
+        "target1e9RecoveredPointPasses": true,
+        "targetCount": 2
+      }
+    },
+    {
+      "bytes": 14144,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/threshold-performance-sweep.json",
+      "schemaVersion": "open-quantum.performance-threshold-sweep.v1",
+      "sha256": "23b8dae4de829dcfcc1abbeb347dae6ce9e20e58875464985a378b153866457f",
+      "summary": {
+        "belowThresholdCandidateCount": 6912,
+        "target1e8IdealMet": true,
+        "target1e8Met": true,
+        "target1e8StressMet": false,
+        "target1e9IdealMet": true,
+        "target1e9Met": true,
+        "target1e9StressMet": false
+      }
+    },
+    {
+      "bytes": 3474,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/throughput-report.json",
+      "schemaVersion": "open-quantum.throughput-report.v1",
+      "sha256": "0b3d301173e790c4591f084849d6017efe8047ec0f36cdbfa9eefd1678d66b24",
+      "summary": {
+        "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+        "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+        "maxUpperBoundLogicalCyclesPerSecond": 8695652.173913043
+      }
+    },
+    {
+      "bytes": 11495,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/truth-switch-raw-closure-report.json",
+      "schemaVersion": "open-quantum.truth-switch-raw-closure.v1",
+      "sha256": "55bd35e3155e52765f763b8c38911fb3469992434ac634c9b5c603068eaa1741",
+      "summary": {
+        "bestRawCrosstalkRatio": 0.0125,
+        "bestRawReflectionRatio": 0.0008,
+        "candidateCount": 1394,
+        "derivedStrictTargetMet": true,
+        "rawStretchTargetMet": true,
+        "rawStrictTargetMet": true
+      }
+    },
+    {
+      "bytes": 5621,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/performance-upgrade-20260502/virtual-sparameter-acceptance-report.json",
+      "schemaVersion": "open-quantum.virtual-sparameter-acceptance.v1",
+      "sha256": "8bc92e3ef5a00ef3c85dfb8a1ef5686c695a7edf753f11f5e7145e4cfe81d355",
+      "summary": {
+        "acceptedVirtualDeviceCount": 4,
+        "allFoundryModelsAccepted": false,
+        "allVirtualCrosstalkBelow2Percent": true,
+        "allVirtualModelsAccepted": true,
+        "allVirtualReflectionBelow0p1Percent": true,
+        "foundryCalibratedDeviceCount": 0,
+        "maxVirtualCrosstalkRatio": 0.0125,
+        "maxVirtualReflectionRatio": 0.0008,
+        "requiredDeviceCount": 4
+      }
+    },
+    {
+      "bytes": 622,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/decoder-report.json",
+      "schemaVersion": "open-quantum.decoder-report.v1",
+      "sha256": "b91884a2b47243a605bd3b1025bfaf807238053fb1684897af2866e8665c11c7"
+    },
+    {
+      "bytes": 78547,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/device-sweep.json",
+      "schemaVersion": "open-quantum.device-sweep.v1",
+      "sha256": "45d959e1c74c2b6a6659535a620f1bbf6c25b93dc9998df88e9ed2b47e67fbed"
+    },
+    {
+      "bytes": 34447,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/evidence-bundle.json",
+      "schemaVersion": "open-quantum.evidence-bundle.v1",
+      "sha256": "cc38c032bc866e28962be942c11b2f3ea96ab393c1d2d99f5988fd3c2b02c335",
+      "summary": {
+        "completeRequirementCount": 0,
+        "hashGapCount": 1,
+        "missingArtifactCount": 9,
+        "presentArtifactCount": 15,
+        "requiredArtifactCount": 24,
+        "totalRequirementCount": 9
+      }
+    },
+    {
+      "bytes": 2434,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/fault-tolerance-audit.json",
+      "schemaVersion": "open-quantum.fault-tolerance-audit.v1",
+      "sha256": "b968e0b3cd72f0f51c14588a010ba8352b61776f5d6a7aaefaf3f2db921d07f6"
+    },
+    {
+      "bytes": 71693,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/prototype-readiness.json",
+      "schemaVersion": "open-quantum.prototype-readiness.v1",
+      "sha256": "e12bc69157ad7f2e999cc0d2b4cf2f7d94474fe57650524a41fe2fbb337145fc",
+      "summary": {
+        "completeCriteria": 1,
+        "highestPriorityBlocker": "No foundry-calibrated S-parameter compact models are attached to core devices.",
+        "status": "not_prototype_ready",
+        "totalCriteria": 9
+      }
+    },
+    {
+      "bytes": 5757,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/sparameter-audit.json",
+      "schemaVersion": "open-quantum.sparameter-audit.v1",
+      "sha256": "b4bd415409a32687ec1bc2eb0633e13bce0e0179913242ebe401eb17bbd3aa16",
+      "summary": {
+        "acceptedDeviceCount": 0,
+        "hashFailureCount": 0,
+        "missingDeviceCount": 0,
+        "requiredDeviceCount": 4
+      }
+    },
+    {
+      "bytes": 3799,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/sparameter-models.json",
+      "schemaVersion": "open-quantum.virtual-sparameter-model-manifest.v1",
+      "sha256": "c4c50fcf7b8651b91b6c51f2117e0fde57e5e6f8c14cd0f9ad879a9b40e26341",
+      "summary": {
+        "allVirtualModelsPresent": true,
+        "foundryCalibrated": false,
+        "modelCount": 4,
+        "requiredModelCount": 4
+      }
+    },
+    {
+      "bytes": 469,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/syndrome-noise-dataset.json",
+      "schemaVersion": "open-quantum.syndrome-noise-dataset.v1",
+      "sha256": "28cab725ba6951a3bf2cf2736f779d4e5b5d8fd44a27ffb434e369a0ed2f73ee"
+    },
+    {
+      "bytes": 21588,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/qc-path/threshold-sweep.json",
+      "schemaVersion": "open-quantum.threshold-sweep.v1",
+      "sha256": "1fcd5c13ade1d53654a0d91d53de352d95093996380d97a922bded6616c5d4b9"
+    },
+    {
+      "bytes": 14516,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json",
+      "schemaVersion": "open-quantum.high-resolution-robustness.v1",
+      "sha256": "6d11cc93d2d91d4085b144f6e07120fab7e07d8d9bc37966b63481a051905efd",
+      "summary": {
+        "acceptedDevices": [
+          "coupler",
+          "mzi",
+          "phase-shifter",
+          "truth-switch"
+        ],
+        "allRequiredDevicesAccepted": true,
+        "blockedDevices": [],
+        "candidateFileCount": 1872,
+        "runCount": 4,
+        "status": "all_core_devices_high_resolution_accepted"
+      }
+    },
+    {
+      "bytes": 3458,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/ip-value-dossier.json",
+      "schemaVersion": "open-quantum.ip-value-dossier.v1",
+      "sha256": "a606abb0a0ecf1a4a815163a6029fd935f8de6bd7218474163ae7278973c0550"
+    },
+    {
+      "bytes": 898,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/reproducibility-manifest.json",
+      "schemaVersion": "open-quantum.reproducibility-manifest.v1",
+      "sha256": "b81b531a12b342ab21ca8cb5742b8305f3c5362cd0cd43dccbfb44e108d00cf6"
+    },
+    {
+      "bytes": 29646,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/testchip/testchip-simulation.json",
+      "schemaVersion": "open-quantum.testchip-simulation.v1",
+      "sha256": "5bf00a37796c9d04e447382bd6d37bef0fb1d21a9852abe8dea30d0a1a6917ee",
+      "summary": {
+        "deviceRunCount": 1868,
+        "deviceStatus": "all_requested_devices_accepted",
+        "fabricationStatus": "not_fabrication_ready_without_real_pdk_and_sparameters",
+        "fusionStatus": "fusion_testcell_pass",
+        "status": "testchip_simulation_complete",
+        "virtualSparameterModelCount": 4,
+        "yieldAcceptedDeviceCount": 4,
+        "yieldRequiredDeviceCount": 4
+      }
+    },
+    {
+      "bytes": 8511,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/testchip/virtual-sparameters.json",
+      "schemaVersion": "open-quantum.virtual-sparameters.v1",
+      "sha256": "099a4d7a9a819c979bc7e9ea0938c058f8748768bb0cf77c04fe1a574a4a8b5a",
+      "summary": {
+        "acceptedModelCount": 4,
+        "allVirtualModelsAccepted": true,
+        "modelCount": 4,
+        "requiredModelCount": 4
+      }
+    },
+    {
+      "bytes": 3384,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/testchip/yield-sweep.json",
+      "schemaVersion": "open-quantum.testchip-yield-sweep.v1",
+      "sha256": "a514bad997f26568f8e71279e31aeda1eb0b9d4beeacd66eb1244d3fc8fa187d",
+      "summary": {
+        "acceptedDeviceCount": 4,
+        "allDevicesYieldPassing": true,
+        "requiredDeviceCount": 4,
+        "systemYieldEstimate": 1.0
+      }
+    },
+    {
+      "bytes": 4303,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/value-upgrade-report.json",
+      "schemaVersion": "open-quantum.value-upgrade-package.v1",
+      "sha256": "89535f99a35dc4f16f59f9810614bbfb2ab41450215ebaf173f6b9a909fba1f0",
+      "summary": {
+        "evidencePresentArtifacts": 15,
+        "evidenceRequiredArtifacts": 24,
+        "faultToleranceBlocksOnlyOnHardware": true,
+        "faultToleranceReady": false,
+        "highResolutionAcceptedDevices": [
+          "coupler",
+          "mzi",
+          "phase-shifter",
+          "truth-switch"
+        ],
+        "highResolutionBlockedDevices": [],
+        "highResolutionStatus": "all_core_devices_high_resolution_accepted",
+        "prototypeCompleteCriteria": 1,
+        "prototypeStatus": "not_prototype_ready",
+        "prototypeTotalCriteria": 9,
+        "status": "value_package_generated",
+        "syntheticSyndromeEventCount": 10000,
+        "testchipStatus": "testchip_simulation_complete",
+        "testchipSystemYieldEstimate": 1.0,
+        "testchipYieldAcceptedDevices": 4,
+        "testchipYieldDeviceSource": "promote_accepted_20_60_high_resolution_candidates_for_testchip_yield",
+        "testchipYieldRequiredDevices": 4,
+        "thresholdChampionLogicalErrorRate": 2.5617154643831186e-07,
+        "thresholdStatus": "below_threshold_candidate_found",
+        "virtualSparameterModelCount": 4,
+        "virtualSparameterModelsReadyForFoundryGate": false
+      }
+    },
+    {
+      "bytes": 3039,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/yield-improvement-report.json",
+      "schemaVersion": "open-quantum.yield-improvement-report.v1",
+      "sha256": "53d9ca574a1565c18a6ec786f93633d656463ab5cd0bd967387be9b81970c302"
+    },
+    {
+      "bytes": 802,
+      "exists": true,
+      "kind": "md",
+      "path": "node-alpha/value-upgrade-20260502/yield-improvement-report.md",
+      "sha256": "2c8298af72749ce4b8ec0c768f0094a1f16f2e440b29c0c789afa7a158ba3b50"
+    },
+    {
+      "bytes": 6492,
+      "exists": true,
+      "kind": "json",
+      "path": "node-alpha/value-upgrade-20260502/yield-optimized-device-sweep.json",
+      "schemaVersion": "open-quantum.device-sweep.v1",
+      "sha256": "68bea3f0bc082c3fae3f12a21e4d8425eb8dfddff9769d4b7ce565a6a2bf47b2"
+    },
+    {
+      "bytes": 3982,
+      "exists": true,
+      "kind": "ipynb",
+      "path": "notebooks/node-alpha-report-summary.ipynb",
+      "sha256": "80d3461b717b81beebabb9a5d133ff619674b3b36ef3a57fecb0045ca42176e5"
+    }
+  ],
+  "deepHardeningV3": {
+    "fastPathLatencyNs": 1.17,
+    "foundrySparametersReady": false,
+    "fullDecoderLatencyNs": 12.732638863577915,
+    "layoutAreaMm2": 17.979962,
+    "nominalFusionProcessFidelity": 0.9999975000000001,
+    "nominalFusionSuccessProbability": 1.0,
+    "prototypeReady": false,
+    "score": 110,
+    "simulatedOnly": true,
+    "status": "deep_hardening_v3_generated",
+    "stressScale": 1.0,
+    "tapeoutReady": false,
+    "truthSwitchRawCrosstalkRatio": 0.0023,
+    "truthSwitchRawReflectionRatio": 4e-05
+  },
+  "generatedAt": "2026-05-02T21:49:13.354834Z",
+  "missingArtifactCount": 0,
+  "presentArtifactCount": 106,
+  "schemaVersion": "open-quantum.report-index.v2"
+}

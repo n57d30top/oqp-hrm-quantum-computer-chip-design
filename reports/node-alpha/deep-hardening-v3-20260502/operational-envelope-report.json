@@ -1,0 +1,340 @@
+{
+  "claimBoundary": "Analytical margin budget only; not measured process, detector, or package tolerance.",
+  "deviceEvidence": {
+    "candidateId": "mzi_threshold_reference_node_alpha",
+    "device": "mzi",
+    "deviceErrorContribution": 9.6e-08,
+    "deviceErrorTerms": {
+      "crosstalkRatio": 2e-06,
+      "lossDb": 0.0012,
+      "lossProbability": 0.0,
+      "reflectionRatio": 4e-06,
+      "usefulTransmission": 2.465
+    },
+    "provided": true
+  },
+  "errorModel": {
+    "basePhysicalErrorRate": 2.5e-05,
+    "claimBoundary": "Deep-Hardening V3 uses an erasure-aware analytical simulator model; it is not hardware-calibrated threshold evidence.",
+    "darkCountHzWeight": 1e-09,
+    "detectorInefficiencyWeight": 0.012,
+    "deviceCrosstalkWeight": 0.008,
+    "deviceLossWeight": 0.012,
+    "deviceReflectionWeight": 0.02,
+    "latencyExcessNsWeight": 5e-06,
+    "latencyFloorNs": 5.0,
+    "lossWeight": 0.02,
+    "name": "node_alpha_v3_erasure_aware_margin_model",
+    "phaseErrorSquaredWeight": 0.035,
+    "thresholdAssumption": 0.005
+  },
+  "limitations": [
+    "Margins are single-axis budgets unless explicitly stated; simultaneous errors must share the same budget.",
+    "The stress scenario remains a synthetic grid and is not hardware-calibrated."
+  ],
+  "recommendedByTarget": {
+    "1e-08": {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 41,
+      "estimatedPhysicalModesPerCorrectionCycle": 60516,
+      "exponent": 21,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0023207944168063895,
+      "remainingNonDeviceErrorBudget": 0.0022956984168063894,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.5295119671036587,
+        "maxDarkCountRateHz": 2295698.416806389,
+        "maxFeedForwardLatencyNs": 464.13968336127783,
+        "maxPhaseErrorRad": 0.25610814773709445,
+        "minDetectorEfficiency": 0.8086917985994675
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    "1e-09": {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 61,
+      "estimatedPhysicalModesPerCorrectionCycle": 133956,
+      "exponent": 31,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0027599771606407852,
+      "remainingNonDeviceErrorBudget": 0.002734881160640785,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.6386042363009726,
+        "maxDarkCountRateHz": 2734881.160640785,
+        "maxFeedForwardLatencyNs": 551.976232128157,
+        "maxPhaseErrorRad": 0.27953436592410935,
+        "minDetectorEfficiency": 0.7720932366132679
+      },
+      "targetLogicalErrorRate": 1e-09
+    }
+  },
+  "rows": [
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 21,
+      "estimatedPhysicalModesPerCorrectionCycle": 15876,
+      "exponent": 11,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0011550648500415798,
+      "remainingNonDeviceErrorBudget": 0.0011299688500415797,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.252573785809848,
+        "maxDarkCountRateHz": 1129968.8500415797,
+        "maxFeedForwardLatencyNs": 230.99377000831592,
+        "maxPhaseErrorRad": 0.17967978263261083,
+        "minDetectorEfficiency": 0.9058359291632017
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 31,
+      "estimatedPhysicalModesPerCorrectionCycle": 34596,
+      "exponent": 16,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0018258706362741886,
+      "remainingNonDeviceErrorBudget": 0.0018007746362741885,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.40977092701928275,
+        "maxDarkCountRateHz": 1800774.6362741883,
+        "maxFeedForwardLatencyNs": 365.1549272548377,
+        "maxPhaseErrorRad": 0.2268274760551469,
+        "minDetectorEfficiency": 0.849935446977151
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 41,
+      "estimatedPhysicalModesPerCorrectionCycle": 60516,
+      "exponent": 21,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0023207944168063895,
+      "remainingNonDeviceErrorBudget": 0.0022956984168063894,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.5295119671036587,
+        "maxDarkCountRateHz": 2295698.416806389,
+        "maxFeedForwardLatencyNs": 464.13968336127783,
+        "maxPhaseErrorRad": 0.25610814773709445,
+        "minDetectorEfficiency": 0.8086917985994675
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 61,
+      "estimatedPhysicalModesPerCorrectionCycle": 133956,
+      "exponent": 31,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.002972785354272196,
+      "remainingNonDeviceErrorBudget": 0.002947689354272196,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.6924675997785295,
+        "maxDarkCountRateHz": 2947689.354272196,
+        "maxFeedForwardLatencyNs": 594.5378708544391,
+        "maxPhaseErrorRad": 0.29020629875374593,
+        "minDetectorEfficiency": 0.754359220477317
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 81,
+      "estimatedPhysicalModesPerCorrectionCycle": 236196,
+      "exponent": 41,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0033747242870596195,
+      "remainingNonDeviceErrorBudget": 0.0033496282870596195,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.7960606226146937,
+        "maxDarkCountRateHz": 3349628.287059619,
+        "maxFeedForwardLatencyNs": 674.9256574119238,
+        "maxPhaseErrorRad": 0.3093600900965743,
+        "minDetectorEfficiency": 0.7208643094116984
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 121,
+      "estimatedPhysicalModesPerCorrectionCycle": 527076,
+      "exponent": 61,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0038389804985830118,
+      "remainingNonDeviceErrorBudget": 0.0038138844985830117,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.918873605434989,
+        "maxDarkCountRateHz": 3813884.4985830113,
+        "maxFeedForwardLatencyNs": 767.7768997166023,
+        "maxPhaseErrorRad": 0.3301032089073706,
+        "minDetectorEfficiency": 0.682176291784749
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 161,
+      "estimatedPhysicalModesPerCorrectionCycle": 933156,
+      "exponent": 81,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0040977952174855,
+      "remainingNonDeviceErrorBudget": 0.0040726992174855,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.9888781399878843,
+        "maxDarkCountRateHz": 4072699.2174854996,
+        "maxFeedForwardLatencyNs": 819.5398434970999,
+        "maxPhaseErrorRad": 0.34111997124955906,
+        "minDetectorEfficiency": 0.660608398542875
+      },
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 21,
+      "estimatedPhysicalModesPerCorrectionCycle": 15876,
+      "exponent": 11,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0009369087114301921,
+      "remainingNonDeviceErrorBudget": 0.0009118127114301921,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.20265308126830572,
+        "maxDarkCountRateHz": 911812.7114301921,
+        "maxFeedForwardLatencyNs": 187.3625422860384,
+        "maxPhaseErrorRad": 0.16140567448249254,
+        "minDetectorEfficiency": 0.9240156073808173
+      },
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 31,
+      "estimatedPhysicalModesPerCorrectionCycle": 34596,
+      "exponent": 16,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0015811388300841897,
+      "remainingNonDeviceErrorBudget": 0.0015560428300841896,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.3517589062294502,
+        "maxDarkCountRateHz": 1556042.8300841895,
+        "maxFeedForwardLatencyNs": 316.2085660168379,
+        "maxPhaseErrorRad": 0.21085152732155862,
+        "minDetectorEfficiency": 0.8703297641596508
+      },
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 41,
+      "estimatedPhysicalModesPerCorrectionCycle": 60516,
+      "exponent": 21,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0020797810815359236,
+      "remainingNonDeviceErrorBudget": 0.0020546850815359235,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.47078911587581795,
+        "maxDarkCountRateHz": 2054685.0815359233,
+        "maxFeedForwardLatencyNs": 415.93701630718465,
+        "maxPhaseErrorRad": 0.2422917415924107,
+        "minDetectorEfficiency": 0.8287762432053397
+      },
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 61,
+      "estimatedPhysicalModesPerCorrectionCycle": 133956,
+      "exponent": 31,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0027599771606407852,
+      "remainingNonDeviceErrorBudget": 0.002734881160640785,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.6386042363009726,
+        "maxDarkCountRateHz": 2734881.160640785,
+        "maxFeedForwardLatencyNs": 551.976232128157,
+        "maxPhaseErrorRad": 0.27953436592410935,
+        "minDetectorEfficiency": 0.7720932366132679
+      },
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 81,
+      "estimatedPhysicalModesPerCorrectionCycle": 236196,
+      "exponent": 41,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.0031904214250588,
+      "remainingNonDeviceErrorBudget": 0.0031653254250588,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.7482527004966316,
+        "maxDarkCountRateHz": 3165325.4250588,
+        "maxFeedForwardLatencyNs": 638.06508501176,
+        "maxPhaseErrorRad": 0.3007288966617513,
+        "minDetectorEfficiency": 0.7362228812450999
+      },
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 121,
+      "estimatedPhysicalModesPerCorrectionCycle": 527076,
+      "exponent": 61,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.003696770274182145,
+      "remainingNonDeviceErrorBudget": 0.003671674274182145,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.8808834034043971,
+        "maxDarkCountRateHz": 3671674.274182145,
+        "maxFeedForwardLatencyNs": 739.3348548364289,
+        "maxPhaseErrorRad": 0.3238903815526898,
+        "minDetectorEfficiency": 0.6940271438181546
+      },
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "basePhysicalErrorRate": 2.5e-05,
+      "deviceErrorContribution": 9.6e-08,
+      "distance": 161,
+      "estimatedPhysicalModesPerCorrectionCycle": 933156,
+      "exponent": 81,
+      "feasibleWithCurrentDeviceTerms": true,
+      "maxEffectivePhysicalErrorRate": 0.003982947411128744,
+      "remainingNonDeviceErrorBudget": 0.003957851411128744,
+      "singleAxisMargins": {
+        "maxAdditionalLossDb": 0.9576746103007487,
+        "maxDarkCountRateHz": 3957851.4111287436,
+        "maxFeedForwardLatencyNs": 796.5702822257488,
+        "maxPhaseErrorRad": 0.33627588211079407,
+        "minDetectorEfficiency": 0.6701790490726047
+      },
+      "targetLogicalErrorRate": 1e-09
+    }
+  ],
+  "schemaVersion": "open-quantum.operational-envelope.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "stressScenarioGap": [],
+  "summary": {
+    "stressScenarioStillFailsTargets": false,
+    "target1e8RecommendedDistance": 41,
+    "target1e9HardeningMarginTargetsMet": true,
+    "target1e9MaxSingleAxisFeedForwardLatencyNs": 551.976232128157,
+    "target1e9MaxSingleAxisLossDb": 0.6386042363009726,
+    "target1e9MaxSingleAxisPhaseErrorRad": 0.27953436592410935,
+    "target1e9MinSingleAxisDetectorEfficiency": 0.7720932366132679,
+    "target1e9RecommendedDistance": 61
+  }
+}

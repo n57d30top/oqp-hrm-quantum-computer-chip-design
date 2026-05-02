@@ -1,0 +1,161 @@
+{
+  "cornerAxes": {
+    "gapErrorNm": [
+      -20.0,
+      -10.0,
+      0.0,
+      10.0,
+      20.0
+    ],
+    "phaseErrorRad": [
+      -0.015,
+      0.0,
+      0.015
+    ],
+    "temperatureDeltaC": [
+      -20.0,
+      -10.0,
+      0.0,
+      10.0,
+      20.0
+    ],
+    "wavelengthNm": [
+      1510.0,
+      1530.0,
+      1550.0,
+      1570.0,
+      1590.0
+    ],
+    "widthErrorNm": [
+      -20.0,
+      -10.0,
+      0.0,
+      10.0,
+      20.0
+    ]
+  },
+  "deviceCorners": [
+    {
+      "candidateId": "coupler_raw_hardened_node_alpha",
+      "cornerCount": 1875,
+      "device": "coupler",
+      "passesCrosstalkTarget": true,
+      "passesReflectionTarget": true,
+      "passesStretchCrosstalkTarget": true,
+      "passesStretchReflectionTarget": true,
+      "worstCorner": {
+        "gapErrorNm": -20.0,
+        "phaseErrorRad": -0.015,
+        "temperatureDeltaC": -20.0,
+        "wavelengthNm": 1510.0,
+        "widthErrorNm": -20.0
+      },
+      "worstMetrics": {
+        "crossRatio": 1.107,
+        "crosstalkRatio": 0.002757333333333334,
+        "insertionLossDb": 0.0034999999999999996,
+        "reflectionRatio": 5.160000000000001e-05,
+        "throughRatio": 1.107,
+        "usefulTransmission": 2.214
+      }
+    },
+    {
+      "candidateId": "mzi_raw_hardened_node_alpha",
+      "cornerCount": 1875,
+      "device": "mzi",
+      "passesCrosstalkTarget": true,
+      "passesReflectionTarget": true,
+      "passesStretchCrosstalkTarget": true,
+      "passesStretchReflectionTarget": true,
+      "worstCorner": {
+        "gapErrorNm": -20.0,
+        "phaseErrorRad": -0.015,
+        "temperatureDeltaC": -20.0,
+        "wavelengthNm": 1510.0,
+        "widthErrorNm": -20.0
+      },
+      "worstMetrics": {
+        "crossRatio": 1.21278,
+        "crosstalkRatio": 2.5066666666666667e-06,
+        "insertionLossDb": 0.0026999999999999997,
+        "reflectionRatio": 5.16e-06,
+        "throughRatio": 1.21278,
+        "usefulTransmission": 2.42556
+      }
+    },
+    {
+      "candidateId": "phase-shifter_raw_hardened_node_alpha",
+      "cornerCount": 1875,
+      "device": "phase-shifter",
+      "passesCrosstalkTarget": true,
+      "passesReflectionTarget": true,
+      "passesStretchCrosstalkTarget": true,
+      "passesStretchReflectionTarget": true,
+      "worstCorner": {
+        "gapErrorNm": -20.0,
+        "phaseErrorRad": -0.015,
+        "temperatureDeltaC": -20.0,
+        "wavelengthNm": 1510.0,
+        "widthErrorNm": -20.0
+      },
+      "worstMetrics": {
+        "crossRatio": 1.07994,
+        "crosstalkRatio": 0.002506666666666667,
+        "insertionLossDb": 0.0040999999999999995,
+        "reflectionRatio": 4.515e-05,
+        "throughRatio": 1.07994,
+        "usefulTransmission": 2.15988
+      }
+    },
+    {
+      "candidateId": "truth-switch_raw_hardened_node_alpha",
+      "cornerCount": 1875,
+      "device": "truth-switch",
+      "passesCrosstalkTarget": true,
+      "passesReflectionTarget": true,
+      "passesStretchCrosstalkTarget": true,
+      "passesStretchReflectionTarget": true,
+      "worstCorner": {
+        "gapErrorNm": -20.0,
+        "phaseErrorRad": -0.015,
+        "temperatureDeltaC": -20.0,
+        "wavelengthNm": 1510.0,
+        "widthErrorNm": -20.0
+      },
+      "worstMetrics": {
+        "crossRatio": 1.12668,
+        "crosstalkRatio": 0.0028826666666666666,
+        "insertionLossDb": 0.0040999999999999995,
+        "reflectionRatio": 5.160000000000001e-05,
+        "throughRatio": 1.12668,
+        "usefulTransmission": 2.25336
+      }
+    }
+  ],
+  "fusionWorstCase": {
+    "estimatedHeraldingSuccessProbability": 1.0,
+    "estimatedProcessFidelity": 0.9999967933333334,
+    "feedForwardLatencyNs": 5.0
+  },
+  "generatedAt": "2026-05-02T21:49:13.302582Z",
+  "limitations": [
+    "Corner factors are deterministic Node Alpha surrogate factors, not process-corner PDK data.",
+    "Foundry S-parameter acceptance remains 0/4 until calibrated compact models are supplied."
+  ],
+  "schemaVersion": "open-quantum.worst-case-corner-sweep.v1",
+  "summary": {
+    "allVirtualCrosstalkBelow1Percent": true,
+    "allVirtualReflectionBelow0p05Percent": true,
+    "allWorstCaseTargetsPass": true,
+    "cornerCountPerDevice": 1875,
+    "fusionWorstCaseFidelityAbove9997": true,
+    "fusionWorstCaseSuccessAbove90Percent": true,
+    "thresholdWorstCasePasses1e9": true
+  },
+  "thresholdWorstCase": {
+    "distance": 161,
+    "effectivePhysicalErrorRate": 0.0014036565244606985,
+    "estimatedLogicalErrorRatePerCycle": 2.049077538547736e-46,
+    "estimatedPhysicalModesPerCorrectionCycle": 933156
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "device": "mzi",
+  "fdtdMetrics": {
+    "crossRatio": 0.000025145314658730814,
+    "crosstalkRatio": 0.000025145314658730814,
+    "insertionLossDb": 45.81729182465569,
+    "reflectionRatio": 0.00004198899777398288,
+    "throughRatio": 0.0000010528469914917003,
+    "usefulTransmission": 0.000026198161650222514
+  },
+  "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+  "schemaVersion": "open-quantum.eigenmode-device.v1",
+  "sourceModel": "eigenmode"
+}

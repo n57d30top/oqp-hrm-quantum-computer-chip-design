@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-05-02T21:49:13.309489Z",
+  "items": [
+    {
+      "id": "stress_robustness",
+      "passed": true,
+      "pointsAvailable": 12,
+      "pointsAwarded": 12
+    },
+    {
+      "id": "truth_switch_raw",
+      "passed": true,
+      "pointsAvailable": 12,
+      "pointsAwarded": 12
+    },
+    {
+      "id": "fusion_nominal",
+      "passed": true,
+      "pointsAvailable": 12,
+      "pointsAwarded": 12
+    },
+    {
+      "id": "one_e_minus_nine_margins",
+      "passed": true,
+      "pointsAvailable": 12,
+      "pointsAwarded": 12
+    },
+    {
+      "id": "virtual_sparameters",
+      "passed": true,
+      "pointsAvailable": 10,
+      "pointsAwarded": 10
+    },
+    {
+      "id": "layout_packaging",
+      "passed": true,
+      "pointsAvailable": 10,
+      "pointsAwarded": 10
+    },
+    {
+      "id": "timing_decoder",
+      "passed": true,
+      "pointsAvailable": 10,
+      "pointsAwarded": 10
+    },
+    {
+      "id": "pareto_front",
+      "passed": true,
+      "pointsAvailable": 8,
+      "pointsAwarded": 8
+    },
+    {
+      "id": "corner_sweep",
+      "passed": true,
+      "pointsAvailable": 7,
+      "pointsAwarded": 7
+    },
+    {
+      "id": "monte_carlo",
+      "passed": true,
+      "pointsAvailable": 7,
+      "pointsAwarded": 7
+    },
+    {
+      "id": "internal_consistency",
+      "passed": true,
+      "pointsAvailable": 10,
+      "pointsAwarded": 10
+    }
+  ],
+  "schemaVersion": "open-quantum.deep-hardening-v3-scorecard.v1",
+  "summary": {
+    "foundrySparametersReady": false,
+    "maxScore": 110,
+    "prototypeReady": false,
+    "score": 110,
+    "status": "simulation_hardening_v3_complete",
+    "tapeoutReady": false
+  }
+}

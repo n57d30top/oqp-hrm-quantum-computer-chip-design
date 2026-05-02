@@ -1,0 +1,963 @@
+{
+  "claimBoundary": "Discrete optimizer over the local analytical error model; not a calibrated control optimizer.",
+  "grid": {
+    "fractionStep": 0.05,
+    "maxUsedBudgetFraction": 0.9,
+    "minPerAxisFraction": 0.05,
+    "minUsedBudgetFraction": 0.5
+  },
+  "limitations": [
+    "The optimizer searches fixed 5% budget increments and does not model correlations.",
+    "Scores are engineering triage scores over simulated constraints, not hardware feasibility proof."
+  ],
+  "results": [
+    {
+      "bestBalanced": {
+        "allocatedErrorBudget": {
+          "dark": 0.0003443547625209585,
+          "detector": 0.0003443547625209585,
+          "latency": 0.0003443547625209585,
+          "loss": 0.0003443547625209585,
+          "phase": 0.0003443547625209585
+        },
+        "distance": 41,
+        "effectivePhysicalErrorRate": 0.0017468698126047926,
+        "estimatedLogicalErrorRatePerCycle": 2.5650819648510777e-11,
+        "estimatedPhysicalModesPerCorrectionCycle": 60516,
+        "operatingPoint": {
+          "additionalLossDb": 0.07542690653273257,
+          "darkCountRateHz": 344354.7625209585,
+          "detectorEfficiency": 0.9713037697899202,
+          "feedForwardLatencyNs": 73.87095250419169,
+          "phaseErrorRad": 0.09919025910137957
+        },
+        "optimizerScores": {
+          "balancedScore": 2.3073924604201603,
+          "detectorRelaxedScore": 0.185739246042016,
+          "latencyRelaxedScore": 0.185739246042016,
+          "lossRelaxedScore": 0.185739246042016,
+          "minimumAxisFraction": 0.15000000000000002,
+          "usedBudgetFraction": 0.7500000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p15_det0p15_dark0p15_phase0p15_lat0p15",
+        "reserveErrorBudget": 0.0005739246042015969,
+        "targetLogicalErrorRate": 1e-08,
+        "usedNonDeviceErrorBudgetFraction": 0.7500000000000001
+      },
+      "candidateCount": 8442,
+      "detectorRelaxed": {
+        "allocatedErrorBudget": {
+          "dark": 0.00011478492084031947,
+          "detector": 0.0016069888917644728,
+          "latency": 0.00011478492084031947,
+          "loss": 0.00011478492084031947,
+          "phase": 0.00011478492084031947
+        },
+        "distance": 41,
+        "effectivePhysicalErrorRate": 0.002091224575125751,
+        "estimatedLogicalErrorRatePerCycle": 1.1221322930973772e-09,
+        "estimatedPhysicalModesPerCorrectionCycle": 60516,
+        "operatingPoint": {
+          "additionalLossDb": 0.02499702972755497,
+          "darkCountRateHz": 114784.92084031946,
+          "detectorEfficiency": 0.8660842590196273,
+          "feedForwardLatencyNs": 27.956984168063894,
+          "phaseErrorRad": 0.05726752279317022
+        },
+        "optimizerScores": {
+          "balancedScore": 0.38295698416806395,
+          "detectorRelaxedScore": 0.7122956984168065,
+          "latencyRelaxedScore": 0.06229569841680639,
+          "lossRelaxedScore": 0.06229569841680639,
+          "minimumAxisFraction": 0.05,
+          "usedBudgetFraction": 0.9000000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p05_det0p70_dark0p05_phase0p05_lat0p05",
+        "reserveErrorBudget": 0.0002295698416806386,
+        "targetLogicalErrorRate": 1e-08,
+        "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+      },
+      "latencyRelaxed": {
+        "allocatedErrorBudget": {
+          "dark": 0.00011478492084031947,
+          "detector": 0.00011478492084031947,
+          "latency": 0.0016069888917644728,
+          "loss": 0.00011478492084031947,
+          "phase": 0.00011478492084031947
+        },
+        "distance": 41,
+        "effectivePhysicalErrorRate": 0.0020912245751257504,
+        "estimatedLogicalErrorRatePerCycle": 1.122132293097374e-09,
+        "estimatedPhysicalModesPerCorrectionCycle": 60516,
+        "operatingPoint": {
+          "additionalLossDb": 0.02499702972755497,
+          "darkCountRateHz": 114784.92084031946,
+          "detectorEfficiency": 0.9904345899299734,
+          "feedForwardLatencyNs": 326.39777835289453,
+          "phaseErrorRad": 0.05726752279317022
+        },
+        "optimizerScores": {
+          "balancedScore": 0.382956984168064,
+          "detectorRelaxedScore": 0.06229569841680639,
+          "latencyRelaxedScore": 0.7122956984168065,
+          "lossRelaxedScore": 0.06229569841680639,
+          "minimumAxisFraction": 0.05,
+          "usedBudgetFraction": 0.9000000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p05_det0p05_dark0p05_phase0p05_lat0p70",
+        "reserveErrorBudget": 0.00022956984168063903,
+        "targetLogicalErrorRate": 1e-08,
+        "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+      },
+      "lossRelaxed": {
+        "allocatedErrorBudget": {
+          "dark": 0.00011478492084031947,
+          "detector": 0.00011478492084031947,
+          "latency": 0.00011478492084031947,
+          "loss": 0.0016069888917644728,
+          "phase": 0.00011478492084031947
+        },
+        "distance": 41,
+        "effectivePhysicalErrorRate": 0.002091224575125751,
+        "estimatedLogicalErrorRatePerCycle": 1.1221322930973772e-09,
+        "estimatedPhysicalModesPerCorrectionCycle": 60516,
+        "operatingPoint": {
+          "additionalLossDb": 0.36377162530130985,
+          "darkCountRateHz": 114784.92084031946,
+          "detectorEfficiency": 0.9904345899299734,
+          "feedForwardLatencyNs": 27.956984168063894,
+          "phaseErrorRad": 0.05726752279317022
+        },
+        "optimizerScores": {
+          "balancedScore": 0.38295698416806395,
+          "detectorRelaxedScore": 0.06229569841680639,
+          "latencyRelaxedScore": 0.06229569841680639,
+          "lossRelaxedScore": 0.7122956984168065,
+          "minimumAxisFraction": 0.05,
+          "usedBudgetFraction": 0.9000000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p70_det0p05_dark0p05_phase0p05_lat0p05",
+        "reserveErrorBudget": 0.0002295698416806386,
+        "targetLogicalErrorRate": 1e-08,
+        "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+      },
+      "targetLogicalErrorRate": 1e-08,
+      "topBalancedProfiles": [
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0003443547625209585,
+            "detector": 0.0003443547625209585,
+            "latency": 0.0003443547625209585,
+            "loss": 0.0003443547625209585,
+            "phase": 0.0003443547625209585
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.0017468698126047926,
+          "estimatedLogicalErrorRatePerCycle": 2.5650819648510777e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.07542690653273257,
+            "darkCountRateHz": 344354.7625209585,
+            "detectorEfficiency": 0.9713037697899202,
+            "feedForwardLatencyNs": 73.87095250419169,
+            "phaseErrorRad": 0.09919025910137957
+          },
+          "optimizerScores": {
+            "balancedScore": 2.3073924604201603,
+            "detectorRelaxedScore": 0.185739246042016,
+            "latencyRelaxedScore": 0.185739246042016,
+            "lossRelaxedScore": 0.185739246042016,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.7500000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p15_dark0p15_phase0p15_lat0p15",
+          "reserveErrorBudget": 0.0005739246042015969,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.7500000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0004591396833612779,
+            "detector": 0.0003443547625209585,
+            "latency": 0.0004591396833612779,
+            "loss": 0.0003443547625209585,
+            "phase": 0.0004591396833612779
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.0020912245751257504,
+          "estimatedLogicalErrorRatePerCycle": 1.122132293097374e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.07542690653273257,
+            "darkCountRateHz": 459139.68336127786,
+            "detectorEfficiency": 0.9713037697899202,
+            "feedForwardLatencyNs": 96.82793667225557,
+            "phaseErrorRad": 0.11453504558634044
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.1822956984168064,
+            "latencyRelaxedScore": 0.2322956984168064,
+            "lossRelaxedScore": 0.1822956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p15_dark0p20_phase0p20_lat0p20",
+          "reserveErrorBudget": 0.00022956984168063903,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0003443547625209585,
+            "detector": 0.0004591396833612779,
+            "latency": 0.0004591396833612779,
+            "loss": 0.0003443547625209585,
+            "phase": 0.0004591396833612779
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.002091224575125751,
+          "estimatedLogicalErrorRatePerCycle": 1.1221322930973772e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.07542690653273257,
+            "darkCountRateHz": 344354.7625209585,
+            "detectorEfficiency": 0.9617383597198935,
+            "feedForwardLatencyNs": 96.82793667225557,
+            "phaseErrorRad": 0.11453504558634044
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.2322956984168064,
+            "latencyRelaxedScore": 0.2322956984168064,
+            "lossRelaxedScore": 0.1822956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p20_dark0p15_phase0p20_lat0p20",
+          "reserveErrorBudget": 0.0002295698416806386,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0004591396833612779,
+            "detector": 0.0004591396833612779,
+            "latency": 0.0004591396833612779,
+            "loss": 0.0003443547625209585,
+            "phase": 0.0003443547625209585
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.002091224575125751,
+          "estimatedLogicalErrorRatePerCycle": 1.1221322930973772e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.07542690653273257,
+            "darkCountRateHz": 459139.68336127786,
+            "detectorEfficiency": 0.9617383597198935,
+            "feedForwardLatencyNs": 96.82793667225557,
+            "phaseErrorRad": 0.09919025910137957
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.2322956984168064,
+            "latencyRelaxedScore": 0.2322956984168064,
+            "lossRelaxedScore": 0.1822956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p20_dark0p20_phase0p15_lat0p20",
+          "reserveErrorBudget": 0.0002295698416806386,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0004591396833612779,
+            "detector": 0.0004591396833612779,
+            "latency": 0.0003443547625209585,
+            "loss": 0.0003443547625209585,
+            "phase": 0.0004591396833612779
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.0020912245751257504,
+          "estimatedLogicalErrorRatePerCycle": 1.122132293097374e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.07542690653273257,
+            "darkCountRateHz": 459139.68336127786,
+            "detectorEfficiency": 0.9617383597198935,
+            "feedForwardLatencyNs": 73.87095250419169,
+            "phaseErrorRad": 0.11453504558634044
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.2322956984168064,
+            "latencyRelaxedScore": 0.1822956984168064,
+            "lossRelaxedScore": 0.1822956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p20_dark0p20_phase0p20_lat0p15",
+          "reserveErrorBudget": 0.00022956984168063903,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0003443547625209585,
+            "detector": 0.0003443547625209585,
+            "latency": 0.0004591396833612779,
+            "loss": 0.0004591396833612779,
+            "phase": 0.0004591396833612779
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.002091224575125751,
+          "estimatedLogicalErrorRatePerCycle": 1.1221322930973772e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.1008631537314458,
+            "darkCountRateHz": 344354.7625209585,
+            "detectorEfficiency": 0.9713037697899202,
+            "feedForwardLatencyNs": 96.82793667225557,
+            "phaseErrorRad": 0.11453504558634044
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.1822956984168064,
+            "latencyRelaxedScore": 0.2322956984168064,
+            "lossRelaxedScore": 0.2322956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p15_dark0p15_phase0p20_lat0p20",
+          "reserveErrorBudget": 0.0002295698416806386,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0004591396833612779,
+            "detector": 0.0003443547625209585,
+            "latency": 0.0004591396833612779,
+            "loss": 0.0004591396833612779,
+            "phase": 0.0003443547625209585
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.002091224575125751,
+          "estimatedLogicalErrorRatePerCycle": 1.1221322930973772e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.1008631537314458,
+            "darkCountRateHz": 459139.68336127786,
+            "detectorEfficiency": 0.9713037697899202,
+            "feedForwardLatencyNs": 96.82793667225557,
+            "phaseErrorRad": 0.09919025910137957
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.1822956984168064,
+            "latencyRelaxedScore": 0.2322956984168064,
+            "lossRelaxedScore": 0.2322956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p15_dark0p20_phase0p15_lat0p20",
+          "reserveErrorBudget": 0.0002295698416806386,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0004591396833612779,
+            "detector": 0.0003443547625209585,
+            "latency": 0.0003443547625209585,
+            "loss": 0.0004591396833612779,
+            "phase": 0.0004591396833612779
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.0020912245751257504,
+          "estimatedLogicalErrorRatePerCycle": 1.122132293097374e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.1008631537314458,
+            "darkCountRateHz": 459139.68336127786,
+            "detectorEfficiency": 0.9713037697899202,
+            "feedForwardLatencyNs": 73.87095250419169,
+            "phaseErrorRad": 0.11453504558634044
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.1822956984168064,
+            "latencyRelaxedScore": 0.1822956984168064,
+            "lossRelaxedScore": 0.2322956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p15_dark0p20_phase0p20_lat0p15",
+          "reserveErrorBudget": 0.00022956984168063903,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0003443547625209585,
+            "detector": 0.0004591396833612779,
+            "latency": 0.0004591396833612779,
+            "loss": 0.0004591396833612779,
+            "phase": 0.0003443547625209585
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.002091224575125751,
+          "estimatedLogicalErrorRatePerCycle": 1.1221322930973772e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.1008631537314458,
+            "darkCountRateHz": 344354.7625209585,
+            "detectorEfficiency": 0.9617383597198935,
+            "feedForwardLatencyNs": 96.82793667225557,
+            "phaseErrorRad": 0.09919025910137957
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.2322956984168064,
+            "latencyRelaxedScore": 0.2322956984168064,
+            "lossRelaxedScore": 0.2322956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p20_dark0p15_phase0p15_lat0p20",
+          "reserveErrorBudget": 0.0002295698416806386,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0003443547625209585,
+            "detector": 0.0004591396833612779,
+            "latency": 0.0003443547625209585,
+            "loss": 0.0004591396833612779,
+            "phase": 0.0004591396833612779
+          },
+          "distance": 41,
+          "effectivePhysicalErrorRate": 0.0020912245751257504,
+          "estimatedLogicalErrorRatePerCycle": 1.122132293097374e-09,
+          "estimatedPhysicalModesPerCorrectionCycle": 60516,
+          "operatingPoint": {
+            "additionalLossDb": 0.1008631537314458,
+            "darkCountRateHz": 344354.7625209585,
+            "detectorEfficiency": 0.9617383597198935,
+            "feedForwardLatencyNs": 73.87095250419169,
+            "phaseErrorRad": 0.11453504558634044
+          },
+          "optimizerScores": {
+            "balancedScore": 2.302956984168064,
+            "detectorRelaxedScore": 0.2322956984168064,
+            "latencyRelaxedScore": 0.1822956984168064,
+            "lossRelaxedScore": 0.2322956984168064,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p20_dark0p15_phase0p20_lat0p15",
+          "reserveErrorBudget": 0.00022956984168063903,
+          "targetLogicalErrorRate": 1e-08,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        }
+      ]
+    },
+    {
+      "bestBalanced": {
+        "allocatedErrorBudget": {
+          "dark": 0.00041023217409611785,
+          "detector": 0.00041023217409611785,
+          "latency": 0.00041023217409611785,
+          "loss": 0.00041023217409611785,
+          "phase": 0.00041023217409611785
+        },
+        "distance": 61,
+        "effectivePhysicalErrorRate": 0.0020762568704805894,
+        "estimatedLogicalErrorRatePerCycle": 1.4711041659587364e-13,
+        "estimatedPhysicalModesPerCorrectionCycle": 133956,
+        "operatingPoint": {
+          "additionalLossDb": 0.09000706811986142,
+          "darkCountRateHz": 410232.17409611784,
+          "detectorEfficiency": 0.9658139854919902,
+          "feedForwardLatencyNs": 87.04643481922356,
+          "phaseErrorRad": 0.10826319439167256
+        },
+        "optimizerScores": {
+          "balancedScore": 2.31837202901602,
+          "detectorRelaxedScore": 0.18683720290160197,
+          "latencyRelaxedScore": 0.18683720290160197,
+          "lossRelaxedScore": 0.18683720290160197,
+          "minimumAxisFraction": 0.15000000000000002,
+          "usedBudgetFraction": 0.7500000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p15_det0p15_dark0p15_phase0p15_lat0p15",
+        "reserveErrorBudget": 0.0006837202901601959,
+        "targetLogicalErrorRate": 1e-09,
+        "usedNonDeviceErrorBudgetFraction": 0.7500000000000001
+      },
+      "candidateCount": 8442,
+      "detectorRelaxed": {
+        "allocatedErrorBudget": {
+          "dark": 0.00013674405803203927,
+          "detector": 0.0019144168124485498,
+          "latency": 0.00013674405803203927,
+          "loss": 0.00013674405803203927,
+          "phase": 0.00013674405803203927
+        },
+        "distance": 61,
+        "effectivePhysicalErrorRate": 0.002486489044576706,
+        "estimatedLogicalErrorRatePerCycle": 3.9365241311559615e-11,
+        "estimatedPhysicalModesPerCorrectionCycle": 133956,
+        "operatingPoint": {
+          "additionalLossDb": 0.029795570569474066,
+          "darkCountRateHz": 136744.05803203926,
+          "detectorEfficiency": 0.8404652656292875,
+          "feedForwardLatencyNs": 32.34881160640785,
+          "phaseErrorRad": 0.06250578442536094
+        },
+        "optimizerScores": {
+          "balancedScore": 0.387348811606408,
+          "detectorRelaxedScore": 0.7127348811606409,
+          "latencyRelaxedScore": 0.0627348811606408,
+          "lossRelaxedScore": 0.0627348811606408,
+          "minimumAxisFraction": 0.05,
+          "usedBudgetFraction": 0.9000000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p05_det0p70_dark0p05_phase0p05_lat0p05",
+        "reserveErrorBudget": 0.00027348811606407904,
+        "targetLogicalErrorRate": 1e-09,
+        "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+      },
+      "latencyRelaxed": {
+        "allocatedErrorBudget": {
+          "dark": 0.00013674405803203927,
+          "detector": 0.00013674405803203927,
+          "latency": 0.0019144168124485498,
+          "loss": 0.00013674405803203927,
+          "phase": 0.00013674405803203927
+        },
+        "distance": 61,
+        "effectivePhysicalErrorRate": 0.002486489044576707,
+        "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+        "estimatedPhysicalModesPerCorrectionCycle": 133956,
+        "operatingPoint": {
+          "additionalLossDb": 0.029795570569474066,
+          "darkCountRateHz": 136744.05803203926,
+          "detectorEfficiency": 0.9886046618306634,
+          "feedForwardLatencyNs": 387.88336248970995,
+          "phaseErrorRad": 0.06250578442536094
+        },
+        "optimizerScores": {
+          "balancedScore": 0.38734881160640794,
+          "detectorRelaxedScore": 0.06273488116064078,
+          "latencyRelaxedScore": 0.7127348811606409,
+          "lossRelaxedScore": 0.06273488116064078,
+          "minimumAxisFraction": 0.05,
+          "usedBudgetFraction": 0.9000000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p05_det0p05_dark0p05_phase0p05_lat0p70",
+        "reserveErrorBudget": 0.00027348811606407817,
+        "targetLogicalErrorRate": 1e-09,
+        "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+      },
+      "lossRelaxed": {
+        "allocatedErrorBudget": {
+          "dark": 0.00013674405803203927,
+          "detector": 0.00013674405803203927,
+          "latency": 0.00013674405803203927,
+          "loss": 0.0019144168124485498,
+          "phase": 0.00013674405803203927
+        },
+        "distance": 61,
+        "effectivePhysicalErrorRate": 0.002486489044576706,
+        "estimatedLogicalErrorRatePerCycle": 3.9365241311559615e-11,
+        "estimatedPhysicalModesPerCorrectionCycle": 133956,
+        "operatingPoint": {
+          "additionalLossDb": 0.4369747808462235,
+          "darkCountRateHz": 136744.05803203926,
+          "detectorEfficiency": 0.9886046618306634,
+          "feedForwardLatencyNs": 32.34881160640785,
+          "phaseErrorRad": 0.06250578442536094
+        },
+        "optimizerScores": {
+          "balancedScore": 0.387348811606408,
+          "detectorRelaxedScore": 0.0627348811606408,
+          "latencyRelaxedScore": 0.0627348811606408,
+          "lossRelaxedScore": 0.7127348811606409,
+          "minimumAxisFraction": 0.05,
+          "usedBudgetFraction": 0.9000000000000001
+        },
+        "passesTarget": true,
+        "profileId": "opt_loss0p70_det0p05_dark0p05_phase0p05_lat0p05",
+        "reserveErrorBudget": 0.00027348811606407904,
+        "targetLogicalErrorRate": 1e-09,
+        "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+      },
+      "targetLogicalErrorRate": 1e-09,
+      "topBalancedProfiles": [
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.00041023217409611785,
+            "detector": 0.00041023217409611785,
+            "latency": 0.00041023217409611785,
+            "loss": 0.00041023217409611785,
+            "phase": 0.00041023217409611785
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.0020762568704805894,
+          "estimatedLogicalErrorRatePerCycle": 1.4711041659587364e-13,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.09000706811986142,
+            "darkCountRateHz": 410232.17409611784,
+            "detectorEfficiency": 0.9658139854919902,
+            "feedForwardLatencyNs": 87.04643481922356,
+            "phaseErrorRad": 0.10826319439167256
+          },
+          "optimizerScores": {
+            "balancedScore": 2.31837202901602,
+            "detectorRelaxedScore": 0.18683720290160197,
+            "latencyRelaxedScore": 0.18683720290160197,
+            "lossRelaxedScore": 0.18683720290160197,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.7500000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p15_dark0p15_phase0p15_lat0p15",
+          "reserveErrorBudget": 0.0006837202901601959,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.7500000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0005469762321281571,
+            "detector": 0.00041023217409611785,
+            "latency": 0.0005469762321281571,
+            "loss": 0.00041023217409611785,
+            "phase": 0.0005469762321281571
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.09000706811986142,
+            "darkCountRateHz": 546976.232128157,
+            "detectorEfficiency": 0.9658139854919902,
+            "feedForwardLatencyNs": 114.39524642563141,
+            "phaseErrorRad": 0.12501156885072187
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.1827348811606408,
+            "latencyRelaxedScore": 0.23273488116064078,
+            "lossRelaxedScore": 0.1827348811606408,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p15_dark0p20_phase0p20_lat0p20",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.00041023217409611785,
+            "detector": 0.0005469762321281571,
+            "latency": 0.0005469762321281571,
+            "loss": 0.00041023217409611785,
+            "phase": 0.0005469762321281571
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.09000706811986142,
+            "darkCountRateHz": 410232.17409611784,
+            "detectorEfficiency": 0.9544186473226536,
+            "feedForwardLatencyNs": 114.39524642563141,
+            "phaseErrorRad": 0.12501156885072187
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.23273488116064078,
+            "latencyRelaxedScore": 0.23273488116064078,
+            "lossRelaxedScore": 0.1827348811606408,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p20_dark0p15_phase0p20_lat0p20",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0005469762321281571,
+            "detector": 0.0005469762321281571,
+            "latency": 0.0005469762321281571,
+            "loss": 0.00041023217409611785,
+            "phase": 0.00041023217409611785
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.09000706811986142,
+            "darkCountRateHz": 546976.232128157,
+            "detectorEfficiency": 0.9544186473226536,
+            "feedForwardLatencyNs": 114.39524642563141,
+            "phaseErrorRad": 0.10826319439167256
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.23273488116064078,
+            "latencyRelaxedScore": 0.23273488116064078,
+            "lossRelaxedScore": 0.1827348811606408,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p20_dark0p20_phase0p15_lat0p20",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0005469762321281571,
+            "detector": 0.0005469762321281571,
+            "latency": 0.00041023217409611785,
+            "loss": 0.00041023217409611785,
+            "phase": 0.0005469762321281571
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.09000706811986142,
+            "darkCountRateHz": 546976.232128157,
+            "detectorEfficiency": 0.9544186473226536,
+            "feedForwardLatencyNs": 87.04643481922356,
+            "phaseErrorRad": 0.12501156885072187
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.23273488116064078,
+            "latencyRelaxedScore": 0.1827348811606408,
+            "lossRelaxedScore": 0.1827348811606408,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p15_det0p20_dark0p20_phase0p20_lat0p15",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.00041023217409611785,
+            "detector": 0.00041023217409611785,
+            "latency": 0.0005469762321281571,
+            "loss": 0.0005469762321281571,
+            "phase": 0.0005469762321281571
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.12042878247293007,
+            "darkCountRateHz": 410232.17409611784,
+            "detectorEfficiency": 0.9658139854919902,
+            "feedForwardLatencyNs": 114.39524642563141,
+            "phaseErrorRad": 0.12501156885072187
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.1827348811606408,
+            "latencyRelaxedScore": 0.23273488116064078,
+            "lossRelaxedScore": 0.23273488116064078,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p15_dark0p15_phase0p20_lat0p20",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0005469762321281571,
+            "detector": 0.00041023217409611785,
+            "latency": 0.0005469762321281571,
+            "loss": 0.0005469762321281571,
+            "phase": 0.00041023217409611785
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.12042878247293007,
+            "darkCountRateHz": 546976.232128157,
+            "detectorEfficiency": 0.9658139854919902,
+            "feedForwardLatencyNs": 114.39524642563141,
+            "phaseErrorRad": 0.10826319439167256
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.1827348811606408,
+            "latencyRelaxedScore": 0.23273488116064078,
+            "lossRelaxedScore": 0.23273488116064078,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p15_dark0p20_phase0p15_lat0p20",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.0005469762321281571,
+            "detector": 0.00041023217409611785,
+            "latency": 0.00041023217409611785,
+            "loss": 0.0005469762321281571,
+            "phase": 0.0005469762321281571
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.12042878247293007,
+            "darkCountRateHz": 546976.232128157,
+            "detectorEfficiency": 0.9658139854919902,
+            "feedForwardLatencyNs": 87.04643481922356,
+            "phaseErrorRad": 0.12501156885072187
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.1827348811606408,
+            "latencyRelaxedScore": 0.1827348811606408,
+            "lossRelaxedScore": 0.23273488116064078,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p15_dark0p20_phase0p20_lat0p15",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.00041023217409611785,
+            "detector": 0.0005469762321281571,
+            "latency": 0.0005469762321281571,
+            "loss": 0.0005469762321281571,
+            "phase": 0.00041023217409611785
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.002486489044576707,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131156002e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.12042878247293007,
+            "darkCountRateHz": 410232.17409611784,
+            "detectorEfficiency": 0.9544186473226536,
+            "feedForwardLatencyNs": 114.39524642563141,
+            "phaseErrorRad": 0.10826319439167256
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.23273488116064078,
+            "latencyRelaxedScore": 0.23273488116064078,
+            "lossRelaxedScore": 0.23273488116064078,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p20_dark0p15_phase0p15_lat0p20",
+          "reserveErrorBudget": 0.00027348811606407817,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        },
+        {
+          "allocatedErrorBudget": {
+            "dark": 0.00041023217409611785,
+            "detector": 0.0005469762321281571,
+            "latency": 0.00041023217409611785,
+            "loss": 0.0005469762321281571,
+            "phase": 0.0005469762321281571
+          },
+          "distance": 61,
+          "effectivePhysicalErrorRate": 0.0024864890445767066,
+          "estimatedLogicalErrorRatePerCycle": 3.936524131155975e-11,
+          "estimatedPhysicalModesPerCorrectionCycle": 133956,
+          "operatingPoint": {
+            "additionalLossDb": 0.12042878247293007,
+            "darkCountRateHz": 410232.17409611784,
+            "detectorEfficiency": 0.9544186473226536,
+            "feedForwardLatencyNs": 87.04643481922356,
+            "phaseErrorRad": 0.12501156885072187
+          },
+          "optimizerScores": {
+            "balancedScore": 2.307348811606408,
+            "detectorRelaxedScore": 0.23273488116064078,
+            "latencyRelaxedScore": 0.1827348811606408,
+            "lossRelaxedScore": 0.23273488116064078,
+            "minimumAxisFraction": 0.15000000000000002,
+            "usedBudgetFraction": 0.9000000000000001
+          },
+          "passesTarget": true,
+          "profileId": "opt_loss0p20_det0p20_dark0p15_phase0p20_lat0p15",
+          "reserveErrorBudget": 0.0002734881160640786,
+          "targetLogicalErrorRate": 1e-09,
+          "usedNonDeviceErrorBudgetFraction": 0.9000000000000001
+        }
+      ]
+    }
+  ],
+  "schemaVersion": "open-quantum.budget-optimizer.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "target1e9BestBalancedLogicalErrorRate": 1.4711041659587364e-13,
+    "target1e9BestBalancedReserve": 0.0006837202901601959,
+    "target1e9BestBalancedUsedBudgetFraction": 0.7500000000000001,
+    "target1e9DetectorRelaxedMinEfficiency": 0.8404652656292875,
+    "target1e9LatencyRelaxedMaxFeedForwardLatencyNs": 387.88336248970995,
+    "target1e9LossRelaxedMaxAdditionalLossDb": 0.4369747808462235,
+    "target1e9OptimizedProfileCount": 8442,
+    "targetCount": 2
+  }
+}

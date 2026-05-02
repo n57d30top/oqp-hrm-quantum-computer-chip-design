@@ -1,0 +1,86 @@
+{
+  "assumptions": {
+    "attemptRateLimitedByFeedForwardOnly": true,
+    "decoderRuntimeMeasured": false,
+    "sourceDetectorHardwareMeasured": false
+  },
+  "claimBoundary": "Upper-bound simulated throughput; source repetition rate, detector dead time, driver settling, and decoder runtime are not measured.",
+  "rows": [
+    {
+      "distance": 15,
+      "estimatedCycleDepth": 23,
+      "estimatedHeraldingSuccessProbability": 0.8178362931958357,
+      "estimatedLogicalCycleTimeNs": 115.0,
+      "estimatedLogicalErrorRatePerCycle": null,
+      "estimatedPhysicalModesPerCorrectionCycle": 8100,
+      "estimatedProcessFidelity": 0.9955578964118097,
+      "feedForwardLatencyNs": 5.0,
+      "label": "baseline_nominal",
+      "upperBoundFusionAttemptsPerSecond": 200000000.0,
+      "upperBoundHeraldedEventsPerSecond": 163567258.63916716,
+      "upperBoundLogicalCyclesPerSecond": 8695652.173913043
+    },
+    {
+      "distance": 15,
+      "estimatedCycleDepth": 23,
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedLogicalCycleTimeNs": 115.0,
+      "estimatedLogicalErrorRatePerCycle": null,
+      "estimatedPhysicalModesPerCorrectionCycle": 8100,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0,
+      "label": "best_nominal_fusion_candidate",
+      "upperBoundFusionAttemptsPerSecond": 200000000.0,
+      "upperBoundHeraldedEventsPerSecond": 200000000.0,
+      "upperBoundLogicalCyclesPerSecond": 8695652.173913043
+    },
+    {
+      "distance": 15,
+      "estimatedCycleDepth": 23,
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedLogicalCycleTimeNs": 115.0,
+      "estimatedLogicalErrorRatePerCycle": null,
+      "estimatedPhysicalModesPerCorrectionCycle": 8100,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0,
+      "label": "best_upgraded_source_detector_sensitivity",
+      "upperBoundFusionAttemptsPerSecond": 200000000.0,
+      "upperBoundHeraldedEventsPerSecond": 200000000.0,
+      "upperBoundLogicalCyclesPerSecond": 8695652.173913043
+    },
+    {
+      "distance": 15,
+      "estimatedCycleDepth": 23,
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedLogicalCycleTimeNs": 115.0,
+      "estimatedLogicalErrorRatePerCycle": 4.0278752459412575e-20,
+      "estimatedPhysicalModesPerCorrectionCycle": 8100,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0,
+      "label": "logical_target_1e-08",
+      "upperBoundFusionAttemptsPerSecond": 200000000.0,
+      "upperBoundHeraldedEventsPerSecond": 200000000.0,
+      "upperBoundLogicalCyclesPerSecond": 8695652.173913043
+    },
+    {
+      "distance": 15,
+      "estimatedCycleDepth": 23,
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedLogicalCycleTimeNs": 115.0,
+      "estimatedLogicalErrorRatePerCycle": 4.0278752459412575e-20,
+      "estimatedPhysicalModesPerCorrectionCycle": 8100,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0,
+      "label": "logical_target_1e-09",
+      "upperBoundFusionAttemptsPerSecond": 200000000.0,
+      "upperBoundHeraldedEventsPerSecond": 200000000.0,
+      "upperBoundLogicalCyclesPerSecond": 8695652.173913043
+    }
+  ],
+  "schemaVersion": "open-quantum.throughput-report.v1",
+  "summary": {
+    "maxUpperBoundFusionAttemptsPerSecond": 200000000.0,
+    "maxUpperBoundHeraldedEventsPerSecond": 200000000.0,
+    "maxUpperBoundLogicalCyclesPerSecond": 8695652.173913043
+  }
+}

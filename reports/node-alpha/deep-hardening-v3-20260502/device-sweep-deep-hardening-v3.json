@@ -1,0 +1,1657 @@
+{
+  "acceptance": {
+    "maxCrosstalkRatio": 0.05,
+    "maxInsertionLossDb": 1.0,
+    "maxReflectionRatio": 0.05,
+    "minOutputPortNormalizationFlux": 1e-08,
+    "minUsefulTransmission": 0.5
+  },
+  "alternatives": [
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_accepted_candidate",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 0.0001,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 0.0001
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "coupler_gap0p08_len5_phi1p5708_w0p45",
+      "device": "coupler",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 4.724458527003818e-05,
+        "crossRatio": 0.47244585270038175,
+        "crosstalkRatio": 0.02489170540076352,
+        "imbalanceRatio": 0.02489170540076352,
+        "inputMonitorFlux": 1.022,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.36212172654444763,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 0.47244585270038175,
+          "throughPortMode0": 0.44755414729961823
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "reflectionFlux": 0.02200000000000002,
+        "reflectionRatio": 0.02200000000000002,
+        "throughFlux": 4.475541472996183e-05,
+        "throughRatio": 0.44755414729961823,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 0.9199999999999999
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.02489170540076352,
+        "crosstalkRatioExcess": 0.0,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.36212172654444763,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.02200000000000002,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 0.9199999999999999,
+        "usefulTransmissionFactorBelowTarget": 0.5434782608695653,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.08,
+        "couplingLengthUm": 5.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.53,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5707963267948966,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.45
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 90.28896121944793,
+      "scoreTerms": {
+        "balancePenalty": 0.2489170540076352,
+        "boundedUsefulTransmission": 0.9199999999999999,
+        "crosstalkPenalty": 0.0,
+        "insertionLossPenalty": 0.36212172654444763,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 1.100000000000001,
+        "score": 90.28896121944793
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_accepted_candidate",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 0.0001,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 0.0001
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "coupler_gap0p08_len5_phi3p14159_w0p45",
+      "device": "coupler",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 4.724458527003818e-05,
+        "crossRatio": 0.47244585270038175,
+        "crosstalkRatio": 0.02489170540076352,
+        "imbalanceRatio": 0.02489170540076352,
+        "inputMonitorFlux": 1.022,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.36212172654444763,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 0.47244585270038175,
+          "throughPortMode0": 0.44755414729961823
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "reflectionFlux": 0.02200000000000002,
+        "reflectionRatio": 0.02200000000000002,
+        "throughFlux": 4.475541472996183e-05,
+        "throughRatio": 0.44755414729961823,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 0.9199999999999999
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.02489170540076352,
+        "crosstalkRatioExcess": 0.0,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.36212172654444763,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.02200000000000002,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 0.9199999999999999,
+        "usefulTransmissionFactorBelowTarget": 0.5434782608695653,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.08,
+        "couplingLengthUm": 5.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.53,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.141592653589793,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.45
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 90.28896121944793,
+      "scoreTerms": {
+        "balancePenalty": 0.2489170540076352,
+        "boundedUsefulTransmission": 0.9199999999999999,
+        "crosstalkPenalty": 0.0,
+        "insertionLossPenalty": 0.36212172654444763,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 1.100000000000001,
+        "score": 90.28896121944793
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 8.500000000000002e-05
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p4",
+      "device": "truth-switch",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00017401107892913638,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.018943783277444,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "reflectionFlux": 0.01894378327744395,
+        "reflectionRatio": 0.01894378327744395,
+        "throughFlux": 0.0001659889210708637,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.01894378327744395,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.141592653589793,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.4
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 93.67119478424553,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 0.9471891638721974,
+        "score": 93.67119478424553
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 0.0001,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 0.0001
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p45",
+      "device": "truth-switch",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00020471891638721923,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.018943783277444,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "reflectionFlux": 0.01894378327744395,
+        "reflectionRatio": 0.01894378327744395,
+        "throughFlux": 0.0001952810836127808,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.01894378327744395,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.55,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.141592653589793,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.45
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 93.67119478424553,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 0.9471891638721974,
+        "score": 93.67119478424553
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 8.500000000000002e-05
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p5",
+      "device": "truth-switch",
+      "durationSeconds": 1.7e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00017401107892913638,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.018943783277444,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "reflectionFlux": 0.01894378327744395,
+        "reflectionRatio": 0.01894378327744395,
+        "throughFlux": 0.0001659889210708637,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.01894378327744395,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.6,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.141592653589793,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.5
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 93.67119478424553,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 0.9471891638721974,
+        "score": 93.67119478424553
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 7e-05,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 7e-05
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p55",
+      "device": "truth-switch",
+      "durationSeconds": 1.7e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00014330324147105345,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.018943783277444,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 7e-05,
+        "reflectionFlux": 0.01894378327744395,
+        "reflectionRatio": 0.01894378327744395,
+        "throughFlux": 0.00013669675852894653,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 7e-05,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.01894378327744395,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.65,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.141592653589793,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.55
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 93.67119478424553,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 0.9471891638721974,
+        "score": 93.67119478424553
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 8.500000000000002e-05
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi1p5708_w0p4",
+      "device": "truth-switch",
+      "durationSeconds": 1.7e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00017401107892913638,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.0755123257723676,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "reflectionFlux": 0.07551232577236755,
+        "reflectionRatio": 0.07551232577236755,
+        "throughFlux": 0.0001659889210708637,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.07551232577236755,
+        "reflectionRatioExcess": 0.025512325772367547,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5707963267948966,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.4
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 90.84276765949934,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 3.7756162886183775,
+        "score": 90.84276765949934
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 0.0001,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 0.0001
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi1p5708_w0p45",
+      "device": "truth-switch",
+      "durationSeconds": 1.7e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00020471891638721923,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.0755123257723676,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "reflectionFlux": 0.07551232577236755,
+        "reflectionRatio": 0.07551232577236755,
+        "throughFlux": 0.0001952810836127808,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.07551232577236755,
+        "reflectionRatioExcess": 0.025512325772367547,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.55,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5707963267948966,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.45
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 90.84276765949934,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 3.7756162886183775,
+        "score": 90.84276765949934
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 8.500000000000002e-05
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi1p5708_w0p5",
+      "device": "truth-switch",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00017401107892913638,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.0755123257723676,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "reflectionFlux": 0.07551232577236755,
+        "reflectionRatio": 0.07551232577236755,
+        "throughFlux": 0.0001659889210708637,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.07551232577236755,
+        "reflectionRatioExcess": 0.025512325772367547,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.6,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5707963267948966,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.5
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 90.84276765949934,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 3.7756162886183775,
+        "score": 90.84276765949934
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    }
+  ],
+  "champion": {
+    "acceptance": {
+      "maxCrosstalkRatio": 0.05,
+      "maxInsertionLossDb": 1.0,
+      "maxMziImbalanceRatio": 0.2,
+      "maxReflectionRatio": 0.05,
+      "minOutputPortNormalizationFlux": 1e-08,
+      "minUsefulTransmission": 0.5
+    },
+    "acceptanceStatus": "surrogate_accepted_candidate",
+    "backend": "node_alpha_analytical_surrogate",
+    "calibration": {
+      "inputFlux": 1.0,
+      "inputFluxMagnitude": 1.0,
+      "method": "analytical_surrogate_output_port_reference",
+      "minOutputPortNormalizationFlux": 1e-08,
+      "outputPortNormalizationFlux": 0.0001,
+      "referenceInputFlux": 1.0,
+      "referenceThroughFlux": 0.0001
+    },
+    "calibrationProtocol": {
+      "nextValidation": [
+        "install MEEP/MPB and rerun eigenmode-device-run",
+        "extract port S-parameters with MPB mode decomposition",
+        "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+      ],
+      "referenceCheck": "analytical_straight_waveguide_reference",
+      "reflectionCheck": "analytical_input_reference_delta",
+      "sourceCheck": "node_alpha_surrogate_only"
+    },
+    "candidateId": "coupler_gap0p08_len5_phi0_w0p45",
+    "device": "coupler",
+    "durationSeconds": 1.8e-05,
+    "fdtdMetrics": {
+      "crossFlux": 4.724458527003818e-05,
+      "crossRatio": 0.47244585270038175,
+      "crosstalkRatio": 0.02489170540076352,
+      "imbalanceRatio": 0.02489170540076352,
+      "inputMonitorFlux": 1.022,
+      "inputNormalizationFlux": 1.0,
+      "insertionLossDb": 0.36212172654444763,
+      "modeResolvedTransmission": {
+        "crossPortMode0": 0.47244585270038175,
+        "throughPortMode0": 0.44755414729961823
+      },
+      "normalizationReliable": true,
+      "outputPortNormalizationFlux": 0.0001,
+      "reflectionFlux": 0.02200000000000002,
+      "reflectionRatio": 0.02200000000000002,
+      "throughFlux": 4.475541472996183e-05,
+      "throughRatio": 0.44755414729961823,
+      "timing": {
+        "resolution": 16,
+        "until": 40
+      },
+      "usefulTransmission": 0.9199999999999999
+    },
+    "gapToAcceptance": {
+      "crosstalkRatio": 0.02489170540076352,
+      "crosstalkRatioExcess": 0.0,
+      "crosstalkRatioTarget": 0.05,
+      "insertionLossDb": 0.36212172654444763,
+      "insertionLossDbExcess": 0.0,
+      "insertionLossDbTarget": 1.0,
+      "normalizationReliable": true,
+      "outputPortNormalizationFlux": 0.0001,
+      "outputPortNormalizationFluxTarget": 1e-08,
+      "reflectionRatio": 0.02200000000000002,
+      "reflectionRatioExcess": 0.0,
+      "reflectionRatioTarget": 0.05,
+      "usefulTransmission": 0.9199999999999999,
+      "usefulTransmissionFactorBelowTarget": 0.5434782608695653,
+      "usefulTransmissionTarget": 0.5
+    },
+    "geometry": {
+      "cellXUm": 13.0,
+      "cellYUm": 4.0,
+      "couplingGapUm": 0.08,
+      "couplingLengthUm": 5.0,
+      "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+      "laneSeparationUm": 0.53,
+      "laserWavelengthNm": 1550,
+      "phaseShiftRad": 0.0,
+      "resolution": 16,
+      "until": 40,
+      "waveguideWidthUm": 0.45
+    },
+    "limitations": [
+      "Analytical surrogate, not a MEEP/FDTD result.",
+      "Not foundry-calibrated and not a wafer measurement.",
+      "Only suitable for local ranking and sensitivity exploration.",
+      "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+    ],
+    "meepVersion": null,
+    "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+    "schemaVersion": "open-quantum.eigenmode-device.v1",
+    "score": 90.28896121944793,
+    "scoreTerms": {
+      "balancePenalty": 0.2489170540076352,
+      "boundedUsefulTransmission": 0.9199999999999999,
+      "crosstalkPenalty": 0.0,
+      "insertionLossPenalty": 0.36212172654444763,
+      "normalizationPenalty": 0.0,
+      "reflectionPenalty": 1.100000000000001,
+      "score": 90.28896121944793
+    },
+    "simulationModelChanges": [
+      "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+      "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+      "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+      "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+    ],
+    "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+    "sourceModel": "node_alpha_analytical_surrogate",
+    "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+    "validationTier": "node_alpha_surrogate_gap_probe"
+  },
+  "championGapToAcceptance": {
+    "candidateId": "coupler_gap0p08_len5_phi0_w0p45",
+    "crosstalkRatio": 0.02489170540076352,
+    "crosstalkRatioExcess": 0.0,
+    "crosstalkRatioTarget": 0.05,
+    "device": "coupler",
+    "insertionLossDb": 0.36212172654444763,
+    "insertionLossDbExcess": 0.0,
+    "insertionLossDbTarget": 1.0,
+    "normalizationReliable": true,
+    "outputPortNormalizationFlux": 0.0001,
+    "outputPortNormalizationFluxTarget": 1e-08,
+    "reflectionRatio": 0.02200000000000002,
+    "reflectionRatioExcess": 0.0,
+    "reflectionRatioTarget": 0.05,
+    "usefulTransmission": 0.9199999999999999,
+    "usefulTransmissionFactorBelowTarget": 0.5434782608695653,
+    "usefulTransmissionTarget": 0.5
+  },
+  "deviceCoverage": {
+    "complete": true,
+    "missingDevices": [],
+    "observedDevices": [
+      "coupler",
+      "mzi",
+      "truth-switch"
+    ],
+    "requestedDevices": [
+      "coupler",
+      "mzi",
+      "truth-switch"
+    ]
+  },
+  "gapSummary": {
+    "blockingMetric": "crosstalk",
+    "interpretation": "High-resolution evidence is sufficient to treat this as a quantified geometry/source-monitor gap.",
+    "perDeviceBlockingMetrics": {
+      "coupler": null,
+      "mzi": "crosstalk",
+      "truth-switch": "crosstalk"
+    },
+    "status": "gap_quantified",
+    "validationTier": "high_resolution_gap_probe"
+  },
+  "nextSteps": [
+    "Promote accepted cells to 3D/MPB mode analysis before GDS cell promotion.",
+    "Sweep bend/coupler geometry at higher resolution and larger parameter ranges.",
+    "Add 3D/MPB mode analysis before GDS cell promotion."
+  ],
+  "perDeviceChampions": {
+    "coupler": {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_accepted_candidate",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 0.0001,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 0.0001
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "coupler_gap0p08_len5_phi0_w0p45",
+      "device": "coupler",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 4.724458527003818e-05,
+        "crossRatio": 0.47244585270038175,
+        "crosstalkRatio": 0.02489170540076352,
+        "imbalanceRatio": 0.02489170540076352,
+        "inputMonitorFlux": 1.022,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.36212172654444763,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 0.47244585270038175,
+          "throughPortMode0": 0.44755414729961823
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "reflectionFlux": 0.02200000000000002,
+        "reflectionRatio": 0.02200000000000002,
+        "throughFlux": 4.475541472996183e-05,
+        "throughRatio": 0.44755414729961823,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 0.9199999999999999
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.02489170540076352,
+        "crosstalkRatioExcess": 0.0,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.36212172654444763,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.02200000000000002,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 0.9199999999999999,
+        "usefulTransmissionFactorBelowTarget": 0.5434782608695653,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.08,
+        "couplingLengthUm": 5.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.53,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.45
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 90.28896121944793,
+      "scoreTerms": {
+        "balancePenalty": 0.2489170540076352,
+        "boundedUsefulTransmission": 0.9199999999999999,
+        "crosstalkPenalty": 0.0,
+        "insertionLossPenalty": 0.36212172654444763,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 1.100000000000001,
+        "score": 90.28896121944793
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    "mzi": {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 0.0001,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 0.0001
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "mzi_gap0p1_len2_phi1p5708_w0p45",
+      "device": "mzi",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 9.611702034595513e-06,
+        "crossRatio": 0.09611702034595512,
+        "crosstalkRatio": 0.09611702034595512,
+        "imbalanceRatio": 0.8161936180263685,
+        "inputMonitorFlux": 1.0362842712474618,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 0.09611702034595512,
+          "throughPortMode0": 0.9123106383723236
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.0001,
+        "reflectionFlux": 0.03628427124746181,
+        "reflectionRatio": 0.03628427124746181,
+        "throughFlux": 9.123106383723237e-05,
+        "throughRatio": 0.9123106383723236,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 1.0084276587182788
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09611702034595512,
+        "crosstalkRatioExcess": 0.04611702034595512,
+        "crosstalkRatioTarget": 0.05,
+        "imbalanceRatio": 0.8161936180263685,
+        "imbalanceRatioNote": "Not an acceptance blocker for through-state MZI/phase-shifter operation; balanced splitting must be swept as a separate operating point.",
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "operatingPoint": "through_state_low_leakage",
+        "outputPortNormalizationFlux": 0.0001,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.03628427124746181,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 1.0084276587182788,
+        "usefulTransmissionFactorBelowTarget": 0.4958213865687746,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 10.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 2.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.55,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5707963267948966,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.45
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 85.41214822276773,
+      "scoreTerms": {
+        "balancePenalty": 8.161936180263684,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.611702034595512,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 1.8142135623730904,
+        "score": 85.41214822276773
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    },
+    "truth-switch": {
+      "acceptance": {
+        "maxCrosstalkRatio": 0.05,
+        "maxInsertionLossDb": 1.0,
+        "maxMziImbalanceRatio": 0.2,
+        "maxReflectionRatio": 0.05,
+        "minOutputPortNormalizationFlux": 1e-08,
+        "minUsefulTransmission": 0.5
+      },
+      "acceptanceStatus": "surrogate_gap_probe_only",
+      "backend": "node_alpha_analytical_surrogate",
+      "calibration": {
+        "inputFlux": 1.0,
+        "inputFluxMagnitude": 1.0,
+        "method": "analytical_surrogate_output_port_reference",
+        "minOutputPortNormalizationFlux": 1e-08,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "referenceInputFlux": 1.0,
+        "referenceThroughFlux": 8.500000000000002e-05
+      },
+      "calibrationProtocol": {
+        "nextValidation": [
+          "install MEEP/MPB and rerun eigenmode-device-run",
+          "extract port S-parameters with MPB mode decomposition",
+          "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+        ],
+        "referenceCheck": "analytical_straight_waveguide_reference",
+        "reflectionCheck": "analytical_input_reference_delta",
+        "sourceCheck": "node_alpha_surrogate_only"
+      },
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p4",
+      "device": "truth-switch",
+      "durationSeconds": 1.8e-05,
+      "fdtdMetrics": {
+        "crossFlux": 0.00017401107892913638,
+        "crossRatio": 2.047189163872192,
+        "crosstalkRatio": 0.09437832774438437,
+        "imbalanceRatio": 0.09437832774438437,
+        "inputMonitorFlux": 1.018943783277444,
+        "inputNormalizationFlux": 1.0,
+        "insertionLossDb": 0.0,
+        "modeResolvedTransmission": {
+          "crossPortMode0": 2.047189163872192,
+          "throughPortMode0": 1.9528108361278078
+        },
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "reflectionFlux": 0.01894378327744395,
+        "reflectionRatio": 0.01894378327744395,
+        "throughFlux": 0.0001659889210708637,
+        "throughRatio": 1.9528108361278078,
+        "timing": {
+          "resolution": 16,
+          "until": 40
+        },
+        "usefulTransmission": 4.0
+      },
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.09437832774438437,
+        "crosstalkRatioExcess": 0.04437832774438437,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.500000000000002e-05,
+        "outputPortNormalizationFluxTarget": 1e-08,
+        "reflectionRatio": 0.01894378327744395,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 4.0,
+        "usefulTransmissionFactorBelowTarget": 0.125,
+        "usefulTransmissionTarget": 0.5
+      },
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.1,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.141592653589793,
+        "resolution": 16,
+        "until": 40,
+        "waveguideWidthUm": 0.4
+      },
+      "limitations": [
+        "Analytical surrogate, not a MEEP/FDTD result.",
+        "Not foundry-calibrated and not a wafer measurement.",
+        "Only suitable for local ranking and sensitivity exploration.",
+        "Prototype readiness gates must continue to require FDTD, S-parameters, PDK, and lab evidence."
+      ],
+      "meepVersion": null,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "score": 93.67119478424553,
+      "scoreTerms": {
+        "balancePenalty": 0.9437832774438437,
+        "boundedUsefulTransmission": 1.0,
+        "crosstalkPenalty": 4.437832774438437,
+        "insertionLossPenalty": 0.0,
+        "normalizationPenalty": 0.0,
+        "reflectionPenalty": 0.9471891638721974,
+        "score": 93.67119478424553
+      },
+      "simulationModelChanges": [
+        "MEEP is unavailable in this Node Alpha environment; this artifact is a deterministic analytical surrogate.",
+        "Surrogate terms are parameterized by coupling gap, coupling length, phase shift, and waveguide width.",
+        "MZI/phase-shifter acceptance is evaluated as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point.",
+        "Use only for ranking and sensitivity exploration; do not promote as FDTD, foundry, or lab evidence."
+      ],
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+      "validationTier": "node_alpha_surrogate_gap_probe"
+    }
+  },
+  "perDeviceGapToAcceptance": {
+    "coupler": {
+      "candidateId": "coupler_gap0p08_len5_phi0_w0p45",
+      "crosstalkRatio": 0.02489170540076352,
+      "crosstalkRatioExcess": 0.0,
+      "crosstalkRatioTarget": 0.05,
+      "device": "coupler",
+      "insertionLossDb": 0.36212172654444763,
+      "insertionLossDbExcess": 0.0,
+      "insertionLossDbTarget": 1.0,
+      "normalizationReliable": true,
+      "outputPortNormalizationFlux": 0.0001,
+      "outputPortNormalizationFluxTarget": 1e-08,
+      "reflectionRatio": 0.02200000000000002,
+      "reflectionRatioExcess": 0.0,
+      "reflectionRatioTarget": 0.05,
+      "usefulTransmission": 0.9199999999999999,
+      "usefulTransmissionFactorBelowTarget": 0.5434782608695653,
+      "usefulTransmissionTarget": 0.5
+    },
+    "mzi": {
+      "candidateId": "mzi_gap0p1_len2_phi1p5708_w0p45",
+      "crosstalkRatio": 0.09611702034595512,
+      "crosstalkRatioExcess": 0.04611702034595512,
+      "crosstalkRatioTarget": 0.05,
+      "device": "mzi",
+      "imbalanceRatio": 0.8161936180263685,
+      "imbalanceRatioNote": "Not an acceptance blocker for through-state MZI/phase-shifter operation; balanced splitting must be swept as a separate operating point.",
+      "insertionLossDb": 0.0,
+      "insertionLossDbExcess": 0.0,
+      "insertionLossDbTarget": 1.0,
+      "normalizationReliable": true,
+      "operatingPoint": "through_state_low_leakage",
+      "outputPortNormalizationFlux": 0.0001,
+      "outputPortNormalizationFluxTarget": 1e-08,
+      "reflectionRatio": 0.03628427124746181,
+      "reflectionRatioExcess": 0.0,
+      "reflectionRatioTarget": 0.05,
+      "usefulTransmission": 1.0084276587182788,
+      "usefulTransmissionFactorBelowTarget": 0.4958213865687746,
+      "usefulTransmissionTarget": 0.5
+    },
+    "truth-switch": {
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p4",
+      "crosstalkRatio": 0.09437832774438437,
+      "crosstalkRatioExcess": 0.04437832774438437,
+      "crosstalkRatioTarget": 0.05,
+      "device": "truth-switch",
+      "insertionLossDb": 0.0,
+      "insertionLossDbExcess": 0.0,
+      "insertionLossDbTarget": 1.0,
+      "normalizationReliable": true,
+      "outputPortNormalizationFlux": 8.500000000000002e-05,
+      "outputPortNormalizationFluxTarget": 1e-08,
+      "reflectionRatio": 0.01894378327744395,
+      "reflectionRatioExcess": 0.0,
+      "reflectionRatioTarget": 0.05,
+      "usefulTransmission": 4.0,
+      "usefulTransmissionFactorBelowTarget": 0.125,
+      "usefulTransmissionTarget": 0.5
+    }
+  },
+  "rerankedFromExistingEvidence": false,
+  "resolution": 16,
+  "runCount": 768,
+  "schemaVersion": "open-quantum.device-sweep.v1",
+  "sourceArtifact": null,
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "status": "high_resolution_gap_quantified",
+  "until": 40,
+  "validationTier": "high_resolution_gap_probe"
+}

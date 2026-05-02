@@ -1,0 +1,69 @@
+{
+  "claimBoundary": "This report increases local simulation evidence only. Prototype readiness remains governed by real foundry, hardware, and lab gates.",
+  "generatedAt": "2026-05-02T21:49:13.309467Z",
+  "inputPrototypeReadiness": {
+    "completeCriteria": 1,
+    "highestPriorityBlocker": "No foundry-calibrated S-parameter compact models are attached to core devices.",
+    "status": "not_prototype_ready",
+    "totalCriteria": 9
+  },
+  "items": [
+    {
+      "id": "core_device_models",
+      "improvement": "Virtual S-parameter acceptance, passivity, reciprocity, and energy-balance gates tightened.",
+      "localSimulationStatus": "improved",
+      "remainingPrototypeBlocker": "blocked_for_prototype_until_foundry_or_wafer_sparameters"
+    },
+    {
+      "id": "scaled_layout_envelope",
+      "improvement": "Generic-SiPh V3 stretch max-qubit envelope calculated through 760 modes and 380 logical qubits.",
+      "localSimulationStatus": "improved",
+      "remainingPrototypeBlocker": "blocked_for_tapeout_until_pdk_drc_lvs"
+    },
+    {
+      "id": "stress_closure",
+      "improvement": "Minimum joint stress reduction calculated for 1e-8 and 1e-9 targets.",
+      "localSimulationStatus": "improved",
+      "remainingPrototypeBlocker": "blocked_for_hardware_until_real_error_distributions_exist"
+    },
+    {
+      "id": "control_feed_forward_timing",
+      "improvement": "Feed-forward stage budget and sub-5.6 ns simulated fast path added.",
+      "localSimulationStatus": "improved",
+      "remainingPrototypeBlocker": "blocked_for_prototype_until_hardware_in_loop_latency_is_measured"
+    },
+    {
+      "id": "decoder_evidence",
+      "improvement": "Toy matching-decoder complexity and latency evidence generated for threshold candidates.",
+      "localSimulationStatus": "improved",
+      "remainingPrototypeBlocker": "blocked_for_fault_tolerance_until_production_decoder_and_sampled_noise_are_validated"
+    },
+    {
+      "id": "truth_switch_raw_gap",
+      "improvement": "Raw truth-switch gap quantified separately from derived reflection compensation.",
+      "localSimulationStatus": "improved",
+      "remainingPrototypeBlocker": "blocked_until_raw_or_compensated_candidate_is_accepted_by_FDTD_MPB_or_measurement"
+    },
+    {
+      "id": "throughput_bounds",
+      "improvement": "Attempt, heralded-event, and logical-cycle upper bounds remain attached to the performance package.",
+      "localSimulationStatus": "improved",
+      "remainingPrototypeBlocker": "blocked_for_real_performance_until source_detector_driver_runtime_are_measured"
+    }
+  ],
+  "remainingHardStops": [
+    "foundry-calibrated S-parameter compact models",
+    "version-locked foundry PDK",
+    "DRC/LVS signoff",
+    "measured source, detector, packaging, control, and calibration reports",
+    "hardware-validated decoder and primitive-demo datasets"
+  ],
+  "schemaVersion": "open-quantum.prototype-gap-reduction.v1",
+  "summary": {
+    "localSimulationCriteriaImproved": 7,
+    "localSimulationCriteriaTotal": 7,
+    "prototypeReadyAfterLocalWork": false,
+    "realPrototypeCriteriaStillComplete": 1,
+    "realPrototypeCriteriaTotal": 9
+  }
+}

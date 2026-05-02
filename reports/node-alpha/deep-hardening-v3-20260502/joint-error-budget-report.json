@@ -1,0 +1,170 @@
+{
+  "claimBoundary": "Synthetic joint operating profiles only; these are not measured environmental or hardware tolerances.",
+  "limitations": [
+    "Budget splits are analytical planning profiles; they do not replace foundry process distributions.",
+    "Joint profiles assume error terms add independently as in the local threshold model."
+  ],
+  "profiles": [
+    {
+      "allocatedErrorBudget": {
+        "dark": 0.00022956984168063895,
+        "detector": 0.0004591396833612779,
+        "latency": 0.00022956984168063895,
+        "loss": 0.0004591396833612779,
+        "phase": 0.0003443547625209584
+      },
+      "distance": 41,
+      "effectivePhysicalErrorRate": 0.0017468698126047921,
+      "estimatedLogicalErrorRatePerCycle": 2.5650819648510697e-11,
+      "estimatedPhysicalModesPerCorrectionCycle": 60516,
+      "operatingPoint": {
+        "additionalLossDb": 0.1008631537314458,
+        "darkCountRateHz": 229569.84168063893,
+        "detectorEfficiency": 0.9617383597198935,
+        "feedForwardLatencyNs": 50.91396833612779,
+        "phaseErrorRad": 0.09919025910137955
+      },
+      "passesTarget": true,
+      "profileId": "balanced_75pct_budget",
+      "reserveErrorBudget": 0.0005739246042015974,
+      "targetLogicalErrorRate": 1e-08,
+      "usedNonDeviceErrorBudgetFraction": 0.75
+    },
+    {
+      "allocatedErrorBudget": {
+        "dark": 0.00022956984168063895,
+        "detector": 0.0005739246042015974,
+        "latency": 0.0,
+        "loss": 0.0005739246042015974,
+        "phase": 0.00022956984168063895
+      },
+      "distance": 41,
+      "effectivePhysicalErrorRate": 0.0016320848917644728,
+      "estimatedLogicalErrorRatePerCycle": 6.1549927273550246e-12,
+      "estimatedPhysicalModesPerCorrectionCycle": 60516,
+      "operatingPoint": {
+        "additionalLossDb": 0.1264492569251571,
+        "darkCountRateHz": 229569.84168063893,
+        "detectorEfficiency": 0.9521729496498669,
+        "feedForwardLatencyNs": 5.0,
+        "phaseErrorRad": 0.08098850741761167
+      },
+      "passesTarget": true,
+      "profileId": "latency_preserving_70pct_budget",
+      "reserveErrorBudget": 0.0006887095250419167,
+      "targetLogicalErrorRate": 1e-08,
+      "usedNonDeviceErrorBudgetFraction": 0.7
+    },
+    {
+      "allocatedErrorBudget": {
+        "dark": 0.00022956984168063895,
+        "detector": 0.0008034944458822363,
+        "latency": 0.00011478492084031947,
+        "loss": 0.00022956984168063895,
+        "phase": 0.00022956984168063895
+      },
+      "distance": 41,
+      "effectivePhysicalErrorRate": 0.0016320848917644728,
+      "estimatedLogicalErrorRatePerCycle": 6.1549927273550246e-12,
+      "estimatedPhysicalModesPerCorrectionCycle": 60516,
+      "operatingPoint": {
+        "additionalLossDb": 0.05013877015352115,
+        "darkCountRateHz": 229569.84168063893,
+        "detectorEfficiency": 0.9330421295098137,
+        "feedForwardLatencyNs": 27.956984168063894,
+        "phaseErrorRad": 0.08098850741761167
+      },
+      "passesTarget": true,
+      "profileId": "low_loss_detector_heavy_70pct_budget",
+      "reserveErrorBudget": 0.0006887095250419167,
+      "targetLogicalErrorRate": 1e-08,
+      "usedNonDeviceErrorBudgetFraction": 0.7
+    },
+    {
+      "allocatedErrorBudget": {
+        "dark": 0.00027348811606407855,
+        "detector": 0.0005469762321281571,
+        "latency": 0.00027348811606407855,
+        "loss": 0.0005469762321281571,
+        "phase": 0.00041023217409611774
+      },
+      "distance": 61,
+      "effectivePhysicalErrorRate": 0.002076256870480589,
+      "estimatedLogicalErrorRatePerCycle": 1.4711041659587303e-13,
+      "estimatedPhysicalModesPerCorrectionCycle": 133956,
+      "operatingPoint": {
+        "additionalLossDb": 0.12042878247293007,
+        "darkCountRateHz": 273488.1160640785,
+        "detectorEfficiency": 0.9544186473226536,
+        "feedForwardLatencyNs": 59.69762321281571,
+        "phaseErrorRad": 0.10826319439167255
+      },
+      "passesTarget": true,
+      "profileId": "balanced_75pct_budget",
+      "reserveErrorBudget": 0.0006837202901601963,
+      "targetLogicalErrorRate": 1e-09,
+      "usedNonDeviceErrorBudgetFraction": 0.75
+    },
+    {
+      "allocatedErrorBudget": {
+        "dark": 0.00027348811606407855,
+        "detector": 0.0006837202901601963,
+        "latency": 0.0,
+        "loss": 0.0006837202901601963,
+        "phase": 0.00027348811606407855
+      },
+      "distance": 61,
+      "effectivePhysicalErrorRate": 0.0019395128124485498,
+      "estimatedLogicalErrorRatePerCycle": 1.779926649673725e-14,
+      "estimatedPhysicalModesPerCorrectionCycle": 133956,
+      "operatingPoint": {
+        "additionalLossDb": 0.15106510078743676,
+        "darkCountRateHz": 273488.1160640785,
+        "detectorEfficiency": 0.943023309153317,
+        "feedForwardLatencyNs": 5.0,
+        "phaseErrorRad": 0.08839652806111441
+      },
+      "passesTarget": true,
+      "profileId": "latency_preserving_70pct_budget",
+      "reserveErrorBudget": 0.0008204643481922354,
+      "targetLogicalErrorRate": 1e-09,
+      "usedNonDeviceErrorBudgetFraction": 0.7
+    },
+    {
+      "allocatedErrorBudget": {
+        "dark": 0.00027348811606407855,
+        "detector": 0.0009572084062242748,
+        "latency": 0.00013674405803203927,
+        "loss": 0.00027348811606407855,
+        "phase": 0.00027348811606407855
+      },
+      "distance": 61,
+      "effectivePhysicalErrorRate": 0.0019395128124485498,
+      "estimatedLogicalErrorRatePerCycle": 1.779926649673725e-14,
+      "estimatedPhysicalModesPerCorrectionCycle": 133956,
+      "operatingPoint": {
+        "additionalLossDb": 0.059796972077069695,
+        "darkCountRateHz": 273488.1160640785,
+        "detectorEfficiency": 0.9202326328146437,
+        "feedForwardLatencyNs": 32.34881160640785,
+        "phaseErrorRad": 0.08839652806111441
+      },
+      "passesTarget": true,
+      "profileId": "low_loss_detector_heavy_70pct_budget",
+      "reserveErrorBudget": 0.0008204643481922354,
+      "targetLogicalErrorRate": 1e-09,
+      "usedNonDeviceErrorBudgetFraction": 0.7
+    }
+  ],
+  "schemaVersion": "open-quantum.joint-error-budget.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "profileCount": 6,
+    "target1e8JointBudgetPass": true,
+    "target1e9BalancedAdditionalLossDb": 0.12042878247293007,
+    "target1e9BalancedDetectorEfficiency": 0.9544186473226536,
+    "target1e9BalancedLogicalErrorRate": 1.4711041659587303e-13,
+    "target1e9BalancedReserve": 0.0006837202901601963,
+    "target1e9JointBudgetPass": true
+  }
+}

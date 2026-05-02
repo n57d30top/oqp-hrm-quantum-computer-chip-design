@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "id": "raw_truth_switch_not_compensated",
+      "passed": true
+    },
+    {
+      "id": "fusion_fidelity_preserved",
+      "passed": true
+    },
+    {
+      "id": "foundry_sparameters_remain_blocked",
+      "passed": true
+    },
+    {
+      "id": "logical_qubits_backed_by_max_qubit_layout_envelope",
+      "passed": true
+    },
+    {
+      "id": "v3_maxout_targets_not_cosmetic",
+      "passed": true
+    },
+    {
+      "id": "attempt_rate_not_inflated",
+      "passed": true
+    },
+    {
+      "id": "fast_path_and_full_decoder_separated",
+      "passed": true
+    },
+    {
+      "id": "full_decoder_not_claimed_in_fast_path",
+      "passed": true
+    },
+    {
+      "id": "one_e_minus_nine_margins_and_joint_budget_pass",
+      "passed": true
+    },
+    {
+      "id": "stress_corner_monte_carlo_agree",
+      "passed": true
+    },
+    {
+      "id": "no_tapeout_or_prototype_claim",
+      "passed": true
+    }
+  ],
+  "generatedAt": "2026-05-02T21:49:13.309143Z",
+  "limitations": [
+    "Consistency checks guard simulator outputs and claim boundaries; they are not external validation."
+  ],
+  "schemaVersion": "open-quantum.internal-consistency-audit.v1",
+  "summary": {
+    "allChecksPassed": true,
+    "checkCount": 11,
+    "failedChecks": [],
+    "passedCheckCount": 11
+  }
+}

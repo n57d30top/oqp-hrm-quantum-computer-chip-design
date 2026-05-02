@@ -1,0 +1,67 @@
+{
+  "claimBoundary": "Toy analytical matching decoder evidence only; not a production decoder benchmark.",
+  "decoder": {
+    "implementationStatus": "simulation_model_available",
+    "interface": [
+      "detector_events",
+      "loss_erasure_flags",
+      "time_ordered_syndromes"
+    ],
+    "name": "toy_loss_erasure_weighted_matching",
+    "productionReady": false
+  },
+  "generatedAt": "2026-05-02T21:49:13.004492Z",
+  "limitations": [
+    "Synthetic sample bounds cannot statistically prove 1e-9 logical error without far more samples.",
+    "Decoder latency is a deterministic complexity model, not measured software or hardware runtime."
+  ],
+  "rows": [
+    {
+      "analyticalLogicalErrorRate": 4.0278752459412575e-20,
+      "candidateId": "d15_p2p5e-05_loss0_eta1_dark0_phase0_ff0",
+      "decoderLatencyBudgetNs": 15.0,
+      "distance": 15,
+      "estimatedDecoderLatencyNs": 12.732638863577915,
+      "excludedFromFastFeedForwardWindow": true,
+      "expectedLogicalErrorsInSyntheticSample": 4.833450295129509e-16,
+      "graphEdgesEstimate": 10125,
+      "graphNodes": 4050,
+      "latencyBudgetPass": true,
+      "parallelMatchingTiles": 2,
+      "sampledBoundMeetsTarget": false,
+      "sampledLogicalErrorUpperBound": 0.00025,
+      "syntheticSyndromeSampleCount": 12000,
+      "targetLogicalErrorRate": 1e-08
+    },
+    {
+      "analyticalLogicalErrorRate": 4.0278752459412575e-20,
+      "candidateId": "d15_p2p5e-05_loss0_eta1_dark0_phase0_ff0",
+      "decoderLatencyBudgetNs": 15.0,
+      "distance": 15,
+      "estimatedDecoderLatencyNs": 12.732638863577915,
+      "excludedFromFastFeedForwardWindow": true,
+      "expectedLogicalErrorsInSyntheticSample": 4.833450295129509e-16,
+      "graphEdgesEstimate": 10125,
+      "graphNodes": 4050,
+      "latencyBudgetPass": true,
+      "parallelMatchingTiles": 2,
+      "sampledBoundMeetsTarget": false,
+      "sampledLogicalErrorUpperBound": 0.00025,
+      "syntheticSyndromeSampleCount": 12000,
+      "targetLogicalErrorRate": 1e-09
+    }
+  ],
+  "schemaVersion": "open-quantum.decoder-evidence.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "fullDecoderSeparatedFromFastPath": true,
+    "productionDecoderReady": false,
+    "sampledEvidenceSufficientFor1e9Claim": false,
+    "target1e9LatencyBelow1000Ns": true,
+    "target1e9LatencyBelow15Ns": true,
+    "target1e9LatencyBelow250Ns": true,
+    "target1e9LatencyBelow50Ns": true,
+    "target1e9ToyDecoderLatencyNs": 12.732638863577915,
+    "targetCount": 2
+  }
+}

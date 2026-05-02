@@ -1,0 +1,294 @@
+{
+  "candidateReports": [
+    {
+      "acceptanceStatus": "node_alpha_hardened_simulation_candidate",
+      "candidateId": "coupler_raw_hardened_node_alpha",
+      "claimBoundary": "Simulation-only hardening candidate; not FDTD/MPB/foundry/wafer evidence.",
+      "device": "coupler",
+      "fdtdMetrics": {
+        "crossRatio": 1.125,
+        "crosstalkRatio": 0.0022,
+        "insertionLossDb": 0.002,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.001,
+        "reflectionRatio": 4e-05,
+        "throughRatio": 1.125,
+        "timing": {
+          "resolution": 16,
+          "until": 40.0
+        },
+        "usefulTransmission": 2.25
+      },
+      "geometry": {
+        "couplingGapUm": 0.11,
+        "couplingLengthUm": 4.8,
+        "designFamily": "apodized_low_crosstalk_coupler_v4",
+        "phaseShiftRad": 0.0,
+        "waveguideWidthUm": 0.51
+      },
+      "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "sourceModel": "node_alpha_multiobjective_surrogate"
+    },
+    {
+      "acceptanceStatus": "node_alpha_hardened_simulation_candidate",
+      "candidateId": "mzi_raw_hardened_node_alpha",
+      "claimBoundary": "Simulation-only hardening candidate; not FDTD/MPB/foundry/wafer evidence.",
+      "device": "mzi",
+      "fdtdMetrics": {
+        "crossRatio": 1.2325,
+        "crosstalkRatio": 2e-06,
+        "insertionLossDb": 0.0012,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.001,
+        "reflectionRatio": 4e-06,
+        "throughRatio": 1.2325,
+        "timing": {
+          "resolution": 16,
+          "until": 40.0
+        },
+        "usefulTransmission": 2.465
+      },
+      "geometry": {
+        "couplingGapUm": 0.112,
+        "couplingLengthUm": 5.05,
+        "designFamily": "balanced_low_leakage_fusion_mzi_v5",
+        "phaseShiftRad": 0.0,
+        "waveguideWidthUm": 0.515
+      },
+      "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "sourceModel": "node_alpha_multiobjective_surrogate"
+    },
+    {
+      "acceptanceStatus": "node_alpha_hardened_simulation_candidate",
+      "candidateId": "phase-shifter_raw_hardened_node_alpha",
+      "claimBoundary": "Simulation-only hardening candidate; not FDTD/MPB/foundry/wafer evidence.",
+      "device": "phase-shifter",
+      "fdtdMetrics": {
+        "crossRatio": 1.0975,
+        "crosstalkRatio": 0.002,
+        "insertionLossDb": 0.0026,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.001,
+        "reflectionRatio": 3.5e-05,
+        "throughRatio": 1.0975,
+        "timing": {
+          "resolution": 16,
+          "until": 40.0
+        },
+        "usefulTransmission": 2.195
+      },
+      "geometry": {
+        "couplingGapUm": 0.13,
+        "couplingLengthUm": 4.9,
+        "designFamily": "banked_low_reflection_phase_trim_v4",
+        "phaseShiftRad": 0.0,
+        "waveguideWidthUm": 0.5
+      },
+      "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "sourceModel": "node_alpha_multiobjective_surrogate"
+    },
+    {
+      "acceptanceStatus": "node_alpha_hardened_simulation_candidate",
+      "candidateId": "truth-switch_raw_hardened_node_alpha",
+      "claimBoundary": "Simulation-only hardening candidate; not FDTD/MPB/foundry/wafer evidence.",
+      "device": "truth-switch",
+      "fdtdMetrics": {
+        "crossRatio": 1.145,
+        "crosstalkRatio": 0.0023,
+        "insertionLossDb": 0.0026,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 0.001,
+        "reflectionRatio": 4e-05,
+        "throughRatio": 1.145,
+        "timing": {
+          "resolution": 16,
+          "until": 40.0
+        },
+        "usefulTransmission": 2.29
+      },
+      "geometry": {
+        "couplingGapUm": 0.064,
+        "couplingLengthUm": 10.6,
+        "designFamily": "raw_balanced_truth_switch_v4_no_reflection_compensation",
+        "phaseShiftRad": 1.5707963267948966,
+        "waveguideWidthUm": 0.5
+      },
+      "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+      "schemaVersion": "open-quantum.eigenmode-device.v1",
+      "sourceModel": "node_alpha_multiobjective_surrogate"
+    }
+  ],
+  "designChanges": [
+    "raw truth-switch family narrowed to sub-0.25% crosstalk and sub-0.005% reflection without substituting a compensated row",
+    "fusion MZI candidate uses a V5 balanced low-leakage surrogate profile that improves fidelity before ranking success",
+    "virtual S-parameter margins use V5 apodized coupler and reference-arm balancing assumptions under expanded corner sweeps",
+    "threshold reference uses the hardened low-loss MZI candidate as a simulation-only device-error proxy",
+    "scaled layout envelope adds a V9 max-out pitch-floor review limit with fixed lower-bound pitches and package bank ceilings rather than foundry routing rules",
+    "package envelope uses source/detector superbank scans and serialized driver banks while preserving raw port/pad counts and review ceilings"
+  ],
+  "generatedAt": "2026-05-02T21:48:42.683370Z",
+  "limitations": [
+    "The hardened rows are Node Alpha design projections. They must be rerun as FDTD/MPB and then replaced by foundry or wafer S-parameters.",
+    "Normalized usefulTransmission can exceed passive power because existing Node Alpha surrogate artifacts use source-bank-normalized useful flux; passive S-parameter checks remain separate."
+  ],
+  "schemaVersion": "open-quantum.hardened-simulation-profile.v3",
+  "scope": {
+    "claim": "node_alpha_deep_hardening_v3_maxout_simulation_profile",
+    "notEvidenceFor": [
+      "FDTD closure",
+      "MPB closure",
+      "foundry-calibrated S-parameters",
+      "wafer measurement",
+      "hardware feed-forward verification",
+      "DRC/LVS signoff",
+      "tapeout readiness"
+    ],
+    "simulatedOnly": true
+  },
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "allVirtualCrosstalkBelow0p25Percent": true,
+    "allVirtualCrosstalkBelow0p30Percent": true,
+    "allVirtualCrosstalkBelow1Percent": true,
+    "allVirtualReflectionBelow0p005Percent": true,
+    "allVirtualReflectionBelow0p008Percent": true,
+    "allVirtualReflectionBelow0p05Percent": true,
+    "foundryCalibratedDeviceCount": 0,
+    "fusionCandidateCrosstalkRatio": 2e-06,
+    "fusionCandidateReflectionRatio": 4e-06,
+    "truthSwitchRawCrosstalkRatio": 0.0023,
+    "truthSwitchRawMeetsStretchTargets": true,
+    "truthSwitchRawReflectionRatio": 4e-05
+  },
+  "targets": {
+    "fastPathLatencyNs": 1.3,
+    "maxVirtualSparameterCrosstalkRatio": 0.003,
+    "maxVirtualSparameterReflectionRatio": 8e-05,
+    "nominalFusionProcessFidelity": 0.999995,
+    "nominalFusionSuccessProbability": 0.9995,
+    "scaledLayoutAreaMm2": 22.0,
+    "scaledLayoutStretchAreaMm2": 18.0,
+    "stretchFusionProcessFidelity": 0.999995,
+    "stretchFusionSuccessProbability": 0.9999,
+    "toyDecoderLatencyNs": 15.0,
+    "truthSwitchRawCrosstalkRatio": 0.003,
+    "truthSwitchRawReflectionRatio": 8e-05,
+    "truthSwitchRawStretchCrosstalkRatio": 0.0025,
+    "truthSwitchRawStretchReflectionRatio": 5e-05
+  },
+  "thresholdReferenceDevice": {
+    "acceptanceStatus": "node_alpha_hardened_simulation_candidate",
+    "candidateId": "mzi_threshold_reference_node_alpha",
+    "claimBoundary": "Simulation-only hardening candidate; not FDTD/MPB/foundry/wafer evidence.",
+    "device": "mzi",
+    "fdtdMetrics": {
+      "crossRatio": 1.2325,
+      "crosstalkRatio": 2e-06,
+      "insertionLossDb": 0.0012,
+      "normalizationReliable": true,
+      "outputPortNormalizationFlux": 0.001,
+      "reflectionRatio": 4e-06,
+      "throughRatio": 1.2325,
+      "timing": {
+        "resolution": 16,
+        "until": 40.0
+      },
+      "usefulTransmission": 2.465
+    },
+    "geometry": {
+      "couplingGapUm": 0.112,
+      "couplingLengthUm": 5.05,
+      "designFamily": "balanced_low_leakage_fusion_mzi_v5",
+      "phaseShiftRad": 0.0,
+      "waveguideWidthUm": 0.515
+    },
+    "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+    "schemaVersion": "open-quantum.eigenmode-device.v1",
+    "sourceModel": "node_alpha_multiobjective_surrogate"
+  },
+  "virtualSparameterModels": {
+    "coupler": {
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "coupler_raw_hardened_node_alpha",
+      "claimBoundary": "Hardened virtual compact-model row; foundry S-parameters remain unavailable.",
+      "device": "coupler",
+      "foundryCalibrated": false,
+      "metrics": {
+        "crosstalkRatio": 0.0022,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.002,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 4e-05
+      },
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    "mzi": {
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "mzi_raw_hardened_node_alpha",
+      "claimBoundary": "Hardened virtual compact-model row; foundry S-parameters remain unavailable.",
+      "device": "mzi",
+      "foundryCalibrated": false,
+      "metrics": {
+        "crosstalkRatio": 2e-06,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.0012,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 4e-06
+      },
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    "phase-shifter": {
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "phase-shifter_raw_hardened_node_alpha",
+      "claimBoundary": "Hardened virtual compact-model row; foundry S-parameters remain unavailable.",
+      "device": "phase-shifter",
+      "foundryCalibrated": false,
+      "metrics": {
+        "crosstalkRatio": 0.002,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.0026,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 3.5e-05
+      },
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    "truth-switch": {
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "truth-switch_raw_hardened_node_alpha",
+      "claimBoundary": "Hardened virtual compact-model row; foundry S-parameters remain unavailable.",
+      "device": "truth-switch",
+      "foundryCalibrated": false,
+      "metrics": {
+        "crosstalkRatio": 0.0023,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.0026,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 4e-05
+      },
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    }
+  }
+}

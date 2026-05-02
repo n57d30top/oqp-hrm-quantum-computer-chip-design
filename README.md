@@ -3,9 +3,11 @@
 Simulation-only design dossier for the Open Quantum Photonics Heralded Reset
 Mesh (OQP-HRM) Node Alpha architecture.
 
-This repository contains design material only. It does not contain the simulator
-implementation, generated reports, graph outputs, caches, test code, foundry
-data, hardware measurements, DRC/LVS evidence, or tapeout material.
+This repository now contains the public design material plus the simulator,
+unit tests, and selected generated V3 report artifacts needed for independent
+review. It still does not contain foundry data, hardware measurements,
+DRC/LVS evidence, tapeout material, private partner data, graph outputs, caches,
+or lab notebooks.
 
 ## Licence
 
@@ -17,7 +19,9 @@ Attribution-NonCommercial 4.0 International licence.
 - Legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
 
 The licence applies to the design documentation, architecture descriptions,
-blueprints, and other non-software design materials in this package.
+blueprints, reproducibility reports, and simulator materials in this public
+package. Commercial use requires a separate written licence; see
+`COMMERCIAL-LICENSING.md`.
 
 ## Claim Boundary
 
@@ -46,10 +50,37 @@ docs/
 hardware/
   Heralded_Reset_Mesh_Blueprint.yaml
   Heralded_Reset_Mesh_V1_Champion.json
+oqp/
+tests/
+reports/node-alpha/deep-hardening-v3-20260502/
+reports/node-alpha/qc-path/
+ARTIFACTS.md
+VALIDATION_ROADMAP.md
+COMMERCIAL-LICENSING.md
+pyproject.toml
 ```
 
-The full simulator, tests, reports, and generated artifacts remain outside this
-design-only repository.
+The repository intentionally excludes generated caches, full graph outputs,
+private working directories, and unreviewed local artifacts.
+
+## Reproducibility
+
+The public repo includes the minimum simulator and report bundle needed to
+rerun the Node Alpha V3 hardening flow and unit tests.
+
+```bash
+python3 -m pip install -e .
+python3 -m unittest discover -s tests -v
+python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml \
+  --artifact-root reports/node-alpha \
+  --out-dir reports/node-alpha/deep-hardening-v3-20260502 \
+  --focused-max-runs 768
+```
+
+Expected unit-test result: `48` tests pass.
+
+Report checksums are listed in `ARTIFACTS.md`. The validation plan and external
+review gates are listed in `VALIDATION_ROADMAP.md`.
 
 ## Current Maximum Design Point
 

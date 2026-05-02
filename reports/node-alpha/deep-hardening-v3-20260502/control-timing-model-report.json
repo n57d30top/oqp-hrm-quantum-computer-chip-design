@@ -1,0 +1,104 @@
+{
+  "channelCounts": {
+    "detectorReadoutChannels": 36,
+    "phaseDriverChannels": 24,
+    "switchDriverChannels": 12,
+    "tdcChannels": 36
+  },
+  "claimBoundary": "Fast-path timing closure is analytical. Full decoder runtime is separate and is not hardware-in-the-loop feed-forward verification.",
+  "decoderTimingSeparation": {
+    "fastPathRole": "heralding, table lookup, switch/phase command issue",
+    "fullDecoderExcludedFromFeedForwardWindow": true,
+    "fullDecoderRole": "batch syndrome graph decoding and correction-frame update",
+    "fullDecoderTargetLatencyNs": 15.0
+  },
+  "generatedAt": "2026-05-02T21:49:13.004477Z",
+  "limitations": [
+    "No measured detector, TDC, heralding logic, driver, or phase-settling latency is attached.",
+    "Passing rows are implementation targets for the ultra-fast path, not proof that control_ready is true.",
+    "Full decoder latency is reported separately and is not claimed to fit inside the few-ns feed-forward window."
+  ],
+  "profiles": [
+    {
+      "clockJitterPs": 25.0,
+      "latencyReserveNs": 379.28336248970993,
+      "passesTarget1e9LatencyBudget": false,
+      "profileId": "conservative_fpga_control",
+      "stageBudget": {
+        "detectorReadoutNs": 1.6,
+        "driverRiseAndDacNs": 1.2,
+        "guardBandNs": 0.4,
+        "heraldingDecisionNs": 2.4,
+        "phaseOrSwitchSettlingNs": 1.2,
+        "shotSchedulerNs": 0.8,
+        "tdcTimestampNs": 1.0
+      },
+      "totalLatencyNs": 8.6
+    },
+    {
+      "clockJitterPs": 8.0,
+      "latencyReserveNs": 385.40336248970993,
+      "passesTarget1e9LatencyBudget": true,
+      "profileId": "node_alpha_balanced_fast_path",
+      "stageBudget": {
+        "detectorReadoutNs": 0.42,
+        "driverRiseAndDacNs": 0.32,
+        "guardBandNs": 0.12,
+        "heraldingDecisionNs": 0.58,
+        "phaseOrSwitchSettlingNs": 0.5,
+        "shotSchedulerNs": 0.24,
+        "tdcTimestampNs": 0.3
+      },
+      "totalLatencyNs": 2.48
+    },
+    {
+      "clockJitterPs": 3.0,
+      "latencyReserveNs": 386.28336248970993,
+      "passesTarget1e9LatencyBudget": true,
+      "profileId": "asic_or_close_fpga_optimized_v2",
+      "stageBudget": {
+        "detectorReadoutNs": 0.2,
+        "driverRiseAndDacNs": 0.24,
+        "guardBandNs": 0.08,
+        "heraldingDecisionNs": 0.34,
+        "phaseOrSwitchSettlingNs": 0.42,
+        "shotSchedulerNs": 0.16,
+        "tdcTimestampNs": 0.16
+      },
+      "totalLatencyNs": 1.6
+    },
+    {
+      "clockJitterPs": 2.0,
+      "latencyReserveNs": 386.71336248970994,
+      "passesTarget1e9LatencyBudget": true,
+      "profileId": "v3_sub_1p3ns_fast_path_target",
+      "stageBudget": {
+        "detectorReadoutNs": 0.14,
+        "driverRiseAndDacNs": 0.18,
+        "guardBandNs": 0.06,
+        "heraldingDecisionNs": 0.25,
+        "phaseOrSwitchSettlingNs": 0.34,
+        "shotSchedulerNs": 0.1,
+        "tdcTimestampNs": 0.1
+      },
+      "totalLatencyNs": 1.17
+    }
+  ],
+  "schemaVersion": "open-quantum.control-timing-model.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "bestFastPathLatencyNs": 1.17,
+    "bestProfileId": "v3_sub_1p3ns_fast_path_target",
+    "bestTotalLatencyNs": 1.17,
+    "fullDecoderNotClaimedInFeedForwardWindow": true,
+    "fullDecoderSeparatedFromFastPath": true,
+    "hardwareFeedForwardVerified": false,
+    "passingProfileCount": 3,
+    "profileCount": 4,
+    "target1e9TimingClosedInSimulation": true
+  },
+  "target": {
+    "target1e9MaxFeedForwardLatencyNs": 387.88336248970995,
+    "targetClockJitterPs": 5.0
+  }
+}

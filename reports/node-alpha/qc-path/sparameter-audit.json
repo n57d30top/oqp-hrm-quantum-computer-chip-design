@@ -1,0 +1,168 @@
+{
+  "blockers": [
+    "coupler: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated.",
+    "mzi: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated.",
+    "phase-shifter: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated.",
+    "truth-switch: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated."
+  ],
+  "devices": [
+    {
+      "accepted": false,
+      "blockers": [
+        "coupler: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "device": "coupler",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 0.01856841435276133,
+        "energyBalanceError": 0.0013333333333332975,
+        "insertionLossDb": 0.08907666689403874,
+        "passivityMaxSingularValue": 1.0,
+        "reciprocityError": 0.0005,
+        "reflectionRatio": 0.0004
+      },
+      "path": "reports/node-alpha/qc-path/sparameters/coupler.sparam",
+      "portCount": 4,
+      "processCorners": [
+        "nominal_virtual"
+      ],
+      "sha256": "23442a56b0d2bd87162522d8466f4ee03408a83806d058283a6ebecceeb9d9f3",
+      "status": "sparameter_gap",
+      "validationLevel": "virtual_surrogate_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    {
+      "accepted": false,
+      "blockers": [
+        "mzi: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "device": "mzi",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 0.023344718346946833,
+        "energyBalanceError": 0.0013333333333332975,
+        "insertionLossDb": 0.11030152494723816,
+        "passivityMaxSingularValue": 1.0,
+        "reciprocityError": 0.0005,
+        "reflectionRatio": 0.00040000050080165136
+      },
+      "path": "reports/node-alpha/qc-path/sparameters/mzi.sparam",
+      "portCount": 4,
+      "processCorners": [
+        "nominal_virtual"
+      ],
+      "sha256": "bd3e9cbd789f4c2125d928bdf1a7b32e6d5c1032d8235b89c2c78965771634bd",
+      "status": "sparameter_gap",
+      "validationLevel": "virtual_surrogate_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    {
+      "accepted": false,
+      "blockers": [
+        "phase-shifter: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "device": "phase-shifter",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 0.023344718346946833,
+        "energyBalanceError": 0.0013333333333332975,
+        "insertionLossDb": 0.11030152494723816,
+        "passivityMaxSingularValue": 1.0,
+        "reciprocityError": 0.0005,
+        "reflectionRatio": 0.00040000050080165136
+      },
+      "path": "reports/node-alpha/qc-path/sparameters/phase-shifter.sparam",
+      "portCount": 4,
+      "processCorners": [
+        "nominal_virtual"
+      ],
+      "sha256": "fd4b60e2b58a2dae7ef8c34febbe80b4caa48dfe672b495b9a1a3f8464365f5d",
+      "status": "sparameter_gap",
+      "validationLevel": "virtual_surrogate_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    {
+      "accepted": false,
+      "blockers": [
+        "truth-switch: calibration status virtual_surrogate_not_foundry is not foundry/wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "device": "truth-switch",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 0.029473908886386988,
+        "energyBalanceError": 0.0013333333333332975,
+        "insertionLossDb": 0.15757700615083473,
+        "passivityMaxSingularValue": 1.0,
+        "reciprocityError": 0.0005,
+        "reflectionRatio": 0.0048258495001045985
+      },
+      "path": "reports/node-alpha/qc-path/sparameters/truth-switch.sparam",
+      "portCount": 4,
+      "processCorners": [
+        "nominal_virtual"
+      ],
+      "sha256": "4ab4b3ff09fa039a1595818edc0683e1e3d92ae3f9734bdee0957a62ada3c8f0",
+      "status": "sparameter_gap",
+      "validationLevel": "virtual_surrogate_sparameter_not_foundry",
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    }
+  ],
+  "generatedAt": "2026-05-02T15:54:53.873489Z",
+  "modelManifest": "reports/node-alpha/qc-path/sparameter-models.json",
+  "nextArtifacts": [
+    "reports/node-alpha/qc-path/sparameter-models.json",
+    "reports/node-alpha/qc-path/sparameters/coupler.sparam",
+    "reports/node-alpha/qc-path/sparameters/mzi.sparam",
+    "reports/node-alpha/qc-path/sparameters/phase-shifter.sparam",
+    "reports/node-alpha/qc-path/sparameters/truth-switch.sparam"
+  ],
+  "readinessFlags": {
+    "all_core_sparameters_accepted": false,
+    "all_core_sparameters_present": true,
+    "all_hashes_verified": true,
+    "foundry_calibrated_sparameters": false,
+    "sparameter_models_ready": false
+  },
+  "schemaVersion": "open-quantum.sparameter-audit.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "acceptedDeviceCount": 0,
+    "hashFailureCount": 0,
+    "missingDeviceCount": 0,
+    "requiredDeviceCount": 4
+  },
+  "targets": {
+    "maxCrosstalkRatio": 0.05,
+    "maxEnergyBalanceError": 0.05,
+    "maxInsertionLossDb": 1.0,
+    "maxPassivitySingularValue": 1.0001,
+    "maxReciprocityError": 0.001,
+    "maxReflectionRatio": 0.05,
+    "requiredDevices": [
+      "coupler",
+      "mzi",
+      "phase-shifter",
+      "truth-switch"
+    ],
+    "wavelengthWindowNm": [
+      1520.0,
+      1580.0
+    ]
+  }
+}

@@ -1,0 +1,4367 @@
+{
+  "claimBoundary": "Dense generic-SiPh review envelope only; no foundry PDK, DRC, LVS, or scaled routed tapeout GDS is claimed.",
+  "generatedAt": "2026-05-02T21:49:13.000973Z",
+  "limitations": [
+    "The max-qubit row is an aggressive dense review envelope, not a DRC/LVS-clean generated foundry layout.",
+    "Fiber pitch adapters, thermal crosstalk, package keepouts, source/detector placement, and process rules remain generic."
+  ],
+  "maxQubitSearch": {
+    "claimBoundary": "Maximum qubits are bounded by the local review-only layout envelope, not hardware or foundry feasibility.",
+    "rows": [
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 2.3324,
+        "effectiveElectricalPackagePadCount": 40,
+        "effectiveOpticalPackagePortCount": 20,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 96,
+        "logicalQubits": 72,
+        "physicalModes": 144,
+        "routeReductionFraction": 0.8682914949419259
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 2.643449,
+        "effectiveElectricalPackagePadCount": 40,
+        "effectiveOpticalPackagePortCount": 26,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 112,
+        "logicalQubits": 84,
+        "physicalModes": 168,
+        "routeReductionFraction": 0.8744008784962212
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 3.012581,
+        "effectiveElectricalPackagePadCount": 48,
+        "effectiveOpticalPackagePortCount": 26,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 128,
+        "logicalQubits": 96,
+        "physicalModes": 192,
+        "routeReductionFraction": 0.8781517852074701
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 3.403025,
+        "effectiveElectricalPackagePadCount": 56,
+        "effectiveOpticalPackagePortCount": 30,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 144,
+        "logicalQubits": 108,
+        "physicalModes": 216,
+        "routeReductionFraction": 0.881091479775224
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 3.814781,
+        "effectiveElectricalPackagePadCount": 64,
+        "effectiveOpticalPackagePortCount": 30,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 160,
+        "logicalQubits": 120,
+        "physicalModes": 240,
+        "routeReductionFraction": 0.883457444378455
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 4.247849,
+        "effectiveElectricalPackagePadCount": 72,
+        "effectiveOpticalPackagePortCount": 36,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 176,
+        "logicalQubits": 132,
+        "physicalModes": 264,
+        "routeReductionFraction": 0.8854027055150884
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 4.702229,
+        "effectiveElectricalPackagePadCount": 72,
+        "effectiveOpticalPackagePortCount": 40,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 192,
+        "logicalQubits": 144,
+        "physicalModes": 288,
+        "routeReductionFraction": 0.8870303122969306
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 5.177921,
+        "effectiveElectricalPackagePadCount": 72,
+        "effectiveOpticalPackagePortCount": 40,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 208,
+        "logicalQubits": 156,
+        "physicalModes": 312,
+        "routeReductionFraction": 0.8884121991730572
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 5.674925,
+        "effectiveElectricalPackagePadCount": 80,
+        "effectiveOpticalPackagePortCount": 46,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 224,
+        "logicalQubits": 168,
+        "physicalModes": 336,
+        "routeReductionFraction": 0.8896001051490159
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 6.193241,
+        "effectiveElectricalPackagePadCount": 88,
+        "effectiveOpticalPackagePortCount": 46,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 240,
+        "logicalQubits": 180,
+        "physicalModes": 360,
+        "routeReductionFraction": 0.8906321962602475
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 6.732869,
+        "effectiveElectricalPackagePadCount": 88,
+        "effectiveOpticalPackagePortCount": 50,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 256,
+        "logicalQubits": 192,
+        "physicalModes": 384,
+        "routeReductionFraction": 0.8915372424722662
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 7.293809,
+        "effectiveElectricalPackagePadCount": 96,
+        "effectiveOpticalPackagePortCount": 56,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 272,
+        "logicalQubits": 204,
+        "physicalModes": 408,
+        "routeReductionFraction": 0.8923373415488178
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 7.876061,
+        "effectiveElectricalPackagePadCount": 104,
+        "effectiveOpticalPackagePortCount": 56,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 288,
+        "logicalQubits": 216,
+        "physicalModes": 432,
+        "routeReductionFraction": 0.8930497472868614
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 8.479625,
+        "effectiveElectricalPackagePadCount": 112,
+        "effectiveOpticalPackagePortCount": 60,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 304,
+        "logicalQubits": 228,
+        "physicalModes": 456,
+        "routeReductionFraction": 0.8936881278427748
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 9.104501,
+        "effectiveElectricalPackagePadCount": 112,
+        "effectiveOpticalPackagePortCount": 60,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 320,
+        "logicalQubits": 240,
+        "physicalModes": 480,
+        "routeReductionFraction": 0.8942634511780619
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 9.962594,
+        "effectiveElectricalPackagePadCount": 120,
+        "effectiveOpticalPackagePortCount": 66,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 341,
+        "logicalQubits": 256,
+        "physicalModes": 512,
+        "routeReductionFraction": 0.8949428326226022
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 10.201622,
+        "effectiveElectricalPackagePadCount": 120,
+        "effectiveOpticalPackagePortCount": 66,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 347,
+        "logicalQubits": 260,
+        "physicalModes": 520,
+        "routeReductionFraction": 0.8951096445584599
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 10.418189,
+        "effectiveElectricalPackagePadCount": 120,
+        "effectiveOpticalPackagePortCount": 70,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 352,
+        "logicalQubits": 264,
+        "physicalModes": 528,
+        "routeReductionFraction": 0.8952589381536583
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 10.636976,
+        "effectiveElectricalPackagePadCount": 120,
+        "effectiveOpticalPackagePortCount": 70,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 357,
+        "logicalQubits": 268,
+        "physicalModes": 536,
+        "routeReductionFraction": 0.8954033782194434
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 10.883552,
+        "effectiveElectricalPackagePadCount": 128,
+        "effectiveOpticalPackagePortCount": 70,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 363,
+        "logicalQubits": 272,
+        "physicalModes": 544,
+        "routeReductionFraction": 0.8955558764035937
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 11.107001,
+        "effectiveElectricalPackagePadCount": 128,
+        "effectiveOpticalPackagePortCount": 70,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 368,
+        "logicalQubits": 276,
+        "physicalModes": 552,
+        "routeReductionFraction": 0.8956924502084298
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 11.817125,
+        "effectiveElectricalPackagePadCount": 128,
+        "effectiveOpticalPackagePortCount": 76,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 384,
+        "logicalQubits": 288,
+        "physicalModes": 576,
+        "routeReductionFraction": 0.8960902052400904
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 12.049676,
+        "effectiveElectricalPackagePadCount": 136,
+        "effectiveOpticalPackagePortCount": 76,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 389,
+        "logicalQubits": 292,
+        "physicalModes": 584,
+        "routeReductionFraction": 0.896212001359267
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 12.311348,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 76,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 395,
+        "logicalQubits": 296,
+        "physicalModes": 592,
+        "routeReductionFraction": 0.8963408986881146
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 12.548561,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 76,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 400,
+        "logicalQubits": 300,
+        "physicalModes": 600,
+        "routeReductionFraction": 0.896456452001706
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 12.787994,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 80,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 405,
+        "logicalQubits": 304,
+        "physicalModes": 608,
+        "routeReductionFraction": 0.8965688759842909
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 13.057214,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 80,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 411,
+        "logicalQubits": 308,
+        "physicalModes": 616,
+        "routeReductionFraction": 0.8966879795064728
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 13.301309,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 80,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 416,
+        "logicalQubits": 312,
+        "physicalModes": 624,
+        "routeReductionFraction": 0.8967947917595648
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 13.547624,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 80,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 421,
+        "logicalQubits": 316,
+        "physicalModes": 632,
+        "routeReductionFraction": 0.8968988870395239
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 13.824392,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 80,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 427,
+        "logicalQubits": 320,
+        "physicalModes": 640,
+        "routeReductionFraction": 0.8970092737986007
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 14.075369,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 86,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 432,
+        "logicalQubits": 324,
+        "physicalModes": 648,
+        "routeReductionFraction": 0.8971082971082971
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 14.870741,
+        "effectiveElectricalPackagePadCount": 152,
+        "effectiveOpticalPackagePortCount": 86,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 448,
+        "logicalQubits": 336,
+        "physicalModes": 672,
+        "routeReductionFraction": 0.897399605548834
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 15.954386,
+        "effectiveElectricalPackagePadCount": 160,
+        "effectiveOpticalPackagePortCount": 90,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 469,
+        "logicalQubits": 352,
+        "physicalModes": 704,
+        "routeReductionFraction": 0.8977549935491448
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 16.253798,
+        "effectiveElectricalPackagePadCount": 160,
+        "effectiveOpticalPackagePortCount": 90,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 475,
+        "logicalQubits": 356,
+        "physicalModes": 712,
+        "routeReductionFraction": 0.897844293386567
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 16.525421,
+        "effectiveElectricalPackagePadCount": 160,
+        "effectiveOpticalPackagePortCount": 90,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 480,
+        "logicalQubits": 360,
+        "physicalModes": 720,
+        "routeReductionFraction": 0.8979244377718274
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 17.665454,
+        "effectiveElectricalPackagePadCount": 160,
+        "effectiveOpticalPackagePortCount": 96,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 501,
+        "logicalQubits": 376,
+        "physicalModes": 752,
+        "routeReductionFraction": 0.8982353371380968
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 17.979962,
+        "effectiveElectricalPackagePadCount": 176,
+        "effectiveOpticalPackagePortCount": 96,
+        "failedEnvelopeConstraints": [],
+        "feasibleUnderV2Envelope": true,
+        "feasibleUnderV3Envelope": true,
+        "interferometers": 507,
+        "logicalQubits": 380,
+        "physicalModes": 760,
+        "routeReductionFraction": 0.898313772678447
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 18.265349,
+        "effectiveElectricalPackagePadCount": 176,
+        "effectiveOpticalPackagePortCount": 100,
+        "failedEnvelopeConstraints": [
+          "area_at_or_above_18mm2_stretch",
+          "effective_optical_package_ports_above_review_ceiling"
+        ],
+        "feasibleUnderV2Envelope": false,
+        "feasibleUnderV3Envelope": false,
+        "interferometers": 512,
+        "logicalQubits": 384,
+        "physicalModes": 768,
+        "routeReductionFraction": 0.89838416980009
+      },
+      {
+        "bestProfileId": "v3_maxout_pitch_floor_review",
+        "chipAreaMm2": 19.46177,
+        "effectiveElectricalPackagePadCount": 184,
+        "effectiveOpticalPackagePortCount": 100,
+        "failedEnvelopeConstraints": [
+          "area_at_or_above_18mm2_stretch",
+          "effective_optical_package_ports_above_review_ceiling"
+        ],
+        "feasibleUnderV2Envelope": false,
+        "feasibleUnderV3Envelope": false,
+        "interferometers": 533,
+        "logicalQubits": 400,
+        "physicalModes": 800,
+        "routeReductionFraction": 0.8986584448697037
+      }
+    ],
+    "schemaVersion": "open-quantum.max-qubit-layout-search.v1",
+    "summary": {
+      "maxFeasibleAreaMm2": 17.979962,
+      "maxFeasibleLogicalQubits": 380,
+      "maxFeasiblePhysicalModes": 760,
+      "maxFeasibleProfileId": "v3_maxout_pitch_floor_review",
+      "nextRejectedAreaMm2": 18.265349,
+      "nextRejectedLogicalQubits": 384,
+      "nextRejectedPhysicalModes": 768
+    }
+  },
+  "resourceScalingRefs": {
+    "maxLogicalQubits": 380,
+    "maxPhysicalModes": 760
+  },
+  "reviewLayoutProfiles": [
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 8.0,
+      "mzi_pitch_um": 72.0,
+      "profileId": "v2_dense_banked_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 7.0,
+      "mzi_pitch_um": 56.0,
+      "profileId": "compact_banked_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 6.0,
+      "mzi_pitch_um": 48.0,
+      "profileId": "max_qubit_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 5.0,
+      "mzi_pitch_um": 42.0,
+      "profileId": "aggressive_max_qubit_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 4.0,
+      "mzi_pitch_um": 32.0,
+      "profileId": "folded_mesh_v3_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 3.0,
+      "mzi_pitch_um": 24.0,
+      "profileId": "ultra_dense_v4_limit_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 2.75,
+      "mzi_pitch_um": 22.0,
+      "profileId": "package_floor_v5_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 2.5,
+      "mzi_pitch_um": 20.0,
+      "profileId": "serial_package_v6_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 2.25,
+      "mzi_pitch_um": 18.0,
+      "profileId": "area_floor_v7_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 2.0,
+      "mzi_pitch_um": 16.0,
+      "profileId": "stretch_mux_density_v8_review"
+    },
+    {
+      "fiber_pitch_um": 127.0,
+      "lane_pitch_um": 1.85,
+      "mzi_pitch_um": 15.0,
+      "profileId": "v3_maxout_pitch_floor_review"
+    }
+  ],
+  "rows": [
+    {
+      "areaReductionFraction": 0.7996036115393085,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 1,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 2,
+        "effectiveAreaMm2": 1.274,
+        "effectiveElectricalPackagePadCount": 40,
+        "effectiveOpticalPackagePortCount": 10,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 1,
+        "phaseDriverBanks": 2,
+        "rawModePortsStillTracked": 72,
+        "rawPerDeviceControlPadsAvoided": 48,
+        "sourceBanks": 2,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 2
+      },
+      "baselineGenericAreaMm2": 6.3574,
+      "baselineTotalRouteLengthMm": 179.184,
+      "chipAreaMm2": 1.274,
+      "chipSizeUm": {
+        "height": 980.0,
+        "width": 1300.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 48,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 288,
+      "interferometers": 24,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 18,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 624,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 36,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 2.61464,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.4725421912670774
+        },
+        {
+          "chipAreaMm2": 2.23832,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.5451379587463167
+        },
+        {
+          "chipAreaMm2": 2.05016,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.5791588534690597
+        },
+        {
+          "chipAreaMm2": 1.90904,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.6035360300026789
+        },
+        {
+          "chipAreaMm2": 1.67384,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.6472006429145459
+        },
+        {
+          "chipAreaMm2": 1.48568,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.6812215376372891
+        },
+        {
+          "chipAreaMm2": 1.43864,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.6897267613179748
+        },
+        {
+          "chipAreaMm2": 1.3916,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.6982319849986606
+        },
+        {
+          "chipAreaMm2": 1.34456,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.7067372086793464
+        },
+        {
+          "chipAreaMm2": 1.29752,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.7152424323600322
+        },
+        {
+          "chipAreaMm2": 1.274,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.7193811947495312
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 25.8024,
+      "totalOpticalRouteLengthMm": 24.48,
+      "totalRouteLengthReductionFraction": 0.7193811947495312
+    },
+    {
+      "areaReductionFraction": 0.851463800972594,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 1,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 2,
+        "effectiveAreaMm2": 1.3916,
+        "effectiveElectricalPackagePadCount": 40,
+        "effectiveOpticalPackagePortCount": 10,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 1,
+        "phaseDriverBanks": 2,
+        "rawModePortsStillTracked": 96,
+        "rawPerDeviceControlPadsAvoided": 64,
+        "sourceBanks": 2,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 2
+      },
+      "baselineGenericAreaMm2": 9.36876,
+      "baselineTotalRouteLengthMm": 307.264,
+      "chipAreaMm2": 1.3916,
+      "chipSizeUm": {
+        "height": 980.0,
+        "width": 1420.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 64,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 384,
+      "interferometers": 32,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 24,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 832,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 48,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 3.490544,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.489897937929598
+        },
+        {
+          "chipAreaMm2": 2.811228,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.5748802332847324
+        },
+        {
+          "chipAreaMm2": 2.431432,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6198708602374505
+        },
+        {
+          "chipAreaMm2": 2.23832,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.6454905228077484
+        },
+        {
+          "chipAreaMm2": 1.92472,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.6906894397000625
+        },
+        {
+          "chipAreaMm2": 1.67384,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.7258904394917726
+        },
+        {
+          "chipAreaMm2": 1.61112,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.7346906894397001
+        },
+        {
+          "chipAreaMm2": 1.5484,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.7434909393876276
+        },
+        {
+          "chipAreaMm2": 1.48568,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.752291189335555
+        },
+        {
+          "chipAreaMm2": 1.42296,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.7610914392834827
+        },
+        {
+          "chipAreaMm2": 1.3916,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.7653717975421788
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 33.6928,
+      "totalOpticalRouteLengthMm": 38.4,
+      "totalRouteLengthReductionFraction": 0.7653717975421788
+    },
+    {
+      "areaReductionFraction": 0.9045885248170713,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 1,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 2,
+        "effectiveAreaMm2": 1.6268,
+        "effectiveElectricalPackagePadCount": 40,
+        "effectiveOpticalPackagePortCount": 10,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 1,
+        "phaseDriverBanks": 2,
+        "rawModePortsStillTracked": 144,
+        "rawPerDeviceControlPadsAvoided": 96,
+        "sourceBanks": 2,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 2
+      },
+      "baselineGenericAreaMm2": 17.05036,
+      "baselineTotalRouteLengthMm": 665.952,
+      "chipAreaMm2": 1.6268,
+      "chipSizeUm": {
+        "height": 980.0,
+        "width": 1660.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 96,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 576,
+      "interferometers": 48,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 36,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 1248,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 72,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 5.574128,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.508577194752775
+        },
+        {
+          "chipAreaMm2": 4.342716,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.5967997693527461
+        },
+        {
+          "chipAreaMm2": 3.652744,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6435058382586132
+        },
+        {
+          "chipAreaMm2": 3.11858,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.6798327807409543
+        },
+        {
+          "chipAreaMm2": 2.436384,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7369179760703474
+        },
+        {
+          "chipAreaMm2": 2.05016,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.7739656912209889
+        },
+        {
+          "chipAreaMm2": 1.95608,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.7830834654749892
+        },
+        {
+          "chipAreaMm2": 1.862,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.7922012397289895
+        },
+        {
+          "chipAreaMm2": 1.76792,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8013190139829898
+        },
+        {
+          "chipAreaMm2": 1.67384,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8104367882369901
+        },
+        {
+          "chipAreaMm2": 1.6268,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 10,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8148695401470376
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 48.408,
+      "totalOpticalRouteLengthMm": 74.88,
+      "totalRouteLengthReductionFraction": 0.8148695401470376
+    },
+    {
+      "areaReductionFraction": 0.9562944335553215,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 1,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 4,
+        "effectiveAreaMm2": 2.3324,
+        "effectiveElectricalPackagePadCount": 40,
+        "effectiveOpticalPackagePortCount": 20,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 2,
+        "phaseDriverBanks": 2,
+        "rawModePortsStillTracked": 288,
+        "rawPerDeviceControlPadsAvoided": 192,
+        "sourceBanks": 4,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 2
+      },
+      "baselineGenericAreaMm2": 53.3662,
+      "baselineTotalRouteLengthMm": 2562.24,
+      "chipAreaMm2": 2.3324,
+      "chipSizeUm": {
+        "height": 980.0,
+        "width": 2380.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 192,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 1152,
+      "interferometers": 96,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 72,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 2496,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 144,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 14.479088,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5287373548145373
+        },
+        {
+          "chipAreaMm2": 10.743516,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6204571000374672
+        },
+        {
+          "chipAreaMm2": 8.643784,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6690146122143125
+        },
+        {
+          "chipAreaMm2": 7.03538,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7067815661296366
+        },
+        {
+          "chipAreaMm2": 5.103264,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.766129636568003
+        },
+        {
+          "chipAreaMm2": 3.662476,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8146871487448483
+        },
+        {
+          "chipAreaMm2": 3.336599,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8268265267890595
+        },
+        {
+          "chipAreaMm2": 3.02445,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8389659048332709
+        },
+        {
+          "chipAreaMm2": 2.726029,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8511052828774822
+        },
+        {
+          "chipAreaMm2": 2.441336,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8632446609216935
+        },
+        {
+          "chipAreaMm2": 2.3324,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 20,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8682914949419259
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 84.0288,
+      "totalOpticalRouteLengthMm": 253.44,
+      "totalRouteLengthReductionFraction": 0.8682914949419259
+    },
+    {
+      "areaReductionFraction": 0.9621797990018193,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 1,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 5,
+        "effectiveAreaMm2": 2.643449,
+        "effectiveElectricalPackagePadCount": 40,
+        "effectiveOpticalPackagePortCount": 26,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 3,
+        "phaseDriverBanks": 2,
+        "rawModePortsStillTracked": 336,
+        "rawPerDeviceControlPadsAvoided": 224,
+        "sourceBanks": 5,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 2
+      },
+      "baselineGenericAreaMm2": 69.89516,
+      "baselineTotalRouteLengthMm": 3467.744,
+      "chipAreaMm2": 2.643449,
+      "chipSizeUm": {
+        "height": 1008.95,
+        "width": 2620.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 224,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 1344,
+      "interferometers": 112,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 84,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 2912,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 168,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 18.332144,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5317485950519992
+        },
+        {
+          "chipAreaMm2": 13.479228,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6239906982753052
+        },
+        {
+          "chipAreaMm2": 10.749832,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6728247529229378
+        },
+        {
+          "chipAreaMm2": 8.66354,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.710806795426652
+        },
+        {
+          "chipAreaMm2": 6.188832,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.770492862218203
+        },
+        {
+          "chipAreaMm2": 4.357228,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8193269168658356
+        },
+        {
+          "chipAreaMm2": 3.946087,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8315354305277437
+        },
+        {
+          "chipAreaMm2": 3.55365,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8437439441896518
+        },
+        {
+          "chipAreaMm2": 3.179917,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8559524578515599
+        },
+        {
+          "chipAreaMm2": 2.824888,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8681609715134682
+        },
+        {
+          "chipAreaMm2": 2.643449,
+          "effectiveElectricalPackagePadCount": 40,
+          "effectiveOpticalPackagePortCount": 26,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8744008784962212
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 99.5456,
+      "totalOpticalRouteLengthMm": 336.0,
+      "totalRouteLengthReductionFraction": 0.8744008784962212
+    },
+    {
+      "areaReductionFraction": 0.9689472718877693,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 2,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 6,
+        "effectiveAreaMm2": 3.403025,
+        "effectiveElectricalPackagePadCount": 56,
+        "effectiveOpticalPackagePortCount": 30,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 3,
+        "phaseDriverBanks": 3,
+        "rawModePortsStillTracked": 432,
+        "rawPerDeviceControlPadsAvoided": 288,
+        "sourceBanks": 6,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 2
+      },
+      "baselineGenericAreaMm2": 109.5886,
+      "baselineTotalRouteLengthMm": 5688.864,
+      "chipAreaMm2": 3.403025,
+      "chipSizeUm": {
+        "height": 1097.75,
+        "width": 3100.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 288,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 1728,
+      "interferometers": 144,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 108,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 3744,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 216,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 27.36536,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5358173442008809
+        },
+        {
+          "chipAreaMm2": 19.85382,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6287652508479724
+        },
+        {
+          "chipAreaMm2": 15.62548,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6779729661317269
+        },
+        {
+          "chipAreaMm2": 12.4037,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7162456335746469
+        },
+        {
+          "chipAreaMm2": 8.65488,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7763883966992355
+        },
+        {
+          "chipAreaMm2": 5.91262,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8255961119829899
+        },
+        {
+          "chipAreaMm2": 5.304455,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8378980408039285
+        },
+        {
+          "chipAreaMm2": 4.72725,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8501999696248671
+        },
+        {
+          "chipAreaMm2": 4.181005,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8625018984458057
+        },
+        {
+          "chipAreaMm2": 3.66572,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8748038272667443
+        },
+        {
+          "chipAreaMm2": 3.403025,
+          "effectiveElectricalPackagePadCount": 56,
+          "effectiveOpticalPackagePortCount": 30,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.881091479775224
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 140.7744,
+      "totalOpticalRouteLengthMm": 535.68,
+      "totalRouteLengthReductionFraction": 0.881091479775224
+    },
+    {
+      "areaReductionFraction": 0.9731368803018288,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 2,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 7,
+        "effectiveAreaMm2": 4.247849,
+        "effectiveElectricalPackagePadCount": 72,
+        "effectiveOpticalPackagePortCount": 36,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 4,
+        "phaseDriverBanks": 4,
+        "rawModePortsStillTracked": 528,
+        "rawPerDeviceControlPadsAvoided": 352,
+        "sourceBanks": 7,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 3
+      },
+      "baselineGenericAreaMm2": 158.1294,
+      "baselineTotalRouteLengthMm": 8456.8,
+      "chipAreaMm2": 4.247849,
+      "chipSizeUm": {
+        "height": 1186.55,
+        "width": 3580.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 352,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 2112,
+      "interferometers": 176,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 132,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 4576,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 264,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 38.168048,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5384391259105099
+        },
+        {
+          "chipAreaMm2": 27.432636,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6318418314255984
+        },
+        {
+          "chipAreaMm2": 21.385864,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6812903225806451
+        },
+        {
+          "chipAreaMm2": 16.78898,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7197502601456816
+        },
+        {
+          "chipAreaMm2": 11.514144,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7801873048907388
+        },
+        {
+          "chipAreaMm2": 7.689196,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8296357960457856
+        },
+        {
+          "chipAreaMm2": 6.848679,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8419979188345473
+        },
+        {
+          "chipAreaMm2": 6.05445,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.854360041623309
+        },
+        {
+          "chipAreaMm2": 5.306509,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8667221644120707
+        },
+        {
+          "chipAreaMm2": 4.604856,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8790842872008324
+        },
+        {
+          "chipAreaMm2": 4.247849,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 36,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8854027055150884
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 187.6864,
+      "totalOpticalRouteLengthMm": 781.44,
+      "totalRouteLengthReductionFraction": 0.8854027055150884
+    },
+    {
+      "areaReductionFraction": 0.9759744820793257,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 2,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 8,
+        "effectiveAreaMm2": 5.177921,
+        "effectiveElectricalPackagePadCount": 72,
+        "effectiveOpticalPackagePortCount": 40,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 4,
+        "phaseDriverBanks": 4,
+        "rawModePortsStillTracked": 624,
+        "rawPerDeviceControlPadsAvoided": 416,
+        "sourceBanks": 8,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 3
+      },
+      "baselineGenericAreaMm2": 215.51756,
+      "baselineTotalRouteLengthMm": 11771.552,
+      "chipAreaMm2": 5.177921,
+      "chipSizeUm": {
+        "height": 1275.35,
+        "width": 4060.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 416,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 2496,
+      "interferometers": 208,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 156,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 5408,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 312,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 50.740208,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5402692864968017
+        },
+        {
+          "chipAreaMm2": 36.215676,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6339894688482878
+        },
+        {
+          "chipAreaMm2": 28.030984,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6836060359755451
+        },
+        {
+          "chipAreaMm2": 21.81938,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7221966992967452
+        },
+        {
+          "chipAreaMm2": 14.766624,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7828391702300598
+        },
+        {
+          "chipAreaMm2": 9.686956,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.832455737357317
+        },
+        {
+          "chipAreaMm2": 8.578759,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8448598791391314
+        },
+        {
+          "chipAreaMm2": 7.53525,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8572640209209457
+        },
+        {
+          "chipAreaMm2": 6.556429,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.86966816270276
+        },
+        {
+          "chipAreaMm2": 5.642296,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8820723044845743
+        },
+        {
+          "chipAreaMm2": 5.177921,
+          "effectiveElectricalPackagePadCount": 72,
+          "effectiveOpticalPackagePortCount": 40,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8884121991730572
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 240.2816,
+      "totalOpticalRouteLengthMm": 1073.28,
+      "totalRouteLengthReductionFraction": 0.8884121991730572
+    },
+    {
+      "areaReductionFraction": 0.9770737334635805,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 2,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 9,
+        "effectiveAreaMm2": 5.674925,
+        "effectiveElectricalPackagePadCount": 80,
+        "effectiveOpticalPackagePortCount": 46,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 5,
+        "phaseDriverBanks": 4,
+        "rawModePortsStillTracked": 672,
+        "rawPerDeviceControlPadsAvoided": 448,
+        "sourceBanks": 9,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 4
+      },
+      "baselineGenericAreaMm2": 247.5294,
+      "baselineTotalRouteLengthMm": 13633.984,
+      "chipAreaMm2": 5.674925,
+      "chipSizeUm": {
+        "height": 1319.75,
+        "width": 4300.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 448,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 2688,
+      "interferometers": 224,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 168,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 5824,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 336,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 57.68984,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5409916866559327
+        },
+        {
+          "chipAreaMm2": 41.05878,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6348371833207374
+        },
+        {
+          "chipAreaMm2": 31.68532,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6845200933197516
+        },
+        {
+          "chipAreaMm2": 24.5765,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7231623566523182
+        },
+        {
+          "chipAreaMm2": 16.54032,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.78388591331778
+        },
+        {
+          "chipAreaMm2": 10.76878,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8335688233167943
+        },
+        {
+          "chipAreaMm2": 9.513495,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8459895508165478
+        },
+        {
+          "chipAreaMm2": 8.33325,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8584102783163013
+        },
+        {
+          "chipAreaMm2": 7.228045,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.870831005816055
+        },
+        {
+          "chipAreaMm2": 6.19788,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8832517333158085
+        },
+        {
+          "chipAreaMm2": 5.674925,
+          "effectiveElectricalPackagePadCount": 80,
+          "effectiveOpticalPackagePortCount": 46,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8896001051490159
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 268.7104,
+      "totalOpticalRouteLengthMm": 1236.48,
+      "totalRouteLengthReductionFraction": 0.8896001051490159
+    },
+    {
+      "areaReductionFraction": 0.9788400055815953,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 2,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 10,
+        "effectiveAreaMm2": 6.732869,
+        "effectiveElectricalPackagePadCount": 88,
+        "effectiveOpticalPackagePortCount": 50,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 5,
+        "phaseDriverBanks": 5,
+        "rawModePortsStillTracked": 768,
+        "rawPerDeviceControlPadsAvoided": 512,
+        "sourceBanks": 10,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 4
+      },
+      "baselineGenericAreaMm2": 318.1886,
+      "baselineTotalRouteLengthMm": 17768.96,
+      "chipAreaMm2": 6.732869,
+      "chipSizeUm": {
+        "height": 1408.55,
+        "width": 4780.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 512,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 3072,
+      "interferometers": 256,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 192,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 6656,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 384,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 72.916208,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5421697161792249
+        },
+        {
+          "chipAreaMm2": 51.648156,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6362195649041925
+        },
+        {
+          "chipAreaMm2": 39.657544,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6860106612879988
+        },
+        {
+          "chipAreaMm2": 30.57458,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.724737069586515
+        },
+        {
+          "chipAreaMm2": 20.382624,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7855928540556116
+        },
+        {
+          "chipAreaMm2": 13.098316,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8353839504394179
+        },
+        {
+          "chipAreaMm2": 11.522359,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8478317245353696
+        },
+        {
+          "chipAreaMm2": 10.04445,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8602794986313211
+        },
+        {
+          "chipAreaMm2": 8.664589,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8727272727272727
+        },
+        {
+          "chipAreaMm2": 7.382776,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8851750468232243
+        },
+        {
+          "chipAreaMm2": 6.732869,
+          "effectiveElectricalPackagePadCount": 88,
+          "effectiveOpticalPackagePortCount": 50,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8915372424722662
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 329.8304,
+      "totalOpticalRouteLengthMm": 1597.44,
+      "totalRouteLengthReductionFraction": 0.8915372424722662
+    },
+    {
+      "areaReductionFraction": 0.9807616260048978,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 3,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 12,
+        "effectiveAreaMm2": 8.479625,
+        "effectiveElectricalPackagePadCount": 112,
+        "effectiveOpticalPackagePortCount": 60,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 6,
+        "phaseDriverBanks": 6,
+        "rawModePortsStillTracked": 912,
+        "rawPerDeviceControlPadsAvoided": 608,
+        "sourceBanks": 12,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 5
+      },
+      "baselineGenericAreaMm2": 440.7662,
+      "baselineTotalRouteLengthMm": 24996.704,
+      "chipAreaMm2": 8.479625,
+      "chipSizeUm": {
+        "height": 1541.75,
+        "width": 5500.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 608,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 3648,
+      "interferometers": 304,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 228,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 7904,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 456,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 99.07352,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5434777321042006
+        },
+        {
+          "chipAreaMm2": 69.79014,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6377544815508477
+        },
+        {
+          "chipAreaMm2": 53.27476,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6876657018461314
+        },
+        {
+          "chipAreaMm2": 40.7813,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7264855398535743
+        },
+        {
+          "chipAreaMm2": 26.88336,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7874881424366988
+        },
+        {
+          "chipAreaMm2": 17.00734,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8373993627319826
+        },
+        {
+          "chipAreaMm2": 14.884135,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8498771678058035
+        },
+        {
+          "chipAreaMm2": 12.89925,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8623549728796245
+        },
+        {
+          "chipAreaMm2": 11.052685,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8748327779534454
+        },
+        {
+          "chipAreaMm2": 9.34444,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8873105830272663
+        },
+        {
+          "chipAreaMm2": 8.479625,
+          "effectiveElectricalPackagePadCount": 112,
+          "effectiveOpticalPackagePortCount": 60,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8936881278427748
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 432.1664,
+      "totalOpticalRouteLengthMm": 2225.28,
+      "totalRouteLengthReductionFraction": 0.8936881278427748
+    },
+    {
+      "areaReductionFraction": 0.9818643965747925,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 3,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 13,
+        "effectiveAreaMm2": 9.962594,
+        "effectiveElectricalPackagePadCount": 120,
+        "effectiveOpticalPackagePortCount": 66,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 7,
+        "phaseDriverBanks": 7,
+        "rawModePortsStillTracked": 1024,
+        "rawPerDeviceControlPadsAvoided": 682,
+        "sourceBanks": 13,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 5
+      },
+      "baselineGenericAreaMm2": 549.339,
+      "baselineTotalRouteLengthMm": 31435.236,
+      "chipAreaMm2": 9.962594,
+      "chipSizeUm": {
+        "height": 1645.35,
+        "width": 6055.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 682,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 4094,
+      "interferometers": 341,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 256,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 8870,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 512,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 122.055696,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5442397823894181
+        },
+        {
+          "chipAreaMm2": 85.693972,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6386527207875901
+        },
+        {
+          "chipAreaMm2": 65.181928,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6886334812310618
+        },
+        {
+          "chipAreaMm2": 49.67781,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7275061971858585
+        },
+        {
+          "chipAreaMm2": 32.521888,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7885950021180054
+        },
+        {
+          "chipAreaMm2": 20.373892,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8385757625614771
+        },
+        {
+          "chipAreaMm2": 17.77252,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8510709526723451
+        },
+        {
+          "chipAreaMm2": 15.3454,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8635661427832131
+        },
+        {
+          "chipAreaMm2": 13.092531,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8760613328940811
+        },
+        {
+          "chipAreaMm2": 11.013912,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8885565230049489
+        },
+        {
+          "chipAreaMm2": 9.962594,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 66,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8949428326226022
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 519.77685,
+      "totalOpticalRouteLengthMm": 2782.72,
+      "totalRouteLengthReductionFraction": 0.8949428326226022
+    },
+    {
+      "areaReductionFraction": 0.9822646061806743,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 3,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 14,
+        "effectiveAreaMm2": 10.636976,
+        "effectiveElectricalPackagePadCount": 120,
+        "effectiveOpticalPackagePortCount": 70,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 7,
+        "phaseDriverBanks": 7,
+        "rawModePortsStillTracked": 1072,
+        "rawPerDeviceControlPadsAvoided": 714,
+        "sourceBanks": 14,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 5
+      },
+      "baselineGenericAreaMm2": 599.7598,
+      "baselineTotalRouteLengthMm": 34435.3,
+      "chipAreaMm2": 10.636976,
+      "chipSizeUm": {
+        "height": 1689.75,
+        "width": 6295.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 714,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 4286,
+      "interferometers": 357,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 268,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 9286,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 536,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 132.68712,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5445198967338748
+        },
+        {
+          "chipAreaMm2": 93.04274,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6389812488928512
+        },
+        {
+          "chipAreaMm2": 70.67716,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6889877538456177
+        },
+        {
+          "chipAreaMm2": 53.77725,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7278805469968317
+        },
+        {
+          "chipAreaMm2": 35.11376,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7890007637511507
+        },
+        {
+          "chipAreaMm2": 21.91594,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8390072687039172
+        },
+        {
+          "chipAreaMm2": 19.093972,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8515088949421088
+        },
+        {
+          "chipAreaMm2": 16.463,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8640105211803004
+        },
+        {
+          "chipAreaMm2": 14.023022,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.876512147418492
+        },
+        {
+          "chipAreaMm2": 11.77404,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8890137736566837
+        },
+        {
+          "chipAreaMm2": 10.636976,
+          "effectiveElectricalPackagePadCount": 120,
+          "effectiveOpticalPackagePortCount": 70,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8954033782194434
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 560.01605,
+      "totalOpticalRouteLengthMm": 3041.8,
+      "totalRouteLengthReductionFraction": 0.8954033782194434
+    },
+    {
+      "areaReductionFraction": 0.9829623201090804,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 15,
+        "effectiveAreaMm2": 12.049676,
+        "effectiveElectricalPackagePadCount": 136,
+        "effectiveOpticalPackagePortCount": 76,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 8,
+        "phaseDriverBanks": 7,
+        "rawModePortsStillTracked": 1168,
+        "rawPerDeviceControlPadsAvoided": 778,
+        "sourceBanks": 15,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 6
+      },
+      "baselineGenericAreaMm2": 707.23692,
+      "baselineTotalRouteLengthMm": 40845.54,
+      "chipAreaMm2": 12.049676,
+      "chipSizeUm": {
+        "height": 1778.55,
+        "width": 6775.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 778,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 4670,
+      "interferometers": 389,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 292,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 10118,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 584,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 155.277072,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5450117197618148
+        },
+        {
+          "chipAreaMm2": 108.643444,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6395580765978366
+        },
+        {
+          "chipAreaMm2": 82.331176,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6896097835895915
+        },
+        {
+          "chipAreaMm2": 62.45997,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7285378281202795
+        },
+        {
+          "chipAreaMm2": 40.592416,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.789713197573101
+        },
+        {
+          "chipAreaMm2": 25.165924,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8397649045648558
+        },
+        {
+          "chipAreaMm2": 21.876268,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8522778313127944
+        },
+        {
+          "chipAreaMm2": 18.8134,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8647907580607332
+        },
+        {
+          "chipAreaMm2": 15.977319,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8773036848086719
+        },
+        {
+          "chipAreaMm2": 13.368024,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8898166115566106
+        },
+        {
+          "chipAreaMm2": 12.049676,
+          "effectiveElectricalPackagePadCount": 136,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.896212001359267
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 644.75685,
+      "totalOpticalRouteLengthMm": 3594.52,
+      "totalRouteLengthReductionFraction": 0.896212001359267
+    },
+    {
+      "areaReductionFraction": 0.9831707756766835,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 15,
+        "effectiveAreaMm2": 12.548561,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 76,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 8,
+        "phaseDriverBanks": 8,
+        "rawModePortsStillTracked": 1200,
+        "rawPerDeviceControlPadsAvoided": 800,
+        "sourceBanks": 15,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 6
+      },
+      "baselineGenericAreaMm2": 745.64108,
+      "baselineTotalRouteLengthMm": 43143.2,
+      "chipAreaMm2": 12.548561,
+      "chipSizeUm": {
+        "height": 1808.15,
+        "width": 6940.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 800,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 4800,
+      "interferometers": 400,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 300,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 10400,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 600,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 163.33208,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5451612305067774
+        },
+        {
+          "chipAreaMm2": 114.20262,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6397300153906061
+        },
+        {
+          "chipAreaMm2": 86.48116,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6897958426820449
+        },
+        {
+          "chipAreaMm2": 65.5493,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7287359305753861
+        },
+        {
+          "chipAreaMm2": 42.53904,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7899274972649224
+        },
+        {
+          "chipAreaMm2": 26.31838,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8399933245563611
+        },
+        {
+          "chipAreaMm2": 22.862215,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8525097813792208
+        },
+        {
+          "chipAreaMm2": 19.64565,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8650262382020805
+        },
+        {
+          "chipAreaMm2": 16.668685,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8775426950249402
+        },
+        {
+          "chipAreaMm2": 13.93132,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8900591518477999
+        },
+        {
+          "chipAreaMm2": 12.548561,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 76,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.896456452001706
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 675.2,
+      "totalOpticalRouteLengthMm": 3792.0,
+      "totalRouteLengthReductionFraction": 0.896456452001706
+    },
+    {
+      "areaReductionFraction": 0.9832682096599468,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 16,
+        "effectiveAreaMm2": 12.787994,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 80,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 8,
+        "phaseDriverBanks": 8,
+        "rawModePortsStillTracked": 1216,
+        "rawPerDeviceControlPadsAvoided": 810,
+        "sourceBanks": 16,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 6
+      },
+      "baselineGenericAreaMm2": 764.29324,
+      "baselineTotalRouteLengthMm": 44255.716,
+      "chipAreaMm2": 12.787994,
+      "chipSizeUm": {
+        "height": 1822.95,
+        "width": 7015.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 810,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 4862,
+      "interferometers": 405,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 304,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 10534,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 608,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 167.2356,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5452287790350064
+        },
+        {
+          "chipAreaMm2": 116.89538,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6398126515453959
+        },
+        {
+          "chipAreaMm2": 88.48996,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6898843078259088
+        },
+        {
+          "chipAreaMm2": 67.04325,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7288279100489528
+        },
+        {
+          "chipAreaMm2": 43.4792,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7900276203869349
+        },
+        {
+          "chipAreaMm2": 26.87386,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8400992766674479
+        },
+        {
+          "chipAreaMm2": 23.337112,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8526171907375761
+        },
+        {
+          "chipAreaMm2": 20.0462,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8651351048077044
+        },
+        {
+          "chipAreaMm2": 17.001123,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8776530188778326
+        },
+        {
+          "chipAreaMm2": 14.20188,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8901709329479609
+        },
+        {
+          "chipAreaMm2": 12.787994,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8965688759842909
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 689.25845,
+      "totalOpticalRouteLengthMm": 3888.16,
+      "totalRouteLengthReductionFraction": 0.8965688759842909
+    },
+    {
+      "areaReductionFraction": 0.983549952377564,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 16,
+        "effectiveAreaMm2": 13.547624,
+        "effectiveElectricalPackagePadCount": 144,
+        "effectiveOpticalPackagePortCount": 80,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 8,
+        "phaseDriverBanks": 8,
+        "rawModePortsStillTracked": 1264,
+        "rawPerDeviceControlPadsAvoided": 842,
+        "sourceBanks": 16,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 6
+      },
+      "baselineGenericAreaMm2": 823.5614,
+      "baselineTotalRouteLengthMm": 47802.596,
+      "chipAreaMm2": 13.547624,
+      "chipSizeUm": {
+        "height": 1867.35,
+        "width": 7255.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 842,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 5054,
+      "interferometers": 421,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 316,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 10950,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 632,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 179.636496,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5454294992681987
+        },
+        {
+          "chipAreaMm2": 125.448372,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6400480634984761
+        },
+        {
+          "chipAreaMm2": 94.869928,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6901381673915785
+        },
+        {
+          "chipAreaMm2": 71.78781,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7290961562003871
+        },
+        {
+          "chipAreaMm2": 46.464288,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7903183751777832
+        },
+        {
+          "chipAreaMm2": 28.637092,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8404084790708856
+        },
+        {
+          "chipAreaMm2": 24.84442,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8529310050441612
+        },
+        {
+          "chipAreaMm2": 21.3174,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8654535310174368
+        },
+        {
+          "chipAreaMm2": 18.05603,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8779760569907124
+        },
+        {
+          "chipAreaMm2": 15.060312,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.890498582963988
+        },
+        {
+          "chipAreaMm2": 13.547624,
+          "effectiveElectricalPackagePadCount": 144,
+          "effectiveOpticalPackagePortCount": 80,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8968988870395239
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 735.18085,
+      "totalOpticalRouteLengthMm": 4193.32,
+      "totalRouteLengthReductionFraction": 0.8968988870395239
+    },
+    {
+      "areaReductionFraction": 0.9839744301550375,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 17,
+        "effectiveAreaMm2": 14.870741,
+        "effectiveElectricalPackagePadCount": 152,
+        "effectiveOpticalPackagePortCount": 86,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 9,
+        "phaseDriverBanks": 8,
+        "rawModePortsStillTracked": 1344,
+        "rawPerDeviceControlPadsAvoided": 896,
+        "sourceBanks": 17,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 7
+      },
+      "baselineGenericAreaMm2": 927.93836,
+      "baselineTotalRouteLengthMm": 54061.952,
+      "chipAreaMm2": 14.870741,
+      "chipSizeUm": {
+        "height": 1941.35,
+        "width": 7660.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 896,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 5376,
+      "interferometers": 448,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 336,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 11648,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 672,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 201.433328,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5457347895984221
+        },
+        {
+          "chipAreaMm2": 140.473116,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6404030694267199
+        },
+        {
+          "chipAreaMm2": 106.070344,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6905215705122894
+        },
+        {
+          "chipAreaMm2": 80.11058,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7295026269121766
+        },
+        {
+          "chipAreaMm2": 51.693984,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7907585726834281
+        },
+        {
+          "chipAreaMm2": 31.720396,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8408770737689975
+        },
+        {
+          "chipAreaMm2": 27.478519,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8534066990403898
+        },
+        {
+          "chipAreaMm2": 23.53725,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8659363243117821
+        },
+        {
+          "chipAreaMm2": 19.896589,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8784659495831745
+        },
+        {
+          "chipAreaMm2": 16.556536,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8909955748545668
+        },
+        {
+          "chipAreaMm2": 14.870741,
+          "effectiveElectricalPackagePadCount": 152,
+          "effectiveOpticalPackagePortCount": 86,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.897399605548834
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 815.8976,
+      "totalOpticalRouteLengthMm": 4730.88,
+      "totalRouteLengthReductionFraction": 0.897399605548834
+    },
+    {
+      "areaReductionFraction": 0.9842757680747514,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 18,
+        "effectiveAreaMm2": 15.954386,
+        "effectiveElectricalPackagePadCount": 160,
+        "effectiveOpticalPackagePortCount": 90,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 9,
+        "phaseDriverBanks": 9,
+        "rawModePortsStillTracked": 1408,
+        "rawPerDeviceControlPadsAvoided": 938,
+        "sourceBanks": 18,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 7
+      },
+      "baselineGenericAreaMm2": 1014.63692,
+      "baselineTotalRouteLengthMm": 59263.46,
+      "chipAreaMm2": 15.954386,
+      "chipSizeUm": {
+        "height": 2000.55,
+        "width": 7975.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 938,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 5630,
+      "interferometers": 469,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 352,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 12198,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 704,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 219.493392,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5459502027050057
+        },
+        {
+          "chipAreaMm2": 152.913684,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6406587634269075
+        },
+        {
+          "chipAreaMm2": 115.336936,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6907967236472524
+        },
+        {
+          "chipAreaMm2": 86.98917,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7297920337422081
+        },
+        {
+          "chipAreaMm2": 56.009376,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7910726440879422
+        },
+        {
+          "chipAreaMm2": 34.258564,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8412106043082871
+        },
+        {
+          "chipAreaMm2": 29.645128,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8537450943633733
+        },
+        {
+          "chipAreaMm2": 25.3614,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8662795844184595
+        },
+        {
+          "chipAreaMm2": 21.407379,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8788140744735458
+        },
+        {
+          "chipAreaMm2": 17.783064,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.891348564528632
+        },
+        {
+          "chipAreaMm2": 15.954386,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.8977549935491448
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 881.47285,
+      "totalOpticalRouteLengthMm": 5177.92,
+      "totalRouteLengthReductionFraction": 0.8977549935491448
+    },
+    {
+      "areaReductionFraction": 0.9843493187795914,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 18,
+        "effectiveAreaMm2": 16.253798,
+        "effectiveElectricalPackagePadCount": 160,
+        "effectiveOpticalPackagePortCount": 90,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 9,
+        "phaseDriverBanks": 9,
+        "rawModePortsStillTracked": 1424,
+        "rawPerDeviceControlPadsAvoided": 950,
+        "sourceBanks": 18,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 7
+      },
+      "baselineGenericAreaMm2": 1038.53612,
+      "baselineTotalRouteLengthMm": 60693.44,
+      "chipAreaMm2": 16.253798,
+      "chipSizeUm": {
+        "height": 2015.35,
+        "width": 8065.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 950,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 5698,
+      "interferometers": 475,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 356,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 12346,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 712,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 224.47432,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5460038185345896
+        },
+        {
+          "chipAreaMm2": 156.34458,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6407245165210605
+        },
+        {
+          "chipAreaMm2": 117.89284,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6908670854708515
+        },
+        {
+          "chipAreaMm2": 88.88695,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7298651221614725
+        },
+        {
+          "chipAreaMm2": 57.20016,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7911522233704334
+        },
+        {
+          "chipAreaMm2": 34.95922,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.8412947923202244
+        },
+        {
+          "chipAreaMm2": 30.243298,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8538304345576722
+        },
+        {
+          "chipAreaMm2": 25.8651,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.8663660767951199
+        },
+        {
+          "chipAreaMm2": 21.824627,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8789017190325676
+        },
+        {
+          "chipAreaMm2": 18.12188,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.8914373612700154
+        },
+        {
+          "chipAreaMm2": 16.253798,
+          "effectiveElectricalPackagePadCount": 160,
+          "effectiveOpticalPackagePortCount": 90,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.897844293386567
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 899.34125,
+      "totalOpticalRouteLengthMm": 5300.84,
+      "totalRouteLengthReductionFraction": 0.897844293386567
+    },
+    {
+      "areaReductionFraction": 0.9847439420933114,
+      "bankedIoEnvelope": {
+        "calibrationBanks": 4,
+        "claimBoundary": "Banking/mux model is a packaging envelope only; no package drawing, probe card, or DRC/LVS closure is claimed.",
+        "detectorBanks": 19,
+        "effectiveAreaMm2": 17.979962,
+        "effectiveElectricalPackagePadCount": 176,
+        "effectiveOpticalPackagePortCount": 96,
+        "model": "banked_source_detector_superbank_mux_serialized_driver_calibration_not_pad_limited_tapeout",
+        "monitorTapBanks": 10,
+        "phaseDriverBanks": 10,
+        "rawModePortsStillTracked": 1520,
+        "rawPerDeviceControlPadsAvoided": 1014,
+        "sourceBanks": 19,
+        "timeMultiplexedTestModes": [
+          "source_bank_scan",
+          "detector_bank_scan",
+          "source_detector_superbank_mux_scan",
+          "monitor_subbank_scan",
+          "truth_switch_bank_scan",
+          "serialized_phase_driver_scan",
+          "serialized_truth_switch_driver_scan",
+          "shared_calibration_bus_scan",
+          "four_frame_calibration_bank_scan"
+        ],
+        "truthSwitchDriverBanks": 8
+      },
+      "baselineGenericAreaMm2": 1178.54572,
+      "baselineTotalRouteLengthMm": 69114.08,
+      "chipAreaMm2": 17.979962,
+      "chipSizeUm": {
+        "height": 2104.15,
+        "width": 8545.0
+      },
+      "dominantBlockers": [
+        "foundry_pdk_missing: generic SiPh layers are not a foundry-locked layer map.",
+        "drc_not_run: no foundry DRC deck has been executed.",
+        "lvs_not_run: no optical/electrical LVS deck has been executed."
+      ],
+      "electricalPadCount": 1014,
+      "failedEnvelopeConstraints": [],
+      "fiberPitchAdapterRequired": true,
+      "instanceCount": 6082,
+      "interferometers": 507,
+      "layoutComputable": true,
+      "layoutProfile": {
+        "fiber_pitch_um": 127.0,
+        "lane_pitch_um": 1.85,
+        "mzi_pitch_um": 15.0,
+        "profileId": "v3_maxout_pitch_floor_review"
+      },
+      "logicalQubits": 380,
+      "maxQubitFeasible": true,
+      "opticalPortCount": 13178,
+      "packageEnvelopeFeasible": true,
+      "physicalModes": 760,
+      "profileCandidates": [
+        {
+          "chipAreaMm2": 253.570768,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "v2_dense_banked_review",
+          "routeReductionFraction": 0.5462894102041147
+        },
+        {
+          "chipAreaMm2": 176.373316,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "compact_banked_review",
+          "routeReductionFraction": 0.6410592892215305
+        },
+        {
+          "chipAreaMm2": 132.800104,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "max_qubit_review",
+          "routeReductionFraction": 0.6912281260200527
+        },
+        {
+          "chipAreaMm2": 99.94183,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "aggressive_max_qubit_review",
+          "routeReductionFraction": 0.7302467022638514
+        },
+        {
+          "chipAreaMm2": 64.124704,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "folded_mesh_v3_review",
+          "routeReductionFraction": 0.7915657996170968
+        },
+        {
+          "chipAreaMm2": 39.022516,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "ultra_dense_v4_limit_review",
+          "routeReductionFraction": 0.841734636415619
+        },
+        {
+          "chipAreaMm2": 33.709001,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "package_floor_v5_review",
+          "routeReductionFraction": 0.8542768456152494
+        },
+        {
+          "chipAreaMm2": 28.7803,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "serial_package_v6_review",
+          "routeReductionFraction": 0.86681905481488
+        },
+        {
+          "chipAreaMm2": 24.236411,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_22mm2",
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "area_floor_v7_review",
+          "routeReductionFraction": 0.8793612640145105
+        },
+        {
+          "chipAreaMm2": 20.077336,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [
+            "area_at_or_above_18mm2_stretch"
+          ],
+          "maxQubitFeasible": false,
+          "profileId": "stretch_mux_density_v8_review",
+          "routeReductionFraction": 0.891903473214141
+        },
+        {
+          "chipAreaMm2": 17.979962,
+          "effectiveElectricalPackagePadCount": 176,
+          "effectiveOpticalPackagePortCount": 96,
+          "failedEnvelopeConstraints": [],
+          "maxQubitFeasible": true,
+          "profileId": "v3_maxout_pitch_floor_review",
+          "routeReductionFraction": 0.898313772678447
+        }
+      ],
+      "tapeoutReady": false,
+      "totalElectricalRouteLengthMm": 1004.95005,
+      "totalOpticalRouteLengthMm": 6023.0,
+      "totalRouteLengthReductionFraction": 0.898313772678447
+    }
+  ],
+  "schemaVersion": "open-quantum.scaled-layout-envelope.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "bankedIoModelApplied": true,
+    "denseReviewLayout": true,
+    "maxEffectiveBankedAreaMm2": 17.979962,
+    "maxEffectiveElectricalPackagePadCount": 176,
+    "maxEffectiveOpticalPackagePortCount": 96,
+    "maxElectricalPadCount": 1014,
+    "maxEstimatedAreaMm2": 17.979962,
+    "maxEstimatedAreaStretchTargetMet": true,
+    "maxEstimatedAreaTargetMet": true,
+    "maxLogicalQubits": 380,
+    "maxOpticalPortCount": 13178,
+    "maxPhysicalModes": 760,
+    "maxQubitLayoutComputable": true,
+    "maxQubitLogicalQubits": 380,
+    "maxQubitPhysicalModes": 760,
+    "maxQubitTapeoutReady": false,
+    "maxReviewElectricalPackagePads": 192,
+    "maxReviewOpticalPackagePorts": 96,
+    "maxTotalRouteLengthReductionFraction": 0.898313772678447,
+    "nextRejectedPhysicalModes": 768,
+    "packageEnvelopeTargetMet": true,
+    "routingReductionTargetMet": true,
+    "scaled144LayoutComputable": true,
+    "scaled144TapeoutReady": false,
+    "targetCount": 20
+  }
+}

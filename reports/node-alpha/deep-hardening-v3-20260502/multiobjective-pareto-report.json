@@ -1,0 +1,1374 @@
+{
+  "candidateCount": 2832,
+  "front": [
+    {
+      "candidateId": "coupler_raw_hardened_node_alpha",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": true
+      },
+      "device": "coupler",
+      "geometry": {
+        "couplingGapUm": 0.11,
+        "couplingLengthUm": 4.8,
+        "designFamily": "apodized_low_crosstalk_coupler_v4",
+        "phaseShiftRad": 0.0,
+        "waveguideWidthUm": 0.51
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.25,
+        "minimizeCrosstalkRatio": 0.0022,
+        "minimizeInsertionLossDb": 0.002,
+        "minimizeReflectionRatio": 4e-05
+      },
+      "paretoScore": 0.8636,
+      "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+      "sourceModel": "node_alpha_multiobjective_surrogate"
+    },
+    {
+      "candidateId": "coupler_gap0p18_len4p005_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 12.004999999999999,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.18,
+        "couplingLengthUm": 4.005,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.63,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 1.9904991626163309,
+        "minimizeCrosstalkRatio": 0.009500837383627836,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 1.6265621197512729e-16
+      },
+      "paretoScore": 0.6821896164429903,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len4p5_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 12.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 4.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.62,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 1.9822315856472388,
+        "minimizeCrosstalkRatio": 0.01776841435276133,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": 0.5796716620257596,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len6p5_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 14.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 6.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.62,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.02656048640445,
+        "minimizeCrosstalkRatio": 0.026560486404449746,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": 0.4918983577083831,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len3_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 11.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 3.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5900000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.054442301887099,
+        "minimizeCrosstalkRatio": 0.054442301887098976,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": 0.16846929810965205,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len3p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 11.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 3.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5900000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.0712640032190195,
+        "minimizeCrosstalkRatio": 0.07126400321901949,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -0.02666243734062601,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 5.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.1052901589356465,
+        "minimizeCrosstalkRatio": 0.10529015893564653,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -0.4213658436534997,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p18_len5p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.18,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.63,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.1245016581331537,
+        "minimizeCrosstalkRatio": 0.12450165813315395,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -0.6442192343445858,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p18_len5p5_phi1p5708_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.18,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.63,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5708,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.1245016581331537,
+        "minimizeCrosstalkRatio": 0.12450165813315395,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -0.6442192343445858,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p18_len5p5_phi3p14159_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.18,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.63,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.14159,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.1245016581331537,
+        "minimizeCrosstalkRatio": 0.12450165813315395,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -0.6442192343445858,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len2p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 10.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 2.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.164730702901158,
+        "minimizeCrosstalkRatio": 0.1647307029011582,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -1.110876153653435,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p2_len5p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.2,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.65,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2126876167027083,
+        "minimizeCrosstalkRatio": 0.21268761670270853,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -1.6671763537514188,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p2_len5p5_phi1p5708_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.2,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.65,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5708,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2126876167027083,
+        "minimizeCrosstalkRatio": 0.21268761670270853,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -1.6671763537514188,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p2_len5p5_phi3p14159_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.2,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.65,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.14159,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2126876167027083,
+        "minimizeCrosstalkRatio": 0.21268761670270853,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -1.6671763537514188,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p26_len5p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.13,
+        "couplingGapUm": 0.26,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.71,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.223577860787934,
+        "minimizeCrosstalkRatio": 0.22357786078233954,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 1.4430053852465985e-15
+      },
+      "paretoScore": -1.793503185072973,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p26_len5p5_phi1p5708_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.13,
+        "couplingGapUm": 0.26,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.71,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5708,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2235778607829846,
+        "minimizeCrosstalkRatio": 0.22357786078298458,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -1.793503185082621,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len5p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2357764408845564,
+        "minimizeCrosstalkRatio": 0.2357764408845564,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -1.9350067142608542,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p22_len5p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.01,
+        "couplingGapUm": 0.22,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.67,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.244562615451577,
+        "minimizeCrosstalkRatio": 0.24456261545157676,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -2.03692633923829,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p22_len5p5_phi1p5708_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.01,
+        "couplingGapUm": 0.22,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.67,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5708,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.244562615451577,
+        "minimizeCrosstalkRatio": 0.24456261545157676,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -2.03692633923829,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p22_len5p5_phi3p14159_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.01,
+        "couplingGapUm": 0.22,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.67,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.14159,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.244562615451577,
+        "minimizeCrosstalkRatio": 0.24456261545157676,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -2.03692633923829,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p24_len5p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.07,
+        "couplingGapUm": 0.24,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.69,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2668530247706844,
+        "minimizeCrosstalkRatio": 0.2668530247706846,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -2.295495087339942,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p24_len5p5_phi1p5708_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.07,
+        "couplingGapUm": 0.24,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.69,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 1.5708,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2668530247706844,
+        "minimizeCrosstalkRatio": 0.2668530247706846,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -2.295495087339942,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p24_len5p5_phi3p14159_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.07,
+        "couplingGapUm": 0.24,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.69,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 3.14159,
+        "resolution": 16,
+        "until": 40.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.2668530247706844,
+        "minimizeCrosstalkRatio": 0.2668530247706846,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -2.295495087339942,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len6_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 14.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 6.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5900000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.3159241328189673,
+        "minimizeCrosstalkRatio": 0.31592413281911036,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 8.090150525086992e-14
+      },
+      "paretoScore": -2.8647199407057826,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len5p5_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.64,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.328150591797272,
+        "minimizeCrosstalkRatio": 0.328150591797272,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -3.0065468648483553,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len5_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 5.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.64,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.3343020672904364,
+        "minimizeCrosstalkRatio": 0.3343020672904362,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -3.07790398056906,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len4p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 12.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 4.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.3626131969766426,
+        "minimizeCrosstalkRatio": 0.3626131969766424,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -3.4063130849290517,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p16_len6p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 14.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.16,
+        "couplingLengthUm": 6.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.61,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.4422931095473785,
+        "minimizeCrosstalkRatio": 0.4422931095473783,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -4.330600070749588,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len6_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 14.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 6.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.62,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.7412249051646596,
+        "minimizeCrosstalkRatio": 0.7412249051803707,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 2.094190861193351e-12
+      },
+      "paretoScore": -7.894698862269157,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len4_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 12.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 4.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.806276746188135,
+        "minimizeCrosstalkRatio": 0.8062767461881346,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -8.675320954257614,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len8_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 16.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 8.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.64,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.8484312850980613,
+        "minimizeCrosstalkRatio": 0.8484312850980615,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -9.18117542117674,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len3_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 11.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 3.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 2.865666478068733,
+        "minimizeCrosstalkRatio": 0.8656664780687333,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -9.3879977368248,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len3p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 11.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 3.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 3.1564498270053627,
+        "minimizeCrosstalkRatio": 1.1564498270053627,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -12.877397924064352,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len5_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 5.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.62,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 3.2911701425124646,
+        "minimizeCrosstalkRatio": 1.2911701425326867,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 1.1734990359508006e-12
+      },
+      "paretoScore": -14.494041710450915,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len6_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 14.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 6.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5700000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 3.3875330636996717,
+        "minimizeCrosstalkRatio": 1.3875330636996717,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -15.65039676439606,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p16_len7_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 15.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.16,
+        "couplingLengthUm": 7.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.61,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 3.588378734365264,
+        "minimizeCrosstalkRatio": 1.5883787343652638,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -18.060544812383164,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len5p5_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 13.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 5.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.62,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 3.696566304053719,
+        "minimizeCrosstalkRatio": 1.6965663040537189,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -19.358795648644627,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p12_len8_phi0_w0p5",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 16.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.12,
+        "couplingLengthUm": 8.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.62,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.5
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 4.101576417196385,
+        "minimizeCrosstalkRatio": 2.1015764171963847,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 0.0
+      },
+      "paretoScore": -24.218917006356616,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len6p5_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 14.5,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 6.5,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5900000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 4.289726376132418,
+        "minimizeCrosstalkRatio": 2.289726376131967,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 2.3098134210804443e-14
+      },
+      "paretoScore": -26.47671651358476,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    },
+    {
+      "candidateId": "coupler_gap0p14_len7_phi0_w0p45",
+      "constraintPass": {
+        "fusionV3": false,
+        "truthSwitchRawV3": true,
+        "virtualSparameterV3": false
+      },
+      "device": "coupler",
+      "geometry": {
+        "cellXUm": 15.0,
+        "cellYUm": 4.0,
+        "couplingGapUm": 0.14,
+        "couplingLengthUm": 7.0,
+        "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+        "laneSeparationUm": 0.5900000000000001,
+        "laserWavelengthNm": 1550,
+        "phaseShiftRad": 0.0,
+        "resolution": 20,
+        "until": 60.0,
+        "waveguideWidthUm": 0.45
+      },
+      "objectives": {
+        "maximizeNominalFusionFidelity": 0.0,
+        "maximizeNominalFusionSuccess": 0.0,
+        "maximizeUsefulTransmission": 5.170951896019599,
+        "minimizeCrosstalkRatio": 3.1709518960193606,
+        "minimizeInsertionLossDb": 0.0,
+        "minimizeReflectionRatio": 1.1607102618439886e-16
+      },
+      "paretoScore": -37.051422752232334,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode"
+    }
+  ],
+  "generatedAt": "2026-05-02T21:49:13.296198Z",
+  "limitations": [
+    "Pareto dominance is computed over local candidate metrics and hardened analytical rows.",
+    "No-Go entries are simulator-family triage flags, not physical impossibility statements."
+  ],
+  "noGoMap": [
+    {
+      "bestCandidateId": "truth-switch_raw_hardened_node_alpha",
+      "bestCrosstalkRatio": 0.0023,
+      "bestReflectionRatio": 4e-05,
+      "candidateCount": 1,
+      "designFamily": "raw_balanced_truth_switch_v4_no_reflection_compensation",
+      "reason": "At least one raw candidate passes V3 crosstalk/reflection targets.",
+      "status": "candidate_family_open"
+    },
+    {
+      "bestCandidateId": "truth-switch_gap0p12_len6p35879_phi3p14159_w0p45",
+      "bestCrosstalkRatio": 7.767120280277595e-12,
+      "bestReflectionRatio": 0.01800000000048585,
+      "candidateCount": 1393,
+      "designFamily": "unknown_truth_switch_family",
+      "reason": "Current local surrogate rows do not cross the raw V3 target without compensation.",
+      "status": "no_go_under_current_surrogate"
+    }
+  ],
+  "objectives": [
+    "maximize useful transmission",
+    "minimize insertion loss",
+    "minimize reflection",
+    "minimize crosstalk",
+    "maximize fusion success where applicable",
+    "maximize fusion fidelity where applicable"
+  ],
+  "schemaVersion": "open-quantum.multiobjective-pareto.v1",
+  "scope": {
+    "claim": "simulation_only_device_pareto_front",
+    "notEvidenceFor": [
+      "3D FDTD closure",
+      "MPB S-parameters",
+      "foundry compact models"
+    ]
+  },
+  "summary": {
+    "coveredDevices": [
+      "coupler",
+      "mzi",
+      "phase-shifter",
+      "truth-switch"
+    ],
+    "paretoFrontCandidateCount": 545,
+    "rawTruthSwitchNoGoFamilies": [
+      "unknown_truth_switch_family"
+    ],
+    "truthSwitchRawV3Candidates": 2
+  }
+}

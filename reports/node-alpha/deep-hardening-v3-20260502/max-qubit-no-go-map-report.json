@@ -1,0 +1,119 @@
+{
+  "claimBoundary": "No-Go rows are local stretch-envelope simulation boundaries; no foundry, DRC/LVS, package, or tapeout feasibility is implied.",
+  "closedMilestones": {
+    "target712ClosedUnder18mm2": true,
+    "target760ClosedUnder18mm2": true,
+    "target760WithinPackageCeilings": true
+  },
+  "failureCounts": {
+    "area_at_or_above_18mm2_stretch": 2,
+    "effective_optical_package_ports_above_review_ceiling": 2
+  },
+  "firstRejectedCandidate": {
+    "bestProfileId": "v3_maxout_pitch_floor_review",
+    "chipAreaMm2": 18.265349,
+    "effectiveElectricalPackagePadCount": 176,
+    "effectiveOpticalPackagePortCount": 100,
+    "failedEnvelopeConstraints": [
+      "area_at_or_above_18mm2_stretch",
+      "effective_optical_package_ports_above_review_ceiling"
+    ],
+    "feasibleUnderV2Envelope": false,
+    "feasibleUnderV3Envelope": false,
+    "interferometers": 512,
+    "logicalQubits": 384,
+    "physicalModes": 768,
+    "routeReductionFraction": 0.89838416980009
+  },
+  "generatedAt": "2026-05-02T21:49:13.004463Z",
+  "noGoRows": [
+    {
+      "bestProfileId": "v3_maxout_pitch_floor_review",
+      "chipAreaMm2": 18.265349,
+      "effectiveElectricalPackagePadCount": 176,
+      "effectiveOpticalPackagePortCount": 100,
+      "failedEnvelopeConstraints": [
+        "area_at_or_above_18mm2_stretch",
+        "effective_optical_package_ports_above_review_ceiling"
+      ],
+      "feasibleUnderV2Envelope": false,
+      "feasibleUnderV3Envelope": false,
+      "interferometers": 512,
+      "logicalQubits": 384,
+      "physicalModes": 768,
+      "routeReductionFraction": 0.89838416980009
+    },
+    {
+      "bestProfileId": "v3_maxout_pitch_floor_review",
+      "chipAreaMm2": 19.46177,
+      "effectiveElectricalPackagePadCount": 184,
+      "effectiveOpticalPackagePortCount": 100,
+      "failedEnvelopeConstraints": [
+        "area_at_or_above_18mm2_stretch",
+        "effective_optical_package_ports_above_review_ceiling"
+      ],
+      "feasibleUnderV2Envelope": false,
+      "feasibleUnderV3Envelope": false,
+      "interferometers": 533,
+      "logicalQubits": 400,
+      "physicalModes": 800,
+      "routeReductionFraction": 0.8986584448697037
+    }
+  ],
+  "pitchGuardrail": {
+    "lowerPitchProfilesExcluded": true,
+    "lowestIncludedProfileId": "v3_maxout_pitch_floor_review",
+    "reason": "Rows above the 760-mode stretch closure would require either below-floor pitch assumptions or a new optical package ceiling; both are left as no-go rather than silently promoted."
+  },
+  "reviewCeilings": {
+    "broadAreaMm2": 22.0,
+    "maxReviewElectricalPackagePads": 192,
+    "maxReviewOpticalPackagePorts": 96,
+    "stretchAreaMm2": 18.0
+  },
+  "schemaVersion": "open-quantum.max-qubit-no-go-map.v1",
+  "targetRows": {
+    "modes712": {
+      "bestProfileId": "v3_maxout_pitch_floor_review",
+      "chipAreaMm2": 16.253798,
+      "effectiveElectricalPackagePadCount": 160,
+      "effectiveOpticalPackagePortCount": 90,
+      "failedEnvelopeConstraints": [],
+      "feasibleUnderV2Envelope": true,
+      "feasibleUnderV3Envelope": true,
+      "interferometers": 475,
+      "logicalQubits": 356,
+      "physicalModes": 712,
+      "routeReductionFraction": 0.897844293386567
+    },
+    "modes760": {
+      "bestProfileId": "v3_maxout_pitch_floor_review",
+      "chipAreaMm2": 17.979962,
+      "effectiveElectricalPackagePadCount": 176,
+      "effectiveOpticalPackagePortCount": 96,
+      "failedEnvelopeConstraints": [],
+      "feasibleUnderV2Envelope": true,
+      "feasibleUnderV3Envelope": true,
+      "interferometers": 507,
+      "logicalQubits": 380,
+      "physicalModes": 760,
+      "routeReductionFraction": 0.898313772678447
+    },
+    "modes768": {
+      "bestProfileId": "v3_maxout_pitch_floor_review",
+      "chipAreaMm2": 18.265349,
+      "effectiveElectricalPackagePadCount": 176,
+      "effectiveOpticalPackagePortCount": 100,
+      "failedEnvelopeConstraints": [
+        "area_at_or_above_18mm2_stretch",
+        "effective_optical_package_ports_above_review_ceiling"
+      ],
+      "feasibleUnderV2Envelope": false,
+      "feasibleUnderV3Envelope": false,
+      "interferometers": 512,
+      "logicalQubits": 384,
+      "physicalModes": 768,
+      "routeReductionFraction": 0.89838416980009
+    }
+  }
+}

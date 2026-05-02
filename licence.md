@@ -10,8 +10,12 @@ provided appropriate attribution is given, changes are indicated, and no
 additional legal or technical restrictions are applied.
 
 This licence applies to the design documentation, architecture descriptions,
-blueprints, and other non-software design materials in this package. It does
-not claim hardware readiness, foundry readiness, tapeout readiness, prototype
-readiness, measured device performance, or foundry-calibrated S-parameters.
+blueprints, reproducibility reports, and simulator materials in this public
+package. It does not claim hardware readiness, foundry readiness, tapeout
+readiness, prototype readiness, measured device performance, or
+foundry-calibrated S-parameters.
+
+Commercial use is not granted by this public licence. Commercial licensing is
+available separately by written agreement.
 
 Legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode

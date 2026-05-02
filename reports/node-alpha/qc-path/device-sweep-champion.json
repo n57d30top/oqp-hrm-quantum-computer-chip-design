@@ -1,0 +1,117 @@
+{
+  "acceptance": {
+    "maxCrosstalkRatio": 0.05,
+    "maxInsertionLossDb": 1.0,
+    "maxMziImbalanceRatio": 0.2,
+    "maxReflectionRatio": 0.05,
+    "minOutputPortNormalizationFlux": 1e-08,
+    "minUsefulTransmission": 0.5
+  },
+  "acceptanceStatus": "accepted_first_pass_candidate",
+  "backend": "meep",
+  "calibration": {
+    "inputFlux": 10.920928366829811,
+    "inputFluxMagnitude": 10.920928366829811,
+    "method": "straight_waveguide_reference_flux",
+    "minOutputPortNormalizationFlux": 1e-08,
+    "outputPortNormalizationFlux": 1.0945538959621231e-07,
+    "referenceInputFlux": 10.920928366829811,
+    "referenceThroughFlux": 1.0945538959621231e-07
+  },
+  "calibrationProtocol": {
+    "nextValidation": [
+      "move monitors away from source near field and PML",
+      "extract port S-parameters with MPB mode decomposition",
+      "repeat at resolution >= 16 and 3D geometry before GDS promotion"
+    ],
+    "referenceCheck": "straight_waveguide_output_port_flux",
+    "reflectionCheck": "input_monitor_reference_subtraction",
+    "sourceCheck": "eigenmode_source_with_gaussian_fallback"
+  },
+  "candidateId": "coupler_gap0p18_len4p005_phi0_w0p45",
+  "device": "coupler",
+  "durationSeconds": 0.235587,
+  "fdtdMetrics": {
+    "crossFlux": 1.084154717388948e-07,
+    "crossRatio": 0.9904991626163515,
+    "crosstalkRatio": 0.009500837383627836,
+    "imbalanceRatio": 0.009500837383627836,
+    "inputMonitorFlux": 10.920928366829813,
+    "inputNormalizationFlux": 10.920928366829811,
+    "insertionLossDb": 0.0,
+    "modeResolvedTransmission": {
+      "crossPortMode0": 0.9904991626163515,
+      "throughPortMode0": 0.9999999999999793
+    },
+    "normalizationReliable": true,
+    "outputPortNormalizationFlux": 1.0945538959621231e-07,
+    "reflectionFlux": 1.7763568394002505e-15,
+    "reflectionRatio": 1.6265621197512729e-16,
+    "throughFlux": 1.0945538959621005e-07,
+    "throughRatio": 0.9999999999999793,
+    "timing": {
+      "resolution": 16,
+      "until": 40.0
+    },
+    "usefulTransmission": 1.9904991626163309
+  },
+  "gapToAcceptance": {
+    "crosstalkRatio": 0.009500837383627836,
+    "crosstalkRatioExcess": 0.0,
+    "crosstalkRatioTarget": 0.05,
+    "insertionLossDb": 0.0,
+    "insertionLossDbExcess": 0.0,
+    "insertionLossDbTarget": 1.0,
+    "normalizationReliable": true,
+    "outputPortNormalizationFlux": 1.0945538959621231e-07,
+    "outputPortNormalizationFluxTarget": 1e-08,
+    "reflectionRatio": 1.6265621197512729e-16,
+    "reflectionRatioExcess": 0.0,
+    "reflectionRatioTarget": 0.05,
+    "usefulTransmission": 1.9904991626163309,
+    "usefulTransmissionFactorBelowTarget": 0.25119327322036916,
+    "usefulTransmissionTarget": 0.5
+  },
+  "geometry": {
+    "cellXUm": 12.004999999999999,
+    "cellYUm": 4.0,
+    "couplingGapUm": 0.18,
+    "couplingLengthUm": 4.005,
+    "couplingRegionModel": "parallel_waveguides_no_core_cutout",
+    "laneSeparationUm": 0.63,
+    "laserWavelengthNm": 1550,
+    "phaseShiftRad": 0.0,
+    "resolution": 16,
+    "until": 40.0,
+    "waveguideWidthUm": 0.45
+  },
+  "limitations": [
+    "2D FDTD cell, not a 3D foundry-validated layout.",
+    "Eigenmode normalization uses a straight-waveguide output-port reference, not a calibrated wafer measurement.",
+    "Truth-switch actuation is represented by a dielectric perturbation pending material/driver model.",
+    "Mode-resolved transmission is first-pass monitor-port power, not full S-parameter/MPB extraction."
+  ],
+  "meepVersion": "1.33.0-beta",
+  "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+  "schemaVersion": "open-quantum.eigenmode-device.v1",
+  "score": 99.9049916261637,
+  "scoreTerms": {
+    "balancePenalty": 0.09500837383627836,
+    "boundedUsefulTransmission": 1.0,
+    "crosstalkPenalty": 0.0,
+    "insertionLossPenalty": 0.0,
+    "normalizationPenalty": 0.0,
+    "reflectionPenalty": 8.132810598756364e-15,
+    "score": 99.9049916261637
+  },
+  "simulationModelChanges": [
+    "Removed cladding block that cut through silicon waveguide cores in coupler/MZI regions.",
+    "Made cell length and monitor positions depend on coupling length to keep sources and monitors away from PML.",
+    "Normalize through/cross output power against the straight-waveguide through-port reference, not the input monitor.",
+    "Evaluate MZI/phase-shifter acceptance as a through-state low-leakage operating point; balanced-splitter tuning is a separate operating point."
+  ],
+  "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+  "sourceModel": "eigenmode",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "validationTier": "high_resolution_gap_probe"
+}

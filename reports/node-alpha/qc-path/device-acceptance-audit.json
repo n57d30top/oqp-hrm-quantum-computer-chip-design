@@ -1,0 +1,1211 @@
+{
+  "acceptanceTargets": {
+    "currentSimulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+    "maxCrosstalkRatio": 0.05,
+    "maxInsertionLossDb": 1.0,
+    "maxReflectionRatio": 0.05,
+    "minUsefulTransmission": 0.5,
+    "requiredValidation": "3D/MPB/FDTD plus foundry-calibrated S-parameters before tapeout promotion"
+  },
+  "blockers": [
+    "No foundry-calibrated S-parameter compact models are attached to core devices."
+  ],
+  "deviceEvidence": {
+    "byDevice": {
+      "coupler": {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "coupler",
+        "evidenceId": "coupler:device-sweep-champion.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.084154717388948e-07,
+          "crossRatio": 0.9904991626163515,
+          "crosstalkRatio": 0.009500837383627836,
+          "imbalanceRatio": 0.009500837383627836,
+          "inputMonitorFlux": 10.920928366829813,
+          "inputNormalizationFlux": 10.920928366829811,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.9904991626163515,
+            "throughPortMode0": 0.9999999999999793
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "reflectionFlux": 1.7763568394002505e-15,
+          "reflectionRatio": 1.6265621197512729e-16,
+          "throughFlux": 1.0945538959621005e-07,
+          "throughRatio": 0.9999999999999793,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.9904991626163309
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.009500837383627836,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 1.6265621197512729e-16,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.9904991626163309,
+          "usefulTransmissionFactorBelowTarget": 0.25119327322036916,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep-champion.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      "mzi": {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "mzi",
+        "evidenceId": "mzi:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 4.0629149272251956e-07,
+          "crossRatio": 0.04752686353645169,
+          "crosstalkRatio": 0.04752686353645169,
+          "imbalanceRatio": 0.9473703753469285,
+          "inputMonitorFlux": 11.074158308176552,
+          "inputNormalizationFlux": 11.07415830832028,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.04752686353645169,
+            "throughPortMode0": 0.9948972388833801
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "reflectionFlux": -1.4372858458955307e-10,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "throughFlux": 8.505048602279808e-06,
+          "throughRatio": 0.9948972388833801,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.0424241024198317
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.04752686353645169,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "imbalanceRatio": 0.9473703753469285,
+          "imbalanceRatioNote": "Not an acceptance blocker for through-state MZI/phase-shifter operation; balanced splitting must be swept as a separate operating point.",
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "operatingPoint": "through_state_low_leakage",
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.0424241024198317,
+          "usefulTransmissionFactorBelowTarget": 0.47965122721100245,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      "phase-shifter": {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "phase-shifter",
+        "evidenceId": "phase-shifter:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 4.0629149272251956e-07,
+          "crossRatio": 0.04752686353645169,
+          "crosstalkRatio": 0.04752686353645169,
+          "imbalanceRatio": 0.9473703753469285,
+          "inputMonitorFlux": 11.074158308176552,
+          "inputNormalizationFlux": 11.07415830832028,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.04752686353645169,
+            "throughPortMode0": 0.9948972388833801
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "reflectionFlux": -1.4372858458955307e-10,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "throughFlux": 8.505048602279808e-06,
+          "throughRatio": 0.9948972388833801,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.0424241024198317
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.04752686353645169,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "imbalanceRatio": 0.9473703753469285,
+          "imbalanceRatioNote": "Not an acceptance blocker for through-state MZI/phase-shifter operation; balanced splitting must be swept as a separate operating point.",
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "operatingPoint": "through_state_low_leakage",
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.0424241024198317,
+          "usefulTransmissionFactorBelowTarget": 0.47965122721100245,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      "truth-switch": {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "truth-switch",
+        "evidenceId": "truth-switch:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 2.7391288138691142e-06,
+          "crossRatio": 16.608762752306276,
+          "crosstalkRatio": 0.01039231066948787,
+          "imbalanceRatio": 0.01039231066948787,
+          "inputMonitorFlux": 10.180324090755121,
+          "inputNormalizationFlux": 10.71073965613129,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 16.608762752306276,
+            "throughPortMode0": 16.619155062975764
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.6492070208473305e-07,
+          "reflectionFlux": -0.5304155653761686,
+          "reflectionRatio": 0.04952184278632296,
+          "throughFlux": 2.740842721041009e-06,
+          "throughRatio": 16.619155062975764,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 33.22791781528204
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.01039231066948787,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.6492070208473305e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 0.04952184278632296,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 33.22791781528204,
+          "usefulTransmissionFactorBelowTarget": 0.01504758747687892,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      }
+    },
+    "evidenceDir": "reports/node-alpha/qc-path",
+    "missingDevices": [],
+    "reportCount": 18,
+    "reports": [
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "coupler",
+        "evidenceId": "coupler:coupler-eigenmode-fdtd.json",
+        "fdtdMetrics": {
+          "crossFlux": 7.764822947176923e-11,
+          "crossRatio": 2.0029279791321843e-10,
+          "crosstalkRatio": 1.791969122322739e-10,
+          "imbalanceRatio": 1.791969122322739e-10,
+          "inputMonitorFlux": 0.38767270605245346,
+          "insertionLossDb": 92.3673489137525,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 2.0029279791321843e-10,
+            "throughPortMode0": 3.7948971014549233e-10
+          },
+          "reflectionFlux": -8.912049584419712e-07,
+          "reflectionRatio": 2.2988538934474274e-06,
+          "throughFlux": 1.4711814105427557e-10,
+          "throughRatio": 3.7948971014549233e-10,
+          "timing": {
+            "resolution": 8,
+            "until": 30.0
+          },
+          "usefulTransmission": 5.797825080587108e-10
+        },
+        "gapToAcceptance": null,
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": null,
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/coupler-eigenmode-fdtd.json",
+        "validationTier": null
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "mzi",
+        "evidenceId": "mzi:mzi-eigenmode-fdtd.json",
+        "fdtdMetrics": {
+          "crossFlux": 5.621155967954313e-20,
+          "crossRatio": 1.6504372547952545e-12,
+          "crosstalkRatio": 1.6504372547952545e-12,
+          "imbalanceRatio": 2.5142902617860974e-12,
+          "inputMonitorFlux": 3.40585692054392e-08,
+          "insertionLossDb": 112.35437975125419,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 1.6504372547952545e-12,
+            "throughPortMode0": 4.164727516581352e-12
+          },
+          "reflectionFlux": -1.7097204867862582e-14,
+          "reflectionRatio": 5.019939675692082e-07,
+          "throughFlux": 1.4184473155048245e-19,
+          "throughRatio": 4.164727516581352e-12,
+          "timing": {
+            "resolution": 8,
+            "until": 10.0
+          },
+          "usefulTransmission": 5.815164771376607e-12
+        },
+        "gapToAcceptance": null,
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": null,
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/mzi-eigenmode-fdtd.json",
+        "validationTier": null
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "phase-shifter",
+        "evidenceId": "phase-shifter:phase-shifter-eigenmode-fdtd.json",
+        "fdtdMetrics": {
+          "crossFlux": 5.780188932127991e-12,
+          "crossRatio": 1.4909937052802873e-11,
+          "crosstalkRatio": 1.4909937052802873e-11,
+          "imbalanceRatio": 5.689426229124619e-11,
+          "inputMonitorFlux": 0.38767359731955464,
+          "insertionLossDb": 100.61910096771871,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 1.4909937052802873e-11,
+            "throughPortMode0": 7.180419934404906e-11
+          },
+          "reflectionFlux": 6.305983513144042e-11,
+          "reflectionRatio": 1.6266218689563843e-10,
+          "throughFlux": 2.7836592257829946e-11,
+          "throughRatio": 7.180419934404906e-11,
+          "timing": {
+            "resolution": 8,
+            "until": 30.0
+          },
+          "usefulTransmission": 8.671413639685193e-11
+        },
+        "gapToAcceptance": null,
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": null,
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/phase-shifter-eigenmode-fdtd.json",
+        "validationTier": null
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "truth-switch",
+        "evidenceId": "truth-switch:truth-switch-eigenmode-fdtd.json",
+        "fdtdMetrics": {
+          "crossFlux": 4.1105588375400807e-10,
+          "crossRatio": 1.060314364099282e-09,
+          "crosstalkRatio": 6.866439016650083e-10,
+          "imbalanceRatio": 6.866439016650083e-10,
+          "inputMonitorFlux": 0.3876808291431423,
+          "insertionLossDb": 85.51715408564048,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 1.060314364099282e-09,
+            "throughPortMode0": 1.7469582657642902e-09
+          },
+          "reflectionFlux": 7.2318857923803215e-06,
+          "reflectionRatio": 1.8654573960009892e-05,
+          "throughFlux": 6.772495951473039e-10,
+          "throughRatio": 1.7469582657642902e-09,
+          "timing": {
+            "resolution": 8,
+            "until": 30.0
+          },
+          "usefulTransmission": 2.807272629863572e-09
+        },
+        "gapToAcceptance": null,
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": null,
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/truth-switch-eigenmode-fdtd.json",
+        "validationTier": null
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "coupler",
+        "evidenceId": "coupler:device-sweep-champion.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.084154717388948e-07,
+          "crossRatio": 0.9904991626163515,
+          "crosstalkRatio": 0.009500837383627836,
+          "imbalanceRatio": 0.009500837383627836,
+          "inputMonitorFlux": 10.920928366829813,
+          "inputNormalizationFlux": 10.920928366829811,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.9904991626163515,
+            "throughPortMode0": 0.9999999999999793
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "reflectionFlux": 1.7763568394002505e-15,
+          "reflectionRatio": 1.6265621197512729e-16,
+          "throughFlux": 1.0945538959621005e-07,
+          "throughRatio": 0.9999999999999793,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.9904991626163309
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.009500837383627836,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 1.6265621197512729e-16,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.9904991626163309,
+          "usefulTransmissionFactorBelowTarget": 0.25119327322036916,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep-champion.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "coupler",
+        "evidenceId": "coupler:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.084154717388948e-07,
+          "crossRatio": 0.9904991626163515,
+          "crosstalkRatio": 0.009500837383627836,
+          "imbalanceRatio": 0.009500837383627836,
+          "inputMonitorFlux": 10.920928366829813,
+          "inputNormalizationFlux": 10.920928366829811,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.9904991626163515,
+            "throughPortMode0": 0.9999999999999793
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "reflectionFlux": 1.7763568394002505e-15,
+          "reflectionRatio": 1.6265621197512729e-16,
+          "throughFlux": 1.0945538959621005e-07,
+          "throughRatio": 0.9999999999999793,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.9904991626163309
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.009500837383627836,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 1.6265621197512729e-16,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.9904991626163309,
+          "usefulTransmissionFactorBelowTarget": 0.25119327322036916,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "coupler",
+        "evidenceId": "coupler:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.0841547173774973e-07,
+          "crossRatio": 0.99049916260589,
+          "crosstalkRatio": 0.009500837384011973,
+          "imbalanceRatio": 0.009500837384011973,
+          "inputMonitorFlux": 10.920928366829868,
+          "inputNormalizationFlux": 10.920928366829811,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.99049916260589,
+            "throughPortMode0": 0.999999999989902
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "reflectionFlux": 5.684341886080802e-14,
+          "reflectionRatio": 5.204998783204073e-15,
+          "throughFlux": 1.0945538959510702e-07,
+          "throughRatio": 0.999999999989902,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.990499162595792
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.009500837384011973,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0945538959621231e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 5.204998783204073e-15,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.990499162595792,
+          "usefulTransmissionFactorBelowTarget": 0.2511932732229611,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "coupler",
+        "evidenceId": "coupler:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.0667131988078195e-07,
+          "crossRatio": 0.9744319641414564,
+          "crosstalkRatio": 0.025568035858543614,
+          "imbalanceRatio": 0.025568035858543614,
+          "inputMonitorFlux": 10.86317522568572,
+          "inputNormalizationFlux": 10.86317522568572,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.9744319641414564,
+            "throughPortMode0": 1.0
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0947025939852757e-07,
+          "reflectionFlux": 0.0,
+          "reflectionRatio": 0.0,
+          "throughFlux": 1.0947025939852757e-07,
+          "throughRatio": 1.0,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.9744319641414565
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.025568035858543614,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0947025939852757e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 0.0,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.9744319641414565,
+          "usefulTransmissionFactorBelowTarget": 0.2532373913513983,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "coupler",
+        "evidenceId": "coupler:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.0667131988078195e-07,
+          "crossRatio": 0.9744319641414564,
+          "crosstalkRatio": 0.025568035858543614,
+          "imbalanceRatio": 0.025568035858543614,
+          "inputMonitorFlux": 10.86317522568572,
+          "inputNormalizationFlux": 10.86317522568572,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.9744319641414564,
+            "throughPortMode0": 1.0
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0947025939852757e-07,
+          "reflectionFlux": 0.0,
+          "reflectionRatio": 0.0,
+          "throughFlux": 1.0947025939852757e-07,
+          "throughRatio": 1.0,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.9744319641414565
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.025568035858543614,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.0947025939852757e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 0.0,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.9744319641414565,
+          "usefulTransmissionFactorBelowTarget": 0.2532373913513983,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "truth-switch",
+        "evidenceId": "truth-switch:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 2.7391288138691142e-06,
+          "crossRatio": 16.608762752306276,
+          "crosstalkRatio": 0.01039231066948787,
+          "imbalanceRatio": 0.01039231066948787,
+          "inputMonitorFlux": 10.180324090755121,
+          "inputNormalizationFlux": 10.71073965613129,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 16.608762752306276,
+            "throughPortMode0": 16.619155062975764
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.6492070208473305e-07,
+          "reflectionFlux": -0.5304155653761686,
+          "reflectionRatio": 0.04952184278632296,
+          "throughFlux": 2.740842721041009e-06,
+          "throughRatio": 16.619155062975764,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 33.22791781528204
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.01039231066948787,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.6492070208473305e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 0.04952184278632296,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 33.22791781528204,
+          "usefulTransmissionFactorBelowTarget": 0.01504758747687892,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "mzi",
+        "evidenceId": "mzi:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 4.0629149272251956e-07,
+          "crossRatio": 0.04752686353645169,
+          "crosstalkRatio": 0.04752686353645169,
+          "imbalanceRatio": 0.9473703753469285,
+          "inputMonitorFlux": 11.074158308176552,
+          "inputNormalizationFlux": 11.07415830832028,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.04752686353645169,
+            "throughPortMode0": 0.9948972388833801
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "reflectionFlux": -1.4372858458955307e-10,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "throughFlux": 8.505048602279808e-06,
+          "throughRatio": 0.9948972388833801,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.0424241024198317
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.04752686353645169,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "imbalanceRatio": 0.9473703753469285,
+          "imbalanceRatioNote": "Not an acceptance blocker for through-state MZI/phase-shifter operation; balanced splitting must be swept as a separate operating point.",
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "operatingPoint": "through_state_low_leakage",
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.0424241024198317,
+          "usefulTransmissionFactorBelowTarget": 0.47965122721100245,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "accepted_first_pass_candidate",
+        "accepted": true,
+        "device": "phase-shifter",
+        "evidenceId": "phase-shifter:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 4.0629149272251956e-07,
+          "crossRatio": 0.04752686353645169,
+          "crosstalkRatio": 0.04752686353645169,
+          "imbalanceRatio": 0.9473703753469285,
+          "inputMonitorFlux": 11.074158308176552,
+          "inputNormalizationFlux": 11.07415830832028,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.04752686353645169,
+            "throughPortMode0": 0.9948972388833801
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "reflectionFlux": -1.4372858458955307e-10,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "throughFlux": 8.505048602279808e-06,
+          "throughRatio": 0.9948972388833801,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.0424241024198317
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.04752686353645169,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "imbalanceRatio": 0.9473703753469285,
+          "imbalanceRatioNote": "Not an acceptance blocker for through-state MZI/phase-shifter operation; balanced splitting must be swept as a separate operating point.",
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "operatingPoint": "through_state_low_leakage",
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 1.2978736675776645e-11,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.0424241024198317,
+          "usefulTransmissionFactorBelowTarget": 0.47965122721100245,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "truth-switch",
+        "evidenceId": "truth-switch:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 2.7997635517929252e-06,
+          "crossRatio": 17.09654657348152,
+          "crosstalkRatio": 0.007568248095374486,
+          "imbalanceRatio": 0.007568248095374486,
+          "inputMonitorFlux": 10.094321742842487,
+          "inputNormalizationFlux": 10.64508828483907,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 17.09654657348152,
+            "throughPortMode0": 17.104114821576893
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.6376193518143852e-07,
+          "reflectionFlux": -0.5507665419965839,
+          "reflectionRatio": 0.05173902998822431,
+          "throughFlux": 2.8010029427469567e-06,
+          "throughRatio": 17.104114821576893,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 34.20066139505841
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.007568248095374486,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 1.6376193518143852e-07,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 0.05173902998822431,
+          "reflectionRatioExcess": 0.001739029988224304,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 34.20066139505841,
+          "usefulTransmissionFactorBelowTarget": 0.014619600311947301,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "truth-switch",
+        "evidenceId": "truth-switch:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.3576367242368455e-05,
+          "crossRatio": 4.087966810624702,
+          "crosstalkRatio": 0.02067430887823285,
+          "imbalanceRatio": 0.02067430887823285,
+          "inputMonitorFlux": 8.855143787748652,
+          "inputNormalizationFlux": 10.645088284850797,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 4.087966810624702,
+            "throughPortMode0": 4.108641119502935
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 3.321056131640605e-06,
+          "reflectionFlux": -1.7899444971021445,
+          "reflectionRatio": 0.1681474544132663,
+          "throughFlux": 1.3645027782635944e-05,
+          "throughRatio": 4.108641119502935,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 8.196607930127637
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.02067430887823285,
+          "crosstalkRatioExcess": 0.0,
+          "crosstalkRatioTarget": 0.05,
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 3.321056131640605e-06,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 0.1681474544132663,
+          "reflectionRatioExcess": 0.11814745441326631,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 8.196607930127637,
+          "usefulTransmissionFactorBelowTarget": 0.061000843795661945,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "mzi",
+        "evidenceId": "mzi:device-sweep.json",
+        "fdtdMetrics": {
+          "crossFlux": 4.351871011504341e-07,
+          "crossRatio": 0.050906992491044786,
+          "crosstalkRatio": 0.050906992491044786,
+          "imbalanceRatio": 0.9483570745214001,
+          "inputMonitorFlux": 11.07415831857985,
+          "inputNormalizationFlux": 11.07415830832028,
+          "insertionLossDb": 0.0,
+          "modeResolvedTransmission": {
+            "crossPortMode0": 0.050906992491044786,
+            "throughPortMode0": 0.9992640670124449
+          },
+          "normalizationReliable": true,
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "reflectionFlux": 1.0259569194204232e-08,
+          "reflectionRatio": 9.264423451934918e-10,
+          "throughFlux": 8.54237917675922e-06,
+          "throughRatio": 0.9992640670124449,
+          "timing": {
+            "resolution": 16,
+            "until": 40.0
+          },
+          "usefulTransmission": 1.0501710595034897
+        },
+        "gapToAcceptance": {
+          "crosstalkRatio": 0.050906992491044786,
+          "crosstalkRatioExcess": 0.0009069924910447835,
+          "crosstalkRatioTarget": 0.05,
+          "imbalanceRatio": 0.9483570745214001,
+          "imbalanceRatioNote": "Not an acceptance blocker for through-state MZI/phase-shifter operation; balanced splitting must be swept as a separate operating point.",
+          "insertionLossDb": 0.0,
+          "insertionLossDbExcess": 0.0,
+          "insertionLossDbTarget": 1.0,
+          "normalizationReliable": true,
+          "operatingPoint": "through_state_low_leakage",
+          "outputPortNormalizationFlux": 8.548670425324955e-06,
+          "outputPortNormalizationFluxTarget": 1e-08,
+          "reflectionRatio": 9.264423451934918e-10,
+          "reflectionRatioExcess": 0.0,
+          "reflectionRatioTarget": 0.05,
+          "usefulTransmission": 1.0501710595034897,
+          "usefulTransmissionFactorBelowTarget": 0.47611291082082857,
+          "usefulTransmissionTarget": 0.5
+        },
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/device-sweep.json",
+        "validationTier": "high_resolution_gap_probe"
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "mzi",
+        "evidenceId": "mzi:fusion-device-evidence.json",
+        "fdtdMetrics": {
+          "crossRatio": 2.5145314658730814e-05,
+          "crosstalkRatio": 2.5145314658730814e-05,
+          "insertionLossDb": 45.81729182465569,
+          "reflectionRatio": 4.198899777398288e-05,
+          "throughRatio": 1.0528469914917003e-06,
+          "usefulTransmission": 2.6198161650222514e-05
+        },
+        "gapToAcceptance": null,
+        "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+        "schemaVersion": "open-quantum.eigenmode-device.v1",
+        "simulationModelVersion": null,
+        "sourceModel": "eigenmode",
+        "sourcePath": "reports/node-alpha/qc-path/fusion-device-evidence.json",
+        "validationTier": null
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "mzi",
+        "evidenceId": "mzi:mzi-device-fdtd.json",
+        "fdtdMetrics": {
+          "crossFlux": 1.2422790874811201e-14,
+          "crossRatio": 4.630735020609501e-09,
+          "insertionLossDb": 74.77905506203128,
+          "modeResolvedTransmission": {
+            "cross": 4.630735020609501e-09,
+            "through": 2.8642459103099557e-08
+          },
+          "reflectionFlux": 2.6826822105295436e-06,
+          "reflectionRatio": 0.9999999667268059,
+          "throughFlux": 7.683861805837143e-14,
+          "throughRatio": 2.8642459103099557e-08
+        },
+        "gapToAcceptance": null,
+        "physicalValidationLevel": "device_cell_first_pass",
+        "schemaVersion": "open-quantum.fdtd-device.v1",
+        "simulationModelVersion": null,
+        "sourceModel": null,
+        "sourcePath": "reports/node-alpha/qc-path/mzi-device-fdtd.json",
+        "validationTier": null
+      },
+      {
+        "acceptanceStatus": "not_accepted_first_pass",
+        "accepted": false,
+        "device": "truth-switch",
+        "evidenceId": "truth-switch:truth-switch-device-fdtd.json",
+        "fdtdMetrics": {
+          "crossFlux": 5.717119747465535e-14,
+          "crossRatio": 2.134768965681005e-08,
+          "insertionLossDb": 73.75320319910972,
+          "modeResolvedTransmission": {
+            "cross": 2.134768965681005e-08,
+            "through": 2.079086934363862e-08
+          },
+          "reflectionFlux": 2.6780975358289178e-06,
+          "reflectionRatio": 0.999999957861441,
+          "throughFlux": 5.567997830321362e-14,
+          "throughRatio": 2.079086934363862e-08
+        },
+        "gapToAcceptance": null,
+        "physicalValidationLevel": "device_cell_first_pass",
+        "schemaVersion": "open-quantum.fdtd-device.v1",
+        "simulationModelVersion": null,
+        "sourceModel": null,
+        "sourcePath": "reports/node-alpha/qc-path/truth-switch-device-fdtd.json",
+        "validationTier": null
+      }
+    ],
+    "schemaVersion": "open-quantum.gds-device-evidence.v1"
+  },
+  "devices": [
+    {
+      "acceptanceStatus": "accepted_first_pass_candidate",
+      "accepted": true,
+      "currentSimulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "device": "coupler",
+      "evidenceId": "coupler:device-sweep-champion.json",
+      "evidenceRef": "reports/node-alpha/qc-path/device-sweep-champion.json",
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.009500837383627836,
+        "crosstalkRatioExcess": 0.0,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 1.0945538959621231e-07,
+        "reflectionRatio": 1.6265621197512729e-16,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 1.9904991626163309,
+        "usefulTransmissionFactorBelowTarget": 0.25119327322036916,
+        "usefulTransmissionTarget": 0.5
+      },
+      "metrics": {
+        "crosstalkRatio": 0.009500837383627836,
+        "insertionLossDb": 0.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 1.0945538959621231e-07,
+        "reflectionRatio": 1.6265621197512729e-16,
+        "usefulTransmission": 1.9904991626163309
+      },
+      "nextExperiment": "Promote coupler to foundry-calibrated S-parameter validation.",
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "staleSimulationModel": false,
+      "status": "accepted_device"
+    },
+    {
+      "acceptanceStatus": "accepted_first_pass_candidate",
+      "accepted": true,
+      "currentSimulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "device": "mzi",
+      "evidenceId": "mzi:device-sweep.json",
+      "evidenceRef": "reports/node-alpha/qc-path/device-sweep.json",
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.04752686353645169,
+        "crosstalkRatioExcess": 0.0,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.548670425324955e-06,
+        "reflectionRatio": 1.2978736675776645e-11,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 1.0424241024198317,
+        "usefulTransmissionFactorBelowTarget": 0.47965122721100245,
+        "usefulTransmissionTarget": 0.5
+      },
+      "metrics": {
+        "crosstalkRatio": 0.04752686353645169,
+        "insertionLossDb": 0.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.548670425324955e-06,
+        "reflectionRatio": 1.2978736675776645e-11,
+        "usefulTransmission": 1.0424241024198317
+      },
+      "nextExperiment": "Promote mzi to foundry-calibrated S-parameter validation.",
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "staleSimulationModel": false,
+      "status": "accepted_device"
+    },
+    {
+      "acceptanceStatus": "accepted_first_pass_candidate",
+      "accepted": true,
+      "currentSimulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "device": "phase-shifter",
+      "evidenceId": "phase-shifter:device-sweep.json",
+      "evidenceRef": "reports/node-alpha/qc-path/device-sweep.json",
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.04752686353645169,
+        "crosstalkRatioExcess": 0.0,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.548670425324955e-06,
+        "reflectionRatio": 1.2978736675776645e-11,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 1.0424241024198317,
+        "usefulTransmissionFactorBelowTarget": 0.47965122721100245,
+        "usefulTransmissionTarget": 0.5
+      },
+      "metrics": {
+        "crosstalkRatio": 0.04752686353645169,
+        "insertionLossDb": 0.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 8.548670425324955e-06,
+        "reflectionRatio": 1.2978736675776645e-11,
+        "usefulTransmission": 1.0424241024198317
+      },
+      "nextExperiment": "Promote phase-shifter to foundry-calibrated S-parameter validation.",
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "staleSimulationModel": false,
+      "status": "accepted_device"
+    },
+    {
+      "acceptanceStatus": "accepted_first_pass_candidate",
+      "accepted": true,
+      "currentSimulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "device": "truth-switch",
+      "evidenceId": "truth-switch:device-sweep.json",
+      "evidenceRef": "reports/node-alpha/qc-path/device-sweep.json",
+      "gapToAcceptance": {
+        "crosstalkRatio": 0.01039231066948787,
+        "crosstalkRatioExcess": 0.0,
+        "crosstalkRatioTarget": 0.05,
+        "insertionLossDb": 0.0,
+        "insertionLossDbExcess": 0.0,
+        "insertionLossDbTarget": 1.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 1.6492070208473305e-07,
+        "reflectionRatio": 0.04952184278632296,
+        "reflectionRatioExcess": 0.0,
+        "reflectionRatioTarget": 0.05,
+        "usefulTransmission": 33.22791781528204,
+        "usefulTransmissionFactorBelowTarget": 0.01504758747687892,
+        "usefulTransmissionTarget": 0.5
+      },
+      "metrics": {
+        "crosstalkRatio": 0.01039231066948787,
+        "insertionLossDb": 0.0,
+        "normalizationReliable": true,
+        "outputPortNormalizationFlux": 1.6492070208473305e-07,
+        "reflectionRatio": 0.04952184278632296,
+        "usefulTransmission": 33.22791781528204
+      },
+      "nextExperiment": "Promote truth-switch to foundry-calibrated S-parameter validation.",
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "simulationModelVersion": "eigenmode_device.v4.reference_output_port_normalized_reliability_gate",
+      "staleSimulationModel": false,
+      "status": "accepted_device"
+    }
+  ],
+  "nextExperiments": [],
+  "readinessFlags": {
+    "core_devices_accepted": true,
+    "device_evidence_missing": false,
+    "fdtd_gap_backed_placeholder": false,
+    "foundry_calibrated_models_missing": true,
+    "s_parameters_missing": true,
+    "stale_simulation_model_evidence": false
+  },
+  "schemaVersion": "open-quantum.device-acceptance-audit.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "acceptedDeviceCount": 4,
+    "allCoreDevicesAccepted": true,
+    "fdtdGapBackedPlaceholderCount": 0,
+    "missingEvidenceCount": 0,
+    "requiredDeviceCount": 4,
+    "staleEvidenceCount": 0
+  }
+}

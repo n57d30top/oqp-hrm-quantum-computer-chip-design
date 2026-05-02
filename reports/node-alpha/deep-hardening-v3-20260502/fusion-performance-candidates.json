@@ -1,0 +1,865 @@
+{
+  "bestNominalCandidate": {
+    "candidateId": "mzi_raw_hardened_node_alpha",
+    "device": "mzi",
+    "metrics": {
+      "crosstalkRatio": 2e-06,
+      "insertionLossDb": 0.0012,
+      "reflectionRatio": 4e-06,
+      "usefulTransmission": 2.465
+    },
+    "nominalSourceDetector": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0
+    },
+    "normalizationReliable": true,
+    "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+    "sourceModel": "node_alpha_multiobjective_surrogate",
+    "stretchSourceDetectorFastPath": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 1.8
+    },
+    "strictTargets": {
+      "nominalMeetsFidelityTarget": true,
+      "nominalMeetsSuccessTarget": true,
+      "stretchMeetsFidelityTarget": true,
+      "stretchMeetsSuccessTarget": true,
+      "upgradedMeetsFidelityTarget": true,
+      "upgradedMeetsSuccessTarget": true
+    },
+    "upgradedSourceDetector": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0
+    }
+  },
+  "bestStretchCandidate": {
+    "candidateId": "mzi_raw_hardened_node_alpha",
+    "device": "mzi",
+    "metrics": {
+      "crosstalkRatio": 2e-06,
+      "insertionLossDb": 0.0012,
+      "reflectionRatio": 4e-06,
+      "usefulTransmission": 2.465
+    },
+    "nominalSourceDetector": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0
+    },
+    "normalizationReliable": true,
+    "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+    "sourceModel": "node_alpha_multiobjective_surrogate",
+    "stretchSourceDetectorFastPath": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 1.8
+    },
+    "strictTargets": {
+      "nominalMeetsFidelityTarget": true,
+      "nominalMeetsSuccessTarget": true,
+      "stretchMeetsFidelityTarget": true,
+      "stretchMeetsSuccessTarget": true,
+      "upgradedMeetsFidelityTarget": true,
+      "upgradedMeetsSuccessTarget": true
+    },
+    "upgradedSourceDetector": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0
+    }
+  },
+  "bestUpgradedSourceDetectorCandidate": {
+    "candidateId": "mzi_raw_hardened_node_alpha",
+    "device": "mzi",
+    "metrics": {
+      "crosstalkRatio": 2e-06,
+      "insertionLossDb": 0.0012,
+      "reflectionRatio": 4e-06,
+      "usefulTransmission": 2.465
+    },
+    "nominalSourceDetector": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0
+    },
+    "normalizationReliable": true,
+    "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+    "sourceModel": "node_alpha_multiobjective_surrogate",
+    "stretchSourceDetectorFastPath": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 1.8
+    },
+    "strictTargets": {
+      "nominalMeetsFidelityTarget": true,
+      "nominalMeetsSuccessTarget": true,
+      "stretchMeetsFidelityTarget": true,
+      "stretchMeetsSuccessTarget": true,
+      "upgradedMeetsFidelityTarget": true,
+      "upgradedMeetsSuccessTarget": true
+    },
+    "upgradedSourceDetector": {
+      "estimatedHeraldingSuccessProbability": 1.0,
+      "estimatedProcessFidelity": 0.9999975000000001,
+      "feedForwardLatencyNs": 5.0
+    }
+  },
+  "candidateCount": 2544,
+  "limitations": [
+    "The upgraded source/detector row is a sensitivity scenario, not measured hardware.",
+    "Candidate rankings are based on local Node Alpha/FDTD artifacts and surrogate reports."
+  ],
+  "schemaVersion": "open-quantum.fusion-performance-candidates.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "bestNominalProcessFidelity": 0.9999975000000001,
+    "bestNominalSuccessProbability": 1.0,
+    "bestStretchProcessFidelity": 0.9999975000000001,
+    "bestStretchSuccessProbability": 1.0,
+    "bestUpgradedSourceDetectorProcessFidelity": 0.9999975000000001,
+    "bestUpgradedSourceDetectorSuccessProbability": 1.0,
+    "nominalCandidateMeets90PercentSuccess": true,
+    "nominalCandidateMeets9997Fidelity": true,
+    "nominalCandidateMeetsBothTargets": true,
+    "stretchCandidateMeets95PercentSuccess": true,
+    "stretchCandidateMeets9999Fidelity": true,
+    "stretchCandidateMeetsBothTargets": true,
+    "upgradedSourceDetectorCandidateMeets90PercentSuccess": true,
+    "upgradedSourceDetectorCandidateMeets9997Fidelity": true,
+    "upgradedSourceDetectorCandidateMeetsBothTargets": true
+  },
+  "targets": {
+    "fastPathStretchLatencyNs": 1.8,
+    "minNominalProcessFidelity": 0.999995,
+    "minNominalSuccessProbability": 0.9995,
+    "stretchProcessFidelity": 0.999995,
+    "stretchSuccessProbability": 0.9999,
+    "upgradedDetectorEfficiencyScenario": 0.95,
+    "upgradedSourceEfficiencyScenario": 0.9
+  },
+  "topCandidates": [
+    {
+      "candidateId": "mzi_raw_hardened_node_alpha",
+      "device": "mzi",
+      "metrics": {
+        "crosstalkRatio": 2e-06,
+        "insertionLossDb": 0.0012,
+        "reflectionRatio": 4e-06,
+        "usefulTransmission": 2.465
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9999975000000001,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_hardened_analytical_profile_not_fdtd",
+      "sourceModel": "node_alpha_multiobjective_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9999975000000001,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": true,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": true,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": true,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9999975000000001,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p12_len6p35879_phi3p14159_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 7.767120280277595e-12,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.01800000000048585,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999978153,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999978153,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999978153,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p1_len5p4186_phi3p14159_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 9.402256750945526e-12,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.01800000000050228,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999973983,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999973983,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999973983,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p18_len10p2763_phi3p14159_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 1.3453904657012572e-11,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.018000000000542915,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.990999999996365,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.990999999996365,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.990999999996365,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p16_len8p75686_phi3p14159_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 1.4573231510439655e-11,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.018000000000554017,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999960797,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999960797,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999960797,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p14_len7p46211_phi3p14159_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 1.974709284979781e-11,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.018000000000605754,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999947603,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999947603,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9909999999947603,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p08_len8_phi0_w0p4",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.02867390888638699,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.004425849500104598,
+        "usefulTransmission": 3.1399986737482086
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.990618598028351,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.990618598028351,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.990618598028351,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p08_len8_phi1p5708_w0p4",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.07542479674408842,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.004425836528943985,
+        "usefulTransmission": 3.4822517297302227
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9789308825495059,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9789308825495059,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9789308825495059,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p2_len8_phi3p14159_w0p4",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.029601940060522303,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.03763523258520506,
+        "usefulTransmission": 6.348350433872309
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.973781898692267,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.973781898692267,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.973781898692267,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p18_len4p005_phi3p14159_w0p5",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.01039231066948787,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.04952184278632296,
+        "usefulTransmission": 33.22791781528204
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9726410009394666,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9726410009394666,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9726410009394666,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p18_len4_phi3p14159_w0p5",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.007568248095374486,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.05173902998822431,
+        "usefulTransmission": 34.20066139505841
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9722384229820442,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9722384229820442,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9722384229820442,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p4",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.09437832774438437,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.01894378327744395,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.09437832774438437,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.01894378327744395,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p5",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.09437832774438437,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.01894378327744395,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p1_len5p5_phi3p14159_w0p55",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.09437832774438437,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.01894378327744395,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9669335264251819,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p16_len7_phi1p5708_w0p55",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.009342801554675262,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.06811555861760892,
+        "usefulTransmission": 4.203250178397568
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9636065203025267,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9636065203025267,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9636065203025267,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p2_len8_phi0_w0p4",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.09320442520550376,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.03763507488750712,
+        "usefulTransmission": 6.950438975088774
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9578813562548705,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9578813562548705,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9578813562548705,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p2_len8_phi1p5708_w0p4",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 0.0934209420776484,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.03763515467550432,
+        "usefulTransmission": 6.695539556812383
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9578271871428358,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "eigenmode_calibrated_2d_first_pass",
+      "sourceModel": "eigenmode",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9578271871428358,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9578271871428358,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p12_len6p35879_phi0_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 7.767120280277595e-12,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.09800000000007758,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9509999999980194,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9509999999980194,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9509999999980194,
+        "feedForwardLatencyNs": 5.0
+      }
+    },
+    {
+      "candidateId": "truth-switch_gap0p1_len5p4186_phi0_w0p45",
+      "device": "truth-switch",
+      "metrics": {
+        "crosstalkRatio": 9.402256750945526e-12,
+        "insertionLossDb": 0.0,
+        "reflectionRatio": 0.09800000000009401,
+        "usefulTransmission": 4.0
+      },
+      "nominalSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9509999999976024,
+        "feedForwardLatencyNs": 5.0
+      },
+      "normalizationReliable": true,
+      "physicalValidationLevel": "node_alpha_surrogate_not_fdtd",
+      "sourceModel": "node_alpha_analytical_surrogate",
+      "stretchSourceDetectorFastPath": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9509999999976024,
+        "feedForwardLatencyNs": 1.8
+      },
+      "strictTargets": {
+        "nominalMeetsFidelityTarget": false,
+        "nominalMeetsSuccessTarget": true,
+        "stretchMeetsFidelityTarget": false,
+        "stretchMeetsSuccessTarget": true,
+        "upgradedMeetsFidelityTarget": false,
+        "upgradedMeetsSuccessTarget": true
+      },
+      "upgradedSourceDetector": {
+        "estimatedHeraldingSuccessProbability": 1.0,
+        "estimatedProcessFidelity": 0.9509999999976024,
+        "feedForwardLatencyNs": 5.0
+      }
+    }
+  ]
+}

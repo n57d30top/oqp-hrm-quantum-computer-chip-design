@@ -1,0 +1,652 @@
+{
+  "deterministicSeed": "sha256:index:deep-hardening-v3",
+  "generatedAt": "2026-05-02T21:49:13.308954Z",
+  "limitations": [
+    "Monte-Carlo samples are deterministic surrogate perturbations, not measured wafer/process distributions.",
+    "Pass fractions are regression evidence for this simulator only."
+  ],
+  "sampleCount": 512,
+  "schemaVersion": "open-quantum.monte-carlo-robustness.v1",
+  "sensitivityRanking": [
+    {
+      "highTailMean": 0.0028162248018896393,
+      "impactScore": 0.0005162248018896393,
+      "interpretation": "crosstalk perturbations increase truthSwitchCrosstalkRatio fastest in the deterministic sample tails.",
+      "lowTailMean": 0.0023,
+      "outputMetric": "truthSwitchCrosstalkRatio",
+      "parameter": "crosstalk"
+    },
+    {
+      "highTailMean": 4.964048348670612e-05,
+      "impactScore": 9.640483486706118e-06,
+      "interpretation": "reflection perturbations increase truthSwitchReflectionRatio fastest in the deterministic sample tails.",
+      "lowTailMean": 4e-05,
+      "outputMetric": "truthSwitchReflectionRatio",
+      "parameter": "reflection"
+    },
+    {
+      "highTailMean": 2.2687631950482473e-49,
+      "impactScore": 2.2078091704581376e-49,
+      "interpretation": "phase perturbations increase logicalErrorRate1e9Distance161 fastest in the deterministic sample tails.",
+      "lowTailMean": 6.095402459010988e-51,
+      "outputMetric": "logicalErrorRate1e9Distance161",
+      "parameter": "phase"
+    },
+    {
+      "highTailMean": 1.9308978810905487e-49,
+      "impactScore": 1.9293000103237334e-49,
+      "interpretation": "loss perturbations increase logicalErrorRate1e9Distance161 fastest in the deterministic sample tails.",
+      "lowTailMean": 1.5978707668152305e-52,
+      "outputMetric": "logicalErrorRate1e9Distance161",
+      "parameter": "loss"
+    },
+    {
+      "highTailMean": 1.5618303797687415e-49,
+      "impactScore": 1.3261221619804452e-49,
+      "interpretation": "detector perturbations increase logicalErrorRate1e9Distance161 fastest in the deterministic sample tails.",
+      "lowTailMean": 2.3570821778829626e-50,
+      "outputMetric": "logicalErrorRate1e9Distance161",
+      "parameter": "detector"
+    },
+    {
+      "highTailMean": 1.3411774113264829e-49,
+      "impactScore": 1.0658270427227773e-49,
+      "interpretation": "latency perturbations increase logicalErrorRate1e9Distance161 fastest in the deterministic sample tails.",
+      "lowTailMean": 2.753503686037057e-50,
+      "outputMetric": "logicalErrorRate1e9Distance161",
+      "parameter": "latency"
+    }
+  ],
+  "summary": {
+    "failureCount": 0,
+    "limitingParameter": "crosstalk",
+    "passCount": 512,
+    "passFraction": 1.0,
+    "robustnessTargetMet": true,
+    "worstLogicalErrorRate": 5.0550495965104103e-48,
+    "worstTruthSwitchCrosstalkRatio": 0.002988889897904043,
+    "worstTruthSwitchReflectionRatio": 5.272849519864232e-05
+  },
+  "summarySamples": [
+    {
+      "fusionProcessFidelity": 0.9999974195066632,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.009824327038436e-50,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.5366222455809804,
+        "dark": -0.945160456614321,
+        "detector": 0.044330678586550265,
+        "latency": 0.9661444745073455,
+        "loss": 0.7234357613793505,
+        "phase": -0.3471300015879155,
+        "reflection": -0.918721002629135,
+        "source": -0.16178168302025642
+      },
+      "sampleId": 0,
+      "truthSwitchCrosstalkRatio": 0.0026702693494508765,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999971243228829,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.006773129552943e-52,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.8138756930407285,
+        "dark": 0.7298895682616806,
+        "detector": 0.8555202825814534,
+        "latency": 0.6778271241816147,
+        "loss": -0.5420217099208756,
+        "phase": -0.9472798795119309,
+        "reflection": 0.39624337993764125,
+        "source": -0.5732875404202287
+      },
+      "sampleId": 1,
+      "truthSwitchCrosstalkRatio": 0.0028615742281981028,
+      "truthSwitchReflectionRatio": 4.507191526320181e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999972853334336,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 7.448646115471325e-52,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.6134779885866521,
+        "dark": 0.06583446603843734,
+        "detector": -0.0162729220174459,
+        "latency": -0.15311833149256016,
+        "loss": 0.44696959167604877,
+        "phase": -0.9066666739550147,
+        "reflection": 0.19163260645632785,
+        "source": 0.4182227711952098
+      },
+      "sampleId": 2,
+      "truthSwitchCrosstalkRatio": 0.00272329981212479,
+      "truthSwitchReflectionRatio": 4.2452897362641e-05
+    },
+    {
+      "fusionProcessFidelity": 0.999997468998827,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 6.074457341278447e-51,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.16456265070835685,
+        "dark": -0.7845644001330732,
+        "detector": 0.37276254127416375,
+        "latency": 0.062249173191739615,
+        "loss": 0.41482908811644736,
+        "phase": 0.22646914210869173,
+        "reflection": 0.04843933286649715,
+        "source": 0.6486613379478681
+      },
+      "sampleId": 3,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4.062002346069117e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999970254015635,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 3.062109311590944e-54,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.9599366947768394,
+        "dark": 0.1197985293442394,
+        "detector": 0.38062030409921066,
+        "latency": -0.07565828383336037,
+        "loss": -0.8069369424609611,
+        "phase": -0.1417775067823107,
+        "reflection": 0.7415600569720402,
+        "source": -0.46864383057005077
+      },
+      "sampleId": 4,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4.949196872924212e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999975000000001,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 9.191368878684603e-52,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.7625100503743623,
+        "dark": 0.2831515763033239,
+        "detector": -0.8482547660336672,
+        "latency": 0.3238713185557376,
+        "loss": 0.41210549197754953,
+        "phase": -0.9316091293634226,
+        "reflection": -0.5769871374046505,
+        "source": 0.07979893181324771
+      },
+      "sampleId": 5,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999972633849855,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.0709679278138755e-51,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.24750379406465928,
+        "dark": 0.09862188112498194,
+        "detector": 0.973595061131264,
+        "latency": 0.9480651518290653,
+        "loss": -0.22407066411838228,
+        "phase": -0.6904677982518985,
+        "reflection": 0.3697109601242159,
+        "source": 0.29464697243629256
+      },
+      "sampleId": 6,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4.4732300289589965e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999974044170036,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 3.165365985756956e-53,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.6372199761508859,
+        "dark": 0.03134122848651533,
+        "detector": 0.18696312226832457,
+        "latency": 0.27516333143274196,
+        "loss": -0.6651934401694506,
+        "phase": 0.2650650121526221,
+        "reflection": -0.754186559149634,
+        "source": 0.4213009384723583
+      },
+      "sampleId": 7,
+      "truthSwitchCrosstalkRatio": 0.0027396817835441114,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999975000000001,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.52031186713057e-49,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.5091235587295745,
+        "dark": 0.19721034026057693,
+        "detector": -0.45975023990190744,
+        "latency": -0.9553124433242614,
+        "loss": 0.9191669235177391,
+        "phase": 0.547598499251905,
+        "reflection": -0.752444740698121,
+        "source": 0.9632920486826289
+      },
+      "sampleId": 8,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999974007202557,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 2.4813848054427957e-52,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.6618649625033994,
+        "dark": -0.627309957768831,
+        "detector": 0.6098723617283588,
+        "latency": 0.161591704122235,
+        "loss": -0.1447651504702483,
+        "phase": -0.005570762315621258,
+        "reflection": -0.4676233558466333,
+        "source": 0.893474325094433
+      },
+      "sampleId": 9,
+      "truthSwitchCrosstalkRatio": 0.0027566868241273453,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999971470037643,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.8794181815757725e-50,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.9717892478259257,
+        "dark": -0.5296779233434055,
+        "detector": 0.8078718250797303,
+        "latency": -0.6802293783466773,
+        "loss": 0.311851705610126,
+        "phase": 0.3868280975261542,
+        "reflection": 0.5515566184077194,
+        "source": -0.6833464656323176
+      },
+      "sampleId": 10,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4.705992471561881e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999972154967522,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 5.838893526413678e-54,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.42479048387220575,
+        "dark": 0.4303210239284472,
+        "detector": -0.3636446061229093,
+        "latency": -0.7014459628746609,
+        "loss": -0.5335594072418905,
+        "phase": -0.3952523489590196,
+        "reflection": 0.4445363247214462,
+        "source": 0.7146785976797418
+      },
+      "sampleId": 11,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4.5690064956434516e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999968986136826,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.4570098801860839e-50,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.6270873709090257,
+        "dark": 0.8835211972899892,
+        "detector": 0.7804256268493348,
+        "latency": 0.8797302032741172,
+        "loss": 0.4246283490443947,
+        "phase": 0.04027836464152856,
+        "reflection": 0.939666121064977,
+        "source": -0.533121063954898
+      },
+      "sampleId": 12,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 5.202772634963171e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999968290057827,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 2.0299496461566555e-53,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.5294553407082336,
+        "dark": -0.6447319513324632,
+        "detector": 0.4894818029218797,
+        "latency": -0.8329895067438281,
+        "loss": -0.540653619875586,
+        "phase": -0.039141138364029326,
+        "reflection": 0.9243373691198953,
+        "source": 0.8948451103629644
+      },
+      "sampleId": 13,
+      "truthSwitchCrosstalkRatio": 0.002665324185088681,
+      "truthSwitchReflectionRatio": 5.183151832473466e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999975000000001,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 9.080217933939738e-50,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.18730672081222588,
+        "dark": 0.4314806871264223,
+        "detector": 0.0661246347153377,
+        "latency": -0.5334339243630849,
+        "loss": 0.9848193082750745,
+        "phase": 0.40424750581986135,
+        "reflection": -0.781892206234439,
+        "source": -0.11140843425514357
+      },
+      "sampleId": 14,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999973136193236,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 7.59150996193427e-53,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.924469719419196,
+        "dark": 0.8154254874135851,
+        "detector": -0.10112950097151585,
+        "latency": 0.2546815936276381,
+        "loss": -0.34905611457556984,
+        "phase": 0.2521395404229405,
+        "reflection": 0.2912198069293168,
+        "source": -0.38594451483134196
+      },
+      "sampleId": 15,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4.372761352869526e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999973215187414,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 3.199589658332112e-52,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.24843068399546842,
+        "dark": -0.6032942730165473,
+        "detector": 0.8555018825920389,
+        "latency": -0.9433187902695012,
+        "loss": -0.12915684847182585,
+        "phase": -0.8878284792655893,
+        "reflection": 0.220651024953197,
+        "source": -0.3090278018328617
+      },
+      "sampleId": 16,
+      "truthSwitchCrosstalkRatio": 0.0024714171719568733,
+      "truthSwitchReflectionRatio": 4.282433311940093e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999969206757683,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.3909319310747456e-54,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.9309547882446518,
+        "dark": -0.8378879781936796,
+        "detector": -0.6751701237941545,
+        "latency": -0.6375303683618063,
+        "loss": -0.9585744474174229,
+        "phase": 0.1560602471071022,
+        "reflection": 0.6870015835698453,
+        "source": -0.06821785034444894
+      },
+      "sampleId": 17,
+      "truthSwitchCrosstalkRatio": 0.0029423588038888096,
+      "truthSwitchReflectionRatio": 4.8793620269694024e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999974078022273,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 5.304419120352435e-50,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.6146518178914118,
+        "dark": 0.8113479330207427,
+        "detector": 0.8310170443709903,
+        "latency": 0.982851591266652,
+        "loss": 0.6801437116372933,
+        "phase": -0.9393778832279346,
+        "reflection": -0.9913865951095221,
+        "source": -0.10277020310105789
+      },
+      "sampleId": 18,
+      "truthSwitchCrosstalkRatio": 0.002724109754345074,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999975000000001,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 6.535370663740423e-53,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.5197732291426564,
+        "dark": 0.009997106360810859,
+        "detector": -0.06422716328334244,
+        "latency": -0.3240584770624998,
+        "loss": -0.034698799202957153,
+        "phase": 0.008560690623041545,
+        "reflection": -0.8192205675950116,
+        "source": -0.2314453001279112
+      },
+      "sampleId": 19,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4e-05
+    }
+  ],
+  "targets": {
+    "maxLogicalErrorRate": 1e-09,
+    "maxTruthSwitchCrosstalkRatio": 0.0035,
+    "maxTruthSwitchReflectionRatio": 0.0001,
+    "minFusionProcessFidelity": 0.999995,
+    "minFusionSuccessProbability": 0.9995,
+    "minPassFraction": 0.99
+  },
+  "worstSamples": [
+    {
+      "fusionProcessFidelity": 0.9999974238730831,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 5.0550495965104103e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.5075127800220876,
+        "dark": 0.91640023553281,
+        "detector": 0.904629040849261,
+        "latency": 0.853699643396544,
+        "loss": 0.5217082512042142,
+        "phase": 0.9851025342037532,
+        "reflection": -0.20873931866211193,
+        "source": -0.8258914800516051
+      },
+      "sampleId": 113,
+      "truthSwitchCrosstalkRatio": 0.0026501838182152403,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999970033562591,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 2.6770438335118967e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.47412309953776455,
+        "dark": -0.5153871429683294,
+        "detector": 0.7207375478204519,
+        "latency": 0.858687355347663,
+        "loss": 0.5986730675709253,
+        "phase": 0.8830524167121814,
+        "reflection": 0.7760058452582055,
+        "source": -0.7771436765194754
+      },
+      "sampleId": 164,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4.993287481930503e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999974661603944,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 2.2149550004816766e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.2255973707907044,
+        "dark": -0.6811614230458403,
+        "detector": 0.9606156677371545,
+        "latency": -0.038630049879538,
+        "loss": 0.4660048784715527,
+        "phase": 0.996583315522656,
+        "reflection": -0.27000264737843926,
+        "source": 0.9267362852023446
+      },
+      "sampleId": 96,
+      "truthSwitchCrosstalkRatio": 0.002455662185845586,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999970866067045,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 2.1589164218124362e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.09584594999222085,
+        "dark": -0.06334242738297702,
+        "detector": 0.5822663309231906,
+        "latency": -0.13760636870933463,
+        "loss": 0.7061192868470765,
+        "phase": 0.9712846584834693,
+        "reflection": 0.6234631296998971,
+        "source": 0.26667370408182056
+      },
+      "sampleId": 448,
+      "truthSwitchCrosstalkRatio": 0.002366133705494632,
+      "truthSwitchReflectionRatio": 4.798032806015869e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999975000000001,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.9659913656293437e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.6971497541775439,
+        "dark": 0.06454179665333948,
+        "detector": 0.5964451317304129,
+        "latency": 0.6583098958598079,
+        "loss": 0.6040523775649769,
+        "phase": 0.8950634630645316,
+        "reflection": -0.07926402312909231,
+        "source": -0.012838588444668009
+      },
+      "sampleId": 111,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999971682369311,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.670848297090575e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.3190364483795598,
+        "dark": -0.9817710723160105,
+        "detector": 0.39896604348181786,
+        "latency": 0.940260979754217,
+        "loss": 0.584521198948827,
+        "phase": 0.9141558065396167,
+        "reflection": 0.44360562769114553,
+        "source": -0.643125950321691
+      },
+      "sampleId": 202,
+      "truthSwitchCrosstalkRatio": 0.0025201351493818963,
+      "truthSwitchReflectionRatio": 4.567815203444666e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999975000000001,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.1714554209721258e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.4022605866022716,
+        "dark": -0.45174806942782997,
+        "detector": -0.915385819645615,
+        "latency": 0.31444978174723426,
+        "loss": 0.9171742999555876,
+        "phase": 0.8895974547257719,
+        "reflection": -0.23844180636045786,
+        "source": -0.839807364357041
+      },
+      "sampleId": 413,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 4e-05
+    },
+    {
+      "fusionProcessFidelity": 0.99999688176113,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 1.1552635180926602e-48,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": -0.06598662153271229,
+        "dark": 0.46558787166619675,
+        "detector": 0.7496243438702501,
+        "latency": -0.6266053990248117,
+        "loss": 0.7776026649730265,
+        "phase": 0.7622622240701704,
+        "reflection": 0.9659982344869695,
+        "source": -0.4841995261234262
+      },
+      "sampleId": 159,
+      "truthSwitchCrosstalkRatio": 0.0023,
+      "truthSwitchReflectionRatio": 5.236477740143322e-05
+    },
+    {
+      "fusionProcessFidelity": 0.9999972599424898,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 7.326186133339657e-49,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.8603332085149804,
+        "dark": -0.7844985762719228,
+        "detector": 0.5815813569342947,
+        "latency": -0.14295482889882316,
+        "loss": 0.6688748333812824,
+        "phase": 0.8182599648408866,
+        "reflection": 0.17344926386927262,
+        "source": 0.04271745918603842
+      },
+      "sampleId": 447,
+      "truthSwitchCrosstalkRatio": 0.0028936299138753365,
+      "truthSwitchReflectionRatio": 4.22201505775267e-05
+    },
+    {
+      "fusionProcessFidelity": 0.999997477448789,
+      "fusionSuccessProbability": 1.0,
+      "logicalErrorRate1e9Distance161": 6.89322026741252e-49,
+      "passes": true,
+      "perturbation": {
+        "crosstalk": 0.15034140701428145,
+        "dark": -0.7292494364588018,
+        "detector": 0.07142545714703452,
+        "latency": -0.28697888506554137,
+        "loss": 0.8882686619955822,
+        "phase": 0.837176517991125,
+        "reflection": -0.7868901286889629,
+        "source": -0.0067789386361217785
+      },
+      "sampleId": 466,
+      "truthSwitchCrosstalkRatio": 0.002403735570839854,
+      "truthSwitchReflectionRatio": 4e-05
+    }
+  ]
+}

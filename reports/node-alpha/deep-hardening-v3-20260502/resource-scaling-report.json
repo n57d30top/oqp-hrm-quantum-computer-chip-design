@@ -1,0 +1,4378 @@
+{
+  "limitations": [
+    "Mode scaling is analytical; it does not create a DRC-clean larger GDS.",
+    "Area scaling is extrapolated from the current generic layout envelope when available."
+  ],
+  "schemaVersion": "open-quantum.performance-resource-scaling.v1",
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "maxAncillaModesPerCycle": 760,
+    "maxLogicalQubits": 380,
+    "maxPhysicalModes": 760,
+    "maxPnrDetectors": 760,
+    "maxSinglePhotonSources": 760,
+    "targetCount": 40
+  },
+  "targets": [
+    {
+      "ancillaModesPerCycle": 48,
+      "estimatedChipAreaMm2": 8.476533,
+      "interferometers": 32,
+      "logicalDualRailQubits": 24,
+      "minimumParallelSourceBanks": 24,
+      "physicalModes": 48,
+      "pnrDetectors": 48,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 24,
+        "physicalModes": 48,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 48,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 24,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 48,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 48,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 48,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 48,
+      "estimatedChipAreaMm2": 8.476533,
+      "interferometers": 32,
+      "logicalDualRailQubits": 24,
+      "minimumParallelSourceBanks": 24,
+      "physicalModes": 48,
+      "pnrDetectors": 48,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 24,
+        "physicalModes": 48,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 48,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 24,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 48,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 48,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 48,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 72,
+      "estimatedChipAreaMm2": 12.7148,
+      "interferometers": 48,
+      "logicalDualRailQubits": 36,
+      "minimumParallelSourceBanks": 36,
+      "physicalModes": 72,
+      "pnrDetectors": 72,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 36,
+        "physicalModes": 72,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 72,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 36,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 72,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 72,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 72,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 72,
+      "estimatedChipAreaMm2": 12.7148,
+      "interferometers": 48,
+      "logicalDualRailQubits": 36,
+      "minimumParallelSourceBanks": 36,
+      "physicalModes": 72,
+      "pnrDetectors": 72,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 36,
+        "physicalModes": 72,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 72,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 36,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 72,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 72,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 72,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 144,
+      "estimatedChipAreaMm2": 25.4296,
+      "interferometers": 96,
+      "logicalDualRailQubits": 72,
+      "minimumParallelSourceBanks": 72,
+      "physicalModes": 144,
+      "pnrDetectors": 144,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 72,
+        "physicalModes": 144,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 144,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 72,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 144,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 144,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 144,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 144,
+      "estimatedChipAreaMm2": 25.4296,
+      "interferometers": 96,
+      "logicalDualRailQubits": 72,
+      "minimumParallelSourceBanks": 72,
+      "physicalModes": 144,
+      "pnrDetectors": 144,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 72,
+        "physicalModes": 144,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 144,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 72,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 144,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 144,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 144,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 168,
+      "estimatedChipAreaMm2": 29.667867,
+      "interferometers": 112,
+      "logicalDualRailQubits": 84,
+      "minimumParallelSourceBanks": 84,
+      "physicalModes": 168,
+      "pnrDetectors": 168,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 84,
+        "physicalModes": 168,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 168,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 84,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 168,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 168,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 168,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 168,
+      "estimatedChipAreaMm2": 29.667867,
+      "interferometers": 112,
+      "logicalDualRailQubits": 84,
+      "minimumParallelSourceBanks": 84,
+      "physicalModes": 168,
+      "pnrDetectors": 168,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 84,
+        "physicalModes": 168,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 168,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 84,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 168,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 168,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 168,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 216,
+      "estimatedChipAreaMm2": 38.1444,
+      "interferometers": 144,
+      "logicalDualRailQubits": 108,
+      "minimumParallelSourceBanks": 108,
+      "physicalModes": 216,
+      "pnrDetectors": 216,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 108,
+        "physicalModes": 216,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 216,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 108,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 216,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 216,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 216,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 216,
+      "estimatedChipAreaMm2": 38.1444,
+      "interferometers": 144,
+      "logicalDualRailQubits": 108,
+      "minimumParallelSourceBanks": 108,
+      "physicalModes": 216,
+      "pnrDetectors": 216,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 108,
+        "physicalModes": 216,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 216,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 108,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 216,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 216,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 216,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 264,
+      "estimatedChipAreaMm2": 46.620933,
+      "interferometers": 176,
+      "logicalDualRailQubits": 132,
+      "minimumParallelSourceBanks": 132,
+      "physicalModes": 264,
+      "pnrDetectors": 264,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 132,
+        "physicalModes": 264,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 264,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 132,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 264,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 264,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 264,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 264,
+      "estimatedChipAreaMm2": 46.620933,
+      "interferometers": 176,
+      "logicalDualRailQubits": 132,
+      "minimumParallelSourceBanks": 132,
+      "physicalModes": 264,
+      "pnrDetectors": 264,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 132,
+        "physicalModes": 264,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 264,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 132,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 264,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 264,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 264,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 312,
+      "estimatedChipAreaMm2": 55.097467,
+      "interferometers": 208,
+      "logicalDualRailQubits": 156,
+      "minimumParallelSourceBanks": 156,
+      "physicalModes": 312,
+      "pnrDetectors": 312,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 156,
+        "physicalModes": 312,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 312,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 156,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 312,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 312,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 312,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 312,
+      "estimatedChipAreaMm2": 55.097467,
+      "interferometers": 208,
+      "logicalDualRailQubits": 156,
+      "minimumParallelSourceBanks": 156,
+      "physicalModes": 312,
+      "pnrDetectors": 312,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 156,
+        "physicalModes": 312,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 312,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 156,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 312,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 312,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 312,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 336,
+      "estimatedChipAreaMm2": 59.335733,
+      "interferometers": 224,
+      "logicalDualRailQubits": 168,
+      "minimumParallelSourceBanks": 168,
+      "physicalModes": 336,
+      "pnrDetectors": 336,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 168,
+        "physicalModes": 336,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 336,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 168,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 336,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 336,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 336,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 336,
+      "estimatedChipAreaMm2": 59.335733,
+      "interferometers": 224,
+      "logicalDualRailQubits": 168,
+      "minimumParallelSourceBanks": 168,
+      "physicalModes": 336,
+      "pnrDetectors": 336,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 168,
+        "physicalModes": 336,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 336,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 168,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 336,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 336,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 336,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 384,
+      "estimatedChipAreaMm2": 67.812267,
+      "interferometers": 256,
+      "logicalDualRailQubits": 192,
+      "minimumParallelSourceBanks": 192,
+      "physicalModes": 384,
+      "pnrDetectors": 384,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 192,
+        "physicalModes": 384,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 384,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 192,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 384,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 384,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 384,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 384,
+      "estimatedChipAreaMm2": 67.812267,
+      "interferometers": 256,
+      "logicalDualRailQubits": 192,
+      "minimumParallelSourceBanks": 192,
+      "physicalModes": 384,
+      "pnrDetectors": 384,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 192,
+        "physicalModes": 384,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 384,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 192,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 384,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 384,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 384,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 456,
+      "estimatedChipAreaMm2": 80.527067,
+      "interferometers": 304,
+      "logicalDualRailQubits": 228,
+      "minimumParallelSourceBanks": 228,
+      "physicalModes": 456,
+      "pnrDetectors": 456,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 228,
+        "physicalModes": 456,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 456,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 228,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 456,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 456,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 456,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 456,
+      "estimatedChipAreaMm2": 80.527067,
+      "interferometers": 304,
+      "logicalDualRailQubits": 228,
+      "minimumParallelSourceBanks": 228,
+      "physicalModes": 456,
+      "pnrDetectors": 456,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 228,
+        "physicalModes": 456,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 456,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 228,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 456,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 456,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 456,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 512,
+      "estimatedChipAreaMm2": 90.372207,
+      "interferometers": 341,
+      "logicalDualRailQubits": 256,
+      "minimumParallelSourceBanks": 256,
+      "physicalModes": 512,
+      "pnrDetectors": 512,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 256,
+        "physicalModes": 512,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 512,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 256,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 512,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 512,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 512,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 512,
+      "estimatedChipAreaMm2": 90.372207,
+      "interferometers": 341,
+      "logicalDualRailQubits": 256,
+      "minimumParallelSourceBanks": 256,
+      "physicalModes": 512,
+      "pnrDetectors": 512,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 256,
+        "physicalModes": 512,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 512,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 256,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 512,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 512,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 512,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 536,
+      "estimatedChipAreaMm2": 94.610474,
+      "interferometers": 357,
+      "logicalDualRailQubits": 268,
+      "minimumParallelSourceBanks": 268,
+      "physicalModes": 536,
+      "pnrDetectors": 536,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 268,
+        "physicalModes": 536,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 536,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 268,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 536,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 536,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 536,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 536,
+      "estimatedChipAreaMm2": 94.610474,
+      "interferometers": 357,
+      "logicalDualRailQubits": 268,
+      "minimumParallelSourceBanks": 268,
+      "physicalModes": 536,
+      "pnrDetectors": 536,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 268,
+        "physicalModes": 536,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 536,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 268,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 536,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 536,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 536,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 584,
+      "estimatedChipAreaMm2": 103.087007,
+      "interferometers": 389,
+      "logicalDualRailQubits": 292,
+      "minimumParallelSourceBanks": 292,
+      "physicalModes": 584,
+      "pnrDetectors": 584,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 292,
+        "physicalModes": 584,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 584,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 292,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 584,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 584,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 584,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 584,
+      "estimatedChipAreaMm2": 103.087007,
+      "interferometers": 389,
+      "logicalDualRailQubits": 292,
+      "minimumParallelSourceBanks": 292,
+      "physicalModes": 584,
+      "pnrDetectors": 584,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 292,
+        "physicalModes": 584,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 584,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 292,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 584,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 584,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 584,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 600,
+      "estimatedChipAreaMm2": 105.956667,
+      "interferometers": 400,
+      "logicalDualRailQubits": 300,
+      "minimumParallelSourceBanks": 300,
+      "physicalModes": 600,
+      "pnrDetectors": 600,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 300,
+        "physicalModes": 600,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 600,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 300,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 600,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 600,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 600,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 600,
+      "estimatedChipAreaMm2": 105.956667,
+      "interferometers": 400,
+      "logicalDualRailQubits": 300,
+      "minimumParallelSourceBanks": 300,
+      "physicalModes": 600,
+      "pnrDetectors": 600,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 300,
+        "physicalModes": 600,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 600,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 300,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 600,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 600,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 600,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 608,
+      "estimatedChipAreaMm2": 107.325274,
+      "interferometers": 405,
+      "logicalDualRailQubits": 304,
+      "minimumParallelSourceBanks": 304,
+      "physicalModes": 608,
+      "pnrDetectors": 608,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 304,
+        "physicalModes": 608,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 608,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 304,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 608,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 608,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 608,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 608,
+      "estimatedChipAreaMm2": 107.325274,
+      "interferometers": 405,
+      "logicalDualRailQubits": 304,
+      "minimumParallelSourceBanks": 304,
+      "physicalModes": 608,
+      "pnrDetectors": 608,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 304,
+        "physicalModes": 608,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 608,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 304,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 608,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 608,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 608,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 632,
+      "estimatedChipAreaMm2": 111.56354,
+      "interferometers": 421,
+      "logicalDualRailQubits": 316,
+      "minimumParallelSourceBanks": 316,
+      "physicalModes": 632,
+      "pnrDetectors": 632,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 316,
+        "physicalModes": 632,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 632,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 316,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 632,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 632,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 632,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 632,
+      "estimatedChipAreaMm2": 111.56354,
+      "interferometers": 421,
+      "logicalDualRailQubits": 316,
+      "minimumParallelSourceBanks": 316,
+      "physicalModes": 632,
+      "pnrDetectors": 632,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 316,
+        "physicalModes": 632,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 632,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 316,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 632,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 632,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 632,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 672,
+      "estimatedChipAreaMm2": 118.671467,
+      "interferometers": 448,
+      "logicalDualRailQubits": 336,
+      "minimumParallelSourceBanks": 336,
+      "physicalModes": 672,
+      "pnrDetectors": 672,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 336,
+        "physicalModes": 672,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 672,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 336,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 672,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 672,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 672,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 672,
+      "estimatedChipAreaMm2": 118.671467,
+      "interferometers": 448,
+      "logicalDualRailQubits": 336,
+      "minimumParallelSourceBanks": 336,
+      "physicalModes": 672,
+      "pnrDetectors": 672,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 336,
+        "physicalModes": 672,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 672,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 336,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 672,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 672,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 672,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 704,
+      "estimatedChipAreaMm2": 124.27834,
+      "interferometers": 469,
+      "logicalDualRailQubits": 352,
+      "minimumParallelSourceBanks": 352,
+      "physicalModes": 704,
+      "pnrDetectors": 704,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 352,
+        "physicalModes": 704,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 704,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 352,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 704,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 704,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 704,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 704,
+      "estimatedChipAreaMm2": 124.27834,
+      "interferometers": 469,
+      "logicalDualRailQubits": 352,
+      "minimumParallelSourceBanks": 352,
+      "physicalModes": 704,
+      "pnrDetectors": 704,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 352,
+        "physicalModes": 704,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 704,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 352,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 704,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 704,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 704,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 712,
+      "estimatedChipAreaMm2": 125.779393,
+      "interferometers": 475,
+      "logicalDualRailQubits": 356,
+      "minimumParallelSourceBanks": 356,
+      "physicalModes": 712,
+      "pnrDetectors": 712,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 356,
+        "physicalModes": 712,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 712,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 356,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 712,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 712,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 712,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 712,
+      "estimatedChipAreaMm2": 125.779393,
+      "interferometers": 475,
+      "logicalDualRailQubits": 356,
+      "minimumParallelSourceBanks": 356,
+      "physicalModes": 712,
+      "pnrDetectors": 712,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 356,
+        "physicalModes": 712,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 712,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 356,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 712,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 712,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 712,
+      "targetLogicalErrorRate": 1e-09
+    },
+    {
+      "ancillaModesPerCycle": 760,
+      "estimatedChipAreaMm2": 134.255926,
+      "interferometers": 507,
+      "logicalDualRailQubits": 380,
+      "minimumParallelSourceBanks": 380,
+      "physicalModes": 760,
+      "pnrDetectors": 760,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 380,
+        "physicalModes": 760,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 760,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 380,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 760,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 760,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-06
+      },
+      "singlePhotonSources": 760,
+      "targetLogicalErrorRate": 1e-06
+    },
+    {
+      "ancillaModesPerCycle": 760,
+      "estimatedChipAreaMm2": 134.255926,
+      "interferometers": 507,
+      "logicalDualRailQubits": 380,
+      "minimumParallelSourceBanks": 380,
+      "physicalModes": 760,
+      "pnrDetectors": 760,
+      "resourceModel": {
+        "bottlenecks": [
+          "No experimentally calibrated source brightness and indistinguishability model.",
+          "No photon-number resolving detector timing and saturation model.",
+          "No resource-state factory schedule.",
+          "No multiplexing strategy for failed heralded events."
+        ],
+        "encoding": "dual_rail",
+        "hardwareCalibrationParameters": {
+          "detectorDarkCountRateHz": "required_per_detector",
+          "detectorEfficiency": "required_per_mode",
+          "detectorTimingJitterPs": "required_per_detector",
+          "fiberCouplingLossDb": "required_per_port",
+          "phaseDriftRadPerHour": "required_per_phase_shifter",
+          "sourceBrightness": "required_per_source_bank",
+          "sourceIndistinguishability": "required_pairwise_hom_visibility",
+          "switchLatencyNs": "required_per_actuator"
+        },
+        "logicalQubits": 380,
+        "physicalModes": 760,
+        "requiredNonGaussianResources": {
+          "ancillaFactory": {
+            "ancillaModesPerCycle": 760,
+            "factoryType": "fusion_resource_state",
+            "scheduleInterface": {
+              "inputs": [
+                "source_bank_status",
+                "detector_heralds",
+                "feed_forward_frame"
+              ],
+              "outputs": [
+                "accepted_resource_state_id",
+                "failed_attempt_mask",
+                "retry_schedule"
+              ]
+            },
+            "status": "not_implemented"
+          },
+          "heraldingModel": {
+            "detectorPattern": "two_fold_pnr_coincidence",
+            "requiresFastFeedForward": true,
+            "requiresLossErasureFlags": true,
+            "statistics": {
+              "calibrationProtocol": "repeat primitive shots with known input occupancy and record PNR coincidence matrix",
+              "tracked": [
+                "success_probability",
+                "false_positive_rate",
+                "false_negative_rate",
+                "dead_time_ns"
+              ]
+            },
+            "status": "analytical_model_only"
+          },
+          "multiplexing": {
+            "minimumParallelSourceBanks": 380,
+            "status": "modeled_not_scheduled",
+            "strategy": "spatial_time_bin_heralded_retry",
+            "targetHeraldingSuccessProbability": 0.01
+          },
+          "pnrDetectors": {
+            "count": 760,
+            "interface": {
+              "calibrationInput": "efficiency_dark_count_jitter_sweep",
+              "outputs": [
+                "mode_id",
+                "time_tag_ps",
+                "photon_number",
+                "confidence"
+              ],
+              "readout": "tdc_timestamp_stream"
+            },
+            "status": "modeled_not_integrated",
+            "targetDarkCountHz": 10,
+            "targetEfficiency": 0.95,
+            "targetTimingJitterPs": 50
+          },
+          "singlePhotonSources": {
+            "count": 760,
+            "interface": {
+              "calibrationInput": "hong_ou_mandel_visibility_scan",
+              "outputs": [
+                "mode_id",
+                "time_bin",
+                "brightness_estimate",
+                "indistinguishability_estimate"
+              ],
+              "trigger": "clocked_or_heralded_source_bank"
+            },
+            "status": "missing_hardware_model",
+            "targetBrightness": 0.8,
+            "targetIndistinguishability": 0.99,
+            "targetMultiphotonProbability": 0.001
+          }
+        },
+        "schemaVersion": "open-quantum.resource-model.v1",
+        "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+        "targetLogicalErrorRate": 1e-09
+      },
+      "singlePhotonSources": 760,
+      "targetLogicalErrorRate": 1e-09
+    }
+  ]
+}

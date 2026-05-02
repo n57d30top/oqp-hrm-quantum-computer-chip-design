@@ -1,0 +1,175 @@
+{
+  "devices": [
+    {
+      "blockers": [
+        "coupler: virtual model is not foundry or wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "coupler_gap0p12_len4p5_phi0_w0p5",
+      "device": "coupler",
+      "foundryCalibrated": false,
+      "hardenedCandidateId": "coupler_raw_hardened_node_alpha",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 0.0022,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.002,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 4e-05
+      },
+      "modelPath": "reports/node-alpha/qc-path/sparameters/coupler.sparam",
+      "source": "hardened_node_alpha_virtual_model",
+      "touchstoneExportReady": true,
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "virtualAccepted": true,
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    {
+      "blockers": [
+        "mzi: virtual model is not foundry or wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "mzi_gap0p26_len4_phi0_w0p55",
+      "device": "mzi",
+      "foundryCalibrated": false,
+      "hardenedCandidateId": "mzi_raw_hardened_node_alpha",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 2e-06,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.0012,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 4e-06
+      },
+      "modelPath": "reports/node-alpha/qc-path/sparameters/mzi.sparam",
+      "source": "hardened_node_alpha_virtual_model",
+      "touchstoneExportReady": true,
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "virtualAccepted": true,
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    {
+      "blockers": [
+        "phase-shifter: virtual model is not foundry or wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "phase-shifter_gap0p26_len4_phi0_w0p55",
+      "device": "phase-shifter",
+      "foundryCalibrated": false,
+      "hardenedCandidateId": "phase-shifter_raw_hardened_node_alpha",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 0.002,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.0026,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 3.5e-05
+      },
+      "modelPath": "reports/node-alpha/qc-path/sparameters/phase-shifter.sparam",
+      "source": "hardened_node_alpha_virtual_model",
+      "touchstoneExportReady": true,
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "virtualAccepted": true,
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    },
+    {
+      "blockers": [
+        "truth-switch: virtual model is not foundry or wafer calibrated."
+      ],
+      "calibrationStatus": "virtual_surrogate_not_foundry",
+      "candidateId": "truth-switch_gap0p08_len8_phi0_w0p4",
+      "device": "truth-switch",
+      "foundryCalibrated": false,
+      "hardenedCandidateId": "truth-switch_raw_hardened_node_alpha",
+      "hashVerified": true,
+      "metrics": {
+        "crosstalkRatio": 0.0023,
+        "energyBalanceError": 0.003,
+        "insertionLossDb": 0.0026,
+        "passivityMaxSingularValue": 0.9994,
+        "reciprocityError": 0.00014,
+        "reflectionRatio": 4e-05
+      },
+      "modelPath": "reports/node-alpha/qc-path/sparameters/truth-switch.sparam",
+      "source": "hardened_node_alpha_virtual_model",
+      "touchstoneExportReady": true,
+      "validationLevel": "node_alpha_hardened_virtual_sparameter_not_foundry",
+      "virtualAccepted": true,
+      "wavelengthRangeNm": [
+        1510.0,
+        1590.0
+      ]
+    }
+  ],
+  "generatedAt": "2026-05-02T21:48:43.008435Z",
+  "limitations": [
+    "Virtual acceptance is a stricter Node Alpha consistency gate, not a foundry-calibrated S-parameter claim.",
+    "Reciprocity/passivity metrics are accepted only at the compact-report level when no bidirectional Touchstone data exist."
+  ],
+  "readinessImpact": {
+    "foundryCalibratedSparameters": false,
+    "sparameterModelsReadyForPrototypeClaim": false,
+    "virtualSparameterAcceptanceComplete": true
+  },
+  "schemaVersion": "open-quantum.virtual-sparameter-acceptance.v1",
+  "scope": {
+    "claim": "simulation_only_virtual_sparameter_acceptance",
+    "notEvidenceFor": [
+      "foundry-calibrated compact model",
+      "measured wafer S-parameters",
+      "tapeout signoff"
+    ]
+  },
+  "sourcePath": "hardware/Heralded_Reset_Mesh_Blueprint.yaml",
+  "summary": {
+    "acceptedVirtualDeviceCount": 4,
+    "allFoundryModelsAccepted": false,
+    "allVirtualCrosstalkBelow0p25Percent": true,
+    "allVirtualCrosstalkBelow0p30Percent": true,
+    "allVirtualCrosstalkBelow0p75Percent": true,
+    "allVirtualCrosstalkBelow1Percent": true,
+    "allVirtualCrosstalkBelow2Percent": true,
+    "allVirtualModelsAccepted": true,
+    "allVirtualReflectionBelow0p005Percent": true,
+    "allVirtualReflectionBelow0p008Percent": true,
+    "allVirtualReflectionBelow0p03Percent": true,
+    "allVirtualReflectionBelow0p05Percent": true,
+    "allVirtualReflectionBelow0p1Percent": true,
+    "foundryCalibratedDeviceCount": 0,
+    "maxVirtualCrosstalkRatio": 0.0023,
+    "maxVirtualReflectionRatio": 4e-05,
+    "requiredDeviceCount": 4
+  },
+  "targets": {
+    "maxCrosstalkRatio": 0.003,
+    "maxEnergyBalanceError": 0.05,
+    "maxInsertionLossDb": 1.0,
+    "maxPassivitySingularValue": 1.0001,
+    "maxReciprocityError": 0.001,
+    "maxReflectionRatio": 8e-05,
+    "requiredDevices": [
+      "coupler",
+      "mzi",
+      "phase-shifter",
+      "truth-switch"
+    ],
+    "stretchMaxCrosstalkRatio": 0.0025,
+    "stretchMaxReflectionRatio": 5e-05,
+    "wavelengthWindowNm": [
+      1520.0,
+      1580.0
+    ]
+  }
+}
