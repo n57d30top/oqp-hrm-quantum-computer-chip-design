@@ -560,7 +560,7 @@ def generate_performance_upgrade(
     write_json_report(report, output / "performance-upgrade-report.json")
     (output / "deep-hardening-v3-report.md").write_text(_markdown(report), encoding="utf-8")
     (output / "performance-upgrade-report.md").write_text(_markdown(report), encoding="utf-8")
-    _update_report_index(root, report)
+    _update_report_index(output, report)
     return report
 
 
@@ -3952,7 +3952,7 @@ def _baseline_truth_switch() -> dict[str, Any]:
         "candidateId": "truth-switch_gap0p08_len8_phi0_w0p4",
         "crosstalkRatio": 0.02867390888638699,
         "reflectionRatio": 0.004425849500104598,
-        "source": "reports/node-alpha/value-upgrade-20260502/yield-optimized-device-sweep.json",
+        "source": "reports/node-alpha/qc-path/device-sweep.json",
     }
 
 

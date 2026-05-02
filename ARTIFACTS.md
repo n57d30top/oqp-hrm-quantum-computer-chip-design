@@ -2,6 +2,7 @@
 
 This file lists the public reproducibility artifacts and their SHA-256 hashes.
 The hashes are intended for review and regression tracking only.
+`ARTIFACTS.sha256` is the machine-readable checksum file used by CI.
 
 ## Reproduction Commands
 
@@ -10,11 +11,12 @@ python3 -m pip install -e .
 python3 -m unittest discover -s tests -v
 python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml \
   --artifact-root reports/node-alpha \
-  --out-dir reports/node-alpha/deep-hardening-v3-20260502 \
+  --out-dir runs/local-deep-hardening-v3 \
   --focused-max-runs 768
+shasum -a 256 -c ARTIFACTS.sha256
 ```
 
-Expected test count: `48`.
+Expected test count: `49`.
 
 ## Deep-Hardening V3 Reports
 
@@ -23,7 +25,7 @@ Expected test count: `48`.
 | `faac361b162db498b9dee2660b5dd7cb59744eae0ac80a73ea3426d3d38718b5` | `reports/node-alpha/deep-hardening-v3-20260502/budget-optimizer-report.json` |
 | `4964b9c15f816ee42e12b78e9498f46dae775e985ca7885e7389fa93f03036bc` | `reports/node-alpha/deep-hardening-v3-20260502/control-timing-model-report.json` |
 | `8035b13f1c9abeadcdaf5770bf2864104a98573ac667dc6ef0ad85c3e6815413` | `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json` |
-| `6ce8f842e17c2fc130c619efae45a4ac9a0167c4c6359995939bab5c583afc50` | `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json` |
+| `b2e129e6588946003c68f0ee946e6ccd8302a360797446d41460630152c7682b` | `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json` |
 | `f1749f1124641b9e0a3c0b7f41a84307e699802d12e4f66dcd7c86d6c772789a` | `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.md` |
 | `4d86655dbc5d54ea02c7cc6b42d112795ad297c94d0e23dab2efd1b32cd8a65f` | `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-scorecard.json` |
 | `d320209d1dde1376a2bb72203d68d351ee8042094720da69343ed61f7839f7cc` | `reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json` |
@@ -36,7 +38,7 @@ Expected test count: `48`.
 | `0bfbf1d7419d1bf330cc5c4504a50e63b0525103481405e380c35a08d683a6fc` | `reports/node-alpha/deep-hardening-v3-20260502/monte-carlo-robustness-report.json` |
 | `45d16fb696d395eca817c869f04c70dfa5ee1b0b626a4a482df40546a1fe9819` | `reports/node-alpha/deep-hardening-v3-20260502/multiobjective-pareto-report.json` |
 | `e7c93470ba27b973e19c10ae30e1519e6c1a36c3712e43122d52dce605373a30` | `reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json` |
-| `6ce8f842e17c2fc130c619efae45a4ac9a0167c4c6359995939bab5c583afc50` | `reports/node-alpha/deep-hardening-v3-20260502/performance-upgrade-report.json` |
+| `b2e129e6588946003c68f0ee946e6ccd8302a360797446d41460630152c7682b` | `reports/node-alpha/deep-hardening-v3-20260502/performance-upgrade-report.json` |
 | `f1749f1124641b9e0a3c0b7f41a84307e699802d12e4f66dcd7c86d6c772789a` | `reports/node-alpha/deep-hardening-v3-20260502/performance-upgrade-report.md` |
 | `7316b520424a14e87fa1dc07eda828ff10798dce5f4c54e92af85633a15bfc23` | `reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json` |
 | `9dde793d1d565a95208aa6484e982e2cba4d755488c38007a1ffbc84498c8685` | `reports/node-alpha/deep-hardening-v3-20260502/resource-scaling-report.json` |
@@ -47,7 +49,7 @@ Expected test count: `48`.
 | `98919797d8840268e1a58d5562db3802dfaf894a9838336a061559401c2114b6` | `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json` |
 | `d2bc83c61e6c4fb2653b08f8a578b94af36a07f67bdc9459dc624ae00759749b` | `reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json` |
 | `c0752a727805da650e66cfeb5f210741515c065116645bbc4822b643112515f3` | `reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json` |
-| `31861c75f0fca8efc473d597c220787eec98dca628599d4362a877ad5a7464f4` | `reports/node-alpha/report-index.json` |
+| `680bd6bdecf4f8d3336f6d2ddc0907cff5cb1ddfa85bd5c0f50df29ef218dad8` | `reports/node-alpha/report-index.json` |
 
 ## Device Evidence Reports
 

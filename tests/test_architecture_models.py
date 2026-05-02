@@ -1981,6 +1981,32 @@ class ArchitectureModelsTest(unittest.TestCase):
         self.assertTrue(no_go_written)
         self.assertTrue(prototype_gap_written)
 
+    def test_public_docs_and_committed_reports_do_not_reference_excluded_artifact_paths(self):
+        root = Path(__file__).resolve().parents[1]
+        inspected_paths = [
+            root / "README.md",
+            root / "ARTIFACTS.md",
+            root / "reports" / "node-alpha" / "report-index.json",
+        ]
+        inspected_paths.extend(sorted((root / "docs").glob("*.md")))
+        inspected_paths.extend(sorted((root / "reports" / "node-alpha" / "deep-hardening-v3-20260502").glob("*")))
+        forbidden_fragments = [
+            "reports/node-alpha/value-upgrade-20260502",
+            "reports/node-alpha/no-budget-package",
+            "reports/node-alpha/gds-path",
+            "notebooks/node-alpha-report-summary.ipynb",
+            "Technical evidence score",
+            "MZI useful transmission",
+        ]
+        offenders = []
+        for path in inspected_paths:
+            text = path.read_text(encoding="utf-8")
+            for fragment in forbidden_fragments:
+                if fragment in text:
+                    offenders.append(f"{path.relative_to(root)} contains {fragment}")
+
+        self.assertEqual(offenders, [])
+
     def test_device_score_penalizes_reflection_and_loss(self):
         report = {
             "fdtdMetrics": {

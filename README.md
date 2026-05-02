@@ -1,5 +1,7 @@
 # OQP-HRM Design Package
 
+[![CI](https://github.com/n57d30top/oqp-hrm-quantum-computer-chip-design/actions/workflows/ci.yml/badge.svg)](https://github.com/n57d30top/oqp-hrm-quantum-computer-chip-design/actions/workflows/ci.yml)
+
 Simulation-only design dossier for the Open Quantum Photonics Heralded Reset
 Mesh (OQP-HRM) Node Alpha architecture.
 
@@ -55,8 +57,10 @@ tests/
 reports/node-alpha/deep-hardening-v3-20260502/
 reports/node-alpha/qc-path/
 ARTIFACTS.md
+ARTIFACTS.sha256
 VALIDATION_ROADMAP.md
 COMMERCIAL-LICENSING.md
+.github/workflows/ci.yml
 pyproject.toml
 ```
 
@@ -73,14 +77,36 @@ python3 -m pip install -e .
 python3 -m unittest discover -s tests -v
 python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml \
   --artifact-root reports/node-alpha \
-  --out-dir reports/node-alpha/deep-hardening-v3-20260502 \
+  --out-dir runs/local-deep-hardening-v3 \
   --focused-max-runs 768
 ```
 
-Expected unit-test result: `48` tests pass.
+Expected unit-test result: `49` tests pass.
+
+The committed public report snapshot is checked by `ARTIFACTS.sha256`; use a
+scratch `runs/` output directory for regeneration so reviewed hashes stay
+stable. Optional photonics runtime dependencies are available with
+`python3 -m pip install -e ".[simulation]"`.
 
 Report checksums are listed in `ARTIFACTS.md`. The validation plan and external
 review gates are listed in `VALIDATION_ROADMAP.md`.
+
+## Metric Provenance
+
+Strong numbers in this repo have different evidentiary levels. The table below
+is the shortest safe reading of each major metric family.
+
+| Metric family | Example value | Primary public artifact | Provenance level |
+| --- | ---: | --- | --- |
+| Physical/logical scale | `760` modes / `380` logical dual-rail qubits | `reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json` | Generic analytical layout envelope; not PDK/DRC/LVS |
+| Fusion success | `1.0` | `reports/node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json` | Model cap under normalized useful-flux surrogate; not measured |
+| Fusion fidelity | `0.9999975` | `reports/node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json` | Analytical/surrogate process-fidelity model; not measured |
+| Truth-Switch raw crosstalk/reflection | `0.23%` / `0.004%` | `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json` | Raw simulation closure; compensated candidate not substituted |
+| Virtual S-parameter acceptance | `4 / 4` virtual, `0 / 4` foundry | `reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json` | Virtual consistency gate only; foundry data absent |
+| 1e-9 margins | loss `0.638604 dB`, detector `77.209%`, phase `0.279534 rad` | `reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json` | Analytical error-budget envelope; not hardware-calibrated |
+| Fast-path timing | `1.17 ns` | `reports/node-alpha/deep-hardening-v3-20260502/control-timing-model-report.json` | Analytical fast-path model; hardware feed-forward unverified |
+| Full decoder timing | `12.732639 ns` | `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json` | Toy decoder evidence; production decoder not ready |
+| Monte-Carlo robustness | `512 / 512` pass | `reports/node-alpha/deep-hardening-v3-20260502/monte-carlo-robustness-report.json` | Deterministic surrogate perturbation set; not wafer statistics |
 
 ## Current Maximum Design Point
 
@@ -139,12 +165,17 @@ measured deterministic hardware claim.
 | Stretch fast-path fusion success | `1.0` |
 | Stretch fast-path process fidelity | `0.9999975000000001` |
 | Stretch fast-path latency in fusion row | `1.8 ns` |
-| MZI useful transmission | `2.465` |
+| MZI normalized useful flux sum (`usefulTransmission`) | `2.465` |
 | MZI insertion loss | `0.0012 dB` |
 | MZI crosstalk ratio | `0.000002` |
 | MZI reflection ratio | `0.000004` |
 | Nominal target met | `true` |
 | Stretch target met | `true` |
+
+`usefulTransmission` can exceed `1.0` because it is a source-bank/port-normalized
+aggregate useful-flux surrogate, not passive single-port power transmission.
+Passive virtual S-parameter crosstalk and reflection gates are reported
+separately.
 
 ## Truth-Switch Performance
 

@@ -11,7 +11,8 @@ Goal: convert the no-budget scorecard into external review evidence and grant le
 
 ## Current Assets
 
-- Technical evidence score: `90 / 100`
+- Internal simulation evidence score: `90 / 100`
+- External hardware evidence score: blocked/not scored as validated hardware
 - Partner diligence readiness: `100 / 100`
 - Scorecard completeness: `100 / 100`
 - Deterministic yield passing: `True`

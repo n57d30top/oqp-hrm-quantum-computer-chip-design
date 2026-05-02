@@ -9,16 +9,16 @@ It is designed to collect external diligence evidence without making hardware cl
 - deterministic_yield_grid_relevance: planning_evidence_only; validation needed: Foundry process distributions and measured wafer statistics.
 - virtual_sparameter_usefulness: hash_verified_placeholder; validation needed: Foundry or wafer calibrated Touchstone/compact-model files.
 - synthetic_noise_representativeness: analytical_only; validation needed: Hardware-calibrated noise and syndrome distributions.
-- generic_gds_portability: layout_computable_not_foundry_clean; validation needed: Versioned PDK mapping plus DRC/LVS reports.
+- generic_layout_portability: layout_envelope_not_foundry_clean; validation needed: Versioned PDK mapping plus DRC/LVS reports.
 
 ## Reviewer Questions
 
-- photonic_device_simulation: Which accepted 20/60 device candidate is most likely to fail under 3D/MPB S-parameter extraction? Artifact: `reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json`
-- silicon_photonics_process: Which tolerance axis in the deterministic yield grid is least realistic for a foundry process? Artifact: `reports/node-alpha/value-upgrade-20260502/yield-improvement-report.json`
-- foundry_pdk_layout: What is the first blocking issue when mapping the generic GDS to a real PDK? Artifact: `reports/node-alpha/gds-path/gds-manifest.json`
+- photonic_device_simulation: Which public V3 device candidate is most likely to fail under 3D/MPB S-parameter extraction? Artifact: `reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json`
+- silicon_photonics_process: Which V3 corner axis is least realistic for a foundry process? Artifact: `reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json`
+- foundry_pdk_layout: What is the first blocking issue when mapping the generic layout envelope to a real PDK? Artifact: `reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json`
 - sparameter_compact_model: What port conventions and process corners are required to replace the virtual S-parameters? Artifact: `reports/node-alpha/qc-path/sparameter-audit.json`
-- quantum_error_correction: Which synthetic noise assumption most strongly affects the below-threshold analytical path? Artifact: `reports/node-alpha/qc-path/fault-tolerance-audit.json`
-- quantum_photonics_lab: What is the minimal measured primitive-demo dataset that would materially raise diligence value? Artifact: `reports/node-alpha/value-upgrade-20260502/testchip/fusion-testcell-report.json`
+- quantum_error_correction: Which analytical noise assumption most strongly affects the 1e-9 envelope? Artifact: `reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json`
+- quantum_photonics_lab: What is the minimal measured primitive-demo dataset that would materially raise diligence value? Artifact: `reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json`
 
 ## Required Review Output
 

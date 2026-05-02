@@ -13,8 +13,9 @@ claim is:
 
 > OQP-HRM has a Node Alpha simulation package with accepted 2D high-resolution
 > candidates for the four core photonic devices, an analytical threshold path,
-> generated generic GDS, virtual compact-model placeholders, and explicit
-> external evidence gates for foundry, hardware, and lab validation.
+> public V3 hardening reports, virtual compact-model placeholders, and explicit
+> external evidence gates for foundry, hardware, layout signoff, and lab
+> validation.
 
 ## One-Page Summary
 
@@ -34,12 +35,14 @@ Core simulated devices:
 
 Other current evidence:
 
-- Threshold champion logical error estimate: `2.56e-7`.
-- Synthetic syndrome dataset: `10,000` deterministic events.
-- GDS: generated and layout-computable.
-- Virtual S-parameter files: 4/4 present and hash-verified.
-- Prototype readiness: `1/9` criteria complete.
-- Testchip yield stress: system yield estimate `0.024`, not robust enough.
+- Public V3 hardening score: `110 / 110`.
+- Public internal consistency checks: `11 / 11`.
+- Public max envelope: `760` physical modes / `380` logical dual-rail qubits.
+- Public estimated layout envelope: `17.979962 mm^2`, generic model only.
+- Public virtual S-parameter acceptance: 4/4 virtual devices below the V3
+  crosstalk/reflection limits; foundry-calibrated S-parameters remain `0/4`.
+- Public readiness flags: prototype-ready `false`, tapeout-ready `false`,
+  hardware-measured `false`, DRC/LVS `false`.
 
 ## What A Partner Can Validate Without Paying Us
 
@@ -48,8 +51,8 @@ The highest-value no-cash asks are:
 1. Run an independent review of the assumptions and report whether the
    simulation gates are meaningful.
 2. Re-run a subset of the device sweeps with independent FDTD/MPB tooling.
-3. Map the generic GDS to a real silicon-photonics PDK and report the first DRC
-   and LVS blockers.
+3. Map the generic layout envelope to a real silicon-photonics PDK and report
+   the first DRC and LVS blockers.
 4. Replace virtual S-parameters with foundry compact-model or wafer-measured
    S-parameters for the four core devices.
 5. Run a small testchip feasibility review: source/detector coupling, pads,
@@ -62,7 +65,8 @@ The highest-value no-cash asks are:
 - Increase sweep breadth on local or donated compute.
 - Improve report indexing, hashes, diagrams, and reproduction docs.
 - Prepare a preprint-quality technical manuscript.
-- Make the testchip package easier for a foundry or university group to audit.
+- Make the validation package easier for a foundry or university group to
+  audit.
 - Add issue templates and validation tasks for open-source contributors.
 - Keep all real-world readiness flags blocked until evidence exists.
 
@@ -94,10 +98,10 @@ Day 31-60:
 
 - Contact university photonics groups with the one-page summary and exact
   validation asks.
-- Ask foundry programs whether a generic-GDS-to-PDK mapping review is possible
-  without paid tapeout.
-- Ask open-source photonics contributors to inspect the device metrics and GDS
-  manifest.
+- Ask foundry programs whether a generic-layout-to-PDK mapping review is
+  possible without paid tapeout.
+- Ask open-source photonics contributors to inspect the device metrics,
+  virtual S-parameter assumptions, and layout envelope.
 
 Day 61-90:
 
@@ -108,12 +112,16 @@ Day 61-90:
 ## Artifact Map
 
 - Report index: `reports/node-alpha/report-index.json`
-- No-budget readiness: `reports/node-alpha/no-budget-package/no-budget-readiness.json`
-- Value package: `reports/node-alpha/value-upgrade-20260502/value-upgrade-report.json`
-- High-resolution robustness: `reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json`
-- GDS audit: `reports/node-alpha/gds-path/gds-audit.json`
-- Fault-tolerance audit: `reports/node-alpha/qc-path/fault-tolerance-audit.json`
+- V3 max-out report: `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json`
+- Device sweep: `reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json`
+- Truth-switch raw closure: `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json`
+- Fusion candidates: `reports/node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json`
+- Operational envelope: `reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json`
+- Decoder evidence: `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json`
+- Layout envelope: `reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json`
+- Virtual S-parameter acceptance: `reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json`
 - S-parameter audit: `reports/node-alpha/qc-path/sparameter-audit.json`
+- Artifact manifest: `ARTIFACTS.md`
 - Reproduction guide: `docs/30-minute-reproduction.md`
 - Preprint outline: `docs/preprint-outline.md`
 - Validation issues: `docs/open-validation-issues.md`

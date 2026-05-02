@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  reproducibility:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install public package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e .
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate committed JSON artifacts
+        run: |
+          python -m json.tool reports/node-alpha/report-index.json >/dev/null
+          python -m json.tool reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json >/dev/null
+          python -m json.tool reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json >/dev/null
+          python -m json.tool reports/node-alpha/qc-path/sparameter-audit.json >/dev/null
+
+      - name: Verify committed artifact hashes
+        run: sha256sum -c ARTIFACTS.sha256
+
+      - name: Regenerate V3 performance package in CI scratch space
+        run: |
+          rm -rf runs/ci-deep-hardening-v3
+          python -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml \
+            --artifact-root reports/node-alpha \
+            --out-dir runs/ci-deep-hardening-v3 \
+            --focused-max-runs 768
+          python -m json.tool runs/ci-deep-hardening-v3/deep-hardening-v3-report.json >/dev/null
+
+      - name: Check claim-boundary invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path("runs/ci-deep-hardening-v3/deep-hardening-v3-report.json").read_text())
+          summary = report["summary"]
+          not_evidence_for = set(report["scope"]["notEvidenceFor"])
+          assert "foundry-calibrated S-parameters" in not_evidence_for
+          assert "DRC/LVS-clean layout" in not_evidence_for
+          assert "prototype readiness" in not_evidence_for
+          assert "tapeout readiness" in not_evidence_for
+          assert report["prototypeGapReduction"]["summary"]["prototypeReadyAfterLocalWork"] is False
+          assert report["scaledLayoutEnvelope"]["summary"]["maxQubitTapeoutReady"] is False
+          assert report["virtualSparameterAcceptance"]["summary"]["foundryCalibratedDeviceCount"] == 0
+          assert report["virtualSparameterAcceptance"]["summary"]["allFoundryModelsAccepted"] is False
+          assert report["controlTimingModel"]["summary"]["hardwareFeedForwardVerified"] is False
+          assert report["decoderEvidence"]["summary"]["productionDecoderReady"] is False
+          assert summary["deepHardeningScore"] == 110
+          assert summary["internalConsistencyPass"] is True
+          assert summary["maxScaledPhysicalModes"] == 760
+          assert summary["maxScaledLogicalQubits"] == 380
+          PY

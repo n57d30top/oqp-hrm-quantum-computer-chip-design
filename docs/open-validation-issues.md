@@ -8,32 +8,32 @@ foundry proof.
 
 Label: `validation`, `device-sweep`, `good-first-review`
 
-Goal: Review whether the current 2D FDTD acceptance metrics are meaningful for
+Goal: Review whether the public V3 device acceptance metrics are meaningful for
 the coupler, MZI, phase shifter, and truth switch.
 
 Evidence to inspect:
 
-- `reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json`
-- `reports/node-alpha/qc-path/mission-20260502144050-g1swlg-device-sweep.json`
-- `reports/node-alpha/qc-path/mission-20260502143702-hlhk77-device-sweep.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json`
+- `reports/node-alpha/qc-path/device-acceptance-audit.json`
 
 Definition of done:
 
 - Written comment identifying accepted assumptions, questionable assumptions,
   and any metric that needs 3D, MPB, or S-parameter verification.
 
-## Issue 2: Generic GDS To PDK Gap Review
+## Issue 2: Generic Layout To PDK Gap Review
 
-Label: `validation`, `gds`, `foundry-needed`
+Label: `validation`, `layout`, `foundry-needed`
 
-Goal: Map the generic GDS audit to a real foundry PDK gap list without running a
-paid tapeout.
+Goal: Map the generic layout envelope to a real foundry PDK gap list without
+running a paid tapeout.
 
 Evidence to inspect:
 
-- `reports/node-alpha/gds-path/gds-manifest.json`
-- `reports/node-alpha/gds-path/gds-audit.json`
-- `reports/node-alpha/gds-path/oqp-hrm-generic-siph.gds`
+- `reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/max-qubit-envelope-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/max-qubit-no-go-map-report.json`
 
 Definition of done:
 
@@ -49,7 +49,7 @@ wafer-measurement plan.
 
 Evidence to inspect:
 
-- `reports/node-alpha/qc-path/sparameter-models.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json`
 - `reports/node-alpha/qc-path/sparameter-audit.json`
 
 Definition of done:
@@ -58,41 +58,64 @@ Definition of done:
   passivity/reciprocity thresholds, and calibration source are specified for all
   four core devices.
 
-## Issue 4: Testchip Yield Stress Review
+## Issue 4: Fusion And Primitive Demo Review
 
-Label: `validation`, `testchip`, `simulation`
+Label: `validation`, `fusion`, `simulation`
 
-Goal: Determine which parameters dominate the current low system-yield estimate.
+Goal: Determine which source, detector, crosstalk, reflection, or timing
+assumption dominates the public fusion-performance model.
 
 Evidence to inspect:
 
-- `reports/node-alpha/value-upgrade-20260502/testchip/yield-sweep.json`
-- `reports/node-alpha/value-upgrade-20260502/testchip/testchip-simulation.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json`
 
 Definition of done:
 
-- Ranked list of yield blockers and a next sweep proposal that does not require
-  paid hardware.
+- Ranked list of fusion blockers and a next measurement or simulation proposal
+  that does not require paid hardware.
 
-## Issue 5: Fault-Tolerance Assumption Review
+## Issue 5: Fault-Tolerance And Decoder Assumption Review
 
 Label: `validation`, `decoder`, `fault-tolerance`
 
-Goal: Review whether the synthetic syndrome/noise data are clearly separated
-from hardware-calibrated noise claims.
+Goal: Review whether the analytical noise and decoder evidence are clearly
+separated from hardware-calibrated noise claims.
 
 Evidence to inspect:
 
-- `reports/node-alpha/qc-path/fault-tolerance-audit.json`
-- `reports/node-alpha/qc-path/decoder-report.json`
-- `reports/node-alpha/qc-path/syndrome-noise-dataset.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/joint-error-budget-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/control-timing-model-report.json`
 
 Definition of done:
 
-- Written review confirming what can be claimed from synthetic data and what
-  requires hardware-calibrated distributions.
+- Written review confirming what can be claimed from analytical/surrogate data
+  and what requires hardware-calibrated distributions.
 
-## Issue 6: Preprint Technical Review
+## Issue 6: Reproducibility And CI Review
+
+Label: `validation`, `reproducibility`, `ci`
+
+Goal: Confirm that the public package can be installed, tested, hash-checked,
+and regenerated in scratch space without hidden private files.
+
+Evidence to inspect:
+
+- `.github/workflows/ci.yml`
+- `docs/30-minute-reproduction.md`
+- `ARTIFACTS.md`
+- `ARTIFACTS.sha256`
+- `reports/node-alpha/report-index.json`
+
+Definition of done:
+
+- Independent run result or issue comment showing tests, JSON validation,
+  checksum verification, and V3 scratch regeneration.
+
+## Issue 7: Preprint Technical Review
 
 Label: `paper`, `review`, `no-budget`
 

@@ -1,8 +1,13 @@
 # 30-Minute Reproduction Guide
 
-This guide verifies the no-budget OQP-HRM package from local artifacts. It does
-not require fabrication access, paid cloud compute, lab hardware, or private
-credentials.
+This guide verifies the public OQP-HRM package from local artifacts. It does
+not require fabrication access, paid cloud compute, lab hardware, private
+credentials, or excluded partner materials.
+
+The public package contains the simulator core, unit tests, selected Node Alpha
+V3 reports, a public report index, and hash manifests. It intentionally excludes
+private/full diligence folders, generated caches, graph outputs, and lab
+notebooks.
 
 ## 1. Install Locally
 
@@ -10,92 +15,96 @@ credentials.
 python3 -m pip install -e .
 ```
 
-## 2. Run The Unit Tests
+Optional photonics simulator dependencies are available for local experiments:
 
 ```bash
-python3 -m unittest tests.test_architecture_models
+python3 -m pip install -e ".[simulation]"
+```
+
+The core public test and V3 report flow does not require the optional extra.
+
+## 2. Run The Full Unit Suite
+
+```bash
+python3 -m unittest discover -s tests -v
 ```
 
 Expected result:
 
 ```text
-Ran 40 tests
+Ran 49 tests
 OK
 ```
 
-## 3. Regenerate The Value Package
-
-```bash
-python3 -m oqp.cli value-package hardware/Heralded_Reset_Mesh_Blueprint.yaml \
-  --artifact-root reports/node-alpha \
-  --device-sweep reports/node-alpha/qc-path/device-sweep.json \
-  --out-dir reports/node-alpha/value-upgrade-20260502 \
-  --syndrome-event-count 10000 \
-  --shots 10000 \
-  --target-logical-error-rate 1e-6
-```
-
-Expected high-level result:
-
-- `status`: `value_package_generated`
-- `highResolutionStatus`: `all_core_devices_high_resolution_accepted`
-- `faultToleranceReady`: `false`
-- `virtualSparameterModelsReadyForFoundryGate`: `false`
-- `prototypeStatus`: `not_prototype_ready`
-
-## 4. Regenerate The Generic GDS Gate
-
-```bash
-python3 -m oqp.cli gds-generate hardware/Heralded_Reset_Mesh_Blueprint.yaml \
-  --out-dir reports/node-alpha/gds-path
-
-python3 -m oqp.cli gds-audit hardware/Heralded_Reset_Mesh_Blueprint.yaml \
-  --manifest reports/node-alpha/gds-path/gds-manifest.json \
-  --out reports/node-alpha/gds-path/gds-audit.json
-```
-
-Expected result:
-
-- `gds_generated`: `true`
-- `layout_computable`: `true`
-- `fdtd_gap_backed_placeholder`: `false`
-- `foundry_pdk_missing`: `true`
-- `drc_not_run`: `true`
-- `lvs_not_run`: `true`
-- `not_tapeout_ready`: `true`
-
-## 5. Inspect The Report Index
+## 3. Validate The Committed Public Reports
 
 ```bash
 python3 -m json.tool reports/node-alpha/report-index.json >/dev/null
-python3 -m json.tool reports/node-alpha/no-budget-package/no-budget-readiness.json >/dev/null
+python3 -m json.tool reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json >/dev/null
+python3 -m json.tool reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json >/dev/null
+python3 -m json.tool reports/node-alpha/qc-path/sparameter-audit.json >/dev/null
 ```
 
-Optional summary:
+## 4. Verify Artifact Hashes
+
+On Linux:
+
+```bash
+sha256sum -c ARTIFACTS.sha256
+```
+
+On macOS:
+
+```bash
+shasum -a 256 -c ARTIFACTS.sha256
+```
+
+The hash manifest tracks the committed public snapshot. If you regenerate
+reports locally, update the manifest before treating hashes as a reviewed
+release snapshot.
+
+## 5. Regenerate The V3 Performance Package
+
+Use a scratch output directory so the committed report hashes remain unchanged:
+
+```bash
+rm -rf runs/local-deep-hardening-v3
+python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml \
+  --artifact-root reports/node-alpha \
+  --out-dir runs/local-deep-hardening-v3 \
+  --focused-max-runs 768
+python3 -m json.tool runs/local-deep-hardening-v3/deep-hardening-v3-report.json >/dev/null
+```
+
+Expected high-level results in the regenerated report:
+
+- `deepHardeningScore`: `110`
+- `internalConsistencyPassed`: `11`
+- `maxScaledPhysicalModes`: `760`
+- `maxScaledLogicalDualRailQubits`: `380`
+- `prototypeReady`: `false`
+- `tapeoutReady`: `false`
+- `hardwareMeasured`: `false`
+- `foundrySparametersReady`: `false`
+
+## 6. Inspect The Public Evidence Index
 
 ```bash
 python3 - <<'PY'
 import json
 from pathlib import Path
 
-for path in [
-    "reports/node-alpha/value-upgrade-20260502/value-upgrade-report.json",
-    "reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json",
-    "reports/node-alpha/no-budget-package/no-budget-readiness.json",
-]:
-    data = json.loads(Path(path).read_text())
-    print(path)
-    print(json.dumps(data.get("summary") or data.get("simulationPosition"), indent=2, sort_keys=True))
+index = json.loads(Path("reports/node-alpha/report-index.json").read_text())
+print(json.dumps(index["summary"], indent=2, sort_keys=True))
 PY
 ```
 
-## 6. Run The Demo Notebook
-
-Open `notebooks/node-alpha-report-summary.ipynb` and run all cells. It only
-reads local JSON reports and plots the current simulation/readiness status.
+The index should report zero missing public artifacts. Any historical or private
+full-package paths are out of scope for this public repository and are listed as
+excluded evidence in `docs/data-room-index.md`.
 
 ## Interpretation
 
-If the commands above pass, the repository is reproducible as a no-budget,
-simulation-only partner package. It is still not prototype-ready because the
-external evidence gates require foundry, hardware, or lab data.
+If the commands above pass, the repository is reproducible as a public,
+simulation-only review package. It is still not prototype-ready or tapeout-ready
+because the external evidence gates require foundry, hardware, or lab data.

@@ -544,7 +544,8 @@ def value_scorecard_command(args: argparse.Namespace) -> int:
         summary = report["summary"]
         print("=== OQP Value Scorecard ===")
         print(f"Status: {summary['status']}")
-        print(f"Technical evidence score: {summary['technicalEvidenceScore']} / 100")
+        print(f"Internal simulation evidence score: {summary['technicalEvidenceScore']} / 100")
+        print("External hardware evidence score: blocked/not scored as validated hardware")
         print(f"Partner diligence readiness: {summary['partnerDiligenceReadiness']} / 100")
         print(f"Commercial readiness: {summary['currentCommercialReadiness']} / 100")
         print(f"Immediate sale range: {summary['immediateSaleRange']}")

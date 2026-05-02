@@ -598,7 +598,7 @@ def _partner_ask_matrix() -> list[dict[str, Any]]:
         {
             "ask": "device_metric_review",
             "costClass": "partner_time",
-            "artifactToReview": "reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json",
+            "artifactToReview": "reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json",
             "usefulOutput": "Written review of which 2D FDTD assumptions need 3D/MPB validation first.",
         },
         {
@@ -608,15 +608,15 @@ def _partner_ask_matrix() -> list[dict[str, Any]]:
             "usefulOutput": "Port conventions, wavelength range, process corners, and calibration requirements.",
         },
         {
-            "ask": "gds_to_pdk_gap_review",
+            "ask": "layout_to_pdk_gap_review",
             "costClass": "partner_or_grant",
-            "artifactToReview": "reports/node-alpha/gds-path/gds-manifest.json",
+            "artifactToReview": "reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json",
             "usefulOutput": "Foundry-specific layer, PCell, pad, package, DRC, and LVS gap list.",
         },
         {
             "ask": "testchip_measurement_plan",
             "costClass": "grant_needed",
-            "artifactToReview": "reports/node-alpha/value-upgrade-20260502/testchip/testchip-simulation.json",
+            "artifactToReview": "reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json",
             "usefulOutput": "Minimal measurement matrix for first fabricated testchip.",
         },
     ]
@@ -649,8 +649,8 @@ def _assumption_register(evidence: dict[str, Any]) -> list[dict[str, Any]]:
             "validationNeeded": "Hardware-calibrated noise and syndrome distributions.",
         },
         {
-            "id": "generic_gds_portability",
-            "status": "layout_computable_not_foundry_clean",
+            "id": "generic_layout_portability",
+            "status": "layout_envelope_not_foundry_clean",
             "currentEvidence": evidence["gds"]["generated"],
             "validationNeeded": "Versioned PDK mapping plus DRC/LVS reports.",
         },
@@ -662,20 +662,20 @@ def _reviewer_question_bank() -> list[dict[str, Any]]:
         {
             "id": "device_metrics",
             "reviewerType": "photonic_device_simulation",
-            "question": "Which accepted 20/60 device candidate is most likely to fail under 3D/MPB S-parameter extraction?",
-            "artifact": "reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json",
+            "question": "Which public V3 device candidate is most likely to fail under 3D/MPB S-parameter extraction?",
+            "artifact": "reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json",
         },
         {
             "id": "yield_model",
             "reviewerType": "silicon_photonics_process",
-            "question": "Which tolerance axis in the deterministic yield grid is least realistic for a foundry process?",
-            "artifact": "reports/node-alpha/value-upgrade-20260502/yield-improvement-report.json",
+            "question": "Which V3 corner axis is least realistic for a foundry process?",
+            "artifact": "reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json",
         },
         {
-            "id": "gds_mapping",
+            "id": "layout_mapping",
             "reviewerType": "foundry_pdk_layout",
-            "question": "What is the first blocking issue when mapping the generic GDS to a real PDK?",
-            "artifact": "reports/node-alpha/gds-path/gds-manifest.json",
+            "question": "What is the first blocking issue when mapping the generic layout envelope to a real PDK?",
+            "artifact": "reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json",
         },
         {
             "id": "compact_models",
@@ -686,14 +686,14 @@ def _reviewer_question_bank() -> list[dict[str, Any]]:
         {
             "id": "fault_tolerance",
             "reviewerType": "quantum_error_correction",
-            "question": "Which synthetic noise assumption most strongly affects the below-threshold analytical path?",
-            "artifact": "reports/node-alpha/qc-path/fault-tolerance-audit.json",
+            "question": "Which analytical noise assumption most strongly affects the 1e-9 envelope?",
+            "artifact": "reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json",
         },
         {
             "id": "primitive_demo",
             "reviewerType": "quantum_photonics_lab",
             "question": "What is the minimal measured primitive-demo dataset that would materially raise diligence value?",
-            "artifact": "reports/node-alpha/value-upgrade-20260502/testchip/fusion-testcell-report.json",
+            "artifact": "reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json",
         },
     ]
 
@@ -794,7 +794,8 @@ def _scorecard_markdown(report: dict[str, Any]) -> str:
         "",
         "## Scores",
         "",
-        f"- Technical evidence score: {summary['technicalEvidenceScore']} / 100",
+        f"- Internal simulation evidence score: {summary['technicalEvidenceScore']} / 100",
+        "- External hardware evidence score: blocked/not scored as validated hardware",
         f"- Partner diligence readiness: {summary['partnerDiligenceReadiness']} / 100",
         f"- Commercial readiness: {summary['currentCommercialReadiness']} / 100",
         f"- Scorecard completeness: {summary['scorecardCompleteness']} / 100",
@@ -875,17 +876,18 @@ Hello,
 I am maintaining OQP-HRM, an open simulation-first photonic quantum-computer
 design package. It is not a build-ready chip. The current package has accepted
 Node Alpha 20/60 2D candidates for the coupler, MZI, phase shifter, and truth
-switch, plus a generated generic GDS and explicit evidence gates for foundry,
-hardware, and lab validation.
+switch, public V3 hardening reports, and explicit evidence gates for foundry,
+layout signoff, hardware, and lab validation.
 
 The useful ask is narrow: could your group review one part of the package and
 tell us which assumption would fail first in a real photonics flow?
 
 Key artifacts:
 
-- `reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json`
-- `reports/node-alpha/value-upgrade-20260502/yield-improvement-report.json`
-- `reports/node-alpha/gds-path/gds-audit.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json`
+- `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json`
 - `reports/node-alpha/qc-path/sparameter-audit.json`
 - `docs/30-minute-reproduction.md`
 
@@ -895,7 +897,7 @@ readiness, no hardware fault-tolerance claim.
 ## Reviewer Ask Options
 
 - Device-metric review.
-- Generic GDS to PDK gap review.
+- Generic layout envelope to PDK gap review.
 - S-parameter replacement plan.
 - Testchip yield stress review.
 - Fault-tolerance assumption review.
@@ -904,7 +906,8 @@ readiness, no hardware fault-tolerance claim.
 
 - High-resolution status: `{evidence['highResolution']['status']}`
 - Accepted devices: `{', '.join(evidence['highResolution']['acceptedDevices'])}`
-- Deterministic system yield: `{evidence['testchip']['systemYieldEstimate']}`
+- Public Deep-Hardening V3 max modes: `{evidence['performance']['maxScaledPhysicalModes']}`
+- Public Deep-Hardening V3 max logical qubits: `{evidence['performance']['maxScaledLogicalQubits']}`
 - Partner diligence readiness: `{summary['partnerDiligenceReadiness']} / 100`
 - Prototype status: `{evidence['prototype']['status']}`
 - Highest blocker: `{evidence['prototype']['highestPriorityBlocker']}`
@@ -981,9 +984,9 @@ def _data_room_markdown(report: dict[str, Any]) -> str:
         "",
         "## Technical Evidence",
         "",
-        "- High-resolution robustness: `reports/node-alpha/value-upgrade-20260502/high-resolution-robustness-report.json`",
-        "- Yield improvement: `reports/node-alpha/value-upgrade-20260502/yield-improvement-report.json`",
-        "- Yield-optimized device sweep: `reports/node-alpha/value-upgrade-20260502/yield-optimized-device-sweep.json`",
+        "- Device sweep: `reports/node-alpha/deep-hardening-v3-20260502/device-sweep-deep-hardening-v3.json`",
+        "- Truth-switch raw closure: `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json`",
+        "- Fusion candidates: `reports/node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json`",
         "- Deep-Hardening V3 Max-Out: `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json`",
         "- Operational envelope: `reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json`",
         "- Joint error budget: `reports/node-alpha/deep-hardening-v3-20260502/joint-error-budget-report.json`",
@@ -999,11 +1002,8 @@ def _data_room_markdown(report: dict[str, Any]) -> str:
         "- Truth-switch raw closure: `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json`",
         "- Pareto/corner/Monte-Carlo: `reports/node-alpha/deep-hardening-v3-20260502/multiobjective-pareto-report.json`, `reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json`, `reports/node-alpha/deep-hardening-v3-20260502/monte-carlo-robustness-report.json`",
         "- Prototype gap reduction: `reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json`",
-        "- Value package: `reports/node-alpha/value-upgrade-20260502/value-upgrade-report.json`",
-        "- GDS audit: `reports/node-alpha/gds-path/gds-audit.json`",
+        "- Artifact manifest: `ARTIFACTS.md`",
         "- S-parameter audit: `reports/node-alpha/qc-path/sparameter-audit.json`",
-        "- Fault-tolerance audit: `reports/node-alpha/qc-path/fault-tolerance-audit.json`",
-        "- Prototype readiness: `reports/node-alpha/qc-path/prototype-readiness.json`",
         "- Report index and hashes: `reports/node-alpha/report-index.json`",
         "",
         "## Missing External Evidence",
@@ -1065,7 +1065,8 @@ def _partner_pipeline_markdown(report: dict[str, Any]) -> str:
     summary = report["summary"]
     lines.extend(
         [
-            f"- Technical evidence score: `{summary['technicalEvidenceScore']} / 100`",
+            f"- Internal simulation evidence score: `{summary['technicalEvidenceScore']} / 100`",
+            "- External hardware evidence score: blocked/not scored as validated hardware",
             f"- Partner diligence readiness: `{summary['partnerDiligenceReadiness']} / 100`",
             f"- Scorecard completeness: `{summary['scorecardCompleteness']} / 100`",
             f"- Deterministic yield passing: `{summary['deterministicYieldPassing']}`",

@@ -17557,7 +17557,7 @@
       "candidateId": "truth-switch_gap0p08_len8_phi0_w0p4",
       "crosstalkRatio": 0.02867390888638699,
       "reflectionRatio": 0.004425849500104598,
-      "source": "reports/node-alpha/value-upgrade-20260502/yield-optimized-device-sweep.json"
+      "source": "reports/node-alpha/qc-path/device-sweep.json"
     },
     "derivedReflectionCompensatedCandidate": {
       "candidateId": "truth-switch_gap0p12_len6p35879_phi3p14159_w0p45_reflection_compensated",
