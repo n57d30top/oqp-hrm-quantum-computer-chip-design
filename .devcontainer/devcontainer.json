@@ -1,0 +1,16 @@
+{
+  "name": "OQP-HRM Public Reproducibility",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  },
+  "postCreateCommand": "make json-check && make hash-check",
+  "remoteUser": "root"
+}

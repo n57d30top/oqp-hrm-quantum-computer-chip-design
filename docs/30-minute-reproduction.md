@@ -15,6 +15,12 @@ notebooks.
 python3 -m pip install -e .
 ```
 
+For a pinned public-core install:
+
+```bash
+make install
+```
+
 Optional photonics simulator dependencies are available for local experiments:
 
 ```bash
@@ -32,7 +38,7 @@ python3 -m unittest discover -s tests -v
 Expected result:
 
 ```text
-Ran 49 tests
+Ran 50 tests
 OK
 ```
 
@@ -63,7 +69,23 @@ The hash manifest tracks the committed public snapshot. If you regenerate
 reports locally, update the manifest before treating hashes as a reviewed
 release snapshot.
 
-## 5. Regenerate The V3 Performance Package
+## 5. One-Command Public Reproduction
+
+```bash
+make ci
+```
+
+This runs the full unit suite, JSON checks, hash verification, and V3 scratch
+regeneration.
+
+The same path can be run in Docker:
+
+```bash
+docker build -t oqp-hrm-public .
+docker run --rm oqp-hrm-public
+```
+
+## 6. Regenerate The V3 Performance Package
 
 Use a scratch output directory so the committed report hashes remain unchanged:
 
@@ -87,7 +109,7 @@ Expected high-level results in the regenerated report:
 - `hardwareMeasured`: `false`
 - `foundrySparametersReady`: `false`
 
-## 6. Inspect The Public Evidence Index
+## 7. Inspect The Public Evidence Index
 
 ```bash
 python3 - <<'PY'
@@ -102,6 +124,14 @@ PY
 The index should report zero missing public artifacts. Any historical or private
 full-package paths are out of scope for this public repository and are listed as
 excluded evidence in `docs/data-room-index.md`.
+
+## 8. Inspect The Evidence Ledger
+
+```bash
+python3 -m json.tool docs/evidence-ledger.json >/dev/null
+```
+
+The human-readable assumption ledger is `docs/assumption-ledger.md`.
 
 ## Interpretation
 

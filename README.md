@@ -11,19 +11,35 @@ review. It still does not contain foundry data, hardware measurements,
 DRC/LVS evidence, tapeout material, private partner data, graph outputs, caches,
 or lab notebooks.
 
+## Readiness At A Glance
+
+| Area | Public status |
+| --- | --- |
+| Public simulation package | partial reproducible public package |
+| Unit tests | present, `50` expected |
+| 2D / surrogate device evidence | present for public review |
+| 3D-FDTD / MPB evidence | open external validation gate |
+| Foundry-calibrated S-parameters | no, `0 / 4` |
+| PDK-bound DRC/LVS | no |
+| Measured device or testchip data | no |
+| Tapeout-ready | no |
+| Prototype-ready | no |
+
+The generated artifacts use names such as `Deep-Hardening V3 Max-Out` for the
+local simulation envelope. Read those names as internal report labels, not as
+hardware maturity, fabrication readiness, or product-readiness claims.
+
 ## Licence
 
-This design package is licensed under the Creative Commons
-Attribution-NonCommercial 4.0 International licence.
+This repository uses a split licence model.
 
 - Licence file: `licence.md`
-- SPDX identifier: `CC-BY-NC-4.0`
-- Legal code: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+- Documentation/design/report licence: `CC-BY-NC-4.0`
+- Source-code review/reproduction licence: `LICENSE-CODE.md`
 
-The licence applies to the design documentation, architecture descriptions,
-blueprints, reproducibility reports, and simulator materials in this public
-package. Commercial use requires a separate written licence; see
-`COMMERCIAL-LICENSING.md`.
+Commercial use of the design, reports, simulator output, or code is not granted
+by the public repository. Commercial use requires a separate written licence;
+see `COMMERCIAL-LICENSING.md`.
 
 ## Claim Boundary
 
@@ -60,6 +76,12 @@ ARTIFACTS.md
 ARTIFACTS.sha256
 VALIDATION_ROADMAP.md
 COMMERCIAL-LICENSING.md
+LICENSE-CODE.md
+Makefile
+Dockerfile
+requirements-lock.txt
+docs/evidence-ledger.json
+docs/assumption-ledger.md
 .github/workflows/ci.yml
 pyproject.toml
 ```
@@ -81,7 +103,15 @@ python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.ya
   --focused-max-runs 768
 ```
 
-Expected unit-test result: `49` tests pass.
+Expected unit-test result: `50` tests pass.
+
+The same public path is wrapped by:
+
+```bash
+make ci
+docker build -t oqp-hrm-public .
+docker run --rm oqp-hrm-public
+```
 
 The committed public report snapshot is checked by `ARTIFACTS.sha256`; use a
 scratch `runs/` output directory for regeneration so reviewed hashes stay
@@ -89,7 +119,9 @@ stable. Optional photonics runtime dependencies are available with
 `python3 -m pip install -e ".[simulation]"`.
 
 Report checksums are listed in `ARTIFACTS.md`. The validation plan and external
-review gates are listed in `VALIDATION_ROADMAP.md`.
+review gates are listed in `VALIDATION_ROADMAP.md`. Machine-readable metric
+provenance is listed in `docs/evidence-ledger.json`; the reviewer-facing
+assumption ledger is `docs/assumption-ledger.md`.
 
 ## Metric Provenance
 
@@ -108,9 +140,10 @@ is the shortest safe reading of each major metric family.
 | Full decoder timing | `12.732639 ns` | `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json` | Toy decoder evidence; production decoder not ready |
 | Monte-Carlo robustness | `512 / 512` pass | `reports/node-alpha/deep-hardening-v3-20260502/monte-carlo-robustness-report.json` | Deterministic surrogate perturbation set; not wafer statistics |
 
-## Current Maximum Design Point
+## Current Simulation Envelope
 
-Final Node Alpha hardening state: Deep-Hardening V3 Max-Out.
+Current public Node Alpha simulation envelope. The generated report label is
+`Deep-Hardening V3 Max-Out`; this is not a hardware-readiness statement.
 
 | Metric | Value |
 | --- | ---: |

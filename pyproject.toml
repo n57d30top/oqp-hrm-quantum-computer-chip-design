@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "Simulation-only OQP-HRM photonic quantum computer chip design and reproducibility tools."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { file = "licence.md" }
+license = { file = "LICENSE-CODE.md" }
 dependencies = [
   "PyYAML>=6.0",
 ]

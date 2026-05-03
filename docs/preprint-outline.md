@@ -1,23 +1,22 @@
-# Preprint Outline: OQP-HRM Simulation-Closed Photonic QC Design
+# Preprint Outline: OQP-HRM Simulation-First Photonic QC Validation Dossier
 
 ## Working Title
 
-OQP-HRM: A Reproducible Simulation-Closed Heralded Photonic Quantum-Computer
-Design Package With Explicit Foundry and Hardware Evidence Gates
+OQP-HRM: A Reproducible Simulation-First Heralded Photonic Quantum-Computing
+Validation Dossier With Explicit Foundry and Hardware Evidence Gates
 
 ## Abstract Draft
 
-We present OQP-HRM, an open simulation-first design package for a heralded
-photonic quantum-computer architecture. The package combines a dual-rail
-photonic architecture model, high-resolution Node Alpha 2D FDTD device sweeps,
-generic GDS generation, virtual compact-model placeholders, synthetic decoder
-datasets, threshold/resource reports, and explicit evidence gates for foundry,
-hardware, and laboratory validation. Current simulations identify accepted
-20/60 candidates for the coupler, MZI, phase shifter, and truth switch under
-the repository's first-pass acceptance metrics. The design is not claimed as a
-fabrication-ready prototype: foundry-calibrated S-parameters, PDK DRC/LVS,
-measured source/detector/package/control evidence, and hardware-calibrated
-noise data remain hard blockers.
+We present OQP-HRM, an open simulation-first validation dossier for a proposed
+heralded photonic quantum-computing architecture. The package combines a
+dual-rail photonic architecture model, Node Alpha 2D/surrogate device sweeps,
+virtual compact-model placeholders, analytical threshold/resource reports, a
+toy decoder evidence path, and explicit evidence gates for foundry, hardware,
+and laboratory validation. Current public artifacts identify a local simulation
+envelope and accepted candidates under first-pass acceptance metrics. The design
+is not claimed as a fabrication-ready prototype: foundry-calibrated
+S-parameters, PDK DRC/LVS, measured source/detector/package/control evidence,
+and hardware-calibrated noise data remain hard blockers.
 
 ## Claim Boundary
 
@@ -25,8 +24,8 @@ Claims to make:
 
 - Reproducible simulation package.
 - Accepted 2D high-resolution local candidates for four core devices.
-- Generic GDS milestone with explicit signoff blockers.
-- Analytical threshold path with synthetic decoder data.
+- Generic layout-envelope milestone with explicit signoff blockers.
+- Analytical threshold path with toy decoder evidence.
 - Evidence contract for real prototype readiness.
 
 Claims not to make:
@@ -42,11 +41,11 @@ Claims not to make:
 1. Introduction
 2. Related work and model positioning
 3. OQP-HRM architecture
-4. Device-sweep methodology
-5. High-resolution device results
-6. Testchip and virtual compact-model package
+4. Device-sweep and surrogate methodology
+5. Public Node Alpha device results
+6. Virtual compact-model package
 7. Threshold, decoder, and resource evidence
-8. GDS and prototype evidence gates
+8. Layout-envelope and prototype evidence gates
 9. Limitations and partner validation path
 10. Reproducibility package
 
@@ -61,14 +60,14 @@ Claims not to make:
 | Virtual S-parameter files | 4/4 present, hash verified |
 | Prototype readiness | 1/9 criteria |
 | Testchip system yield estimate | `0.024` |
-| GDS state | generated, layout-computable, not tapeout-ready |
+| Layout state | generic envelope, not DRC/LVS-clean, not tapeout-ready |
 
 ## Figure Plan
 
 - System block diagram of the OQP-HRM evidence gates.
 - Device table with 20/60 metrics.
 - Bar chart: completed vs blocked readiness gates.
-- Testchip yield stress plot.
+- Surrogate/corner sensitivity plot.
 - Artifact dependency graph from the report index.
 - Partner validation path: simulation artifact to foundry/lab evidence.
 

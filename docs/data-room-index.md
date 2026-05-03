@@ -8,6 +8,8 @@ materials and from external hardware/foundry evidence that does not exist yet.
 
 - README and claim boundary: `README.md`
 - Artifact manifest and hashes: `ARTIFACTS.md`, `ARTIFACTS.sha256`
+- Machine-readable evidence ledger: `docs/evidence-ledger.json`
+- Reviewer assumption ledger: `docs/assumption-ledger.md`
 - Commercial licensing note: `COMMERCIAL-LICENSING.md`
 - Validation roadmap: `VALIDATION_ROADMAP.md`
 - Reproduction guide: `docs/30-minute-reproduction.md`
@@ -57,6 +59,9 @@ materials and from external hardware/foundry evidence that does not exist yet.
 - Unit tests: `tests/`
 - Package metadata: `pyproject.toml`
 - CI workflow: `.github/workflows/ci.yml`
+- Make reproduction target: `Makefile`
+- Pinned public-core dependency lock: `requirements-lock.txt`
+- Containerized reproduction: `Dockerfile`, `.devcontainer/devcontainer.json`
 
 ## Excluded From The Public Repository
 

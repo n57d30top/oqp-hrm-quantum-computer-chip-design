@@ -1986,6 +1986,8 @@ class ArchitectureModelsTest(unittest.TestCase):
         inspected_paths = [
             root / "README.md",
             root / "ARTIFACTS.md",
+            root / "docs" / "evidence-ledger.json",
+            root / "docs" / "assumption-ledger.md",
             root / "reports" / "node-alpha" / "report-index.json",
         ]
         inspected_paths.extend(sorted((root / "docs").glob("*.md")))
@@ -2006,6 +2008,21 @@ class ArchitectureModelsTest(unittest.TestCase):
                     offenders.append(f"{path.relative_to(root)} contains {fragment}")
 
         self.assertEqual(offenders, [])
+
+    def test_public_evidence_ledger_keeps_strong_metrics_non_hardware(self):
+        root = Path(__file__).resolve().parents[1]
+        ledger = json.loads((root / "docs" / "evidence-ledger.json").read_text(encoding="utf-8"))
+        self.assertEqual(ledger["schemaVersion"], "open-quantum.public-evidence-ledger.v1")
+        self.assertFalse(ledger["readiness"]["tapeoutReady"])
+        self.assertFalse(ledger["readiness"]["prototypeReady"])
+        self.assertEqual(ledger["readiness"]["foundryCalibratedSparameters"], "absent_0_of_4")
+        self.assertGreaterEqual(len(ledger["metrics"]), 10)
+        for metric in ledger["metrics"]:
+            self.assertIn("artifact", metric)
+            self.assertIn("evidenceLevel", metric)
+            self.assertIn("notEvidenceFor", metric)
+            self.assertTrue(metric["notEvidenceFor"])
+            self.assertNotIn("hardware_measured", metric["evidenceLevel"])
 
     def test_device_score_penalizes_reflection_and_loss(self):
         report = {

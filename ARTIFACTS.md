@@ -13,10 +13,11 @@ python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.ya
   --artifact-root reports/node-alpha \
   --out-dir runs/local-deep-hardening-v3 \
   --focused-max-runs 768
+python3 tools/update_public_index.py
 shasum -a 256 -c ARTIFACTS.sha256
 ```
 
-Expected test count: `49`.
+Expected test count: `50`.
 
 ## Deep-Hardening V3 Reports
 
@@ -49,7 +50,7 @@ Expected test count: `49`.
 | `98919797d8840268e1a58d5562db3802dfaf894a9838336a061559401c2114b6` | `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json` |
 | `d2bc83c61e6c4fb2653b08f8a578b94af36a07f67bdc9459dc624ae00759749b` | `reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json` |
 | `c0752a727805da650e66cfeb5f210741515c065116645bbc4822b643112515f3` | `reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json` |
-| `680bd6bdecf4f8d3336f6d2ddc0907cff5cb1ddfa85bd5c0f50df29ef218dad8` | `reports/node-alpha/report-index.json` |
+| `67badb7dc693642d4fb80e21255b7c32960cc8b1b1e0213f92a9d0485ef2f26b` | `reports/node-alpha/report-index.json` |
 
 ## Device Evidence Reports
 

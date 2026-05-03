@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "open-quantum.public-evidence-ledger.v1",
+  "claimBoundary": "Simulation-only public evidence ledger. Entries are not hardware measurements and do not imply foundry, DRC/LVS, tapeout, or prototype readiness.",
+  "readiness": {
+    "simulationReproducible": "partial_public",
+    "unitTests": "present",
+    "twoDimensionalOrSurrogateDeviceEvidence": "present_for_review",
+    "threeDimensionalFdtdOrMpb": "open_external_gate",
+    "foundryCalibratedSparameters": "absent_0_of_4",
+    "pdkDrcLvs": "absent",
+    "measuredDeviceOrTestchipData": "absent",
+    "tapeoutReady": false,
+    "prototypeReady": false
+  },
+  "metrics": [
+    {
+      "id": "physical_logical_scale",
+      "headlineValue": "760 physical modes / 380 logical dual-rail qubits",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json",
+      "evidenceLevel": "generic_analytical_layout_envelope",
+      "notEvidenceFor": ["PDK", "DRC", "LVS", "tapeout", "hardware"]
+    },
+    {
+      "id": "fusion_success",
+      "headlineValue": "1.0",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json",
+      "evidenceLevel": "analytical_surrogate_model_cap",
+      "notEvidenceFor": ["deterministic hardware success", "measured process"]
+    },
+    {
+      "id": "fusion_process_fidelity",
+      "headlineValue": "0.9999975",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/fusion-performance-candidates.json",
+      "evidenceLevel": "analytical_surrogate",
+      "notEvidenceFor": ["measured gate fidelity", "hardware-demonstrated primitive"]
+    },
+    {
+      "id": "truth_switch_raw_crosstalk",
+      "headlineValue": "0.23%",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json",
+      "evidenceLevel": "raw_hardened_simulation_profile",
+      "notEvidenceFor": ["foundry S-parameter", "wafer-measured crosstalk"]
+    },
+    {
+      "id": "truth_switch_raw_reflection",
+      "headlineValue": "0.004%",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json",
+      "evidenceLevel": "raw_hardened_simulation_profile",
+      "notEvidenceFor": ["foundry S-parameter", "wafer-measured reflection"]
+    },
+    {
+      "id": "virtual_sparameter_acceptance",
+      "headlineValue": "4 / 4 virtual accepted, 0 / 4 foundry calibrated",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json",
+      "evidenceLevel": "virtual_consistency_gate",
+      "notEvidenceFor": ["foundry-calibrated S-parameters", "Touchstone measurement"]
+    },
+    {
+      "id": "target_1e9_operational_envelope",
+      "headlineValue": "loss 0.638604 dB, detector 77.209%, phase 0.279534 rad",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/operational-envelope-report.json",
+      "evidenceLevel": "analytical_error_budget",
+      "notEvidenceFor": ["hardware-calibrated fault tolerance", "measured syndrome distribution"]
+    },
+    {
+      "id": "fast_path_timing",
+      "headlineValue": "1.17 ns",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/control-timing-model-report.json",
+      "evidenceLevel": "analytical_control_timing_model",
+      "notEvidenceFor": ["verified hardware feed-forward"]
+    },
+    {
+      "id": "full_decoder_timing",
+      "headlineValue": "12.732639 ns",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json",
+      "evidenceLevel": "toy_decoder_model",
+      "notEvidenceFor": ["production decoder readiness", "full decoder in fast path"]
+    },
+    {
+      "id": "monte_carlo_pass_fraction",
+      "headlineValue": "512 / 512",
+      "artifact": "reports/node-alpha/deep-hardening-v3-20260502/monte-carlo-robustness-report.json",
+      "evidenceLevel": "deterministic_surrogate_perturbation_set",
+      "notEvidenceFor": ["wafer statistics", "fabrication yield"]
+    }
+  ],
+  "requiredEvidenceUpgradePath": [
+    "independent simulator review",
+    "3D-FDTD or MPB device validation",
+    "foundry-calibrated S-parameters",
+    "PDK-bound DRC/LVS",
+    "measured device or testchip data",
+    "hardware-calibrated noise and decoder review"
+  ]
+}

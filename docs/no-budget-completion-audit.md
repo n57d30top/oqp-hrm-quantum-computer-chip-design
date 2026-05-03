@@ -19,6 +19,10 @@ lab input.
 | Layout envelope | `reports/node-alpha/deep-hardening-v3-20260502/scaled-layout-envelope-report.json` | Generic layout envelope only; no DRC/LVS claim |
 | Timing and decoder | `reports/node-alpha/deep-hardening-v3-20260502/control-timing-model-report.json`, `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json` | Fast path and full decoder are separate |
 | Reproduzierbarkeit maximal machen | `docs/30-minute-reproduction.md` | Install, full tests, JSON validation, hash check, scratch regeneration |
+| One-command reproduction | `Makefile` | `make ci` wraps tests, JSON checks, hashes, and scratch V3 regeneration |
+| Containerized reproduction | `Dockerfile`, `.devcontainer/devcontainer.json` | Public package can be rebuilt in a pinned Python 3.10 container path |
+| Evidence ledger | `docs/evidence-ledger.json`, `docs/assumption-ledger.md` | Strong metrics are tagged as surrogate/analytical/virtual rather than hardware |
+| Split licensing | `licence.md`, `LICENSE-CODE.md` | CC BY-NC remains for docs/reports; code uses a software-specific non-commercial review licence |
 | Report index | `reports/node-alpha/report-index.json` | Public paths, sizes, hashes, and readiness flags |
 | Partnerpaket | `docs/no-budget-partner-package.md` | One-page public summary, no-cash asks, 90-day plan, artifact map |
 | Testchip proposal path | `docs/open-validation-issues.md` and GitHub issues | Defines foundry/lab review asks without claiming hardware evidence |
@@ -54,5 +58,6 @@ This no-budget public package is complete if:
 - The local unit suite passes.
 - CI runs tests, JSON validation, hash checks, V3 scratch regeneration, and
   claim-boundary invariants.
+- Docker and Make reproduction paths stay aligned with CI.
 - The package does not claim prototype or tapeout readiness.
 - Every public deliverable maps to a concrete committed file.

@@ -20,29 +20,19 @@ jobs:
       - name: Install public package
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e .
+          make install
 
       - name: Run unit tests
-        run: python -m unittest discover -s tests -v
+        run: make test
 
       - name: Validate committed JSON artifacts
-        run: |
-          python -m json.tool reports/node-alpha/report-index.json >/dev/null
-          python -m json.tool reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json >/dev/null
-          python -m json.tool reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json >/dev/null
-          python -m json.tool reports/node-alpha/qc-path/sparameter-audit.json >/dev/null
+        run: make json-check
 
       - name: Verify committed artifact hashes
-        run: sha256sum -c ARTIFACTS.sha256
+        run: make hash-check
 
       - name: Regenerate V3 performance package in CI scratch space
-        run: |
-          rm -rf runs/ci-deep-hardening-v3
-          python -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml \
-            --artifact-root reports/node-alpha \
-            --out-dir runs/ci-deep-hardening-v3 \
-            --focused-max-runs 768
-          python -m json.tool runs/ci-deep-hardening-v3/deep-hardening-v3-report.json >/dev/null
+        run: make reproduce RUN_DIR=runs/ci-deep-hardening-v3
 
       - name: Check claim-boundary invariants
         run: |

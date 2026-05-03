@@ -1,25 +1,53 @@
 {
   "artifacts": [
     {
-      "bytes": 2960,
+      "bytes": 311,
+      "exists": true,
+      "kind": "json",
+      "path": ".devcontainer/devcontainer.json",
+      "sha256": "495c2a1b7b0d919bbe06b5825d86f08313eab5aa3a28347b0f9dfba35992bbce"
+    },
+    {
+      "bytes": 2181,
       "exists": true,
       "kind": "yaml",
       "path": ".github/workflows/ci.yml",
-      "sha256": "f6fcee816a1f3763aa1982bc08a2cdbe450c2c6d752d526f23a1d5ed09e886ba"
+      "sha256": "a47fa5ce6decf744c1342d4f93dde3ddf3c5a05a352f4d5632c1210bf565ef9f"
     },
     {
-      "bytes": 1047,
+      "bytes": 1185,
       "exists": true,
       "kind": "markdown",
       "path": "COMMERCIAL-LICENSING.md",
-      "sha256": "dca962d890a005af162cb9f001288ed0bf280ee1777fd637eb135a44517dd6bf"
+      "sha256": "a990f0a7897cd9745aa224d842d61f37df6327b557753b6fbc685c8ba0531376"
     },
     {
-      "bytes": 15910,
+      "bytes": 601,
+      "exists": true,
+      "kind": "file",
+      "path": "Dockerfile",
+      "sha256": "8654a59e328b05e4c1aec0e29132c6c9a53d19784ac73d3d923ec71c3ef3e605"
+    },
+    {
+      "bytes": 1254,
+      "exists": true,
+      "kind": "markdown",
+      "path": "LICENSE-CODE.md",
+      "sha256": "8d70559f6ab93c88abd69b51521df61490d47abe452c646cc939426a7031599a"
+    },
+    {
+      "bytes": 1396,
+      "exists": true,
+      "kind": "file",
+      "path": "Makefile",
+      "sha256": "7a6e25a7c994aaaaeb3fee9f59cd403c676db3dced1d6eed76ece75f541e873e"
+    },
+    {
+      "bytes": 16955,
       "exists": true,
       "kind": "markdown",
       "path": "README.md",
-      "sha256": "2d0c11f16d3030fa2a85f012b76f58143057409e4169e33d8e035dae283ef3f3"
+      "sha256": "1219e89e27ea8e2224777bd5b64bfa1e3ac7329c390be567680c00f9e621464c"
     },
     {
       "bytes": 3004,
@@ -141,18 +169,35 @@
       "sha256": "fe3d681a483d9a532036ddd5229bd7ed7961d331a7738e989d14a691343baeb5"
     },
     {
-      "bytes": 3116,
+      "bytes": 3620,
       "exists": true,
       "kind": "markdown",
       "path": "docs/30-minute-reproduction.md",
-      "sha256": "fa588d6f92b587fb523f9394fc69d5aaf2b54884d0fc024af35e96035325f103"
+      "sha256": "e40c8d5101001aeb09db526934bc2da8e503192adf8d74c98c5d2c9a7b20fa90"
     },
     {
-      "bytes": 5135,
+      "bytes": 1855,
+      "exists": true,
+      "kind": "markdown",
+      "path": "docs/assumption-ledger.md",
+      "sha256": "34902ee5753414516448fa5f64885ad5fe86de0187b8719479747b6d300766f2"
+    },
+    {
+      "bytes": 5436,
       "exists": true,
       "kind": "markdown",
       "path": "docs/data-room-index.md",
-      "sha256": "f66b23fab9edc52be170788cfd3a15e52ef24811c1993ffa44b1394dfb438bcf"
+      "sha256": "5420dcf6f5bb3cbe35ea8adef3d55c5fbfc44ee4d4960b38cd94bbe44434839a"
+    },
+    {
+      "bytes": 4273,
+      "exists": true,
+      "kind": "json",
+      "path": "docs/evidence-ledger.json",
+      "sha256": "a23b638e8bf65a97cd85f5ad62e69e5097804390e39610a3c8dbaab740596674",
+      "summary": {
+        "schemaVersion": "open-quantum.public-evidence-ledger.v1"
+      }
     },
     {
       "bytes": 1682,
@@ -162,11 +207,11 @@
       "sha256": "f3f6cdf6e0ea46b860028d6502e70b7bfc2992e5956ecf6998b9660484b0bfd8"
     },
     {
-      "bytes": 4298,
+      "bytes": 4936,
       "exists": true,
       "kind": "markdown",
       "path": "docs/no-budget-completion-audit.md",
-      "sha256": "46fa3f963ebb535f92ab5823cffb31debf4918251f7d7af3efb85c7af95bd569"
+      "sha256": "87945942d4a03b1caec25ae1439be02545c651cb131d2f191096817a0d9b2c01"
     },
     {
       "bytes": 5690,
@@ -197,11 +242,11 @@
       "sha256": "cb7ea3e32105aebf818adc8a81404bc98f6e91fe2df3231297134b1c9248eb5f"
     },
     {
-      "bytes": 4053,
+      "bytes": 4061,
       "exists": true,
       "kind": "markdown",
       "path": "docs/preprint-outline.md",
-      "sha256": "c6fbfadcab79e3deb230d530efc76870e6d617f462758bafe500da35d1b547c0"
+      "sha256": "5dc06b53cc866d36ae45bdecf183a1c2045677065591870d8a6470816771b5fc"
     },
     {
       "bytes": 2373,
@@ -211,11 +256,11 @@
       "sha256": "81111169117673088328fe1d355e6421f112db5e0d195d848488da8381e98a82"
     },
     {
-      "bytes": 7451,
+      "bytes": 8103,
       "exists": true,
       "kind": "markdown",
       "path": "docs/value-increase-completion-audit.md",
-      "sha256": "5dc7e3be3c5710fb5d545d4959ee81248451ac59dba06b11d782acf5422137f6"
+      "sha256": "ddcae11165bb02e6f537b2dd27c498ee648be90e003868948658ed212a335957"
     },
     {
       "bytes": 1317,
@@ -235,11 +280,11 @@
       }
     },
     {
-      "bytes": 891,
+      "bytes": 1256,
       "exists": true,
       "kind": "markdown",
       "path": "licence.md",
-      "sha256": "11e46260a22748c7a2d0c570f7d9ac44408d9a3301ee1ced0141496e5fa664a6"
+      "sha256": "1e43d329a52974edd289f5b5a8d9cf8a2f2af2b84de5b877ed7e67dc5f93d3f9"
     },
     {
       "bytes": 74,
@@ -543,11 +588,11 @@
       "sha256": "fa95498cbed6b0a54a4578d1737bed39f45f03a82a579c3919148e802c6c78f3"
     },
     {
-      "bytes": 601,
+      "bytes": 606,
       "exists": true,
       "kind": "toml",
       "path": "pyproject.toml",
-      "sha256": "7ff6aeeae1e0d3e0cf4658e5d57dbbd0b77ce9041c6bf9d3536e7876d033dafd"
+      "sha256": "509078b81ad00ca3e51d1c371558d15cf082b0dcf15ae6a0fcfd4972bc6806f1"
     },
     {
       "bytes": 41556,
@@ -1193,11 +1238,18 @@
       }
     },
     {
-      "bytes": 107882,
+      "bytes": 14,
+      "exists": true,
+      "kind": "text",
+      "path": "requirements-lock.txt",
+      "sha256": "01e08410080741c1f164e3b7459ea15db5966cef6629bfeb2691175f269efd00"
+    },
+    {
+      "bytes": 108905,
       "exists": true,
       "kind": "python",
       "path": "tests/test_architecture_models.py",
-      "sha256": "121d66de9c829728d09fedc838c6613bc381a300e2c77ec6ee9caec9bbefd076"
+      "sha256": "9d52a20fab83e08caf645ca7cd1570211729ae7012fd23e02f37afaa2e9f2692"
     },
     {
       "bytes": 1298,
@@ -1205,10 +1257,17 @@
       "kind": "python",
       "path": "tests/test_metrics_topology.py",
       "sha256": "05162e795690edb00374258508a383ac9d210ca58c33ad9e9ba39ac4b5ef29d4"
+    },
+    {
+      "bytes": 5599,
+      "exists": true,
+      "kind": "python",
+      "path": "tools/update_public_index.py",
+      "sha256": "4abff3a1c8375fa210f03df3f94b818a2bcc065781b9084d14b84ab3557be3d0"
     }
   ],
   "claimBoundary": "Public simulation-only reproducibility index. No foundry, hardware, DRC/LVS, tapeout, prototype, or commercial-product readiness is claimed.",
-  "generatedAt": "2026-05-02T22:54:50.167828Z",
+  "generatedAt": "2026-05-03T08:19:33.940304Z",
   "schemaVersion": "open-quantum.public-report-index.v1",
   "summary": {
     "ciWorkflowIncluded": true,
@@ -1230,7 +1289,7 @@
     "lvsRun": false,
     "missingPublicArtifactCount": 0,
     "prototypeReady": false,
-    "publicArtifactCount": 112,
+    "publicArtifactCount": 120,
     "simulatorIncluded": true,
     "tapeoutReady": false,
     "testsIncluded": true

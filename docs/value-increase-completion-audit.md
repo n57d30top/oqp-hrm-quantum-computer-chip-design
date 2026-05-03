@@ -11,7 +11,11 @@ review, and fund without adding false hardware claims.
 | Conservative claim boundary | `README.md` | Build, foundry, DRC/LVS, hardware, prototype, tapeout, and product-readiness claims remain blocked |
 | Public artifact hashes | `ARTIFACTS.md`, `ARTIFACTS.sha256` | Committed public reports can be checksum-verified |
 | Public report index | `reports/node-alpha/report-index.json` | Index contains only public committed artifacts and reports zero missing public artifacts |
+| Machine-readable evidence ledger | `docs/evidence-ledger.json` | Tags strong metrics by evidence level and explicitly records what each metric is not evidence for |
+| Reviewer assumption ledger | `docs/assumption-ledger.md` | Lists assumptions, usage, current evidence, risk, and next validation test |
 | Reproduction guide | `docs/30-minute-reproduction.md` | Install, full tests, JSON validation, hash verification, and scratch V3 regeneration |
+| Make/Docker reproduction | `Makefile`, `Dockerfile`, `.devcontainer/devcontainer.json` | Provides one-command and containerized public reproduction paths |
+| Split licensing | `licence.md`, `LICENSE-CODE.md`, `COMMERCIAL-LICENSING.md` | Separates CC BY-NC documentation/report licensing from software-specific non-commercial code review terms |
 | CI workflow | `.github/workflows/ci.yml` | Tests, JSON validation, checksums, V3 scratch regeneration, and claim-boundary invariants |
 | Partner outreach package | `docs/partner-outreach.md` | Contains short email and reviewer ask options |
 | Grant concept package | `docs/grant-concept-note.md` | Defines work packages and non-dilutive funding target |
@@ -34,7 +38,7 @@ review, and fund without adding false hardware claims.
 | Decoder evidence | `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json` | Adds toy matching-decoder graph and sub-15 ns full-decoder evidence while keeping production decoder readiness false |
 | Pareto/corner/Monte-Carlo | `reports/node-alpha/deep-hardening-v3-20260502/multiobjective-pareto-report.json` | Adds multi-objective Pareto, 1875-corner worst-case sweep, Monte-Carlo robustness, sensitivity, and consistency reports |
 | Prototype gap reduction | `reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json` | Maps local simulation improvements to prototype gates while preserving real-world hard stops |
-| Tests cover generators | `python3 -m unittest discover -s tests -v` | 49 tests pass locally |
+| Tests cover generators | `python3 -m unittest discover -s tests -v` | 50 tests pass locally |
 
 ## Current Scorecard Snapshot
 
