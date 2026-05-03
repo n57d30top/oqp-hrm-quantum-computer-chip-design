@@ -16,7 +16,7 @@ or lab notebooks.
 | Area | Public status |
 | --- | --- |
 | Public simulation package | partial reproducible public package |
-| Unit tests | present, `50` expected |
+| Unit tests | present, `51` expected |
 | 2D / surrogate device evidence | present for public review |
 | 3D-FDTD / MPB evidence | open external validation gate |
 | Foundry-calibrated S-parameters | no, `0 / 4` |
@@ -103,7 +103,7 @@ python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.ya
   --focused-max-runs 768
 ```
 
-Expected unit-test result: `50` tests pass.
+Expected unit-test result: `51` tests pass.
 
 The same public path is wrapped by:
 

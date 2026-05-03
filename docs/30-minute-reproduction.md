@@ -38,7 +38,7 @@ python3 -m unittest discover -s tests -v
 Expected result:
 
 ```text
-Ran 50 tests
+Ran 51 tests
 OK
 ```
 

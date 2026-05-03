@@ -1,6 +1,6 @@
 # Artifact Manifest
 
-This file lists the public reproducibility artifacts and their SHA-256 hashes.
+This file is generated from `ARTIFACTS.sha256` by `python3 tools/update_public_index.py`.
 The hashes are intended for review and regression tracking only.
 `ARTIFACTS.sha256` is the machine-readable checksum file used by CI.
 
@@ -17,7 +17,7 @@ python3 tools/update_public_index.py
 shasum -a 256 -c ARTIFACTS.sha256
 ```
 
-Expected test count: `50`.
+Expected test count: `51`.
 
 ## Deep-Hardening V3 Reports
 
@@ -50,7 +50,6 @@ Expected test count: `50`.
 | `98919797d8840268e1a58d5562db3802dfaf894a9838336a061559401c2114b6` | `reports/node-alpha/deep-hardening-v3-20260502/truth-switch-raw-closure-report.json` |
 | `d2bc83c61e6c4fb2653b08f8a578b94af36a07f67bdc9459dc624ae00759749b` | `reports/node-alpha/deep-hardening-v3-20260502/virtual-sparameter-acceptance-report.json` |
 | `c0752a727805da650e66cfeb5f210741515c065116645bbc4822b643112515f3` | `reports/node-alpha/deep-hardening-v3-20260502/worst-case-corner-sweep-report.json` |
-| `67badb7dc693642d4fb80e21255b7c32960cc8b1b1e0213f92a9d0485ef2f26b` | `reports/node-alpha/report-index.json` |
 
 ## Device Evidence Reports
 
@@ -61,3 +60,10 @@ Expected test count: `50`.
 | `45d959e1c74c2b6a6659535a620f1bbf6c25b93dc9998df88e9ed2b47e67fbed` | `reports/node-alpha/qc-path/device-sweep.json` |
 | `7b9716b0a61c372c6994a31790d4c731b7501105ac36f367bd8d68aa08c43386` | `reports/node-alpha/qc-path/fusion-device-evidence.json` |
 | `b4bd415409a32687ec1bc2eb0633e13bce0e0179913242ebe401eb17bbd3aa16` | `reports/node-alpha/qc-path/sparameter-audit.json` |
+
+## Public Report Index
+
+| SHA-256 | Artifact |
+| --- | --- |
+| `89be4e6f449a302f6468e8f04e71c5390efdbc8e8e749c924bb1d2aeb3cd1156` | `reports/node-alpha/report-index.json` |
+

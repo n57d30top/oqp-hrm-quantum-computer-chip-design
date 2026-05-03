@@ -20,9 +20,11 @@ framed as validation work, not as a claim of working hardware.
 
 | Gate | Target evidence | Current status |
 | --- | --- | --- |
-| Reproducible simulator | `oqp/`, `tests/`, `pyproject.toml`, and generated reports | public |
-| Unit tests | `python3 -m unittest discover -s tests -v` | `48` tests expected |
-| V3 report hashes | `ARTIFACTS.md` plus JSON reports | public |
+| Reproducible simulator | `oqp/`, `tests/`, `pyproject.toml`, `Makefile`, Docker/devcontainer, and generated reports | public |
+| Unit tests | `python3 -m unittest discover -s tests -v` or `make test` | `51` tests expected |
+| V3 report hashes | `ARTIFACTS.sha256`, generated `ARTIFACTS.md`, and JSON reports | public |
+| Evidence ledger | `docs/evidence-ledger.json` and `docs/assumption-ledger.md` | public |
+| Container reproduction | `docker build -t oqp-hrm-public .` and `docker run --rm oqp-hrm-public` | public |
 | Independent code review | reviewer notes or issue comments | open |
 | Independent photonics review | device-model review notes | open |
 | Foundry PDK review | versioned PDK manifest | missing |
@@ -34,11 +36,12 @@ framed as validation work, not as a claim of working hardware.
 
 ## Immediate Work Items
 
-1. Run the published reproduction command on a clean machine.
+1. Run `make ci` or the Docker reproduction path on a clean machine.
 2. Review `reports/node-alpha/deep-hardening-v3-20260502/deep-hardening-v3-report.json`.
-3. Verify the checksums in `ARTIFACTS.md`.
-4. Inspect the No-Go row in `max-qubit-no-go-map-report.json`.
-5. Open technical review issues for crosstalk, reflection, fusion fidelity,
+3. Verify the checksums in `ARTIFACTS.sha256`.
+4. Inspect `docs/evidence-ledger.json` and `docs/assumption-ledger.md`.
+5. Inspect the No-Go row in `max-qubit-no-go-map-report.json`.
+6. Open technical review issues for crosstalk, reflection, fusion fidelity,
    layout envelope, package ports, timing, and decoder assumptions.
 
 ## External Review Questions

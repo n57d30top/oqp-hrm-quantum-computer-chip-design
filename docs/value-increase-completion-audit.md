@@ -38,7 +38,7 @@ review, and fund without adding false hardware claims.
 | Decoder evidence | `reports/node-alpha/deep-hardening-v3-20260502/decoder-evidence-report.json` | Adds toy matching-decoder graph and sub-15 ns full-decoder evidence while keeping production decoder readiness false |
 | Pareto/corner/Monte-Carlo | `reports/node-alpha/deep-hardening-v3-20260502/multiobjective-pareto-report.json` | Adds multi-objective Pareto, 1875-corner worst-case sweep, Monte-Carlo robustness, sensitivity, and consistency reports |
 | Prototype gap reduction | `reports/node-alpha/deep-hardening-v3-20260502/prototype-gap-reduction-report.json` | Maps local simulation improvements to prototype gates while preserving real-world hard stops |
-| Tests cover generators | `python3 -m unittest discover -s tests -v` | 50 tests pass locally |
+| Tests cover generators | `python3 -m unittest discover -s tests -v` | 51 tests pass locally |
 
 ## Current Scorecard Snapshot
 

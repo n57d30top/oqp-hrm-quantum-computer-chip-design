@@ -47,14 +47,14 @@
       "exists": true,
       "kind": "markdown",
       "path": "README.md",
-      "sha256": "1219e89e27ea8e2224777bd5b64bfa1e3ac7329c390be567680c00f9e621464c"
+      "sha256": "80c06dbb671b704712dd2fe6b7e6bda9135f418b5e574776cb4372aee8393714"
     },
     {
-      "bytes": 3004,
+      "bytes": 3366,
       "exists": true,
       "kind": "markdown",
       "path": "VALIDATION_ROADMAP.md",
-      "sha256": "a0cc84923067a2210f27f7842687ffb8a784eadcbacf9d71b4c44780d9c68031"
+      "sha256": "6f4c90365ea8dee838d686bf66b9eb02aa43181ab6c8989b8bd57bcdc3d01f5d"
     },
     {
       "bytes": 1930,
@@ -173,7 +173,7 @@
       "exists": true,
       "kind": "markdown",
       "path": "docs/30-minute-reproduction.md",
-      "sha256": "e40c8d5101001aeb09db526934bc2da8e503192adf8d74c98c5d2c9a7b20fa90"
+      "sha256": "a4d19efb7725a80d184241dc6ec4f119c171afafb80c1214cde5279985a69836"
     },
     {
       "bytes": 1855,
@@ -260,7 +260,7 @@
       "exists": true,
       "kind": "markdown",
       "path": "docs/value-increase-completion-audit.md",
-      "sha256": "ddcae11165bb02e6f537b2dd27c498ee648be90e003868948658ed212a335957"
+      "sha256": "db935cce5d6ab53c5ea6d90a1a790e4bddea111a59d13d1d8488598eab5d9e1c"
     },
     {
       "bytes": 1317,
@@ -1245,11 +1245,11 @@
       "sha256": "01e08410080741c1f164e3b7459ea15db5966cef6629bfeb2691175f269efd00"
     },
     {
-      "bytes": 108905,
+      "bytes": 109685,
       "exists": true,
       "kind": "python",
       "path": "tests/test_architecture_models.py",
-      "sha256": "9d52a20fab83e08caf645ca7cd1570211729ae7012fd23e02f37afaa2e9f2692"
+      "sha256": "c8323644d41c90668c62829569f09e04356b52153f1cadf795aa547fa31b4e7e"
     },
     {
       "bytes": 1298,
@@ -1259,15 +1259,15 @@
       "sha256": "05162e795690edb00374258508a383ac9d210ca58c33ad9e9ba39ac4b5ef29d4"
     },
     {
-      "bytes": 5599,
+      "bytes": 7759,
       "exists": true,
       "kind": "python",
       "path": "tools/update_public_index.py",
-      "sha256": "4abff3a1c8375fa210f03df3f94b818a2bcc065781b9084d14b84ab3557be3d0"
+      "sha256": "3be87c296d69e79bb9903a7854b79d5e84414fbff19ed9f8d4c669b0833e3033"
     }
   ],
   "claimBoundary": "Public simulation-only reproducibility index. No foundry, hardware, DRC/LVS, tapeout, prototype, or commercial-product readiness is claimed.",
-  "generatedAt": "2026-05-03T08:19:33.940304Z",
+  "generatedAt": "2026-05-03T08:35:20.677436Z",
   "schemaVersion": "open-quantum.public-report-index.v1",
   "summary": {
     "ciWorkflowIncluded": true,

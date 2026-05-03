@@ -12,6 +12,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 REPORT_INDEX = ROOT / "reports" / "node-alpha" / "report-index.json"
 HASH_MANIFEST = ROOT / "ARTIFACTS.sha256"
+ARTIFACTS_MD = ROOT / "ARTIFACTS.md"
 
 PUBLIC_PATTERNS = [
     ".github/workflows/ci.yml",
@@ -97,7 +98,9 @@ def main() -> None:
         "artifacts": artifacts,
     }
     REPORT_INDEX.write_text(json.dumps(index, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    HASH_MANIFEST.write_text(_hash_manifest_text(), encoding="utf-8")
+    manifest_lines = _hash_manifest_lines()
+    HASH_MANIFEST.write_text("\n".join(manifest_lines) + "\n", encoding="utf-8")
+    ARTIFACTS_MD.write_text(_artifact_markdown(manifest_lines), encoding="utf-8")
 
 
 def _public_paths() -> list[Path]:
@@ -157,17 +160,71 @@ def _json_summary(path: Path) -> dict[str, Any]:
     return summary
 
 
-def _hash_manifest_text() -> str:
+def _hash_manifest_lines() -> list[str]:
     paths: set[Path] = set()
     for pattern in HASH_PATTERNS:
         for path in ROOT.glob(pattern):
             if path.is_file():
                 paths.add(path)
-    lines = [
+    return [
         f"{_sha256(path)}  {path.relative_to(ROOT).as_posix()}"
         for path in sorted(paths, key=lambda item: item.relative_to(ROOT).as_posix())
     ]
+
+
+def _artifact_markdown(manifest_lines: list[str]) -> str:
+    deep_hardening: list[tuple[str, str]] = []
+    device_evidence: list[tuple[str, str]] = []
+    report_index: list[tuple[str, str]] = []
+    for line in manifest_lines:
+        digest, artifact = line.split("  ", 1)
+        row = (digest, artifact)
+        if artifact == "reports/node-alpha/report-index.json":
+            report_index.append(row)
+        elif "/qc-path/" in artifact:
+            device_evidence.append(row)
+        else:
+            deep_hardening.append(row)
+
+    lines = [
+        "# Artifact Manifest",
+        "",
+        "This file is generated from `ARTIFACTS.sha256` by `python3 tools/update_public_index.py`.",
+        "The hashes are intended for review and regression tracking only.",
+        "`ARTIFACTS.sha256` is the machine-readable checksum file used by CI.",
+        "",
+        "## Reproduction Commands",
+        "",
+        "```bash",
+        "python3 -m pip install -e .",
+        "python3 -m unittest discover -s tests -v",
+        "python3 -m oqp.cli performance-upgrade hardware/Heralded_Reset_Mesh_Blueprint.yaml \\",
+        "  --artifact-root reports/node-alpha \\",
+        "  --out-dir runs/local-deep-hardening-v3 \\",
+        "  --focused-max-runs 768",
+        "python3 tools/update_public_index.py",
+        "shasum -a 256 -c ARTIFACTS.sha256",
+        "```",
+        "",
+        "Expected test count: `51`.",
+        "",
+    ]
+    lines.extend(_artifact_table("Deep-Hardening V3 Reports", deep_hardening))
+    lines.extend(_artifact_table("Device Evidence Reports", device_evidence))
+    lines.extend(_artifact_table("Public Report Index", report_index))
     return "\n".join(lines) + "\n"
+
+
+def _artifact_table(title: str, rows: list[tuple[str, str]]) -> list[str]:
+    lines = [
+        f"## {title}",
+        "",
+        "| SHA-256 | Artifact |",
+        "| --- | --- |",
+    ]
+    lines.extend(f"| `{digest}` | `{artifact}` |" for digest, artifact in rows)
+    lines.append("")
+    return lines
 
 
 def _sha256(path: Path) -> str:

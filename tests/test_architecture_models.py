@@ -2024,6 +2024,25 @@ class ArchitectureModelsTest(unittest.TestCase):
             self.assertTrue(metric["notEvidenceFor"])
             self.assertNotIn("hardware_measured", metric["evidenceLevel"])
 
+    def test_artifacts_markdown_matches_machine_readable_hash_manifest(self):
+        root = Path(__file__).resolve().parents[1]
+        manifest_rows = {}
+        for line in (root / "ARTIFACTS.sha256").read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            digest, artifact = line.split("  ", 1)
+            manifest_rows[artifact] = digest
+
+        markdown = (root / "ARTIFACTS.md").read_text(encoding="utf-8")
+        self.assertIn("generated from `ARTIFACTS.sha256`", markdown)
+        missing = []
+        for artifact, digest in manifest_rows.items():
+            row = f"| `{digest}` | `{artifact}` |"
+            if row not in markdown:
+                missing.append(row)
+
+        self.assertEqual(missing, [])
+
     def test_device_score_penalizes_reflection_and_loss(self):
         report = {
             "fdtdMetrics": {
