@@ -114,6 +114,7 @@ def generate_gds_plan(
         "routingStats": manifest["routingStats"],
         "layerUsage": manifest["layerUsage"],
         "deviceEvidence": manifest["deviceEvidence"],
+        "layoutCompletion": _layout_completion_report(manifest),
         "readinessFlags": {
             **manifest["readinessFlags"],
             "gds_generated": False,
@@ -195,6 +196,7 @@ def generate_gds_artifacts(
         "byteSize": len(gds_bytes),
     }
     manifest["readinessFlags"]["gds_generated"] = True
+    manifest["layoutCompletion"] = _layout_completion_report(manifest)
 
     plan = generate_gds_plan(
         blueprint,
@@ -233,6 +235,7 @@ def generate_gds_artifacts(
         "gdsFile": manifest["gdsFile"],
         "manifestSummary": _manifest_summary(manifest),
         "auditSummary": _audit_summary(audit),
+        "layoutCompletion": manifest["layoutCompletion"],
         "readinessFlags": manifest["readinessFlags"],
         "blockers": manifest["blockers"],
         "nextSteps": manifest["nextSteps"],
@@ -290,12 +293,13 @@ def generate_gds_audit(
             "drc": "No foundry DRC deck has been run against this GDS.",
             "lvs": "No optical/electrical LVS deck or extracted netlist comparison has been run.",
             "foundryPdk": "The design uses a generic SiPh layer map, not a locked foundry PDK and process stack.",
-            "devicePhysics": "FDTD reports exist for core devices, but current evidence is not accepted and is therefore used as fdtd_gap_backed_placeholder geometry.",
+            "devicePhysics": _device_physics_gap_text(flags, manifest.get("deviceEvidence", {})),
             "sParameters": "No foundry-calibrated S-parameter compact models are attached to MZI/coupler/phase-shifter/truth-switch cells.",
             "packaging": "Fiber pitch adaptation, edge/grating coupler selection, probe card, thermal stack, and package drawing remain placeholders.",
             "controls": "Phase-driver, truth-switch, source, and detector interfaces need real driver, TDC, and calibration closure.",
             "tapeout": "The milestone is a reproducible pre-tapeout GDS, not a foundry-clean or tapeout-ready database.",
         },
+        "layoutCompletion": _layout_completion_report(manifest),
         "nextSteps": manifest.get("nextSteps", []),
     }
 
@@ -565,6 +569,7 @@ def build_gds_design(
             "Tie control electronics, phase calibration, detector timing, and source indistinguishability data to the layout manifest.",
         ],
     }
+    manifest["layoutCompletion"] = _layout_completion_report(manifest)
     return GdsDesign(manifest=manifest, cells=cells)
 
 
@@ -584,6 +589,80 @@ def _gds_blockers(*, foundry_pdk_missing: bool, fdtd_gap_backed_placeholder: boo
         )
     blockers.append("not_tapeout_ready: package, calibration, compact-model, and signoff flows remain open.")
     return blockers
+
+
+def _layout_completion_report(manifest: dict[str, Any]) -> dict[str, Any]:
+    flags = manifest.get("readinessFlags", {})
+    generated = bool(flags.get("gds_generated"))
+    computable = bool(flags.get("layout_computable"))
+    tapeout_ready = not bool(flags.get("not_tapeout_ready", True))
+    foundry_locked = not bool(flags.get("foundry_pdk_missing", True))
+    signoff_clean = not bool(flags.get("drc_not_run", True)) and not bool(flags.get("lvs_not_run", True))
+    no_device_placeholders = not bool(flags.get("fdtd_gap_backed_placeholder", True))
+    quantum_layout_complete = generated and computable and tapeout_ready and foundry_locked and signoff_clean and no_device_placeholders
+    return {
+        "status": "gds_package_generated" if generated else "layout_model_computable",
+        "layoutModelComputable": computable,
+        "reproducibleGdsPackageComplete": generated and computable,
+        "quantumComputerLayoutComplete": quantum_layout_complete,
+        "tapeoutReady": tapeout_ready,
+        "claimBoundary": (
+            "A complete GDS package here means a reproducible generic-SiPh layout artifact was produced. "
+            "It is not a finished quantum-computer layout unless foundry PDK, DRC/LVS, compact-model, "
+            "package, control, and hardware-evidence gates are also closed."
+        ),
+        "missingForFinishedQuantumComputerLayout": _finished_layout_missing_requirements(flags),
+    }
+
+
+def _finished_layout_missing_requirements(flags: dict[str, Any]) -> list[str]:
+    missing: list[str] = []
+    if not flags.get("gds_generated"):
+        missing.append("generated GDS file")
+    if not flags.get("layout_computable"):
+        missing.append("computable top-level layout")
+    if flags.get("foundry_pdk_missing"):
+        missing.append("version-locked foundry PDK and layer map")
+    if flags.get("drc_not_run"):
+        missing.append("clean DRC report or documented waivers")
+    if flags.get("lvs_not_run"):
+        missing.append("clean optical/electrical LVS report or documented waivers")
+    if flags.get("fdtd_gap_backed_placeholder"):
+        missing.append("accepted core-device geometry evidence without placeholder cells")
+    if flags.get("not_tapeout_ready", True):
+        missing.append("closed package, calibration, compact-model, control, and signoff flow")
+    return missing
+
+
+def _device_physics_gap_text(flags: dict[str, Any], evidence: dict[str, Any]) -> str:
+    required = ("coupler", "mzi", "phase-shifter", "truth-switch")
+    by_device = evidence.get("byDevice", {}) if isinstance(evidence, dict) else {}
+    accepted = [
+        device
+        for device in required
+        if isinstance(by_device.get(device), dict) and by_device[device].get("accepted")
+    ]
+    missing = [device for device in required if device not in by_device]
+    if flags.get("fdtd_gap_backed_placeholder"):
+        return (
+            "One or more core device cells are computable placeholders because current FDTD/eigenmode evidence "
+            "is missing or not accepted for that device family."
+        )
+    if len(accepted) == len(required):
+        return (
+            "Core device cells have accepted first-pass local simulation/eigenmode candidates attached. "
+            "That is still not foundry- or wafer-calibrated device physics and does not promote the GDS to tapeout."
+        )
+    if missing:
+        return (
+            "Core device evidence is incomplete for "
+            + ", ".join(missing)
+            + "; those cells remain generic until accepted device evidence is attached."
+        )
+    return (
+        "Core device cells have local simulation evidence attached, but the evidence is not sufficient for "
+        "foundry, wafer, or tapeout readiness."
+    )
 
 
 def collect_device_evidence(
@@ -1380,6 +1459,7 @@ def _manifest_summary(manifest: dict[str, Any]) -> dict[str, Any]:
         "padCount": len(manifest["pads"]),
         "routingStats": manifest["routingStats"],
         "layerUsage": manifest["layerUsage"],
+        "layoutCompletion": manifest.get("layoutCompletion", _layout_completion_report(manifest)),
     }
 
 
@@ -1389,6 +1469,7 @@ def _audit_summary(audit: dict[str, Any]) -> dict[str, Any]:
         "counts": audit["counts"],
         "chipSizeUm": audit["chipSizeUm"],
         "blockers": audit["blockers"],
+        "layoutCompletion": audit.get("layoutCompletion"),
     }
 
 
@@ -1412,6 +1493,22 @@ def _final_gap_audit_markdown(audit: dict[str, Any], manifest: dict[str, Any]) -
         "",
     ]
     lines.extend(f"- {key}: {value}" for key, value in flags.items())
+    completion = audit.get("layoutCompletion")
+    if isinstance(completion, dict):
+        lines.extend(["", "## Layout Completion", ""])
+        for key in (
+            "status",
+            "layoutModelComputable",
+            "reproducibleGdsPackageComplete",
+            "quantumComputerLayoutComplete",
+            "tapeoutReady",
+        ):
+            lines.append(f"- {key}: {completion.get(key)}")
+        missing = completion.get("missingForFinishedQuantumComputerLayout") or []
+        if missing:
+            lines.append("- missingForFinishedQuantumComputerLayout:")
+            lines.extend(f"  - {item}" for item in missing)
+        lines.append(f"- claimBoundary: {completion.get('claimBoundary')}")
     lines.extend(["", "## Remaining Tapeout Gaps", ""])
     lines.extend(f"- {key}: {value}" for key, value in gaps.items())
     lines.extend(["", "## Generated Artifacts", ""])

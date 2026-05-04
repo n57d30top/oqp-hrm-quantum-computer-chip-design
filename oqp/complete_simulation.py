@@ -141,8 +141,10 @@ def run_complete_simulation(
         fusion=fusion,
     )
     hard_stops = _hard_stops_requiring_real_world_input(closure)
+    all_referenced_artifacts_complete = all(item["status"] == "complete" for item in checklist)
     flags = {
-        "completeSimulationExecuted": all(item["status"] == "complete" for item in checklist),
+        "completeSimulationExecuted": True,
+        "allReferencedSimulationArtifactsComplete": all_referenced_artifacts_complete,
         "topologyBackendFullyAvailable": topology["backendAvailable"],
         "allCoreDevicesPassSimulatedGates": _all_core_devices_accepted(device_sweep),
         "primitiveReadyInSimulation": fusion["readinessFlags"]["primitiveReady"],
@@ -155,7 +157,7 @@ def run_complete_simulation(
     flags["simulatedQuantumComputerComplete"] = all(
         flags[name]
         for name in (
-            "completeSimulationExecuted",
+            "allReferencedSimulationArtifactsComplete",
             "allCoreDevicesPassSimulatedGates",
             "primitiveReadyInSimulation",
             "belowThresholdCandidateFound",
@@ -208,6 +210,9 @@ def run_complete_simulation(
             "simulatedLayerCount": sum(1 for item in layers.values() if item["status"] == "complete"),
             "totalLayerCount": len(layers),
             "failedGateCount": len(failed_simulation_gates),
+            "missingOrFailedRequirementCount": len(
+                [item for item in checklist if item["status"] != "complete"]
+            ),
             "realWorldHardStopCount": len(hard_stops),
             "deviceSweepRuns": device_sweep.get("runCount", 0),
             "thresholdSweepRuns": threshold_sweep.get("runCount", 0),

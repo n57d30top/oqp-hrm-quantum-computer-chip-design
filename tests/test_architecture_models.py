@@ -150,6 +150,8 @@ class ArchitectureModelsTest(unittest.TestCase):
         self.assertTrue(audit["auditFlags"]["lvs_not_run"])
         self.assertTrue(audit["auditFlags"]["not_tapeout_ready"])
         self.assertIn("foundryPdk", audit["finalGapAudit"])
+        self.assertIn("accepted first-pass", audit["finalGapAudit"]["devicePhysics"])
+        self.assertFalse(audit["layoutCompletion"]["quantumComputerLayoutComplete"])
 
     def test_gds_generate_writes_gds_and_artifact_manifests(self):
         with TemporaryDirectory() as tmp:
@@ -157,6 +159,8 @@ class ArchitectureModelsTest(unittest.TestCase):
             self.assertEqual(report["schemaVersion"], "open-quantum.gds-generate.v1")
             self.assertTrue(report["gdsGenerated"])
             self.assertTrue(report["readinessFlags"]["gds_generated"])
+            self.assertTrue(report["layoutCompletion"]["reproducibleGdsPackageComplete"])
+            self.assertFalse(report["layoutCompletion"]["quantumComputerLayoutComplete"])
             self.assertGreater(report["gdsFile"]["byteSize"], 1024)
             with open(report["gdsFile"]["path"], "rb") as handle:
                 self.assertEqual(handle.read(4), b"\x00\x06\x00\x02")
@@ -1270,6 +1274,7 @@ class ArchitectureModelsTest(unittest.TestCase):
         self.assertEqual(report["schemaVersion"], "open-quantum.complete-simulation.v1")
         self.assertTrue(report["scope"]["simulatedOnly"])
         self.assertTrue(report["readinessFlags"]["completeSimulationExecuted"])
+        self.assertTrue(report["readinessFlags"]["allReferencedSimulationArtifactsComplete"])
         self.assertFalse(report["readinessFlags"]["simulatedQuantumComputerComplete"])
         self.assertEqual(report["summary"]["status"], "complete_simulation_executed_not_viable")
         self.assertFalse(report["readinessFlags"]["belowThresholdCandidateFound"])
@@ -1404,6 +1409,7 @@ class ArchitectureModelsTest(unittest.TestCase):
 
         self.assertEqual(report["summary"]["status"], "complete_simulation_passed")
         self.assertTrue(report["readinessFlags"]["simulatedQuantumComputerComplete"])
+        self.assertTrue(report["readinessFlags"]["allReferencedSimulationArtifactsComplete"])
         self.assertFalse(report["readinessFlags"]["realWorldPrototypeReady"])
         self.assertEqual(report["failedReadinessGates"], [])
         self.assertTrue(report["hardStopsRequiringRealWorldInput"])

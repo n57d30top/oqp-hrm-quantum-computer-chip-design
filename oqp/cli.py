@@ -205,6 +205,8 @@ def gds_generate_command(args: argparse.Namespace) -> int:
         print(f"GDS: {report['gdsFile']['path']}")
         print(f"Chip: {summary['chipSizeUm']['width']:.1f} x {summary['chipSizeUm']['height']:.1f} um")
         print(f"Instances: {summary['instanceCount']} Ports: {summary['portCount']} Pads: {summary['padCount']}")
+        print(f"GDS package complete: {report['layoutCompletion']['reproducibleGdsPackageComplete']}")
+        print(f"Quantum computer layout complete: {report['layoutCompletion']['quantumComputerLayoutComplete']}")
         print(f"Tapeout ready: {not report['readinessFlags']['not_tapeout_ready']}")
     return 0
 
@@ -255,6 +257,8 @@ def gds_audit_command(args: argparse.Namespace) -> int:
         print(f"GDS generated: {flags['gds_generated']}")
         print(f"Layout computable: {flags['layout_computable']}")
         print(f"FDTD gap placeholders: {flags['fdtd_gap_backed_placeholder']}")
+        if report.get("layoutCompletion"):
+            print(f"Quantum computer layout complete: {report['layoutCompletion']['quantumComputerLayoutComplete']}")
         print(f"Tapeout ready: {not flags['not_tapeout_ready']}")
     return 0
 
